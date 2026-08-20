@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Reestructurar el bloque de comunidad con texto amplio, centrado vertical y CTA de lista prioritaria.
 - [x] Ampliar el texto de comunidad para reducir el espacio entre mensaje y CTA.
 - [x] Alinear el bloque editorial izquierdo con la altura total de la galería de comunidad.
 - [x] Añadir CTA bajo el mensaje de comunidad y equilibrar el bloque editorial con la galería.

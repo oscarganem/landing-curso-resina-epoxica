@@ -139,8 +139,8 @@ export default function Home() {
       <section className="community-section" aria-labelledby="community-title">
         <div className="community-inner">
           <div className="community-copy">
-            <h2 id="community-title">Más de <span>500 alumnos</span> ya han perdido el miedo a la resina y están creando acabados increíbles. <em>¡El próximo puedes ser tú!</em></h2>
-            <a className="community-cta" href="#lista-de-espera">Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></a>
+            <h2 id="community-title">Más de <span>500 alumnos</span><br className="community-break" /> ya perdieron el miedo<br className="community-break" /> a la resina y hoy crean<br className="community-break" /> acabados increíbles.<em>Tú puedes ser el siguiente.</em></h2>
+            <a className="community-cta" href="#lista-de-espera">Únete GRATIS a la lista prioritaria <MoveUpRight aria-hidden="true" /></a>
           </div>
           <div className="community-gallery" aria-label="Galería de alumnos durante las prácticas">
             {studentGallery.map(({ image, alt }, index) => <figure className={`community-photo photo-${index + 1}`} key={image}><img src={image} alt={alt} loading="lazy" /></figure>)}
