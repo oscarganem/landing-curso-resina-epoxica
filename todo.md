@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Corregir el titular de comunidad a tres líneas exactas según la referencia.
 - [x] Reestructurar el bloque de comunidad con texto amplio, centrado vertical y CTA de lista prioritaria.
 - [x] Ampliar el texto de comunidad para reducir el espacio entre mensaje y CTA.
 - [x] Alinear el bloque editorial izquierdo con la altura total de la galería de comunidad.
