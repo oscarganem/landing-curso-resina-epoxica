@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Compactar la franja de perfiles, actualizar su texto y ampliar ligeramente las etiquetas.
 - [x] Retirar números de los bullets y centrar la franja de perfiles a todo lo ancho.
 - [x] Añadir la sección “¿Para quién es este curso?” con fondo blanco, iconos y perfiles de audiencia.
 - [x] Ampliar el CTA, poner “PRECIO EXCLUSIVO” en mayúsculas y retirar el rótulo superior.
