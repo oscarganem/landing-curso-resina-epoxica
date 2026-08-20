@@ -7,8 +7,8 @@ import { CalendarDays, Check, MapPin, MoveUpRight } from "lucide-react";
 const benefits = [
   "Aprende a crear acabados marmoleados, metálicos, unicolor y 3D.",
   "Crea pisos con hojuelas y granito antiderrapante.",
-  "Obtén acceso GRATIS a nuestra clase online.",
-  "Ahorra hasta un 20% al unirte a la lista de espera.",
+  "Obtén acceso GRATIS a nuestra clase online previa al curso.",
+  "Accede a un precio exclusivo de preventa.",
 ];
 
 export default function Home() {
@@ -59,12 +59,12 @@ export default function Home() {
           </ul>
 
           <a className="waitlist-cta" href="#lista-de-espera">
-            Únete a la lista de espera <MoveUpRight aria-hidden="true" />
+            Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" />
           </a>
 
           <div className="course-footer" id="lista-de-espera">
             <span className="footer-rule" />
-            <p><b>18 SEP</b> · Playa del Carmen · Curso presencial</p>
+            <p><b>+1,000</b> alumnos ya aprendieron con nosotros</p>
           </div>
         </div>
 

@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Actualizar los beneficios 3 y 4, el texto del CTA y la prueba de confianza inferior.
 - [x] Mantener la landing en una única vista estática, sin datos remotos ni lógica innecesaria.
 - [x] Evitar dependencias y activos visuales pesados antes de que exista una foto real del curso.
 - [x] Usar fuentes con carga no bloqueante y tipografía de sistema como respaldo.
