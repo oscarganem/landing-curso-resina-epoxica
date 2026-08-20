@@ -1,0 +1,8 @@
+# Lista de verificación
+
+- [x] Mantener la landing en una única vista estática, sin datos remotos ni lógica innecesaria.
+- [x] Evitar dependencias y activos visuales pesados antes de que exista una foto real del curso.
+- [x] Usar fuentes con carga no bloqueante y tipografía de sistema como respaldo.
+- [x] Eliminar solicitudes externas de tipografía y componentes de interfaz no requeridos.
+- [x] Reservar dimensiones explícitas para el contenedor de fotografía y prevenir saltos de layout.
+- [x] Validar compilación y revisar visualmente las versiones de escritorio y móvil.

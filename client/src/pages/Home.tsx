@@ -1,25 +1,86 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
-
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * Diseño: Taller de Alto Contraste. Una landing editorial carbón/amarillo con
+ * composición asimétrica, gran jerarquía tipográfica y fotografía reservada.
  */
-export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+import { CalendarDays, Check, MapPin, MoveUpRight } from "lucide-react";
 
+const benefits = [
+  "Aprende a crear acabados marmoleados, metálicos, unicolor y 3D.",
+  "Crea pisos con hojuelas y granito antiderrapante.",
+  "Obtén acceso GRATIS a nuestra clase online.",
+  "Ahorra hasta un 20% al unirte a la lista de espera.",
+];
+
+export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
-    </div>
+    <main className="landing-shell">
+      <header className="site-header" aria-label="Encabezado del curso">
+        <a className="brand-lockup" href="#inicio" aria-label="Curso de resina epoxica">
+          <img
+            className="brand-mark"
+            src="/manus-storage/resina-pro-logo_ee0235df.png"
+            width="42"
+            height="42"
+            alt=""
+          />
+          <span>RESINA <b>PRO</b></span>
+        </a>
+        <div className="header-detail" aria-hidden="true">
+          <i /> Formación presencial
+        </div>
+      </header>
+
+      <section className="hero" id="inicio" aria-labelledby="course-title">
+        <div className="hero-copy">
+          <div className="eyebrow">
+            <span className="eyebrow-dot" /> Curso presencial
+          </div>
+
+          <h1 id="course-title">
+            Aprende a aplicar <span>resina epóxica</span> en pisos, barras y mesas de río
+          </h1>
+
+          <p className="event-line">
+            <MapPin aria-hidden="true" /> Playa del Carmen <b>|</b>
+            <CalendarDays aria-hidden="true" /> 18 de Septiembre
+          </p>
+
+          <p className="course-lede">
+            La formación <strong>#1</strong> para aplicadores de resina epóxica en México.
+          </p>
+
+          <ul className="benefit-list">
+            {benefits.map((benefit) => (
+              <li key={benefit}>
+                <Check aria-hidden="true" strokeWidth={3.2} />
+                <span>{benefit}</span>
+              </li>
+            ))}
+          </ul>
+
+          <a className="waitlist-cta" href="#lista-de-espera">
+            Únete a la lista de espera <MoveUpRight aria-hidden="true" />
+          </a>
+
+          <div className="course-footer" id="lista-de-espera">
+            <span className="footer-rule" />
+            <p><b>18 SEP</b> · Playa del Carmen · Curso presencial</p>
+          </div>
+        </div>
+
+        <aside className="visual-column" aria-label="Espacio reservado para fotografía del curso">
+          <div className="photo-frame">
+            <div className="frame-corner frame-corner-top" aria-hidden="true" />
+            <div className="frame-corner frame-corner-bottom" aria-hidden="true" />
+            <div className="photo-placeholder">
+              <div className="placeholder-grid" aria-hidden="true" />
+              <p>Espacio reservado<br /><span>para fotografía del curso</span></p>
+              <span className="placeholder-index" aria-hidden="true">01</span>
+            </div>
+            <span className="photo-note">IMAGEN PRINCIPAL</span>
+          </div>
+        </aside>
+      </section>
+    </main>
   );
 }
