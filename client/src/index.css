@@ -307,7 +307,7 @@ h1 span { color: var(--resin-yellow); }
 .community-section { position: relative; overflow: hidden; background: #EFEFEF; color: #161616; }
 .community-section::before { position: absolute; top: -7vw; left: -8vw; width: 32vw; height: 32vw; border: 1px solid rgba(20,20,20,.07); border-radius: 50%; content: ""; }
 .community-inner { position: relative; display: grid; grid-template-columns: minmax(270px, .72fr) minmax(0, 1.28fr); align-items: start; gap: clamp(42px, 6vw, 90px); width: min(100% - 48px, 1080px); margin: 0 auto; padding: clamp(76px, 9vw, 122px) 0; }
-.community-copy { position: relative; z-index: 1; max-width: 400px; }
+.community-copy { position: relative; z-index: 1; display: flex; align-self: stretch; flex-direction: column; justify-content: space-between; max-width: 400px; padding: 3px 0 4px; }
 .community-eyebrow { justify-content: flex-start; color: #151515; }
 .community-copy h2 { margin: 0; font-family: var(--font-display); font-size: clamp(33px, 3.2vw, 47px); font-weight: 800; letter-spacing: -.067em; line-height: .98; }
 .community-copy h2 span { color: var(--resin-yellow); }
@@ -358,6 +358,7 @@ h1 span { color: var(--resin-yellow); }
   .earning-fact p { grid-column: 2; font-size: 11px; }
   .earning-disclaimer { margin: -4px 5px 2px; font-size: 8px; }
   .community-inner { grid-template-columns: 1fr; gap: 35px; padding: 72px 0 78px; }
+  .community-copy { display: block; align-self: auto; padding: 0; }
   .community-copy h2 { font-size: clamp(35px, 10.3vw, 44px); }
   .community-cta { width: 100%; margin-top: 18px; }
   .community-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }

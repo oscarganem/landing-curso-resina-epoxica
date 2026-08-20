@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Alinear el bloque editorial izquierdo con la altura total de la galería de comunidad.
 - [x] Añadir CTA bajo el mensaje de comunidad y equilibrar el bloque editorial con la galería.
 - [x] Integrar las dos fotografías nuevas en la galería de seis imágenes, tres por fila.
 - [x] Retirar el eyebrow de comunidad, resaltar “500 alumnos” en amarillo y ampliar la galería a seis fotos.
