@@ -1,19 +1,6 @@
 # Lista de verificación
 
-- [x] Refinar los márgenes, alturas y alineaciones internas del recuadro económico.
-- [x] Ajustar la nueva foto al mismo encuadre visual que tenía la imagen anterior.
-- [x] Sustituir la imagen lateral del recuadro económico por el piso marmoleado proporcionado.
-- [x] Aumentar el tamaño de texto de las filas del recuadro económico.
-- [x] Eliminar el texto descriptivo y alinear la columna de datos con la imagen del recuadro económico.
-- [x] Añadir un recuadro informativo de oportunidad económica al final de la sección de técnicas.
-- [x] Centrar eyebrow y título de técnicas, y retirar el subtítulo.
-- [x] Crear la sección “Lo que aprenderás” con cuadrícula 2×2 de técnicas y fotografías.
-- [x] Equilibrar escala, altura y alineación del bloque izquierdo frente a los beneficios.
-- [x] Cambiar el encabezado de perfiles a “No importa a qué te dediques:”.
-- [x] Rediseñar el bloque izquierdo de audiencia con título contundente y tarjeta de experiencia previa.
-- [x] Compactar la franja de perfiles, actualizar su texto y ampliar ligeramente las etiquetas.
-- [x] Retirar números de los bullets y centrar la franja de perfiles a todo lo ancho.
-- [x] Añadir la sección “¿Para quién es este curso?” con fondo blanco, iconos y perfiles de audiencia.
+- [x] Añadir una sección de comunidad con fondo #EFEFEF, mensaje de alumnos y galería de cuatro fotografías.
 - [x] Ampliar el CTA, poner “PRECIO EXCLUSIVO” en mayúsculas y retirar el rótulo superior.
 - [x] Actualizar los beneficios 3 y 4, el texto del CTA y la prueba de confianza inferior.
 - [x] Mantener la landing en una única vista estática, sin datos remotos ni lógica innecesaria.
