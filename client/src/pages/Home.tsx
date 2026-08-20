@@ -207,7 +207,7 @@ export default function Home() {
 
           <aside className="earning-card" aria-labelledby="earning-title">
             <div className="earning-photo">
-              <img src="/manus-storage/piso-metalico_e19ee2d1.webp" alt="Piso de resina epóxica de alto brillo" loading="lazy" />
+              <img src="/manus-storage/piso-marmoleado-economico_fe9c195f.webp" alt="Piso marmoleado de resina epóxica" loading="lazy" />
             </div>
             <div className="earning-details">
               <h3 id="earning-title">¿Cuánto se cobra por este tipo de proyectos?</h3>

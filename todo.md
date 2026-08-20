@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Sustituir la imagen lateral del recuadro económico por el piso marmoleado proporcionado.
 - [x] Aumentar el tamaño de texto de las filas del recuadro económico.
 - [x] Eliminar el texto descriptivo y alinear la columna de datos con la imagen del recuadro económico.
 - [x] Añadir un recuadro informativo de oportunidad económica al final de la sección de técnicas.
