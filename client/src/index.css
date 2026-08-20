@@ -309,7 +309,7 @@ h1 span { color: var(--resin-yellow); }
 .community-inner { position: relative; display: grid; grid-template-columns: minmax(470px, 490px) minmax(0, 600px); align-items: center; justify-content: center; gap: clamp(28px, 3vw, 42px); width: min(100% - 72px, 1280px); margin: 0 auto; padding: clamp(76px, 9vw, 122px) 0; }
 .community-copy { position: relative; z-index: 1; align-self: center; max-width: 490px; }
 .community-eyebrow { justify-content: flex-start; color: #151515; }
-.community-copy h2 { margin: 0; font-family: var(--font-display); font-size: clamp(35px, 3vw, 50px); font-weight: 800; letter-spacing: -.095em; line-height: 1.02; }
+.community-copy h2 { margin: 0; font-family: var(--font-display); font-size: 48px; font-weight: 800; letter-spacing: -.095em; line-height: 1.02; }
 .community-line { display: block; white-space: nowrap; color: #151515; }
 .community-highlight { color: var(--resin-yellow); font-weight: 800; }
 .community-copy h2 em { display: block; margin-top: 27px; color: #151515; font-family: var(--font-body); font-size: clamp(17px, 1.4vw, 21px); font-style: normal; font-weight: 850; letter-spacing: -.03em; line-height: 1.15; }
