@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Refinar los márgenes, alturas y alineaciones internas del recuadro económico.
 - [x] Ajustar la nueva foto al mismo encuadre visual que tenía la imagen anterior.
 - [x] Sustituir la imagen lateral del recuadro económico por el piso marmoleado proporcionado.
 - [x] Aumentar el tamaño de texto de las filas del recuadro económico.
