@@ -211,7 +211,6 @@ export default function Home() {
             </div>
             <div className="earning-details">
               <h3 id="earning-title">¿Cuánto se cobra por este tipo de proyectos?</h3>
-              <p className="earning-intro">Estos son rangos de referencia que suelen manejarse en trabajos de resina epóxica según el tipo de acabado, la ciudad y las condiciones del proyecto.</p>
               <div className="earning-facts">
                 {earningFacts.map(({ icon: Icon, label, detail }) => (
                   <div className="earning-fact" key={label}>
