@@ -139,7 +139,7 @@ export default function Home() {
       <section className="community-section" aria-labelledby="community-title">
         <div className="community-inner">
           <div className="community-copy">
-            <h2 id="community-title"><span className="community-line">Más de <b className="community-highlight">500 alumnos</b></span><span className="community-line">ya perdieron el miedo a la resina</span><span className="community-line">y hoy crean acabados increíbles.</span><em>Tú puedes ser el siguiente.</em></h2>
+            <h2 id="community-title"><span className="community-line">Más de <b className="community-highlight">500 alumnos</b></span><span className="community-line">ya perdieron el miedo</span><span className="community-line">a la resina y hoy crean</span><span className="community-line">acabados increíbles.</span><em>Tú puedes ser el siguiente.</em></h2>
             <a className="community-cta" href="#lista-de-espera">Únete GRATIS a la lista prioritaria <MoveUpRight aria-hidden="true" /></a>
           </div>
           <div className="community-gallery" aria-label="Galería de alumnos durante las prácticas">
