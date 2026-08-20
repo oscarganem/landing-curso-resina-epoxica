@@ -272,27 +272,64 @@ h1 span { color: var(--resin-yellow); }
   text-transform: uppercase;
 }
 .audience-intro h2 {
-  max-width: 390px;
+  max-width: 430px;
   margin: 19px 0 0;
   font-family: var(--font-display);
-  font-size: clamp(38px, 4.05vw, 60px);
+  font-size: clamp(42px, 4.4vw, 66px);
   font-weight: 800;
-  letter-spacing: -.063em;
+  letter-spacing: -.07em;
   line-height: .98;
 }
 .audience-intro h2 span { color: var(--resin-yellow); }
 .experience-note {
+  position: relative;
   display: grid;
-  grid-template-columns: 36px 1fr;
-  gap: 10px;
-  max-width: 335px;
-  margin-top: 35px;
-  padding-top: 17px;
-  border-top: 2px solid #151515;
+  grid-template-columns: 68px 1fr;
+  align-items: center;
+  gap: 18px;
+  max-width: 400px;
+  min-height: 174px;
+  margin-top: 39px;
+  padding: 28px 24px;
+  border: 1px solid #dbdad6;
+  border-radius: 13px;
+  background: rgba(255,255,255,.66);
 }
-.experience-note > span { color: #9d9c97; font-family: var(--font-display); font-size: 11px; font-weight: 800; letter-spacing: .09em; }
-.experience-note p { margin: 0; color: #4b4a47; font-size: 13px; font-weight: 600; letter-spacing: -.01em; line-height: 1.45; }
-.experience-note strong { color: #161616; font-weight: 900; }
+.experience-note::before {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 154px;
+  height: 3px;
+  background: var(--resin-yellow);
+  content: "";
+}
+.experience-icon {
+  display: grid;
+  width: 68px;
+  height: 68px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--resin-yellow);
+}
+.experience-icon svg { width: 36px; height: 36px; color: #111; }
+.experience-copy strong {
+  display: block;
+  color: #121212;
+  font-family: var(--font-display);
+  font-size: clamp(20px, 1.67vw, 25px);
+  font-weight: 800;
+  letter-spacing: -.058em;
+  line-height: 1.04;
+}
+.experience-copy p {
+  margin: 13px 0 0;
+  color: #686763;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  line-height: 1.42;
+}
 
 .audience-content { min-width: 0; }
 .audience-list { margin: 0; padding: 0; list-style: none; }
@@ -348,8 +385,12 @@ h1 span { color: var(--resin-yellow); }
   .waitlist-cta { width: 100%; min-width: 0; }
   .audience-section::before { left: 20px; }
   .audience-layout { grid-template-columns: 1fr; row-gap: 43px; width: min(100% - 40px, 500px); padding-top: 70px; }
-  .audience-intro h2 { max-width: 340px; font-size: clamp(42px, 12.2vw, 54px); }
-  .experience-note { max-width: none; margin-top: 28px; }
+  .audience-intro h2 { max-width: 340px; font-size: clamp(48px, 13.3vw, 57px); }
+  .experience-note { grid-template-columns: 59px 1fr; gap: 16px; max-width: none; min-height: 165px; margin-top: 30px; padding: 24px 18px; }
+  .experience-icon { width: 59px; height: 59px; }
+  .experience-icon svg { width: 31px; height: 31px; }
+  .experience-copy strong { font-size: 22px; }
+  .experience-copy p { margin-top: 10px; font-size: 14px; }
   .audience-list li { grid-template-columns: 55px 1fr; gap: 15px; padding-bottom: 21px; }
   .audience-list li + li { padding-top: 21px; }
   .audience-icon { width: 50px; height: 50px; }

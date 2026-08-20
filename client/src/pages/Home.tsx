@@ -13,6 +13,7 @@ import {
   MoveUpRight,
   Palette,
   Ruler,
+  ShieldCheck,
   Users,
 } from "lucide-react";
 
@@ -122,10 +123,13 @@ export default function Home() {
         <div className="audience-layout">
           <div className="audience-intro">
             <div className="light-eyebrow">¿Para quién es este curso?</div>
-            <h2 id="audience-title">El curso intensivo es para ti si<span>…</span></h2>
+            <h2 id="audience-title">El curso<br />intensivo es<br />para ti si<span>…</span></h2>
             <div className="experience-note">
-              <span>01</span>
-              <p><strong>NO NECESITAS EXPERIENCIA PREVIA,</strong> te enseñaremos desde cero paso a paso.</p>
+              <span className="experience-icon" aria-hidden="true"><ShieldCheck strokeWidth={2.4} /></span>
+              <div className="experience-copy">
+                <strong>NO NECESITAS<br />EXPERIENCIA PREVIA</strong>
+                <p>Te enseñaremos desde cero,<br />paso a paso.</p>
+              </div>
             </div>
           </div>
 
