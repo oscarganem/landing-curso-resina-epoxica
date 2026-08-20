@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Añadir la sección de funcionamiento con tres pasos conectados y bloque final de curso presencial.
 - [x] Limpiar estilos inline repetidos del titular de comunidad y validar el tamaño de 48 px.
 - [x] Compactar y centrar la retícula de texto y galería de comunidad.
 - [x] Corregir el titular de comunidad con la división exacta en cuatro líneas.

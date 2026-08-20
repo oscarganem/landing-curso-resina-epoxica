@@ -7,16 +7,19 @@ import {
   Calculator,
   CalendarDays,
   Check,
+  ClipboardCheck,
   DollarSign,
   GraduationCap,
   HardHat,
   House,
   MapPin,
+  MonitorPlay,
   MoveUpRight,
   Palette,
   Ruler,
   ShieldCheck,
   TrendingUp,
+  TicketCheck,
   Users,
 } from "lucide-react";
 
@@ -74,6 +77,27 @@ const studentGallery = [
   { image: "/manus-storage/alumno-practica-azul-detalle_9d4f3565.webp", alt: "Alumno creando un acabado decorativo con resina" },
   { image: "/manus-storage/alumno-practica-mezcla_5961ed1f.webp", alt: "Alumnos preparando mezclas de resina durante la práctica" },
   { image: "/manus-storage/alumno-practica-granito_1e42691c.webp", alt: "Alumno aplicando sistema de granito antiderrapante" },
+];
+
+const prioritySteps = [
+  {
+    icon: ClipboardCheck,
+    number: "01",
+    title: "Regístrate GRATIS",
+    text: "Únete a la lista prioritaria dejando tu nombre, WhatsApp y correo.",
+  },
+  {
+    icon: MonitorPlay,
+    number: "02",
+    title: "Asiste a la clase online gratuita",
+    text: "Conoce al instructor, aprende contenido práctico y resuelve tus dudas antes del curso presencial.",
+  },
+  {
+    icon: TicketCheck,
+    number: "03",
+    title: "Accede a la preventa exclusiva",
+    text: "Durante la clase revelaremos el precio especial para miembros de la lista y tendrás prioridad para asegurar tu lugar antes de abrir inscripciones al público.",
+  },
 ];
 
 export default function Home() {
@@ -145,6 +169,37 @@ export default function Home() {
           <div className="community-gallery" aria-label="Galería de alumnos durante las prácticas">
             {studentGallery.map(({ image, alt }, index) => <figure className={`community-photo photo-${index + 1}`} key={image}><img src={image} alt={alt} loading="lazy" /></figure>)}
           </div>
+        </div>
+      </section>
+
+      <section className="process-section" aria-labelledby="process-title">
+        <div className="process-inner">
+          <div className="process-heading">
+            <div className="process-eyebrow"><span /> Así funciona</div>
+            <h2 id="process-title">Únete <span>gratis</span> a la lista prioritaria y<br />accede a nuestra clase online +<br /><b>precio exclusivo</b></h2>
+            <p>Te explicamos paso a paso cómo funciona tu acceso antes de abrir las inscripciones al público general.</p>
+          </div>
+
+          <div className="process-steps">
+            {prioritySteps.map(({ icon: Icon, number, title, text }) => (
+              <article className="process-step" key={number}>
+                <div className="process-step-top"><span className="process-icon"><Icon aria-hidden="true" strokeWidth={2.3} /></span><b>{number}</b></div>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
+
+          <aside className="process-course-note" aria-label="Detalles del curso presencial">
+            <span className="process-calendar"><CalendarDays aria-hidden="true" strokeWidth={2.25} /></span>
+            <div className="process-course-copy">
+              <h3>Curso presencial: <span>Playa del Carmen — 18 de septiembre</span></h3>
+              <ul>
+                <li><Check aria-hidden="true" strokeWidth={3} />Los miembros de la lista prioritaria tendrán acceso primero a los lugares antes de abrir las inscripciones al público general.</li>
+                <li><Check aria-hidden="true" strokeWidth={3} />Una vez dentro de la lista recibirás tu acceso a la clase online gratuita, donde revelaremos la oferta especial de preventa exclusiva para los miembros registrados.</li>
+              </ul>
+            </div>
+          </aside>
         </div>
       </section>
     </main>
