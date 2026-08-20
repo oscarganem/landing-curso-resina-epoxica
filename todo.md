@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Centrar eyebrow y título de técnicas, y retirar el subtítulo.
 - [x] Crear la sección “Lo que aprenderás” con cuadrícula 2×2 de técnicas y fotografías.
 - [x] Equilibrar escala, altura y alineación del bloque izquierdo frente a los beneficios.
 - [x] Cambiar el encabezado de perfiles a “No importa a qué te dediques:”.

@@ -183,7 +183,6 @@ export default function Home() {
           <div className="learning-heading">
             <div className="section-eyebrow"><span /> Lo que aprenderás</div>
             <h2 id="learning-title">Domina las principales técnicas de aplicación de <span>resina epóxica</span> en una sola clase práctica</h2>
-            <p>Aprende los fundamentos para crear pisos marmoleados, acabados metálicos, sistemas antiderrapantes, pisos 3D y aplicaciones decorativas.</p>
           </div>
 
           <div className="technique-grid">
