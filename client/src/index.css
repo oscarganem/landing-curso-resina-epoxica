@@ -307,11 +307,11 @@ h1 span { color: var(--resin-yellow); }
 .community-section { position: relative; overflow: hidden; background: #EFEFEF; color: #161616; }
 .community-section::before { position: absolute; top: -7vw; left: -8vw; width: 32vw; height: 32vw; border: 1px solid rgba(20,20,20,.07); border-radius: 50%; content: ""; }
 .community-inner { position: relative; display: grid; grid-template-columns: minmax(270px, .72fr) minmax(0, 1.28fr); align-items: start; gap: clamp(42px, 6vw, 90px); width: min(100% - 48px, 1080px); margin: 0 auto; padding: clamp(76px, 9vw, 122px) 0; }
-.community-copy { position: relative; z-index: 1; display: flex; align-self: stretch; flex-direction: column; justify-content: space-between; max-width: 400px; padding: 3px 0 4px; }
+.community-copy { position: relative; z-index: 1; display: flex; align-self: stretch; flex-direction: column; justify-content: space-between; max-width: 370px; padding: 3px 0 4px; }
 .community-eyebrow { justify-content: flex-start; color: #151515; }
-.community-copy h2 { margin: 0; font-family: var(--font-display); font-size: clamp(33px, 3.2vw, 47px); font-weight: 800; letter-spacing: -.067em; line-height: .98; }
+.community-copy h2 { margin: 0; font-family: var(--font-display); font-size: clamp(39px, 3.75vw, 54px); font-weight: 800; letter-spacing: -.07em; line-height: .94; }
 .community-copy h2 span { color: var(--resin-yellow); }
-.community-copy h2 em { display: block; margin-top: 12px; color: #151515; font-family: var(--font-body); font-size: clamp(15px, 1.22vw, 18px); font-style: normal; font-weight: 850; letter-spacing: -.03em; line-height: 1.15; }
+.community-copy h2 em { display: block; margin-top: 13px; color: #151515; font-family: var(--font-body); font-size: clamp(16px, 1.3vw, 19px); font-style: normal; font-weight: 850; letter-spacing: -.03em; line-height: 1.15; }
 .community-cta { display: inline-flex; align-items: center; justify-content: center; min-height: 49px; margin-top: 22px; padding: 0 17px; border: 1px solid var(--resin-yellow); border-radius: 4px; background: var(--resin-yellow); color: #121212; font-size: 12px; font-weight: 900; letter-spacing: -.015em; text-decoration: none; transition: transform 160ms cubic-bezier(.23,1,.32,1), background 160ms ease, color 160ms ease; }
 .community-cta svg { width: 16px; height: 16px; margin-left: 8px; }
 .community-cta:hover { background: transparent; color: #151515; transform: translateY(-2px); }
