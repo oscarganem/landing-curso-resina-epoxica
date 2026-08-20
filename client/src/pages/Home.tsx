@@ -8,7 +8,7 @@ const benefits = [
   "Aprende a crear acabados marmoleados, metálicos, unicolor y 3D.",
   "Crea pisos con hojuelas y granito antiderrapante.",
   "Obtén acceso GRATIS a nuestra clase online previa al curso.",
-  "Accede a un precio exclusivo de preventa.",
+  "Accede a un PRECIO EXCLUSIVO de preventa.",
 ];
 
 export default function Home() {
@@ -25,9 +25,6 @@ export default function Home() {
           />
           <span>RESINA <b>PRO</b></span>
         </a>
-        <div className="header-detail" aria-hidden="true">
-          <i /> Formación presencial
-        </div>
       </header>
 
       <section className="hero" id="inicio" aria-labelledby="course-title">

@@ -185,7 +185,7 @@ h1 span { color: var(--resin-yellow); }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 250px;
+  min-width: 300px;
   height: 54px;
   margin-top: 25px;
   border: 1px solid var(--resin-yellow);
@@ -245,5 +245,5 @@ h1 span { color: var(--resin-yellow); }
   .photo-frame { width: min(88%, 390px); margin: 0 auto; }
   .photo-placeholder { min-height: 360px; }
   .benefit-list { font-size: 12.5px; }
-  .waitlist-cta { width: 100%; }
+  .waitlist-cta { width: 100%; min-width: 0; }
 }
