@@ -145,7 +145,7 @@ export default function Home() {
           </div>
 
           <div className="audience-groups" aria-label="Perfiles para quienes está dirigido el curso">
-            <p>Un curso ideal para</p>
+            <p>No importa a qué te dediques:</p>
             <div>
               {audienceGroups.map(({ icon: Icon, label }) => (
                 <span key={label}><Icon aria-hidden="true" />{label}</span>

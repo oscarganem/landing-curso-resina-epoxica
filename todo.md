@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Cambiar el encabezado de perfiles a “No importa a qué te dediques:”.
 - [x] Rediseñar el bloque izquierdo de audiencia con título contundente y tarjeta de experiencia previa.
 - [x] Compactar la franja de perfiles, actualizar su texto y ampliar ligeramente las etiquetas.
 - [x] Retirar números de los bullets y centrar la franja de perfiles a todo lo ancho.
