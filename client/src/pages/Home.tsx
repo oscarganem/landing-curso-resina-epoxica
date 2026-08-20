@@ -4,8 +4,10 @@
  */
 import {
   BriefcaseBusiness,
+  Calculator,
   CalendarDays,
   Check,
+  DollarSign,
   GraduationCap,
   HardHat,
   Home as House,
@@ -14,6 +16,7 @@ import {
   Palette,
   Ruler,
   ShieldCheck,
+  TrendingUp,
   Users,
 } from "lucide-react";
 
@@ -72,6 +75,12 @@ const techniques = [
     image: "/manus-storage/mesa-rio_c4ac227a.webp",
     position: "center 48%",
   },
+];
+
+const earningFacts = [
+  { icon: DollarSign, label: "Referencia de cobro", detail: "$1,000 a $1,500 MXN por m²" },
+  { icon: Calculator, label: "Ejemplo práctico", detail: "Una casa de 100 m² puede cotizarse entre $100,000 y $150,000 MXN" },
+  { icon: TrendingUp, label: "Servicio de alto valor", detail: "Un solo proyecto bien cotizado puede representar una oportunidad importante de ingresos." },
 ];
 
 export default function Home() {
@@ -195,6 +204,26 @@ export default function Home() {
               </article>
             ))}
           </div>
+
+          <aside className="earning-card" aria-labelledby="earning-title">
+            <div className="earning-photo">
+              <img src="/manus-storage/piso-metalico_e19ee2d1.webp" alt="Piso de resina epóxica de alto brillo" loading="lazy" />
+            </div>
+            <div className="earning-details">
+              <h3 id="earning-title">¿Cuánto se cobra por este tipo de proyectos?</h3>
+              <p className="earning-intro">Estos son rangos de referencia que suelen manejarse en trabajos de resina epóxica según el tipo de acabado, la ciudad y las condiciones del proyecto.</p>
+              <div className="earning-facts">
+                {earningFacts.map(({ icon: Icon, label, detail }) => (
+                  <div className="earning-fact" key={label}>
+                    <span className="earning-icon" aria-hidden="true"><Icon strokeWidth={2.2} /></span>
+                    <strong>{label}</strong>
+                    <p>{detail}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <p className="earning-disclaimer">*Los precios son aproximados y pueden variar según superficie, complejidad, materiales, ciudad y condiciones del trabajo.</p>
+          </aside>
         </div>
       </section>
     </main>

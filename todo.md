@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Añadir un recuadro informativo de oportunidad económica al final de la sección de técnicas.
 - [x] Centrar eyebrow y título de técnicas, y retirar el subtítulo.
 - [x] Crear la sección “Lo que aprenderás” con cuadrícula 2×2 de técnicas y fotografías.
 - [x] Equilibrar escala, altura y alineación del bloque izquierdo frente a los beneficios.
