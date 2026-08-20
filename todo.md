@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Compactar y centrar la retícula de texto y galería de comunidad.
 - [x] Corregir el titular de comunidad con la división exacta en cuatro líneas.
 - [x] Corregir el titular de comunidad a tres líneas exactas según la referencia.
 - [x] Reestructurar el bloque de comunidad con texto amplio, centrado vertical y CTA de lista prioritaria.
