@@ -134,21 +134,18 @@ export default function Home() {
               {audienceReasons.map(({ icon: Icon, text }, index) => (
                 <li key={text}>
                   <span className="audience-icon" aria-hidden="true"><Icon strokeWidth={2.1} /></span>
-                  <div>
-                    <span className="audience-number">0{index + 1}</span>
-                    <p>{text}</p>
-                  </div>
+                  <p>{text}</p>
                 </li>
               ))}
             </ul>
+          </div>
 
-            <div className="audience-groups" aria-label="Perfiles para quienes está dirigido el curso">
-              <p>Una formación práctica para</p>
-              <div>
-                {audienceGroups.map(({ icon: Icon, label }) => (
-                  <span key={label}><Icon aria-hidden="true" />{label}</span>
-                ))}
-              </div>
+          <div className="audience-groups" aria-label="Perfiles para quienes está dirigido el curso">
+            <p>Una formación práctica para</p>
+            <div>
+              {audienceGroups.map(({ icon: Icon, label }) => (
+                <span key={label}><Icon aria-hidden="true" />{label}</span>
+              ))}
             </div>
           </div>
         </div>

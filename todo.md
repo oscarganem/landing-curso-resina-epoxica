@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Retirar números de los bullets y centrar la franja de perfiles a todo lo ancho.
 - [x] Añadir la sección “¿Para quién es este curso?” con fondo blanco, iconos y perfiles de audiencia.
 - [x] Ampliar el CTA, poner “PRECIO EXCLUSIVO” en mayúsculas y retirar el rótulo superior.
 - [x] Actualizar los beneficios 3 y 4, el texto del CTA y la prueba de confianza inferior.
