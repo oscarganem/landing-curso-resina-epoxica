@@ -72,6 +72,8 @@ const studentGallery = [
   { image: "/manus-storage/alumno-practica-azul_ac182caa.webp", alt: "Alumno aplicando resina azul durante el taller" },
   { image: "/manus-storage/alumno-practica-negra_f6afd7d8.webp", alt: "Alumno aplicando resina negra durante el taller" },
   { image: "/manus-storage/alumno-practica-azul-detalle_9d4f3565.webp", alt: "Alumno creando un acabado decorativo con resina" },
+  { image: "/manus-storage/alumno-practica-mezcla_5961ed1f.webp", alt: "Alumnos preparando mezclas de resina durante la práctica" },
+  { image: "/manus-storage/alumno-practica-granito_1e42691c.webp", alt: "Alumno aplicando sistema de granito antiderrapante" },
 ];
 
 export default function Home() {
@@ -137,7 +139,6 @@ export default function Home() {
       <section className="community-section" aria-labelledby="community-title">
         <div className="community-inner">
           <div className="community-copy">
-            <div className="community-eyebrow"><span /> Comunidad Resina Pro</div>
             <h2 id="community-title">Más de <span>500 alumnos</span> ya han perdido el miedo a la resina y están creando acabados increíbles. <em>¡El próximo puedes ser tú!</em></h2>
           </div>
           <div className="community-gallery" aria-label="Galería de alumnos durante las prácticas">

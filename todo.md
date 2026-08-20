@@ -1,5 +1,7 @@
 # Lista de verificación
 
+- [x] Integrar las dos fotografías nuevas en la galería de seis imágenes, tres por fila.
+- [x] Retirar el eyebrow de comunidad, resaltar “500 alumnos” en amarillo y ampliar la galería a seis fotos.
 - [x] Añadir una sección de comunidad con fondo #EFEFEF, mensaje de alumnos y galería de cuatro fotografías.
 - [x] Ampliar el CTA, poner “PRECIO EXCLUSIVO” en mayúsculas y retirar el rótulo superior.
 - [x] Actualizar los beneficios 3 y 4, el texto del CTA y la prueba de confianza inferior.
