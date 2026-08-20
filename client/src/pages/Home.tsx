@@ -51,6 +51,29 @@ const audienceGroups = [
   { icon: HardHat, label: "Albañiles" },
 ];
 
+const techniques = [
+  {
+    title: "Pisos marmoleados, metálicos y unicolor",
+    image: "/manus-storage/piso-metalico_e19ee2d1.webp",
+    position: "center center",
+  },
+  {
+    title: "Pisos con hojuela y granito antiderrapante",
+    image: "/manus-storage/piso-antiderrapante_d347b0f3.webp",
+    position: "center center",
+  },
+  {
+    title: "Pisos 3D",
+    image: "/manus-storage/piso-3d_69280b5d.webp",
+    position: "center 52%",
+  },
+  {
+    title: "Mesas tipo río y decoraciones",
+    image: "/manus-storage/mesa-rio_c4ac227a.webp",
+    position: "center 48%",
+  },
+];
+
 export default function Home() {
   return (
     <main className="landing-shell">
@@ -151,6 +174,27 @@ export default function Home() {
                 <span key={label}><Icon aria-hidden="true" />{label}</span>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="learning-section" aria-labelledby="learning-title">
+        <div className="learning-inner">
+          <div className="learning-heading">
+            <div className="section-eyebrow"><span /> Lo que aprenderás</div>
+            <h2 id="learning-title">Domina las principales técnicas de aplicación de <span>resina epóxica</span> en una sola clase práctica</h2>
+            <p>Aprende los fundamentos para crear pisos marmoleados, acabados metálicos, sistemas antiderrapantes, pisos 3D y aplicaciones decorativas.</p>
+          </div>
+
+          <div className="technique-grid">
+            {techniques.map(({ title, image, position }) => (
+              <article className="technique-card" key={title}>
+                <img src={image} alt={title} loading="lazy" style={{ objectPosition: position }} />
+                <div className="technique-shade" aria-hidden="true" />
+                <div className="technique-status"><Check aria-hidden="true" strokeWidth={3} /> Incluido en el taller presencial</div>
+                <h3>{title}</h3>
+              </article>
+            ))}
           </div>
         </div>
       </section>
