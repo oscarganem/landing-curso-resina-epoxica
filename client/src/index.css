@@ -284,13 +284,13 @@ h1 span { color: var(--resin-yellow); }
 .experience-note {
   position: relative;
   display: grid;
-  grid-template-columns: 68px 1fr;
+  grid-template-columns: 64px 1fr;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
   max-width: 400px;
-  min-height: 174px;
-  margin-top: 39px;
-  padding: 28px 24px;
+  min-height: 151px;
+  margin-top: 30px;
+  padding: 22px 22px;
   border: 1px solid #dbdad6;
   border-radius: 13px;
   background: rgba(255,255,255,.66);
@@ -306,24 +306,24 @@ h1 span { color: var(--resin-yellow); }
 }
 .experience-icon {
   display: grid;
-  width: 68px;
-  height: 68px;
+  width: 64px;
+  height: 64px;
   place-items: center;
   border-radius: 50%;
   background: var(--resin-yellow);
 }
-.experience-icon svg { width: 36px; height: 36px; color: #111; }
+.experience-icon svg { width: 34px; height: 34px; color: #111; }
 .experience-copy strong {
   display: block;
   color: #121212;
   font-family: var(--font-display);
-  font-size: clamp(20px, 1.67vw, 25px);
+  font-size: clamp(19px, 1.55vw, 23px);
   font-weight: 800;
   letter-spacing: -.058em;
   line-height: 1.04;
 }
 .experience-copy p {
-  margin: 13px 0 0;
+  margin: 10px 0 0;
   color: #686763;
   font-size: 15px;
   font-weight: 600;
