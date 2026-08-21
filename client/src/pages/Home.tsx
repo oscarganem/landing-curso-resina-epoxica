@@ -164,7 +164,7 @@ export default function Home() {
         <div className="community-inner">
           <div className="community-copy">
             <h2 id="community-title"><span className="community-line">Más de <b className="community-highlight">500 alumnos</b></span><span className="community-line">ya perdieron el miedo</span><span className="community-line">a la resina y hoy crean</span><span className="community-line">acabados increíbles.</span><em>Tú puedes ser el siguiente.</em></h2>
-            <a className="community-cta" href="#lista-de-espera">Únete GRATIS a la lista prioritaria <MoveUpRight aria-hidden="true" /></a>
+            <a className="community-cta" href="#lista-de-espera">Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></a>
           </div>
           <div className="community-gallery" aria-label="Galería de alumnos durante las prácticas">
             {studentGallery.map(({ image, alt }, index) => <figure className={`community-photo photo-${index + 1}`} key={image}><img src={image} alt={alt} loading="lazy" /></figure>)}
