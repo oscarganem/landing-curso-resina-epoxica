@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Actualizar el titular con lista prioritaria y descuento exclusivo de preventa.
 - [x] Validar el CTA de comunidad con el texto “Únete GRATIS a la lista de espera”.
 - [x] Cambiar el titular a “Únete gratis a la lista espera y”.
 - [x] Consolidar los tamaños de 28 px y 16 px del bloque de curso presencial sin estilos inline redundantes.
