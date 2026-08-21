@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Cambiar el texto del primer paso a “Únete a la lista de espera”.
 - [x] Actualizar el titular con lista prioritaria y descuento exclusivo de preventa.
 - [x] Validar el CTA de comunidad con el texto “Únete GRATIS a la lista de espera”.
 - [x] Cambiar el titular a “Únete gratis a la lista espera y”.

@@ -84,7 +84,7 @@ const prioritySteps = [
     icon: ClipboardCheck,
     number: "01",
     title: "Regístrate GRATIS",
-    text: "Únete a la lista prioritaria dejando tu nombre, WhatsApp y correo.",
+    text: "Únete a la lista de espera dejando tu nombre, WhatsApp y correo.",
   },
   {
     icon: MonitorPlay,
