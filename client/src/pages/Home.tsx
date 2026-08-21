@@ -267,7 +267,7 @@ export default function Home() {
           <div className="about-copy">
             <p className="about-greeting">¡Hola! Somos <strong>Oscar Cárdenas</strong> y <strong>Oscar Ganem</strong>.</p>
             <div className="about-prose">
-              <p>Somos <strong>Grupo Ocares</strong>. Desde hace años nos dedicamos a la construcción, remodelación y aplicación de acabados, trabajando directamente en obra y enfrentándonos a los mismos retos que cualquier profesional de la construcción.</p>
+              <p>Somos <strong>Grupo Ocares</strong>. Desde hace años nos dedicamos a la construcción, remodelación y aplicación de acabados, <strong>trabajando directamente en obra</strong> y enfrentándonos a los mismos retos que cualquier profesional de la construcción.</p>
               <p>Con el tiempo decidimos llevar toda esa experiencia a nuestros <strong>cursos presenciales</strong> y comenzar a enseñar a otras personas lo que nosotros mismos hemos aprendido trabajando en campo.</p>
               <p>Hoy hemos capacitado a <strong>cientos de alumnos</strong> en distintas ciudades de México, quienes han aplicado estos conocimientos en proyectos personales, en su trabajo e incluso para iniciar sus propios negocios.</p>
             </div>

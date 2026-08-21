@@ -1,5 +1,7 @@
 # Lista de verificación
 
+- [x] Resaltar “trabajando directamente en obra” en el primer párrafo institucional.
+- [x] Consolidar a 18 px el saludo institucional sin estilos inline del editor visual.
 - [x] Actualizar los párrafos primero y tercero de la presentación institucional con el copy solicitado.
 - [x] Actualizar el primer párrafo institucional con el copy solicitado desde el editor visual.
 - [x] Ajustar a 15 px y peso regular los párrafos institucionales, reservando la negrita para énfasis puntuales.
