@@ -176,8 +176,7 @@ export default function Home() {
         <div className="process-inner">
           <div className="process-heading">
             <div className="process-eyebrow"><span /> Así funciona</div>
-            <h2 id="process-title">Únete <span>gratis</span> a la lista prioritaria y<br />accede a nuestra clase online +<br /><b>precio exclusivo</b></h2>
-            <p>Te explicamos paso a paso cómo funciona tu acceso antes de abrir las inscripciones al público general.</p>
+            <h2 id="process-title"><span className="process-line">Únete <b>gratis</b> a la lista prioritaria y</span><span className="process-line">accede a nuestra clase online</span><strong className="process-line">+ precio exclusivo</strong></h2>
           </div>
 
           <div className="process-steps">

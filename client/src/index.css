@@ -376,7 +376,8 @@ h1 span { color: var(--resin-yellow); }
 .process-eyebrow { display: flex; align-items: center; justify-content: center; gap: 11px; color: var(--resin-yellow); font-size: 13px; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
 .process-eyebrow span { width: 12px; height: 12px; background: var(--resin-yellow); transform: rotate(45deg); }
 .process-heading h2 { margin: 19px auto 0; font-family: var(--font-display); font-size: clamp(38px, 4vw, 59px); font-weight: 800; letter-spacing: -.07em; line-height: .97; }
-.process-heading h2 span, .process-heading h2 b { color: var(--resin-yellow); font-weight: inherit; }
+.process-line { display: block; white-space: nowrap; }
+.process-heading h2 b, .process-heading h2 strong { color: var(--resin-yellow); font-weight: inherit; }
 .process-heading > p { max-width: 640px; margin: 19px auto 0; color: #cbc9c4; font-size: clamp(15px, 1.25vw, 18px); font-weight: 650; letter-spacing: -.018em; line-height: 1.38; }
 .process-steps { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 36px; }
 .process-steps::before { position: absolute; z-index: 0; top: 120px; right: 15%; left: 15%; border-top: 3px dotted var(--resin-yellow); content: ""; }
@@ -415,7 +416,7 @@ h1 span { color: var(--resin-yellow); }
   .process-eyebrow { font-size: 10px; }
   .process-eyebrow span { width: 9px; height: 9px; }
   .process-heading h2 { font-size: clamp(37px, 10.9vw, 50px); line-height: .98; }
-  .process-heading h2 br { display: none; }
+  .process-line { white-space: normal; }
   .process-heading > p { margin-top: 17px; font-size: 14px; }
   .process-steps { grid-template-columns: 1fr; gap: 13px; margin-top: 34px; }
   .process-step { min-height: 0; padding: 20px; }
