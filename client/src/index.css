@@ -444,10 +444,10 @@ h1 span { color: var(--resin-yellow); }
 .included-section::before { position: absolute; top: -14vw; right: -12vw; width: 38vw; height: 38vw; border: 1px solid rgba(20,20,20,.05); border-radius: 50%; content: ""; }
 .included-inner { position: relative; z-index: 1; width: min(100% - 48px, 1080px); margin: 0 auto; padding: clamp(78px, 9vw, 120px) 0 clamp(84px, 9vw, 122px); }
 .included-heading { max-width: 900px; margin: 0 auto; text-align: center; }
-.included-eyebrow { display: flex; align-items: center; justify-content: center; gap: 16px; color: #c69e00; font-size: 11px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
-.included-eyebrow span { display: block; width: 47px; height: 2px; background: var(--resin-yellow); }
+.included-eyebrow { display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--resin-yellow); font-size: 11px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.included-eyebrow span { display: block; width: 9px; height: 9px; background: var(--resin-yellow); transform: rotate(45deg); }
 .included-heading h2 { max-width: 870px; margin: 22px auto 0; font-family: var(--font-display); font-size: clamp(36px, 4.05vw, 59px); font-weight: 800; letter-spacing: -.07em; line-height: .98; }
-.included-heading h2 span { color: #c69e00; }
+.included-heading h2 span { color: var(--resin-yellow); }
 .included-heading p { max-width: 770px; margin: 20px auto 0; color: #575653; font-size: clamp(15px, 1.35vw, 19px); font-weight: 600; letter-spacing: -.018em; line-height: 1.45; }
 .module-area { position: relative; margin-top: 56px; }
 .module-label { position: absolute; z-index: 1; top: -16px; left: 50%; min-width: 205px; padding: 8px 14px; border-radius: 5px; background: var(--resin-yellow); color: #171717; font-size: 12px; font-weight: 900; letter-spacing: .04em; text-align: center; text-transform: uppercase; transform: translateX(-50%); }
@@ -477,7 +477,7 @@ h1 span { color: var(--resin-yellow); }
 @media (max-width: 680px) {
   .included-inner { width: min(100% - 40px, 500px); padding: 73px 0 78px; }
   .included-eyebrow { gap: 11px; font-size: 10px; }
-  .included-eyebrow span { width: 25px; }
+  .included-eyebrow span { width: 8px; height: 8px; }
   .included-heading h2 { font-size: clamp(37px, 10.4vw, 50px); }
   .included-heading p { margin-top: 16px; font-size: 14px; }
   .module-area { margin-top: 42px; }
