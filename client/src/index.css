@@ -465,7 +465,7 @@ h1 span { color: var(--resin-yellow); }
 .resource-icon { display: grid; width: 82px; height: 82px; place-items: center; border-radius: 50%; background: var(--resin-yellow); color: #151515; }
 .resource-icon svg { width: 43px; height: 43px; }
 .resource-card h3 { margin: 0; color: #171717; font-family: var(--font-display); font-size: clamp(19px, 1.72vw, 25px); font-weight: 800; letter-spacing: -.055em; line-height: 1.04; }
-.resource-card p { margin: 10px 0 0; color: #5b5955; font-size: clamp(13px, 1.12vw, 16px); font-weight: 600; letter-spacing: -.015em; line-height: 1.34; }
+.resource-card p { margin: 10px 0 0; color: #5b5955; font-size: 12px; font-weight: 600; letter-spacing: -.015em; line-height: 1.34; }
 
 @media (max-width: 850px) {
   .module-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -494,5 +494,5 @@ h1 span { color: var(--resin-yellow); }
   .resource-icon { width: 64px; height: 64px; }
   .resource-icon svg { width: 34px; height: 34px; }
   .resource-card h3 { font-size: 21px; }
-  .resource-card p { margin-top: 6px; font-size: 13px; }
+  .resource-card p { margin-top: 6px; font-size: 12px; }
 }
