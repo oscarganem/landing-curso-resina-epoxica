@@ -233,8 +233,16 @@ export default function Home() {
           <header className="included-heading">
             <div className="included-eyebrow"><span /> Todo lo que recibirás <span /></div>
             <h2 id="included-title">Todo lo que necesitas para aprender, practicar y empezar a aplicar <span>resina</span> por tu cuenta</h2>
-            <p>Tu inscripción incluye una estructura clara de aprendizaje y recursos prácticos para que no salgas con dudas.</p>
           </header>
+
+          <div className="resource-grid">
+            {includedResources.map(({ icon: Icon, title, text }) => (
+              <article className="resource-card" key={title}>
+                <span className="resource-icon"><Icon aria-hidden="true" strokeWidth={1.9} /></span>
+                <div><h3>{title}</h3><p>{text}</p></div>
+              </article>
+            ))}
+          </div>
 
           <div className="module-area">
             <div className="module-label">4 módulos prácticos</div>
@@ -248,15 +256,6 @@ export default function Home() {
                 </article>
               ))}
             </div>
-          </div>
-
-          <div className="resource-grid">
-            {includedResources.map(({ icon: Icon, title, text }) => (
-              <article className="resource-card" key={title}>
-                <span className="resource-icon"><Icon aria-hidden="true" strokeWidth={1.9} /></span>
-                <div><h3>{title}</h3><p>{text}</p></div>
-              </article>
-            ))}
           </div>
         </div>
       </section>
