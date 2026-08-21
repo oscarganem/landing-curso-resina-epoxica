@@ -289,7 +289,6 @@ export default function Home() {
       <section className="venue-section" aria-labelledby="venue-title">
         <div className="venue-inner">
           <header className="venue-heading">
-            <div className="venue-kicker"><span /> Sede del curso</div>
             <h2 id="venue-title">¿Dónde y cuándo se realizará el curso?</h2>
           </header>
           <div className="venue-layout">
