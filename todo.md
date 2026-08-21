@@ -1,5 +1,7 @@
 # Lista de verificación
 
+- [x] Centrar el título institucional a todo el ancho al inicio de la sección.
+- [x] Retirar la etiqueta “Grupo Ocares” y el pie de foto institucional.
 - [x] Añadir sección institucional de Grupo Ocares con texto y fotografía del equipo.
 - [x] Limpiar estilos repetidos y consolidar descripciones de recursos a 12 px.
 - [x] Eliminar el eyebrow “Todo lo que recibirás” de la sección de contenidos.

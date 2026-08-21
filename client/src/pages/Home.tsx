@@ -260,10 +260,11 @@ export default function Home() {
       </section>
 
       <section className="about-section" aria-labelledby="about-title">
+        <header className="about-heading">
+          <h2 id="about-title">¿Quiénes somos y por qué podemos ayudarte?</h2>
+        </header>
         <div className="about-inner">
           <div className="about-copy">
-            <div className="about-eyebrow"><span /> Grupo Ocares</div>
-            <h2 id="about-title">¿Quiénes somos y por qué podemos ayudarte?</h2>
             <p className="about-greeting">¡Hola! Somos <strong>Oscar Cárdenas</strong> y <strong>Oscar Ganem</strong>.</p>
             <div className="about-prose">
               <p>Somos el equipo detrás de Grupo Ocares. Desde hace años nos dedicamos al mundo de la construcción, remodelación y aplicación de acabados, trabajando directamente en obra y enfrentándonos a los mismos retos que cualquier profesional de la construcción encuentra en un proyecto real.</p>
@@ -278,7 +279,6 @@ export default function Home() {
           </div>
           <figure className="about-photo">
             <div className="about-photo-frame"><img src="/manus-storage/grupo-ocares-team_ac748c58.webp" alt="Oscar Cárdenas y Oscar Ganem, equipo de Grupo Ocares" loading="lazy" /></div>
-            <figcaption><span /> Oscar Cárdenas &amp; Oscar Ganem · Grupo Ocares</figcaption>
           </figure>
         </div>
       </section>
