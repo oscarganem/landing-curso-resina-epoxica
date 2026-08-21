@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Actualizar el primer párrafo institucional con el copy solicitado desde el editor visual.
 - [x] Ajustar a 15 px y peso regular los párrafos institucionales, reservando la negrita para énfasis puntuales.
 - [x] Centrar el título institucional a todo el ancho al inicio de la sección.
 - [x] Retirar la etiqueta “Grupo Ocares” y el pie de foto institucional.
