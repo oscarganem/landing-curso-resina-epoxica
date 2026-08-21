@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Añadir una sección negra de prueba social con la foto 4 como imagen principal y cuatro fotos complementarias.
 - [x] Actualizar la sede del curso a CANACO Servitur Playa del Carmen, con nuevo horario, dirección y mapa.
 - [x] Eliminar el rótulo “Sede del curso” y consolidar el espaciado de detalles de ubicación.
 - [x] Reforzar con amarillo de marca, iconografía y detalles editoriales la sección de ubicación.
