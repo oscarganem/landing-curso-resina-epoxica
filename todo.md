@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Consolidar los tamaños de 28 px y 16 px del bloque de curso presencial sin estilos inline redundantes.
 - [x] Eliminar el subtítulo de funcionamiento y dejar el titular en tres líneas exactas.
 - [x] Ajustar ancho, márgenes y separación interna de la sección de funcionamiento.
 - [x] Añadir la sección de funcionamiento con tres pasos conectados y bloque final de curso presencial.

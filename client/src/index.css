@@ -393,10 +393,10 @@ h1 span { color: var(--resin-yellow); }
 .process-calendar { width: 104px; height: 104px; }
 .process-calendar svg { width: 54px; height: 54px; }
 .process-course-copy { min-width: 0; padding-left: 28px; border-left: 1px solid rgba(255,255,255,.35); }
-.process-course-copy h3 { margin: 0; color: #fbfaf7; font-family: var(--font-display); font-size: clamp(25px, 2.35vw, 37px); font-weight: 800; letter-spacing: -.06em; line-height: 1.02; }
+.process-course-copy h3 { margin: 0; color: #fbfaf7; font-family: var(--font-display); font-size: 28px; font-weight: 800; letter-spacing: -.06em; line-height: 1.02; }
 .process-course-copy h3 span { color: var(--resin-yellow); }
 .process-course-copy ul { display: grid; gap: 10px; margin: 15px 0 0; padding: 0; list-style: none; }
-.process-course-copy li { display: flex; align-items: flex-start; gap: 10px; color: #d9d7d2; font-size: clamp(14px, 1.15vw, 17px); font-weight: 600; letter-spacing: -.015em; line-height: 1.35; }
+.process-course-copy li { display: flex; align-items: flex-start; gap: 10px; color: #d9d7d2; font-size: 16px; font-weight: 600; letter-spacing: -.015em; line-height: 1.35; }
 .process-course-copy li svg { flex: 0 0 auto; width: 19px; height: 19px; margin-top: 1px; color: var(--resin-yellow); }
 
 @media (max-width: 850px) {
