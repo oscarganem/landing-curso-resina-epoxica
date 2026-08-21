@@ -90,13 +90,13 @@ const prioritySteps = [
     icon: MonitorPlay,
     number: "02",
     title: "Asiste a la clase online gratuita",
-    text: "Conoce al instructor, aprende contenido práctico y resuelve tus dudas antes del curso presencial.",
+    text: "Aprenderás las 5 capas que componen un piso epóxica con una demostración en vivo y resolveremos tus dudas sobre el curso presencial.",
   },
   {
     icon: TicketCheck,
     number: "03",
-    title: "Accede a la preventa exclusiva",
-    text: "Durante la clase revelaremos el precio especial para miembros de la lista y tendrás prioridad para asegurar tu lugar antes de abrir inscripciones al público.",
+    title: "Descubre tu descuento de preventa",
+    text: "Al final de la clase en vivo revelaremos el precio especial disponible únicamente para quienes se registraron en la lista.",
   },
 ];
 
@@ -199,6 +199,7 @@ export default function Home() {
               </ul>
             </div>
           </aside>
+          <a className="process-cta" href="#lista-de-espera">Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></a>
         </div>
       </section>
     </main>

@@ -1,5 +1,7 @@
 # Lista de verificación
 
+- [x] Añadir un CTA de ancho completo debajo del recuadro de curso presencial.
+- [x] Actualizar el contenido de la clase en vivo y el descuento de preventa en los pasos dos y tres.
 - [x] Cambiar el texto del primer paso a “Únete a la lista de espera”.
 - [x] Actualizar el titular con lista prioritaria y descuento exclusivo de preventa.
 - [x] Validar el CTA de comunidad con el texto “Únete GRATIS a la lista de espera”.

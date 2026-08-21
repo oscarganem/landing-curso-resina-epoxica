@@ -398,6 +398,10 @@ h1 span { color: var(--resin-yellow); }
 .process-course-copy ul { display: grid; gap: 10px; margin: 15px 0 0; padding: 0; list-style: none; }
 .process-course-copy li { display: flex; align-items: flex-start; gap: 10px; color: #d9d7d2; font-size: 16px; font-weight: 600; letter-spacing: -.015em; line-height: 1.35; }
 .process-course-copy li svg { flex: 0 0 auto; width: 19px; height: 19px; margin-top: 1px; color: var(--resin-yellow); }
+.process-cta { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 58px; margin-top: 16px; border: 1px solid var(--resin-yellow); border-radius: 6px; background: var(--resin-yellow); color: #111; font-size: 15px; font-weight: 900; letter-spacing: -.02em; text-decoration: none; transition: transform 160ms cubic-bezier(.23,1,.32,1), background 160ms ease, color 160ms ease; }
+.process-cta svg { width: 18px; height: 18px; margin-left: 9px; }
+.process-cta:hover { background: transparent; color: var(--resin-yellow); transform: translateY(-2px); }
+.process-cta:active { transform: scale(.985); }
 
 @media (max-width: 850px) {
   .process-inner { width: min(100% - 48px, 760px); }
@@ -432,4 +436,5 @@ h1 span { color: var(--resin-yellow); }
   .process-course-copy { padding: 0; border: 0; }
   .process-course-copy h3 { font-size: 28px; }
   .process-course-copy li { font-size: 14px; }
+  .process-cta { min-height: 54px; margin-top: 13px; font-size: 14px; }
 }
