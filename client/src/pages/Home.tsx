@@ -267,14 +267,14 @@ export default function Home() {
           <div className="about-copy">
             <p className="about-greeting">¡Hola! Somos <strong>Oscar Cárdenas</strong> y <strong>Oscar Ganem</strong>.</p>
             <div className="about-prose">
-              <p>Somos el equipo detrás de Grupo Ocares. Desde hace años nos dedicamos al mundo de la construcción, remodelación y aplicación de acabados, trabajando directamente en obra y enfrentándonos a los mismos retos que cualquier profesional de la construcción encuentra en un proyecto real.</p>
-              <p>Con el tiempo decidimos llevar toda esa experiencia a nuestros cursos presenciales y comenzar a enseñar a otras personas lo que nosotros mismos hemos aprendido trabajando en campo.</p>
-              <p>Hoy hemos impartido capacitaciones en distintas ciudades de México y cientos de alumnos ya han aprendido con nosotros a trabajar con resina epóxica, aplicando lo aprendido en proyectos personales, en su trabajo e incluso para iniciar sus propios negocios.</p>
+              <p>Somos el equipo detrás de <strong>Grupo Ocares</strong>. Desde hace años nos dedicamos al mundo de la construcción, remodelación y aplicación de acabados, trabajando directamente en obra y enfrentándonos a los mismos retos que cualquier profesional de la construcción encuentra en un proyecto real.</p>
+              <p>Con el tiempo decidimos llevar toda esa experiencia a nuestros <strong>cursos presenciales</strong> y comenzar a enseñar a otras personas lo que nosotros mismos hemos aprendido trabajando en campo.</p>
+              <p>Hoy hemos impartido capacitaciones en distintas ciudades de México y <strong>cientos de alumnos</strong> ya han aprendido con nosotros a trabajar con resina epóxica, aplicando lo aprendido en proyectos personales, en su trabajo e incluso para iniciar sus propios negocios.</p>
             </div>
             <div className="about-trust">
               <h3>¿Por qué te contamos esto?</h3>
               <p>Porque para nosotros es importante que sepas quién está detrás de la información que vas a recibir.</p>
-              <p>Sabemos que aprender una nueva técnica —y mucho más si piensas convertirla en un negocio— requiere confiar en las personas que te están enseñando.</p>
+              <p>Sabemos que aprender una nueva técnica —y mucho más si piensas convertirla en un negocio— requiere <strong>confiar en las personas que te están enseñando</strong>.</p>
             </div>
           </div>
           <figure className="about-photo">

@@ -505,10 +505,11 @@ h1 span { color: var(--resin-yellow); }
 .about-heading h2 { max-width: 880px; margin: 0 auto; font-family: var(--font-display); font-size: clamp(42px, 4.8vw, 66px); font-weight: 800; letter-spacing: -.07em; line-height: .97; }
 .about-inner { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(330px, .82fr); align-items: center; gap: clamp(48px, 7vw, 100px); width: min(100% - 48px, 1080px); margin: 0 auto; padding: clamp(50px, 6vw, 78px) 0 clamp(84px, 10vw, 132px); }
 .about-copy { max-width: 625px; }
-.about-greeting { margin: 0; color: #fffefa; font-size: clamp(17px, 1.47vw, 21px); font-weight: 700; letter-spacing: -.02em; line-height: 1.33; }
+.about-greeting { margin: 0; color: #fffefa; font-size: 15px; font-weight: 400; letter-spacing: -.01em; line-height: 1.5; }
 .about-greeting strong { color: var(--resin-yellow); font-weight: 850; }
 .about-prose { display: grid; gap: 15px; margin-top: 23px; }
-.about-prose p, .about-trust p { margin: 0; color: #c9c7c1; font-size: clamp(13px, 1.13vw, 16px); font-weight: 600; letter-spacing: -.013em; line-height: 1.52; }
+.about-prose p, .about-trust p { margin: 0; color: #c9c7c1; font-size: 15px; font-weight: 400; letter-spacing: -.01em; line-height: 1.55; }
+.about-prose p strong, .about-trust p strong { color: #fffefa; font-weight: 700; }
 .about-trust { margin-top: 27px; padding: 20px 0 0 20px; border-top: 1px solid rgba(255,255,255,.18); border-left: 3px solid var(--resin-yellow); }
 .about-trust h3 { margin: 0 0 10px; color: #fffefa; font-family: var(--font-display); font-size: clamp(19px, 1.7vw, 25px); font-weight: 800; letter-spacing: -.05em; line-height: 1.05; }
 .about-trust p + p { margin-top: 10px; }
@@ -525,9 +526,9 @@ h1 span { color: var(--resin-yellow); }
   .about-inner { grid-template-columns: 1fr; gap: 42px; width: min(100% - 40px, 500px); padding: 76px 0 82px; }
   .about-heading { width: min(100% - 40px, 500px); padding-top: 76px; }
   .about-heading h2 { font-size: clamp(40px, 11.5vw, 53px); }
-  .about-greeting { margin-top: 21px; font-size: 17px; }
+  .about-greeting { margin-top: 21px; font-size: 15px; }
   .about-prose { gap: 14px; margin-top: 20px; }
-  .about-prose p, .about-trust p { font-size: 13px; line-height: 1.5; }
+  .about-prose p, .about-trust p { font-size: 15px; line-height: 1.5; }
   .about-trust { margin-top: 23px; padding: 17px 0 0 16px; }
   .about-photo { width: min(88%, 390px); margin: 0 auto; }
 }
