@@ -351,6 +351,14 @@ export default function Home() {
               <figure><img src="/manus-storage/prueba-alumnos-02_517ece59.webp" alt="Participantes de un curso presencial de resina" loading="lazy" /></figure>
               <figure><img src="/manus-storage/prueba-alumnos-03_b9160a17.webp" alt="Grupo de alumnos mostrando sus proyectos de resina" loading="lazy" /></figure>
               <figure><img src="/manus-storage/prueba-alumnos-04_7ed2cdc6.webp" alt="Grupo de asistentes a una capacitación de resina epóxica" loading="lazy" /></figure>
+              <figure><img src="/manus-storage/prueba-practica-01_784b8232.webp" alt="Alumna aplicando resina epóxica durante una práctica" loading="lazy" /></figure>
+              <figure><img src="/manus-storage/prueba-practica-02_fe684c40.webp" alt="Alumno extendiendo resina roja en una práctica presencial" loading="lazy" /></figure>
+              <figure><img src="/manus-storage/prueba-practica-03_32c5b58c.webp" alt="Alumnos aplicando resina sobre paneles durante el curso" loading="lazy" /></figure>
+              <figure><img src="/manus-storage/prueba-practica-04_57479a44.webp" alt="Alumno distribuyendo resina azul durante una demostración práctica" loading="lazy" /></figure>
+            </div>
+            <div className="proof-cta-area">
+              <p>El próximo aplicador de resina epóxica puedes ser tú</p>
+              <a className="proof-cta" href="#lista-de-espera">Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></a>
             </div>
           </div>
         </div>

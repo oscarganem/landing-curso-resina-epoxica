@@ -593,6 +593,12 @@ h1 span { color: var(--resin-yellow); }
 .proof-grid figure { position: relative; margin: 0; overflow: hidden; background: #191919; }
 .proof-grid img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; filter: saturate(.94) contrast(1.04); transition: transform 260ms var(--ease-out, ease-out); }
 .proof-grid figure:hover img, .proof-main-photo:hover img { transform: scale(1.025); }
+.proof-cta-area { max-width: 560px; margin: clamp(42px, 5vw, 62px) auto 0; text-align: center; }
+.proof-cta-area p { margin: 0; color: #fcfcfa; font-family: var(--font-display); font-size: clamp(26px, 3.2vw, 40px); font-weight: 800; letter-spacing: -.06em; line-height: .98; }
+.proof-cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 55px; margin-top: 24px; padding: 15px 25px; background: var(--resin-yellow); color: #171717; font-size: 14px; font-weight: 900; letter-spacing: -.02em; text-decoration: none; transition: transform 160ms var(--ease-out, ease-out), background 160ms var(--ease-out, ease-out); }
+.proof-cta svg { width: 18px; height: 18px; }
+.proof-cta:hover { background: #ffe14c; transform: translateY(-2px); }
+.proof-cta:active { transform: scale(.97); }
 
 @media (max-width: 680px) {
   .proof-inner { width: min(100% - 40px, 500px); padding: 79px 0 86px; }
@@ -601,4 +607,7 @@ h1 span { color: var(--resin-yellow); }
   .proof-gallery { margin-top: 40px; }
   .proof-main-photo { width: 100%; margin-bottom: 15px; }
   .proof-grid { width: 100%; gap: 12px; }
+  .proof-cta-area { margin-top: 42px; }
+  .proof-cta-area p { font-size: clamp(27px, 8.2vw, 34px); }
+  .proof-cta { width: 100%; margin-top: 21px; }
 }

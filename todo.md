@@ -1,5 +1,7 @@
 # Lista de verificación
 
+- [x] Añadir un mensaje de cierre y CTA de lista de espera debajo de la galería de evidencia.
+- [x] Incorporar cuatro fotografías adicionales de práctica a la galería de evidencia.
 - [x] Cambiar el título de pruebas, ampliar las fotografías y retirar sus detalles decorativos.
 - [x] Añadir una sección negra de prueba social con la foto 4 como imagen principal y cuatro fotos complementarias.
 - [x] Actualizar la sede del curso a CANACO Servitur Playa del Carmen, con nuevo horario, dirección y mapa.
