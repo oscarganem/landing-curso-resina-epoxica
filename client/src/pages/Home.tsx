@@ -90,7 +90,7 @@ const prioritySteps = [
     icon: MonitorPlay,
     number: "02",
     title: "Asiste a la clase online gratuita",
-    text: "Aprenderás las 5 capas que componen un piso epóxica con una demostración en vivo y resolveremos tus dudas sobre el curso presencial.",
+    text: "Aprenderás las 5 capas que conforman un piso epóxico, verás una demostración en vivo y podrás resolver todas tus dudas sobre el curso presencial.",
   },
   {
     icon: TicketCheck,
@@ -194,7 +194,7 @@ export default function Home() {
             <div className="process-course-copy">
               <h3>Curso presencial: <span>Playa del Carmen — 18 de septiembre</span></h3>
               <ul>
-                <li><Check aria-hidden="true" strokeWidth={3} />Los miembros de la lista prioritaria tendrán acceso primero a los lugares antes de abrir las inscripciones al público general.</li>
+                <li><Check aria-hidden="true" strokeWidth={3} />Los miembros de la lista de espera tendrán acceso primero a los lugares antes de abrir las inscripciones al público general.</li>
                 <li><Check aria-hidden="true" strokeWidth={3} />Una vez dentro de la lista recibirás tu acceso a la clase online gratuita, donde revelaremos la oferta especial de preventa exclusiva para los miembros registrados.</li>
               </ul>
             </div>
