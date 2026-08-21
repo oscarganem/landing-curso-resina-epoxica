@@ -231,7 +231,6 @@ export default function Home() {
       <section className="included-section" aria-labelledby="included-title">
         <div className="included-inner">
           <header className="included-heading">
-            <div className="included-eyebrow"><span /> Todo lo que recibirás</div>
             <h2 id="included-title">Todo lo que necesitas para aprender, practicar y empezar a aplicar <span>resina</span> por tu cuenta</h2>
           </header>
 
