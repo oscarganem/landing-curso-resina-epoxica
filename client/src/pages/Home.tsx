@@ -176,7 +176,7 @@ export default function Home() {
         <div className="process-inner">
           <div className="process-heading">
             <div className="process-eyebrow"><span /> Así funciona</div>
-            <h2 id="process-title"><span className="process-line">Únete <b>gratis</b> a la lista prioritaria y</span><span className="process-line">accede a nuestra clase online</span><strong className="process-line">+ precio exclusivo</strong></h2>
+            <h2 id="process-title"><span className="process-line">Únete <b>gratis</b> a la lista espera y</span><span className="process-line">accede a nuestra clase online</span><strong className="process-line">+ precio exclusivo</strong></h2>
           </div>
 
           <div className="process-steps">
