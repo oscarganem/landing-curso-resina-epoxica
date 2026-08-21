@@ -338,15 +338,13 @@ export default function Home() {
       <section className="proof-section" aria-labelledby="proof-title">
         <div className="proof-inner">
           <header className="proof-heading">
-            <h2 id="proof-title">¿Aún necesitas más pruebas?</h2>
+            <h2 id="proof-title">Cientos de alumnos ya dieron el primer paso</h2>
             <span aria-hidden="true" />
           </header>
 
           <div className="proof-gallery">
             <figure className="proof-main-photo">
               <img src="/manus-storage/prueba-alumnos-principal_8ff31ef4.webp" alt="Grupo de alumnos de una capacitación de resina epóxica" loading="lazy" />
-              <span className="proof-corner proof-corner-top" aria-hidden="true" />
-              <span className="proof-corner proof-corner-bottom" aria-hidden="true" />
             </figure>
             <div className="proof-grid">
               <figure><img src="/manus-storage/prueba-alumnos-01_1b085399.webp" alt="Alumnos reunidos después de una capacitación práctica" loading="lazy" /></figure>

@@ -586,15 +586,11 @@ h1 span { color: var(--resin-yellow); }
 .proof-heading { text-align: center; }
 .proof-heading h2 { margin: 0; font-family: var(--font-display); font-size: clamp(42px, 4.7vw, 64px); font-weight: 800; letter-spacing: -.07em; line-height: .97; }
 .proof-heading > span { display: block; width: 58px; height: 5px; margin: 24px auto 0; background: var(--resin-yellow); }
-.proof-gallery { max-width: 910px; margin: clamp(42px, 5vw, 65px) auto 0; }
-.proof-main-photo { position: relative; width: min(76%, 645px); margin: 0 auto 24px; overflow: hidden; border: 1px solid rgba(255,212,0,.7); background: #171717; box-shadow: 13px 15px 0 rgba(255,212,0,.12); }
+.proof-gallery { max-width: 1045px; margin: clamp(42px, 5vw, 65px) auto 0; }
+.proof-main-photo { width: min(87%, 742px); margin: 0 auto 24px; overflow: hidden; background: #171717; }
 .proof-main-photo img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
-.proof-corner { position: absolute; width: 37px; height: 37px; pointer-events: none; }
-.proof-corner-top { top: 8px; left: 8px; border-top: 2px solid var(--resin-yellow); border-left: 2px solid var(--resin-yellow); }
-.proof-corner-bottom { right: 8px; bottom: 8px; border-right: 2px solid var(--resin-yellow); border-bottom: 2px solid var(--resin-yellow); }
-.proof-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; width: min(88%, 760px); margin: 0 auto; }
+.proof-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; width: min(100%, 875px); margin: 0 auto; }
 .proof-grid figure { position: relative; margin: 0; overflow: hidden; background: #191919; }
-.proof-grid figure::after { position: absolute; top: 8px; right: 8px; width: 19px; height: 19px; border-top: 1px solid rgba(255,212,0,.9); border-right: 1px solid rgba(255,212,0,.9); content: ""; pointer-events: none; }
 .proof-grid img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; filter: saturate(.94) contrast(1.04); transition: transform 260ms var(--ease-out, ease-out); }
 .proof-grid figure:hover img, .proof-main-photo:hover img { transform: scale(1.025); }
 
@@ -605,5 +601,4 @@ h1 span { color: var(--resin-yellow); }
   .proof-gallery { margin-top: 40px; }
   .proof-main-photo { width: 100%; margin-bottom: 15px; }
   .proof-grid { width: 100%; gap: 12px; }
-  .proof-corner { width: 28px; height: 28px; }
 }
