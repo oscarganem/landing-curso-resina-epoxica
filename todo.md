@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Reducir 10–15% la altura de módulos y hacer más discreto el texto descriptivo.
 - [x] Unificar el eyebrow y el color de “resina” con el amarillo de marca.
 - [x] Reordenar la sección: seis beneficios primero y módulos prácticos como franja resumen compacta.
 - [x] Añadir la sección de módulos prácticos y recursos incluidos inspirada en la referencia.
