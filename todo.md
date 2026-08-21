@@ -1,5 +1,7 @@
 # Lista de verificación
 
+- [x] Reforzar con amarillo de marca, iconografía y detalles editoriales la sección de ubicación.
+- [x] Añadir sección blanca de ubicación, fecha del curso y mapa de Mex Hoteles Cancún Centro.
 - [x] Resaltar “trabajando directamente en obra” en el primer párrafo institucional.
 - [x] Consolidar a 18 px el saludo institucional sin estilos inline del editor visual.
 - [x] Actualizar los párrafos primero y tercero de la presentación institucional con el copy solicitado.

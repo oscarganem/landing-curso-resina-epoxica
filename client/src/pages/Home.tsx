@@ -5,11 +5,13 @@
 import {
   BadgeCheck,
   BookOpen,
+  Building2,
   BriefcaseBusiness,
   Calculator,
   CalendarDays,
   Check,
   ClipboardCheck,
+  Clock3,
   DollarSign,
   FlaskConical,
   Gem,
@@ -17,6 +19,7 @@ import {
   HardHat,
   Headphones,
   House,
+  Info,
   MapPin,
   MonitorPlay,
   MoveUpRight,
@@ -280,6 +283,56 @@ export default function Home() {
           <figure className="about-photo">
             <div className="about-photo-frame"><img src="/manus-storage/grupo-ocares-team_ac748c58.webp" alt="Oscar Cárdenas y Oscar Ganem, equipo de Grupo Ocares" loading="lazy" /></div>
           </figure>
+        </div>
+      </section>
+
+      <section className="venue-section" aria-labelledby="venue-title">
+        <div className="venue-inner">
+          <header className="venue-heading">
+            <div className="venue-kicker"><span /> Sede del curso</div>
+            <h2 id="venue-title">¿Dónde y cuándo se realizará el curso?</h2>
+          </header>
+          <div className="venue-layout">
+            <article className="venue-card">
+              <div className="venue-card-top">
+                <span className="venue-place-icon"><Building2 aria-hidden="true" strokeWidth={1.8} /></span>
+                <div>
+                  <h3>Mex Hoteles</h3>
+                  <p>Cancún Centro</p>
+                </div>
+              </div>
+
+              <div className="venue-divider" aria-hidden="true"><span /></div>
+
+              <dl className="venue-details">
+                <div>
+                  <dt><span className="venue-detail-icon"><CalendarDays aria-hidden="true" strokeWidth={1.9} /></span><span>Fecha</span></dt>
+                  <dd>Viernes 18 de septiembre</dd>
+                </div>
+                <div>
+                  <dt><span className="venue-detail-icon"><Clock3 aria-hidden="true" strokeWidth={1.9} /></span><span>Horario</span></dt>
+                  <dd>10:00 am a 4:00 pm</dd>
+                </div>
+                <div>
+                  <dt><span className="venue-detail-icon"><MapPin aria-hidden="true" strokeWidth={1.9} /></span><span>Dirección</span></dt>
+                  <dd>Av. Carlos Nader 28-Mz 11, 5,<br />77500 Cancún, Q.R.</dd>
+                </div>
+              </dl>
+
+              <div className="venue-note"><span className="venue-note-icon"><Info aria-hidden="true" strokeWidth={1.9} /></span><p>Te recomendamos llegar 1 hora antes para el registro.</p></div>
+            </article>
+
+            <div className="venue-map">
+              <span className="venue-map-tag">Ubicación</span>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.7362018635677!2d-86.82496929999999!3d21.162893999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2c024bca53bb%3A0x8c5d064789bfdcfa!2sMex%20Hoteles%20Canc%C3%BAn%20Centro!5e0!3m2!1ses-419!2smx!4v1787348605285!5m2!1ses-419!2smx"
+                title="Ubicación de Mex Hoteles Cancún Centro"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </main>
