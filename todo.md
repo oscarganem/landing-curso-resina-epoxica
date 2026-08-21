@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Añadir la sección de módulos prácticos y recursos incluidos inspirada en la referencia.
 - [x] Verificar y consolidar el copy actualizado de clase en vivo y lista de espera.
 - [x] Añadir un CTA de ancho completo debajo del recuadro de curso presencial.
 - [x] Actualizar el contenido de la clase en vivo y el descuento de preventa en los pasos dos y tres.

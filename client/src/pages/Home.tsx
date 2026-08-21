@@ -3,24 +3,33 @@
  * módulos de formación, práctica y comunidad de alumnos.
  */
 import {
+  BadgeCheck,
+  BookOpen,
   BriefcaseBusiness,
   Calculator,
   CalendarDays,
   Check,
   ClipboardCheck,
   DollarSign,
+  FlaskConical,
+  Gem,
   GraduationCap,
   HardHat,
+  Headphones,
   House,
   MapPin,
   MonitorPlay,
   MoveUpRight,
   Palette,
+  Paintbrush,
+  Presentation,
   Ruler,
   ShieldCheck,
   TrendingUp,
   TicketCheck,
+  Table2,
   Users,
+  Wrench,
 } from "lucide-react";
 
 const benefits = [
@@ -98,6 +107,22 @@ const prioritySteps = [
     title: "Descubre tu descuento de preventa",
     text: "Al final de la clase en vivo revelaremos el precio especial disponible únicamente para quienes se registraron en la lista.",
   },
+];
+
+const courseModules = [
+  { number: "1", icon: FlaskConical, title: "Fundamentos de la resina", text: "Conceptos básicos, materiales y proporciones" },
+  { number: "2", icon: Paintbrush, title: "Preparación de superficies", text: "Cómo evitar desprendimientos, burbujas y fallas" },
+  { number: "3", icon: Gem, title: "Acabados profesionales", text: "Marmoleados, metálicos, sólidos, 3D y antiderrapantes" },
+  { number: "4", icon: Table2, title: "Aplicaciones decorativas", text: "Mesas tipo río, encapsulados y proyectos comerciales" },
+];
+
+const includedResources = [
+  { icon: Presentation, title: "Curso intensivo presencial", text: "Práctica guiada durante el curso" },
+  { icon: Wrench, title: "Materiales y herramientas para prácticas", text: "Todo lo necesario para aprender en clase" },
+  { icon: BookOpen, title: "Manual del aplicador", text: "Guía de apoyo con procesos y conceptos clave" },
+  { icon: Calculator, title: "Calculadora de materiales", text: "Para estimar resina, pigmentos y cantidades" },
+  { icon: BadgeCheck, title: "Certificado de participación", text: "Reconoce tu participación en el curso" },
+  { icon: Headphones, title: "Soporte posterior al curso", text: "Resuelve dudas sobre tus primeras aplicaciones" },
 ];
 
 export default function Home() {
@@ -200,6 +225,39 @@ export default function Home() {
             </div>
           </aside>
           <a className="process-cta" href="#lista-de-espera">Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></a>
+        </div>
+      </section>
+
+      <section className="included-section" aria-labelledby="included-title">
+        <div className="included-inner">
+          <header className="included-heading">
+            <div className="included-eyebrow"><span /> Todo lo que recibirás <span /></div>
+            <h2 id="included-title">Todo lo que necesitas para aprender, practicar y empezar a aplicar <span>resina</span> por tu cuenta</h2>
+            <p>Tu inscripción incluye una estructura clara de aprendizaje y recursos prácticos para que no salgas con dudas.</p>
+          </header>
+
+          <div className="module-area">
+            <div className="module-label">4 módulos prácticos</div>
+            <div className="module-grid">
+              {courseModules.map(({ number, icon: Icon, title, text }) => (
+                <article className="module-card" key={number}>
+                  <div className="module-icon-row"><span className="module-number">{number}</span><Icon aria-hidden="true" strokeWidth={1.9} /></div>
+                  <h3>{title}</h3>
+                  <span className="module-rule" />
+                  <p>{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="resource-grid">
+            {includedResources.map(({ icon: Icon, title, text }) => (
+              <article className="resource-card" key={title}>
+                <span className="resource-icon"><Icon aria-hidden="true" strokeWidth={1.9} /></span>
+                <div><h3>{title}</h3><p>{text}</p></div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
     </main>
