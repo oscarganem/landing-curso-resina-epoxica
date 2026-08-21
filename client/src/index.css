@@ -496,3 +496,41 @@ h1 span { color: var(--resin-yellow); }
   .resource-card h3 { font-size: 21px; }
   .resource-card p { margin-top: 6px; font-size: 12px; }
 }
+
+/* Sección institucional — experiencia de Grupo Ocares. */
+.about-section { position: relative; overflow: hidden; background: #090909; color: #f8f7f3; }
+.about-section::before { position: absolute; top: -16vw; left: -14vw; width: 40vw; height: 40vw; border: 1px solid rgba(255,212,0,.1); border-radius: 50%; content: ""; }
+.about-section::after { position: absolute; right: 8%; bottom: 0; width: 1px; height: 26%; background: rgba(255,212,0,.35); content: ""; }
+.about-inner { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(330px, .82fr); align-items: center; gap: clamp(48px, 7vw, 100px); width: min(100% - 48px, 1080px); margin: 0 auto; padding: clamp(84px, 10vw, 132px) 0; }
+.about-copy { max-width: 625px; }
+.about-eyebrow { display: flex; align-items: center; gap: 10px; color: var(--resin-yellow); font-size: 11px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+.about-eyebrow span { width: 9px; height: 9px; background: var(--resin-yellow); transform: rotate(45deg); }
+.about-copy h2 { max-width: 580px; margin: 19px 0 0; font-family: var(--font-display); font-size: clamp(39px, 4.3vw, 62px); font-weight: 800; letter-spacing: -.07em; line-height: .97; }
+.about-greeting { margin: 26px 0 0; color: #fffefa; font-size: clamp(17px, 1.47vw, 21px); font-weight: 700; letter-spacing: -.02em; line-height: 1.33; }
+.about-greeting strong { color: var(--resin-yellow); font-weight: 850; }
+.about-prose { display: grid; gap: 15px; margin-top: 23px; }
+.about-prose p, .about-trust p { margin: 0; color: #c9c7c1; font-size: clamp(13px, 1.13vw, 16px); font-weight: 600; letter-spacing: -.013em; line-height: 1.52; }
+.about-trust { margin-top: 27px; padding: 20px 0 0 20px; border-top: 1px solid rgba(255,255,255,.18); border-left: 3px solid var(--resin-yellow); }
+.about-trust h3 { margin: 0 0 10px; color: #fffefa; font-family: var(--font-display); font-size: clamp(19px, 1.7vw, 25px); font-weight: 800; letter-spacing: -.05em; line-height: 1.05; }
+.about-trust p + p { margin-top: 10px; }
+.about-photo { position: relative; margin: 0; }
+.about-photo-frame { position: relative; overflow: hidden; border: 1px solid rgba(255,212,0,.55); background: #161616; box-shadow: 20px 23px 0 rgba(0,0,0,.26); }
+.about-photo-frame::before { position: absolute; z-index: 1; top: 8px; left: 8px; width: 34px; height: 34px; border-top: 2px solid var(--resin-yellow); border-left: 2px solid var(--resin-yellow); content: ""; pointer-events: none; }
+.about-photo-frame img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center; }
+.about-photo figcaption { display: flex; align-items: center; gap: 9px; margin-top: 13px; color: #aaa8a2; font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.about-photo figcaption span { width: 24px; height: 2px; background: var(--resin-yellow); }
+
+@media (max-width: 850px) {
+  .about-inner { grid-template-columns: minmax(0, 1fr) minmax(270px, .82fr); gap: 42px; }
+}
+
+@media (max-width: 680px) {
+  .about-inner { grid-template-columns: 1fr; gap: 42px; width: min(100% - 40px, 500px); padding: 76px 0 82px; }
+  .about-copy h2 { font-size: clamp(40px, 11.5vw, 53px); }
+  .about-greeting { margin-top: 21px; font-size: 17px; }
+  .about-prose { gap: 14px; margin-top: 20px; }
+  .about-prose p, .about-trust p { font-size: 13px; line-height: 1.5; }
+  .about-trust { margin-top: 23px; padding: 17px 0 0 16px; }
+  .about-photo { width: min(88%, 390px); margin: 0 auto; }
+  .about-photo figcaption { font-size: 9px; }
+}

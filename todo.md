@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Añadir sección institucional de Grupo Ocares con texto y fotografía del equipo.
 - [x] Limpiar estilos repetidos y consolidar descripciones de recursos a 12 px.
 - [x] Eliminar el eyebrow “Todo lo que recibirás” de la sección de contenidos.
 - [x] Reducir 10–15% la altura de módulos y hacer más discreto el texto descriptivo.
