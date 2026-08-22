@@ -164,7 +164,7 @@ const faqItems = [
   },
   {
     question: "¿Dónde y cuándo será el curso presencial?",
-    answer: <><p>El curso se realizará en <strong>Playa del Carmen el 18 de septiembre</strong>.</p><p>En esta misma página podrás consultar la sede, horario y dirección del evento.</p></>,
+    answer: <><p>El curso se realizará en <strong>CANACO Servitur</strong><br />Playa del Carmen</p><p><strong>Viernes 18 de septiembre</strong><br />10:00 am a 5:00 pm</p><p><strong>Dirección:</strong><br />Carretera Federal, Manzana 8, Lote 6, S/N,<br />Gonzalo Guerrero, 77710 Playa del Carmen, Q.R.</p></>,
   },
   {
     question: "¿Qué pasa si no puedo asistir a la clase online?",

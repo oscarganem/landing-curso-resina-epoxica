@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Completar la respuesta FAQ de fecha y sede con CANACO Servitur, horario y dirección.
 - [x] Corregir la primera pregunta frecuente para referirse a la lista de espera.
 - [x] Verificar y publicar el CTA final “Unirme GRATIS a la lista de espera”.
 - [x] Corregir el titular final a “Únete AHORA a la lista de espera” y limitarlo a tres líneas.
