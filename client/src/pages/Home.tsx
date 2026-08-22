@@ -185,7 +185,12 @@ export default function Home() {
       <section className="hero" id="inicio" aria-labelledby="course-title">
         <div className="hero-copy">
           <div className="eyebrow"><span className="eyebrow-dot" /> Curso presencial</div>
-          <h1 id="course-title">Aprende a aplicar <span>resina epóxica</span> en pisos, barras y mesas de río</h1>
+          <h1 id="course-title">
+            <span className="hero-title-line">Aprende a aplicar</span>
+            <span className="hero-title-line hero-title-yellow">resina epóxica</span>
+            <span className="hero-title-line">en pisos, barras y</span>
+            <span className="hero-title-line">mesas de río</span>
+          </h1>
           <p className="event-line"><MapPin aria-hidden="true" /> Playa del Carmen <b>|</b><CalendarDays aria-hidden="true" /> 18 de Septiembre</p>
           <p className="course-lede">La formación <strong>#1</strong> para aplicadores de resina epóxica en México.</p>
           <ul className="benefit-list">

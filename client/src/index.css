@@ -132,16 +132,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .eyebrow-dot { width: 8px; height: 8px; background: var(--resin-yellow); transform: rotate(45deg); }
 
 h1 {
-  max-width: 590px;
+  max-width: 480px;
   margin: 0;
   color: #fbfaf7;
   font-family: var(--font-display);
-  font-size: clamp(42px, 4.12vw, 64px);
+  font-size: clamp(38px, 3.35vw, 52px);
   font-weight: 800;
   letter-spacing: -.057em;
-  line-height: .98;
+  line-height: 1.02;
 }
-h1 span { color: var(--resin-yellow); }
+h1 .hero-title-line { display: block; color: inherit; }
+h1 .hero-title-yellow { color: var(--resin-yellow); }
 
 .event-line {
   display: flex;
@@ -238,7 +239,7 @@ h1 span { color: var(--resin-yellow); }
   .brand-mark { width: 30px; height: 30px; }
   .header-detail { display: none; }
   .hero { grid-template-columns: 1fr; min-height: auto; padding: 54px 0 50px; }
-  h1 { font-size: clamp(43px, 12.5vw, 57px); }
+  h1 { max-width: 100%; font-size: clamp(32px, 9.5vw, 38px); letter-spacing: -.05em; line-height: 1.03; }
   .hero-copy { max-width: none; }
   .event-line { font-size: 11px; }
   .visual-column { margin-top: 12px; }

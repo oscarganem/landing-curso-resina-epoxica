@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Reducir y recomponer el título principal del hero en cuatro líneas equilibradas.
 - [x] Retirar las etiquetas “Lo que aprenderás” y “Así funciona” de las secciones 3 y 5.
 - [x] Completar la respuesta FAQ de fecha y sede con CANACO Servitur, horario y dirección.
 - [x] Corregir la primera pregunta frecuente para referirse a la lista de espera.
