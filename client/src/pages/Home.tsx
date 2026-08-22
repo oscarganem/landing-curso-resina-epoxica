@@ -220,7 +220,7 @@ export default function Home() {
 
       <section className="learning-section" aria-labelledby="learning-title">
         <div className="learning-inner">
-          <div className="learning-heading"><div className="section-eyebrow"><span /> Lo que aprenderás</div><h2 id="learning-title">Domina las principales técnicas de aplicación de <span>resina epóxica</span> en una sola clase práctica</h2></div>
+          <div className="learning-heading"><h2 id="learning-title">Domina las principales técnicas de aplicación de <span>resina epóxica</span> en una sola clase práctica</h2></div>
           <div className="technique-grid">
             {techniques.map(({ title, image, position }) => <article className="technique-card" key={title}><img src={image} alt={title} loading="lazy" style={{ objectPosition: position }} /><div className="technique-shade" aria-hidden="true" /><div className="technique-status"><Check aria-hidden="true" strokeWidth={3} /> Incluido en el taller presencial</div><h3>{title}</h3></article>)}
           </div>
@@ -247,7 +247,6 @@ export default function Home() {
       <section className="process-section" aria-labelledby="process-title">
         <div className="process-inner">
           <div className="process-heading">
-            <div className="process-eyebrow"><span /> Así funciona</div>
             <h2 id="process-title"><span className="process-line">Únete <b>GRATIS</b> a la lista</span><span className="process-line">prioritaria y accede a un</span><strong className="process-line">descuento exclusivo de preventa</strong></h2>
           </div>
 
