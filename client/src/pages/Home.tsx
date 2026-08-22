@@ -440,7 +440,7 @@ export default function Home() {
             <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Acceso prioritario al curso antes de abrir inscripciones al público general</span></li>
             <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Acceso GRATIS a nuestra clase online sobre las 5 capas de un piso epóxico</span></li>
           </ul>
-          <a className="final-cta-button" href="#lista-de-espera">Unirme GRATIS a la lista prioritaria <MoveUpRight aria-hidden="true" /></a>
+          <a className="final-cta-button" href="#lista-de-espera">Unirme GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></a>
           <p className="final-cta-trust">Registro gratuito · Sin compromiso · Cupo presencial limitado</p>
         </div>
       </section>
