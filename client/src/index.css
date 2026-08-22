@@ -513,6 +513,7 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .about-prose { display: grid; gap: 15px; margin-top: 23px; }
 .about-prose p, .about-trust p { margin: 0; color: #c9c7c1; font-size: 15px; font-weight: 400; letter-spacing: -.01em; line-height: 1.55; }
 .about-prose p strong, .about-trust p strong { color: #fffefa; font-weight: 700; }
+.about-prose p, .about-trust p { text-align: justify; text-align-last: left; }
 .about-trust { margin-top: 27px; padding: 20px 0 0 20px; border-top: 1px solid rgba(255,255,255,.18); border-left: 3px solid var(--resin-yellow); }
 .about-trust h3 { margin: 0 0 10px; color: #fffefa; font-family: var(--font-display); font-size: clamp(19px, 1.7vw, 25px); font-weight: 800; letter-spacing: -.05em; line-height: 1.05; }
 .about-trust p + p { margin-top: 10px; }
@@ -531,7 +532,7 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   .about-heading h2 { font-size: clamp(40px, 11.5vw, 53px); }
   .about-greeting { margin-top: 21px; font-size: 18px; }
   .about-prose { gap: 14px; margin-top: 20px; }
-  .about-prose p, .about-trust p { font-size: 15px; line-height: 1.5; }
+  .about-prose p, .about-trust p { font-size: 15px; line-height: 1.5; text-align: left; }
   .about-trust { margin-top: 23px; padding: 17px 0 0 16px; }
   .about-photo { width: min(88%, 390px); margin: 0 auto; }
 }
