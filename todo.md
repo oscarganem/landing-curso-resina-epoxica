@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Añadir líneas amarillas bajo los títulos de las secciones con fondo negro.
 - [x] Consolidar a 38 px el mensaje de cierre de la galería sin estilos inline.
 - [x] Ajustar el subtítulo del hero a dos líneas específicas en escritorio.
 - [x] Reducir y recomponer el título principal del hero en cuatro líneas equilibradas.

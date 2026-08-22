@@ -191,6 +191,7 @@ export default function Home() {
             <span className="hero-title-line">en pisos, barras y</span>
             <span className="hero-title-line">mesas de río</span>
           </h1>
+          <span className="hero-title-rule" aria-hidden="true" />
           <p className="event-line"><MapPin aria-hidden="true" /> Playa del Carmen <b>|</b><CalendarDays aria-hidden="true" /> 18 de Septiembre</p>
           <p className="course-lede"><span>La formación <strong>#1</strong> para aplicadores</span><span>de resina epóxica en México.</span></p>
           <ul className="benefit-list">
@@ -225,7 +226,7 @@ export default function Home() {
 
       <section className="learning-section" aria-labelledby="learning-title">
         <div className="learning-inner">
-          <div className="learning-heading"><h2 id="learning-title">Domina las principales técnicas de aplicación de <span>resina epóxica</span> en una sola clase práctica</h2></div>
+          <div className="learning-heading"><h2 id="learning-title">Domina las principales técnicas de aplicación de <span>resina epóxica</span> en una sola clase práctica</h2><span className="dark-title-rule" aria-hidden="true" /></div>
           <div className="technique-grid">
             {techniques.map(({ title, image, position }) => <article className="technique-card" key={title}><img src={image} alt={title} loading="lazy" style={{ objectPosition: position }} /><div className="technique-shade" aria-hidden="true" /><div className="technique-status"><Check aria-hidden="true" strokeWidth={3} /> Incluido en el taller presencial</div><h3>{title}</h3></article>)}
           </div>
@@ -253,6 +254,7 @@ export default function Home() {
         <div className="process-inner">
           <div className="process-heading">
             <h2 id="process-title"><span className="process-line">Únete <b>GRATIS</b> a la lista</span><span className="process-line">prioritaria y accede a un</span><strong className="process-line">descuento exclusivo de preventa</strong></h2>
+            <span className="dark-title-rule" aria-hidden="true" />
           </div>
 
           <div className="process-steps">
@@ -313,6 +315,7 @@ export default function Home() {
       <section className="about-section" aria-labelledby="about-title">
         <header className="about-heading">
           <h2 id="about-title">¿Quiénes somos y por qué podemos ayudarte?</h2>
+          <span className="dark-title-rule" aria-hidden="true" />
         </header>
         <div className="about-inner">
           <div className="about-copy">
@@ -387,7 +390,7 @@ export default function Home() {
         <div className="proof-inner">
           <header className="proof-heading">
             <h2 id="proof-title">Cientos de alumnos ya dieron el primer paso</h2>
-            <span aria-hidden="true" />
+            <span className="dark-title-rule" aria-hidden="true" />
           </header>
 
           <div className="proof-gallery">
@@ -438,6 +441,7 @@ export default function Home() {
             <span className="final-headline-line">y da el primer paso para convertirte</span>
             <span className="final-headline-line">en aplicador de <em>Resina Epóxica</em></span>
           </h2>
+          <span className="dark-title-rule" aria-hidden="true" />
           <p className="final-cta-intro">Al registrarte GRATIS obtendrás:</p>
           <ul className="final-benefit-list">
             <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Descuento exclusivo de preventa</span></li>
