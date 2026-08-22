@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Recomponer el FAQ como una columna blanca centrada de tarjetas amplias y sombras suaves según la referencia.
 - [x] Añadir sección FAQ blanca con diez preguntas desplegables y sus respuestas.
 - [x] Añadir un mensaje de cierre y CTA de lista de espera debajo de la galería de evidencia.
 - [x] Incorporar cuatro fotografías adicionales de práctica a la galería de evidencia.
