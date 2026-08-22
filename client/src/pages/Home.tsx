@@ -2,6 +2,7 @@
  * Diseño: Taller de Alto Contraste. Landing editorial carbón/amarillo con
  * módulos de formación, práctica y comunidad de alumnos.
  */
+import { type FormEvent, useState } from "react";
 import {
   BadgeCheck,
   BookOpen,
@@ -33,8 +34,11 @@ import {
   Table2,
   Users,
   Wrench,
+  X,
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
+import { trpc } from "@/lib/trpc";
 
 const benefits = [
   "Aprende a crear acabados marmoleados, metálicos, unicolor y 3D.",
@@ -173,6 +177,30 @@ const faqItems = [
 ];
 
 export default function Home() {
+  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
+  const [isRegistered, setIsRegistered] = useState(false);
+  const [formError, setFormError] = useState<string | null>(null);
+  const [formValues, setFormValues] = useState({ fullName: "", email: "", whatsapp: "" });
+  const waitlistMutation = trpc.waitlist.signup.useMutation({
+    onSuccess: () => {
+      setIsRegistered(true);
+      setFormError(null);
+    },
+    onError: (error) => setFormError(error.message || "No pudimos guardar tu registro. Inténtalo de nuevo."),
+  });
+
+  const openWaitlist = () => {
+    setIsRegistered(false);
+    setFormError(null);
+    setIsWaitlistOpen(true);
+  };
+
+  const handleWaitlistSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setFormError(null);
+    waitlistMutation.mutate(formValues);
+  };
+
   return (
     <main className="landing-shell">
       <header className="site-header" aria-label="Encabezado del curso">
@@ -196,7 +224,7 @@ export default function Home() {
           <ul className="benefit-list">
             {benefits.map((benefit) => <li key={benefit}><Check aria-hidden="true" strokeWidth={3.2} /><span>{benefit}</span></li>)}
           </ul>
-          <a className="waitlist-cta" href="#lista-de-espera">Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></a>
+          <button className="waitlist-cta" type="button" onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
           <div className="course-footer" id="lista-de-espera"><span className="footer-rule" /><p><b>+1,000</b> alumnos ya aprendieron con nosotros</p></div>
         </div>
         <aside className="visual-column" aria-label="Espacio reservado para fotografía del curso">
@@ -241,7 +269,7 @@ export default function Home() {
         <div className="community-inner">
           <div className="community-copy">
             <h2 id="community-title"><span className="community-line">Más de <b className="community-highlight">500 alumnos</b></span><span className="community-line">ya perdieron el miedo</span><span className="community-line">a la resina y hoy crean</span><span className="community-line">acabados increíbles.</span><em>Tú puedes ser el siguiente.</em></h2>
-            <a className="community-cta" href="#lista-de-espera">Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></a>
+            <button className="community-cta" type="button" onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
           </div>
           <div className="community-gallery" aria-label="Galería de alumnos durante las prácticas">
             {studentGallery.map(({ image, alt }, index) => <figure className={`community-photo photo-${index + 1}`} key={image}><img src={image} alt={alt} loading="lazy" /></figure>)}
@@ -276,7 +304,7 @@ export default function Home() {
               </ul>
             </div>
           </aside>
-          <a className="process-cta" href="#lista-de-espera">Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></a>
+          <button className="process-cta" type="button" onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
         </div>
       </section>
 
@@ -408,7 +436,7 @@ export default function Home() {
             </div>
             <div className="proof-cta-area">
               <p>El próximo aplicador de resina epóxica puedes ser tú</p>
-              <a className="proof-cta" href="#lista-de-espera">Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></a>
+              <button className="proof-cta" type="button" onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
             </div>
           </div>
         </div>
@@ -447,10 +475,49 @@ export default function Home() {
             <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Acceso prioritario al curso antes de abrir inscripciones al público general</span></li>
             <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Acceso GRATIS a nuestra clase online sobre las 5 capas de un piso epóxico</span></li>
           </ul>
-          <a className="final-cta-button" href="#lista-de-espera">Unirme GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></a>
+          <button className="final-cta-button" type="button" onClick={openWaitlist}>Unirme GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
           <p className="final-cta-trust">Registro gratuito · Sin compromiso · Cupo presencial limitado</p>
         </div>
       </section>
+
+      <Dialog open={isWaitlistOpen} onOpenChange={setIsWaitlistOpen}>
+        <DialogContent className="waitlist-modal" showCloseButton={false}>
+          <DialogClose className="waitlist-close" aria-label="Cerrar formulario"><X aria-hidden="true" /></DialogClose>
+          {isRegistered ? (
+            <div className="waitlist-success">
+              <span className="waitlist-success-mark"><Check aria-hidden="true" strokeWidth={3} /></span>
+              <DialogTitle>¡Listo! Ya estás en la lista de espera.</DialogTitle>
+              <DialogDescription>Recibirás por correo la información de la clase online y el acceso anticipado a la preventa.</DialogDescription>
+              <button type="button" onClick={() => setIsWaitlistOpen(false)}>Volver a la página</button>
+            </div>
+          ) : (
+            <>
+              <div className="waitlist-modal-copy">
+                <DialogTitle>Únete GRATIS a la lista prioritaria del Curso de Resina Epóxica</DialogTitle>
+                <DialogDescription>
+                  <strong>Las inscripciones para nuestro curso presencial en Playa del Carmen todavía no están abiertas.</strong>
+                  <span>Antes de abrir los lugares al público general, daremos acceso primero a las personas registradas en nuestra lista de espera.</span>
+                </DialogDescription>
+                <p>Al registrarte GRATIS obtendrás:</p>
+                <ul className="waitlist-benefits">
+                  <li><Check aria-hidden="true" strokeWidth={3} /><span><strong>Acceso a nuestra clase online gratuita</strong>, donde aprenderás las 5 capas de un piso epóxico y verás una demostración en vivo.</span></li>
+                  <li><Check aria-hidden="true" strokeWidth={3} /><span><strong>Un descuento exclusivo de preventa</strong>, que revelaremos durante la clase.</span></li>
+                  <li><Check aria-hidden="true" strokeWidth={3} /><span><strong>Acceso prioritario para reservar tu lugar</strong> antes de abrir las inscripciones al público general.</span></li>
+                </ul>
+              </div>
+              <form className="waitlist-form" onSubmit={handleWaitlistSubmit}>
+                <h3>¿Quieres recibir tu acceso y conocer el descuento de preventa?</h3>
+                <label><span className="sr-only">Introduce tu nombre</span><input required autoComplete="name" placeholder="Introduce tu nombre" value={formValues.fullName} onChange={(event) => setFormValues((values) => ({ ...values, fullName: event.target.value }))} /></label>
+                <label><span className="sr-only">Tu mejor correo</span><input required type="email" autoComplete="email" placeholder="Tu mejor correo" value={formValues.email} onChange={(event) => setFormValues((values) => ({ ...values, email: event.target.value }))} /></label>
+                <label><span className="sr-only">WhatsApp</span><input required type="tel" autoComplete="tel" placeholder="WhatsApp" value={formValues.whatsapp} onChange={(event) => setFormValues((values) => ({ ...values, whatsapp: event.target.value }))} /></label>
+                {formError && <p className="waitlist-form-error" role="alert">{formError}</p>}
+                <button type="submit" disabled={waitlistMutation.isPending}>{waitlistMutation.isPending ? "Guardando tu registro…" : <>Sí, quiero unirme GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></>}</button>
+                <p className="waitlist-form-trust">Registro gratuito · Sin compromiso · No estás comprando el curso</p>
+              </form>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </main>
   );
 }
