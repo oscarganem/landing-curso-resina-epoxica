@@ -131,7 +131,7 @@ const includedResources = [
 
 const faqItems = [
   {
-    question: "¿Por qué estamos manejando una lista prioritaria?",
+    question: "¿Por qué estamos manejando una lista de espera?",
     answer: <><p>El curso presencial tiene <strong>cupo limitado</strong>, por lo que antes de abrir las inscripciones al público general daremos acceso primero a las personas registradas en nuestra lista.</p><p>Al unirte GRATIS tendrás acceso a la <strong>clase online previa</strong>, conocerás nuestro <strong>descuento especial de preventa</strong> y tendrás prioridad para reservar tu lugar antes de que abramos los lugares restantes al público.</p></>,
   },
   {
