@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Reemplazar el logo del encabezado por el nuevo logo de Ocares Academy.
 - [x] Justificar los párrafos de la presentación institucional para equilibrar la columna de texto.
 - [x] Ampliar 10% la galería de fotos de comunidad en escritorio.
 - [x] Añadir líneas amarillas bajo los títulos de las secciones con fondo negro.

@@ -88,7 +88,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 .brand-lockup b { color: var(--resin-yellow); font-weight: 900; }
-.brand-mark { display: block; width: 34px; height: 34px; object-fit: contain; }
+.brand-mark { display: block; width: 164px; height: auto; max-height: 54px; object-fit: contain; }
 
 .header-detail {
   display: flex;
@@ -238,7 +238,7 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 @media (max-width: 680px) {
   .site-header, .hero { width: min(100% - 40px, 500px); }
   .site-header { height: 62px; }
-  .brand-mark { width: 30px; height: 30px; }
+  .brand-mark { width: 132px; height: auto; max-height: 44px; }
   .header-detail { display: none; }
   .hero { grid-template-columns: 1fr; min-height: auto; padding: 54px 0 50px; }
   h1 { max-width: 100%; font-size: clamp(32px, 9.5vw, 38px); letter-spacing: -.05em; line-height: 1.03; }

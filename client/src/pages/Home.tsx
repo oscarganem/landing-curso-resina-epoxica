@@ -176,9 +176,8 @@ export default function Home() {
   return (
     <main className="landing-shell">
       <header className="site-header" aria-label="Encabezado del curso">
-        <a className="brand-lockup" href="#inicio" aria-label="Curso de resina epoxica">
-          <img className="brand-mark" src="/manus-storage/resina-pro-logo_ee0235df.png" width="42" height="42" alt="" />
-          <span>RESINA <b>PRO</b></span>
+        <a className="brand-lockup" href="#inicio" aria-label="Ocares Academy">
+          <img className="brand-mark" src="/manus-storage/ocares-academy-logo_cf81a218.png" width="217" height="72" alt="Ocares Academy" />
         </a>
       </header>
 
