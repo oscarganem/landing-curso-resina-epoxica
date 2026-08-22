@@ -643,9 +643,10 @@ h1 span { color: var(--resin-yellow); }
 .final-cta-section { position: relative; overflow: hidden; background: #101010; color: #fcfcfa; text-align: center; }
 .final-cta-section::before { position: absolute; top: 0; left: 50%; width: min(100%, 1080px); height: 1px; background: rgba(255,255,255,.16); content: ""; transform: translateX(-50%); }
 .final-cta-section::after { position: absolute; right: -10vw; bottom: -22vw; width: 46vw; height: 46vw; border: 1px solid rgba(255,212,0,.09); border-radius: 50%; content: ""; }
-.final-cta-inner { position: relative; z-index: 1; width: min(100% - 48px, 850px); margin: 0 auto; padding: clamp(88px, 10vw, 126px) 0 clamp(92px, 10vw, 132px); }
-.final-cta-inner h2 { max-width: 810px; margin: 0 auto; font-family: var(--font-display); font-size: clamp(38px, 4.4vw, 59px); font-weight: 800; letter-spacing: -.07em; line-height: .99; }
-.final-cta-inner h2 span, .final-cta-inner h2 em { color: var(--resin-yellow); font-style: normal; }
+.final-cta-inner { position: relative; z-index: 1; width: min(100% - 48px, 960px); margin: 0 auto; padding: clamp(88px, 10vw, 126px) 0 clamp(92px, 10vw, 132px); }
+.final-cta-inner h2 { max-width: 950px; margin: 0 auto; font-family: var(--font-display); font-size: clamp(38px, 4vw, 54px); font-weight: 800; letter-spacing: -.07em; line-height: .99; }
+.final-headline-line { display: block; }
+.final-cta-inner h2 strong, .final-cta-inner h2 em { color: var(--resin-yellow); font-style: normal; }
 .final-cta-intro { margin: 30px auto 0; color: #d4d2cb; font-size: 16px; font-weight: 500; }
 .final-benefit-list { display: grid; gap: 13px; max-width: 690px; margin: 22px auto 0; padding: 0; text-align: left; list-style: none; }
 .final-benefit-list li { display: flex; align-items: flex-start; gap: 12px; color: #f8f7f3; font-size: clamp(14px, 1.45vw, 17px); font-weight: 650; letter-spacing: -.018em; line-height: 1.35; }
@@ -658,7 +659,7 @@ h1 span { color: var(--resin-yellow); }
 
 @media (max-width: 680px) {
   .final-cta-inner { width: min(100% - 40px, 500px); padding: 80px 0 87px; }
-  .final-cta-inner h2 { font-size: clamp(37px, 10.7vw, 49px); }
+  .final-cta-inner h2 { font-size: clamp(31px, 8.7vw, 41px); }
   .final-cta-intro { margin-top: 25px; font-size: 15px; }
   .final-benefit-list { gap: 14px; }
   .final-benefit-list li { font-size: 14px; }

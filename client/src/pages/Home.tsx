@@ -429,7 +429,11 @@ export default function Home() {
 
       <section className="final-cta-section" aria-labelledby="final-cta-title">
         <div className="final-cta-inner">
-          <h2 id="final-cta-title">Únete <span>AHORA</span> a la lista prioritaria<br />y da el primer paso para convertirte en aplicador de <em>Resina Epóxica</em></h2>
+          <h2 id="final-cta-title">
+            <span className="final-headline-line">Únete <strong>AHORA</strong> a la lista de espera</span>
+            <span className="final-headline-line">y da el primer paso para convertirte</span>
+            <span className="final-headline-line">en aplicador de <em>Resina Epóxica</em></span>
+          </h2>
           <p className="final-cta-intro">Al registrarte GRATIS obtendrás:</p>
           <ul className="final-benefit-list">
             <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Descuento exclusivo de preventa</span></li>

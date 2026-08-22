@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Corregir el titular final a “Únete AHORA a la lista de espera” y limitarlo a tres líneas.
 - [x] Añadir cierre final negro con beneficios, CTA de lista prioritaria y mensaje de confianza.
 - [x] Recomponer el FAQ como una columna blanca centrada de tarjetas amplias y sombras suaves según la referencia.
 - [x] Añadir sección FAQ blanca con diez preguntas desplegables y sus respuestas.
