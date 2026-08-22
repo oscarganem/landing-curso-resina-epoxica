@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Consolidar a 38 px el mensaje de cierre de la galería sin estilos inline.
 - [x] Ajustar el subtítulo del hero a dos líneas específicas en escritorio.
 - [x] Reducir y recomponer el título principal del hero en cuatro líneas equilibradas.
 - [x] Retirar las etiquetas “Lo que aprenderás” y “Así funciona” de las secciones 3 y 5.
