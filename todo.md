@@ -1,5 +1,6 @@
 # Lista de verificación
 
+- [x] Redondear, ocultar barras de scroll y afinar la jerarquía tipográfica del formulario modal.
 - [x] Crear un formulario modal de lista de espera con nombre, correo y WhatsApp, conectado a todos los CTA.
 - [x] Reemplazar el logo del encabezado por el nuevo logo de Ocares Academy.
 - [x] Justificar los párrafos de la presentación institucional para equilibrar la columna de texto.
