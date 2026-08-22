@@ -192,7 +192,7 @@ export default function Home() {
             <span className="hero-title-line">mesas de río</span>
           </h1>
           <p className="event-line"><MapPin aria-hidden="true" /> Playa del Carmen <b>|</b><CalendarDays aria-hidden="true" /> 18 de Septiembre</p>
-          <p className="course-lede">La formación <strong>#1</strong> para aplicadores de resina epóxica en México.</p>
+          <p className="course-lede"><span>La formación <strong>#1</strong> para aplicadores</span><span>de resina epóxica en México.</span></p>
           <ul className="benefit-list">
             {benefits.map((benefit) => <li key={benefit}><Check aria-hidden="true" strokeWidth={3.2} /><span>{benefit}</span></li>)}
           </ul>

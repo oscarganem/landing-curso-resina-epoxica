@@ -166,6 +166,7 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   letter-spacing: -.025em;
   line-height: 1.28;
 }
+.course-lede > span { display: block; }
 .course-lede strong { color: #fffdf8; font-weight: 900; }
 
 .benefit-list {
