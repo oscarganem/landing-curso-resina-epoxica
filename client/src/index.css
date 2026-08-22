@@ -709,6 +709,58 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   .waitlist-form > button { min-height: 53px; padding: 0 14px; font-size: 11px; }
 }
 
+/* Página de gracias — confirmación editorial en carbón, amarillo y WhatsApp. */
+.thanks-page { min-height: 100vh; background: #080808; color: #fcfcfa; }
+.thanks-shell { width: min(100% - 48px, 880px); margin: 0 auto; padding: 25px 0 76px; }
+.thanks-brand { display: inline-flex; width: 166px; }
+.thanks-brand img { display: block; width: 100%; height: auto; }
+.thanks-card { max-width: 730px; margin: 30px auto 0; padding: clamp(35px, 5vw, 56px); border: 1px solid rgba(255,212,0,.28); border-radius: 18px; background: #111; box-shadow: 0 25px 70px rgba(0,0,0,.35); text-align: center; }
+.thanks-status { display: flex; align-items: flex-start; justify-content: center; margin: 0 auto 31px; }
+.thanks-status-item { display: grid; justify-items: center; width: 125px; color: #787873; }
+.thanks-status-item > span { display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid #75756f; border-radius: 50%; color: #a7a7a0; }
+.thanks-status-item > span svg { width: 18px; height: 18px; }
+.thanks-status-item b { margin-top: 8px; color: #adada7; font-size: 10px; font-weight: 900; letter-spacing: .03em; text-transform: uppercase; }
+.thanks-status-item small { margin-top: 3px; font-size: 10px; }
+.thanks-status-item.is-complete { color: var(--resin-yellow); }
+.thanks-status-item.is-complete > span { border-color: var(--resin-yellow); background: var(--resin-yellow); color: #161616; }
+.thanks-status-item.is-complete b { color: var(--resin-yellow); }
+.thanks-status > i { width: 54px; height: 1px; margin-top: 18px; border-top: 1px dashed rgba(255,212,0,.55); }
+.thanks-card h1 { max-width: 610px; margin: 0 auto; font-family: var(--font-display); font-size: clamp(38px, 4.1vw, 57px); font-weight: 800; letter-spacing: -.065em; line-height: .98; }
+.thanks-card h1 span { color: var(--resin-yellow); }
+.thanks-rule { display: block; width: 58px; height: 5px; margin: 24px auto 0; background: var(--resin-yellow); }
+.thanks-intro { max-width: 575px; margin: 24px auto 0; color: #cac8c1; font-size: 16px; font-weight: 500; line-height: 1.55; }
+.thanks-whatsapp { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; margin-top: 29px; padding: 14px 25px; border: 0; border-radius: 8px; background: #25d366; color: #0f2418; font-size: 14px; font-weight: 900; letter-spacing: -.012em; text-transform: uppercase; }
+.thanks-whatsapp svg { width: 22px; height: 22px; }
+.thanks-whatsapp-note { margin: 9px 0 0; color: #878780; font-size: 11px; }
+.thanks-info-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 31px; border: 1px solid rgba(255,212,0,.35); border-radius: 8px; }
+.thanks-info-row > div { display: flex; align-items: center; gap: 10px; min-height: 69px; padding: 13px 18px; text-align: left; }
+.thanks-info-row > div + div { border-left: 1px solid rgba(255,212,0,.35); }
+.thanks-info-row > div > svg { flex: 0 0 auto; width: 24px; height: 24px; color: var(--resin-yellow); }
+.thanks-info-row span { display: grid; gap: 3px; color: #b4b3ac; font-size: 11px; }
+.thanks-info-row strong { color: #f8f7f2; font-size: 12px; font-weight: 800; }
+.thanks-important { display: flex; gap: 13px; margin-top: 13px; padding: 17px; border: 1px solid rgba(255,212,0,.35); border-radius: 8px; text-align: left; }
+.thanks-important > span { display: grid; flex: 0 0 auto; width: 33px; height: 33px; place-items: center; border: 1px solid var(--resin-yellow); border-radius: 50%; color: var(--resin-yellow); }
+.thanks-important svg { width: 19px; height: 19px; }
+.thanks-important b { color: var(--resin-yellow); font-size: 11px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.thanks-important p { margin: 6px 0 0; color: #c6c5bd; font-size: 12px; line-height: 1.45; }
+
+@media (max-width: 680px) {
+  .thanks-shell { width: min(100% - 24px, 500px); padding: 16px 0 28px; }
+  .thanks-brand { width: 132px; }
+  .thanks-card { margin-top: 14px; padding: 28px 18px; border-radius: 16px; }
+  .thanks-status { margin-bottom: 25px; }
+  .thanks-status-item { width: 88px; }
+  .thanks-status-item > span { width: 31px; height: 31px; }
+  .thanks-status-item b { font-size: 8px; }
+  .thanks-status-item small { font-size: 9px; }
+  .thanks-status > i { width: 16px; margin-top: 15px; }
+  .thanks-card h1 { font-size: clamp(35px, 10vw, 43px); }
+  .thanks-intro { font-size: 14px; }
+  .thanks-whatsapp { width: 100%; min-height: 54px; padding: 12px 14px; font-size: 12px; }
+  .thanks-info-row { grid-template-columns: 1fr; }
+  .thanks-info-row > div + div { border-top: 1px solid rgba(255,212,0,.35); border-left: 0; }
+}
+
 @media (max-width: 680px) {
   .final-cta-inner { width: min(100% - 40px, 500px); padding: 80px 0 87px; }
   .final-cta-inner h2 { font-size: clamp(31px, 8.7vw, 41px); }

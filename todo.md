@@ -1,5 +1,8 @@
 # Lista de verificación
 
+- [x] Validar la ruta /gracias, su redirección tras el registro y su diseño responsive.
+- [ ] Vincular el CTA verde de WhatsApp al número definitivo cuando sea proporcionado.
+- [x] Crear una página de gracias con pasos de acceso y CTA verde de WhatsApp tras el registro.
 - [x] Redondear, ocultar barras de scroll y afinar la jerarquía tipográfica del formulario modal.
 - [x] Crear un formulario modal de lista de espera con nombre, correo y WhatsApp, conectado a todos los CTA.
 - [x] Reemplazar el logo del encabezado por el nuevo logo de Ocares Academy.
