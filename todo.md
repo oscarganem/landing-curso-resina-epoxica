@@ -1,5 +1,8 @@
 # Lista de verificación
 
+- [x] Publicar la etiqueta “Clase ONLINE gratuita” en /gracias.
+- [x] Validar visualmente y publicar la etiqueta “Clase ONLINE gratuita” en /gracias.
+- [x] Cambiar la etiqueta de la clase online a “Clase ONLINE gratuita”.
 - [x] Publicar el aviso de asistencia con el curso presencial destacado en /gracias.
 - [x] Validar visualmente y publicar el aviso de asistencia con el curso presencial destacado en /gracias.
 - [x] Añadir el aviso de asistencia y resaltar “Curso presencial en Playa del Carmen”.
