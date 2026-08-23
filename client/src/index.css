@@ -770,3 +770,28 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   .final-cta-button { width: 100%; margin-top: 31px; padding-inline: 16px; font-size: 12px; }
   .final-cta-trust { font-size: 11px; line-height: 1.45; }
 }
+
+/* Galería final — fotografías de alumnos organizadas por orientación. */
+.student-showcase-section { background: #fcfcfa; color: #171717; }
+.student-showcase-inner { width: min(100% - 48px, 1080px); margin: 0 auto; padding: clamp(88px, 10vw, 132px) 0; }
+.student-showcase-heading { max-width: 875px; margin: 0 auto; text-align: center; }
+.student-showcase-heading h2 { margin: 0; font-family: var(--font-display); font-size: clamp(39px, 4.35vw, 60px); font-weight: 800; letter-spacing: -.07em; line-height: .98; }
+.student-showcase-heading h2 span { color: #c7a400; }
+.student-showcase-rule { display: block; width: 58px; height: 5px; margin: 24px auto 0; background: var(--resin-yellow); }
+.student-horizontal-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: clamp(43px, 5vw, 62px); }
+.student-horizontal-grid figure, .student-vertical-grid figure { margin: 0; overflow: hidden; background: #e6e5df; }
+.student-horizontal-grid img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; transition: transform 260ms var(--ease-out, ease-out); }
+.student-horizontal-wide { grid-column: 1 / -1; }
+.student-horizontal-wide img { aspect-ratio: 16 / 7; }
+.student-vertical-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 18px; }
+.student-vertical-grid img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 260ms var(--ease-out, ease-out); }
+.student-horizontal-grid figure:hover img, .student-vertical-grid figure:hover img { transform: scale(1.025); }
+
+@media (max-width: 680px) {
+  .student-showcase-inner { width: min(100% - 40px, 500px); padding: 80px 0 88px; }
+  .student-showcase-heading h2 { font-size: clamp(38px, 10.9vw, 51px); }
+  .student-showcase-rule { width: 50px; height: 4px; margin-top: 20px; }
+  .student-horizontal-grid { gap: 10px; margin-top: 40px; }
+  .student-vertical-grid { gap: 10px; margin-top: 10px; }
+  .student-horizontal-wide img { aspect-ratio: 3 / 2; }
+}

@@ -1,9 +1,12 @@
 # Lista de verificación
 
+- [x] Publicar la nueva galería de alumnos.
+- [x] Validar visualmente y publicar la nueva galería de alumnos en escritorio y móvil.
+- [x] Añadir galería de más de 1,000 alumnos con fotos horizontales en pares y verticales en filas de tres.
 - [x] Publicar la página de gracias sin avisos auxiliares.
 - [x] Validar visualmente y publicar la página de gracias sin avisos auxiliares.
 - [x] Quitar avisos auxiliares, ajustar los pasos y eliminar el recuadro de importante en /gracias.
-- [ ] Publicar el CTA verde con icono de WhatsApp en /gracias.
+- [x] Publicar el CTA verde con icono de WhatsApp en /gracias.
 - [x] Validar visualmente y publicar el CTA verde con icono de WhatsApp en /gracias.
 - [x] Aplicar el verde #0DBB42, texto blanco e icono proporcionado al CTA y paso de WhatsApp.
 - [x] Publicar la etiqueta “Clase ONLINE gratuita” en /gracias.
