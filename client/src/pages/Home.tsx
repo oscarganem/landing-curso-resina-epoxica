@@ -481,27 +481,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="student-showcase-section" aria-labelledby="student-showcase-title">
-        <div className="student-showcase-inner">
-          <header className="student-showcase-heading">
-            <h2 id="student-showcase-title">Únete a más de <span>1,000 alumnos</span> que ya aprendieron a aplicar resina epóxica con nosotros.</h2>
-            <span className="student-showcase-rule" aria-hidden="true" />
-          </header>
-
-          <div className="student-horizontal-grid">
-            <figure><img src="/manus-storage/alumnos-nueva-horizontal-01_3ce88029.webp" alt="Alumnos durante una capacitación presencial de resina epóxica" loading="lazy" /></figure>
-            <figure><img src="/manus-storage/alumnos-nueva-horizontal-02_7a128335.webp" alt="Grupo de participantes durante el curso de resina" loading="lazy" /></figure>
-            <figure className="student-horizontal-wide"><img src="/manus-storage/alumnos-nueva-horizontal-03_dad02957.webp" alt="Alumnos reunidos tras una clase práctica de resina" loading="lazy" /></figure>
-          </div>
-
-          <div className="student-vertical-grid">
-            <figure><img src="/manus-storage/alumnos-nueva-vertical-01_1ab340fa.webp" alt="Alumno realizando una práctica de resina epóxica" loading="lazy" /></figure>
-            <figure><img src="/manus-storage/alumnos-nueva-vertical-02_540c4291.webp" alt="Participante aplicando resina en un proyecto práctico" loading="lazy" /></figure>
-            <figure><img src="/manus-storage/alumnos-nueva-vertical-03_eeed7fcc.webp" alt="Alumno aprendiendo técnicas de aplicación de resina" loading="lazy" /></figure>
-          </div>
-        </div>
-      </section>
-
       <Dialog open={isWaitlistOpen} onOpenChange={setIsWaitlistOpen}>
         <DialogContent className="waitlist-modal" showCloseButton={false}>
           <DialogClose className="waitlist-close" aria-label="Cerrar formulario"><X aria-hidden="true" /></DialogClose>

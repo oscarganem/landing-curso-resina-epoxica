@@ -1,5 +1,8 @@
 # Lista de verificación
 
+- [x] Publicar la galería reubicada en la página de gracias.
+- [x] Validar la galería reubicada en /gracias y confirmar que no aparezca en la landing principal.
+- [x] Mover la nueva galería de alumnos de la landing principal a la página de gracias.
 - [x] Publicar la nueva galería de alumnos.
 - [x] Validar visualmente y publicar la nueva galería de alumnos en escritorio y móvil.
 - [x] Añadir galería de más de 1,000 alumnos con fotos horizontales en pares y verticales en filas de tres.
