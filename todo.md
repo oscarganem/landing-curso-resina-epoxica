@@ -1,5 +1,7 @@
 # Lista de verificación
 
+- [x] Validar visualmente y publicar el nuevo aviso de acceso por WhatsApp y preventa en /gracias.
+- [x] Reemplazar el mensaje de gracias por el aviso de acceso por WhatsApp y preventa.
 - [x] Verificar visualmente y publicar la fecha y horario actualizados de la clase online en /gracias.
 - [x] Actualizar la página de gracias con la clase online del jueves 10 de septiembre a las 8:00 PM.
 - [x] Validar la ruta /gracias, su redirección tras el registro y su diseño responsive.
