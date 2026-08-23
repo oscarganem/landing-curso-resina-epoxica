@@ -1,5 +1,9 @@
 # Lista de verificación
 
+- [x] Publicar la instrucción de WhatsApp en negrita en la página de gracias.
+- [x] Validar visualmente y publicar la instrucción de WhatsApp en negrita en /gracias.
+- [x] Resaltar en negrita la instrucción principal para solicitar el pase por WhatsApp.
+- [x] Verificar y publicar el copy simplificado de la página de gracias.
 - [x] Validar visualmente y publicar el nuevo aviso de acceso por WhatsApp y preventa en /gracias.
 - [x] Reemplazar el mensaje de gracias por el aviso de acceso por WhatsApp y preventa.
 - [x] Verificar visualmente y publicar la fecha y horario actualizados de la clase online en /gracias.

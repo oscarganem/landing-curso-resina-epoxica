@@ -20,7 +20,11 @@ export default function ThankYou() {
 
           <h1 id="thanks-title">¡Ya casi estás dentro de la <span>lista de espera!</span></h1>
           <span className="thanks-rule" aria-hidden="true" />
-          <p className="thanks-intro">Por último, pide tu acceso a la clase online por WhatsApp. Recuerda que el descuento especial de preventa se revelará durante la clase online. Si no asistes, no podrás acceder a este beneficio para nuestro próximo Curso Presencial de Resina Epóxica en Playa del Carmen, que se realizará el 18 de septiembre.</p>
+          <p className="thanks-intro">
+            <span><strong>Por último, solicita tu pase GRATIS por WhatsApp.</strong></span>
+            <span>El descuento especial de preventa se revelará durante la clase online.</span>
+            <span>Si no asistes, no podrás acceder a este beneficio para el curso presencial en Playa del Carmen.</span>
+          </p>
 
           <button className="thanks-whatsapp" type="button" aria-label="WhatsApp se habilitará próximamente">
             <MessageCircle aria-hidden="true" /> Solicitar mi pase GRATIS por WhatsApp

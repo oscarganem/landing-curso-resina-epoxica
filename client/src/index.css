@@ -729,6 +729,9 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .thanks-card h1 span { color: var(--resin-yellow); }
 .thanks-rule { display: block; width: 58px; height: 5px; margin: 24px auto 0; background: var(--resin-yellow); }
 .thanks-intro { max-width: 575px; margin: 24px auto 0; color: #cac8c1; font-size: 16px; font-weight: 500; line-height: 1.55; }
+.thanks-intro span { display: block; }
+.thanks-intro span + span { margin-top: 6px; }
+.thanks-intro strong { color: #f8f7f2; font-weight: 800; }
 .thanks-whatsapp { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; margin-top: 29px; padding: 14px 25px; border: 0; border-radius: 8px; background: #25d366; color: #0f2418; font-size: 14px; font-weight: 900; letter-spacing: -.012em; text-transform: uppercase; }
 .thanks-whatsapp svg { width: 22px; height: 22px; }
 .thanks-whatsapp-note { margin: 9px 0 0; color: #878780; font-size: 11px; }
