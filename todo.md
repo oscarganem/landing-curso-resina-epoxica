@@ -1,5 +1,11 @@
 # Lista de verificación
 
+- [x] Publicar el aviso de asistencia con el curso presencial destacado en /gracias.
+- [x] Validar visualmente y publicar el aviso de asistencia con el curso presencial destacado en /gracias.
+- [x] Añadir el aviso de asistencia y resaltar “Curso presencial en Playa del Carmen”.
+- [x] Publicar el nuevo mensaje principal de clase online en /gracias.
+- [x] Validar visualmente y publicar el nuevo mensaje principal de clase online en /gracias.
+- [x] Reemplazar el mensaje principal por el nuevo texto de clase online y preventa.
 - [x] Publicar el nuevo copy de precio especial y descuento en /gracias.
 - [x] Validar visualmente y publicar el nuevo copy de precio especial y descuento en /gracias.
 - [x] Actualizar las frases de precio especial y descuento en la página de gracias.
