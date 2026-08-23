@@ -28,8 +28,8 @@ export default function ThankYou() {
           <p className="thanks-whatsapp-note">El enlace de WhatsApp se habilitará próximamente.</p>
 
           <div className="thanks-info-row">
-            <div><CalendarDays aria-hidden="true" /><span>Clase online<strong>Fecha por confirmar</strong></span></div>
-            <div><Clock3 aria-hidden="true" /><span>Horario<strong>Se confirmará por WhatsApp</strong></span></div>
+            <div><CalendarDays aria-hidden="true" /><span>Clase online<strong>Jueves 10 de septiembre</strong></span></div>
+            <div><Clock3 aria-hidden="true" /><span>Horario<strong>8:00 PM</strong></span></div>
           </div>
 
           <aside className="thanks-important">
