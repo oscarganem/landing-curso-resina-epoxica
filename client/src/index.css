@@ -719,11 +719,14 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .thanks-status-item { display: grid; justify-items: center; width: 125px; color: #787873; }
 .thanks-status-item > span { display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid #75756f; border-radius: 50%; color: #a7a7a0; }
 .thanks-status-item > span svg { width: 18px; height: 18px; }
+.thanks-status-item > span img { display: block; width: 19px; height: 19px; object-fit: contain; }
 .thanks-status-item b { margin-top: 8px; color: #adada7; font-size: 10px; font-weight: 900; letter-spacing: .03em; text-transform: uppercase; }
 .thanks-status-item small { margin-top: 3px; font-size: 10px; }
 .thanks-status-item.is-complete { color: var(--resin-yellow); }
 .thanks-status-item.is-complete > span { border-color: var(--resin-yellow); background: var(--resin-yellow); color: #161616; }
 .thanks-status-item.is-complete b { color: var(--resin-yellow); }
+.thanks-status-item.is-whatsapp > span { border-color: #0DBB42; background: #0DBB42; }
+.thanks-status-item.is-whatsapp b { color: #0DBB42; }
 .thanks-status > i { width: 54px; height: 1px; margin-top: 18px; border-top: 1px dashed rgba(255,212,0,.55); }
 .thanks-card h1 { max-width: 610px; margin: 0 auto; font-family: var(--font-display); font-size: clamp(38px, 4.1vw, 57px); font-weight: 800; letter-spacing: -.065em; line-height: .98; }
 .thanks-card h1 span { color: var(--resin-yellow); }
@@ -732,20 +735,14 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .thanks-intro span { display: block; }
 .thanks-intro span + span { margin-top: 6px; }
 .thanks-intro strong { color: #f8f7f2; font-weight: 800; }
-.thanks-whatsapp { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; margin-top: 29px; padding: 14px 25px; border: 0; border-radius: 8px; background: #25d366; color: #0f2418; font-size: 14px; font-weight: 900; letter-spacing: -.012em; text-transform: uppercase; }
-.thanks-whatsapp svg { width: 22px; height: 22px; }
-.thanks-whatsapp-note { margin: 9px 0 0; color: #878780; font-size: 11px; }
+.thanks-whatsapp { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; margin-top: 29px; padding: 14px 25px; border: 0; border-radius: 8px; background: #0DBB42; color: #fff; font-size: 14px; font-weight: 900; letter-spacing: -.012em; text-transform: uppercase; }
+.thanks-whatsapp img { display: block; width: 22px; height: 22px; object-fit: contain; }
 .thanks-info-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 31px; border: 1px solid rgba(255,212,0,.35); border-radius: 8px; }
 .thanks-info-row > div { display: flex; align-items: center; gap: 10px; min-height: 69px; padding: 13px 18px; text-align: left; }
 .thanks-info-row > div + div { border-left: 1px solid rgba(255,212,0,.35); }
 .thanks-info-row > div > svg { flex: 0 0 auto; width: 24px; height: 24px; color: var(--resin-yellow); }
 .thanks-info-row span { display: grid; gap: 3px; color: #b4b3ac; font-size: 11px; }
 .thanks-info-row strong { color: #f8f7f2; font-size: 12px; font-weight: 800; }
-.thanks-important { display: flex; gap: 13px; margin-top: 13px; padding: 17px; border: 1px solid rgba(255,212,0,.35); border-radius: 8px; text-align: left; }
-.thanks-important > span { display: grid; flex: 0 0 auto; width: 33px; height: 33px; place-items: center; border: 1px solid var(--resin-yellow); border-radius: 50%; color: var(--resin-yellow); }
-.thanks-important svg { width: 19px; height: 19px; }
-.thanks-important b { color: var(--resin-yellow); font-size: 11px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
-.thanks-important p { margin: 6px 0 0; color: #c6c5bd; font-size: 12px; line-height: 1.45; }
 
 @media (max-width: 680px) {
   .thanks-shell { width: min(100% - 24px, 500px); padding: 16px 0 28px; }

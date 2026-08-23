@@ -1,4 +1,4 @@
-import { CalendarDays, Check, Clock3, MessageCircle, ShieldAlert } from "lucide-react";
+import { CalendarDays, Check, Clock3 } from "lucide-react";
 import { Link } from "wouter";
 
 export default function ThankYou() {
@@ -13,9 +13,9 @@ export default function ThankYou() {
           <div className="thanks-status" aria-label="Progreso de acceso">
             <div className="thanks-status-item is-complete"><span><Check aria-hidden="true" strokeWidth={3} /></span><b>01 Registro</b><small>Completado</small></div>
             <i aria-hidden="true" />
-            <div className="thanks-status-item"><span><MessageCircle aria-hidden="true" strokeWidth={2.3} /></span><b>02 WhatsApp</b><small>Próximamente</small></div>
+            <div className="thanks-status-item is-whatsapp"><span><img src="/manus-storage/whatsapp-icon_a58887ab.png" alt="" /></span><b>02 WhatsApp</b><small>Próximo paso</small></div>
             <i aria-hidden="true" />
-            <div className="thanks-status-item"><span><CalendarDays aria-hidden="true" strokeWidth={2.3} /></span><b>03 Clase online</b><small>Próximamente</small></div>
+            <div className="thanks-status-item"><span><CalendarDays aria-hidden="true" strokeWidth={2.3} /></span><b>03 Clase online</b><small>Próximo paso</small></div>
           </div>
 
           <h1 id="thanks-title">¡Ya casi estás dentro de la <span>lista de espera!</span></h1>
@@ -27,19 +27,13 @@ export default function ThankYou() {
           </p>
 
           <button className="thanks-whatsapp" type="button" aria-label="WhatsApp se habilitará próximamente">
-            <MessageCircle aria-hidden="true" /> Solicitar mi pase GRATIS por WhatsApp
+            <img src="/manus-storage/whatsapp-icon_a58887ab.png" alt="" /> Solicitar mi pase GRATIS por WhatsApp
           </button>
-          <p className="thanks-whatsapp-note">El enlace de WhatsApp se habilitará próximamente.</p>
 
           <div className="thanks-info-row">
             <div><CalendarDays aria-hidden="true" /><span>Clase ONLINE gratuita<strong>Jueves 10 de septiembre</strong></span></div>
             <div><Clock3 aria-hidden="true" /><span>Horario<strong>8:00 PM</strong></span></div>
           </div>
-
-          <aside className="thanks-important">
-            <span><ShieldAlert aria-hidden="true" /></span>
-            <div><b>Importante</b><p>Completa este paso cuando recibas el enlace por WhatsApp para asegurar tu acceso a la clase y conocer el descuento de preventa.</p></div>
-          </aside>
         </section>
       </div>
     </main>
