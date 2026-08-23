@@ -1,5 +1,8 @@
 # Lista de verificación
 
+- [x] Publicar el nuevo copy de precio especial y descuento en /gracias.
+- [x] Validar visualmente y publicar el nuevo copy de precio especial y descuento en /gracias.
+- [x] Actualizar las frases de precio especial y descuento en la página de gracias.
 - [x] Publicar la instrucción de WhatsApp en negrita en la página de gracias.
 - [x] Validar visualmente y publicar la instrucción de WhatsApp en negrita en /gracias.
 - [x] Resaltar en negrita la instrucción principal para solicitar el pase por WhatsApp.

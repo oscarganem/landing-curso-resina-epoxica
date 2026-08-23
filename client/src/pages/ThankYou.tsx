@@ -22,8 +22,8 @@ export default function ThankYou() {
           <span className="thanks-rule" aria-hidden="true" />
           <p className="thanks-intro">
             <span><strong>Por último, solicita tu pase GRATIS por WhatsApp.</strong></span>
-            <span>El descuento especial de preventa se revelará durante la clase online.</span>
-            <span>Si no asistes, no podrás acceder a este beneficio para el curso presencial en Playa del Carmen.</span>
+            <span>El precio especial de preventa se revelará durante la clase online.</span>
+            <span>Si no asistes, no podrás acceder a este descuento para el curso presencial en Playa del Carmen.</span>
           </p>
 
           <button className="thanks-whatsapp" type="button" aria-label="WhatsApp se habilitará próximamente">
