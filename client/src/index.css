@@ -663,33 +663,33 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 
 /* Modal de registro — panel blanco editorial inspirado en el flujo de espera. */
 .waitlist-cta, .community-cta, .process-cta, .proof-cta, .final-cta-button { font-family: inherit; cursor: pointer; }
-.waitlist-modal { width: min(100% - 32px, 760px) !important; max-width: 760px !important; max-height: min(92dvh, 760px); overflow-x: hidden; overflow-y: auto; -ms-overflow-style: none; scrollbar-width: none; border: 0 !important; border-radius: 20px !important; background: #fff !important; padding: clamp(28px, 3vw, 38px) !important; color: #1d2b40; box-shadow: 0 24px 70px rgba(0,0,0,.36) !important; }
+.waitlist-modal { width: min(100% - 32px, 690px) !important; max-width: 690px !important; max-height: min(92dvh, 900px); overflow-x: hidden; overflow-y: auto; -ms-overflow-style: none; scrollbar-width: none; border: 0 !important; border-radius: 20px !important; background: #fff !important; padding: clamp(32px, 4vw, 52px) !important; color: #1d2b40; box-shadow: 0 24px 70px rgba(0,0,0,.36) !important; }
 .waitlist-modal::-webkit-scrollbar { width: 0; height: 0; display: none; }
 .waitlist-close { position: absolute; top: -14px; right: -14px; display: grid; width: 36px; height: 36px; place-items: center; border: 0; border-radius: 50%; background: #fff; color: #4c4b47; box-shadow: 0 4px 14px rgba(0,0,0,.16); }
 .waitlist-close svg { width: 21px; height: 21px; }
 .waitlist-modal-copy { text-align: center; }
-.waitlist-modal-copy [data-slot="dialog-title"], .waitlist-success [data-slot="dialog-title"] { max-width: 650px; margin: 0 auto; color: #1d2b40; font-family: Arial, Helvetica, sans-serif; font-size: clamp(27px, 3vw, 37px); font-weight: 800; letter-spacing: -.045em; line-height: 1.03; text-align: center; }
+.waitlist-modal-copy [data-slot="dialog-title"], .waitlist-success [data-slot="dialog-title"] { margin: 0 auto; color: #1d2b40; font-family: Arial, Helvetica, sans-serif; font-size: clamp(28px, 3vw, 39px); font-weight: 800; letter-spacing: -.035em; line-height: 1.06; text-align: center; }
 .waitlist-modal-copy [data-slot="dialog-title"] strong { color: var(--resin-yellow); font-weight: 900; }
-.waitlist-modal-copy [data-slot="dialog-description"] { display: block; max-width: 620px; margin: 17px auto 0; color: #50545a; font-size: 15px; font-weight: 400; line-height: 1.42; text-align: center; }
-.waitlist-modal-copy > p { margin: 19px 0 0; color: #1d2b40; font-size: 15px; font-weight: 800; text-align: left; }
+.waitlist-modal-copy [data-slot="dialog-description"] { display: grid; gap: 15px; margin: 25px auto 0; color: #3f4854; font-size: 16px; font-weight: 400; line-height: 1.5; text-align: center; }
+.waitlist-modal-copy > p { margin: 23px 0 0; color: #1d2b40; font-size: 16px; font-weight: 800; text-align: left; }
 .waitlist-modal-copy > p strong { color: var(--resin-yellow); font-weight: 900; }
-.waitlist-benefits { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 12px 0 0; padding: 0; color: #424a54; font-size: 13px; line-height: 1.35; text-align: left; list-style: none; }
-.waitlist-benefits li { display: flex; align-items: flex-start; gap: 8px; }
-.waitlist-benefits svg { flex: 0 0 auto; width: 16px; height: 16px; margin-top: 1px; color: var(--resin-yellow); }
+.waitlist-benefits { display: grid; gap: 12px; margin: 14px 0 0; padding: 0; color: #424a54; font-size: 14px; line-height: 1.45; text-align: left; list-style: none; }
+.waitlist-benefits li { display: flex; align-items: flex-start; gap: 10px; }
+.waitlist-benefits svg { flex: 0 0 auto; width: 18px; height: 18px; margin-top: 1px; color: #c9a600; }
 .waitlist-benefits strong { color: #202b3a; font-weight: 800; }
-.waitlist-form { display: grid; gap: 9px; margin-top: 20px; }
-.waitlist-form h3 { margin: 0 0 1px; color: #1d2b40; font-family: Arial, Helvetica, sans-serif; font-size: clamp(20px, 2vw, 24px); font-weight: 800; letter-spacing: -.035em; line-height: 1.14; text-align: center; }
+.waitlist-form { display: grid; gap: 13px; margin-top: 27px; }
+.waitlist-form h3 { margin: 0 0 2px; color: #1d2b40; font-family: Arial, Helvetica, sans-serif; font-size: clamp(21px, 2.1vw, 26px); font-weight: 800; letter-spacing: -.025em; line-height: 1.14; text-align: center; }
 .waitlist-form label { display: block; }
-.waitlist-form input { width: 100%; min-height: 46px; border: 1px solid #d9d9d5; border-radius: 3px; background: #fff; padding: 0 14px; color: #26364b; font-family: Arial, Helvetica, sans-serif; font-size: 15px; outline: none; transition: border-color 160ms ease, box-shadow 160ms ease; }
+.waitlist-form input { width: 100%; min-height: 54px; border: 1px solid #d9d9d5; border-radius: 3px; background: #fff; padding: 0 15px; color: #26364b; font-family: Arial, Helvetica, sans-serif; font-size: 16px; outline: none; transition: border-color 160ms ease, box-shadow 160ms ease; }
 .waitlist-form input::placeholder { color: #8a8d92; }
 .waitlist-form input:focus { border-color: var(--resin-yellow); box-shadow: 0 0 0 3px rgba(255,212,0,.24); }
-.waitlist-form > button, .waitlist-success > button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 51px; margin-top: 4px; border: 0; border-radius: 999px; background: var(--resin-yellow); color: #1a1a18; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: 900; letter-spacing: .015em; text-transform: uppercase; transition: transform 160ms var(--ease-out, ease-out), background 160ms var(--ease-out, ease-out); }
+.waitlist-form > button, .waitlist-success > button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 55px; margin-top: 8px; border: 0; border-radius: 999px; background: var(--resin-yellow); color: #1a1a18; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: 900; letter-spacing: .015em; text-transform: uppercase; transition: transform 160ms var(--ease-out, ease-out), background 160ms var(--ease-out, ease-out); }
 .waitlist-form > button:hover, .waitlist-success > button:hover { background: #ffe14c; transform: translateY(-1px); }
 .waitlist-form > button:active, .waitlist-success > button:active { transform: scale(.98); }
 .waitlist-form > button:disabled { cursor: wait; opacity: .72; transform: none; }
 .waitlist-form > button svg { width: 17px; height: 17px; }
 .waitlist-form-error { margin: -2px 0 0; color: #b42318; font-size: 13px; font-weight: 700; text-align: center; }
-.waitlist-form-trust { margin: 1px 0 0; color: #777a7f; font-size: 11px; font-style: italic; line-height: 1.35; text-align: center; }
+.waitlist-form-trust { margin: 1px 0 0; color: #777a7f; font-size: 12px; font-style: italic; line-height: 1.35; text-align: center; }
 .waitlist-success { display: grid; justify-items: center; gap: 18px; padding: 26px 8px 10px; text-align: center; }
 .waitlist-success-mark { display: grid; width: 52px; height: 52px; place-items: center; border-radius: 50%; background: var(--resin-yellow); color: #171717; }
 .waitlist-success-mark svg { width: 28px; height: 28px; }
@@ -697,15 +697,15 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .waitlist-success > button { width: min(100%, 300px); margin-top: 4px; padding: 0 18px; }
 
 @media (max-width: 680px) {
-  .waitlist-modal { width: min(100% - 24px, 520px) !important; max-height: 89dvh; padding: 30px 22px !important; }
+  .waitlist-modal { width: min(100% - 24px, 520px) !important; max-height: 89dvh; padding: 33px 22px !important; }
   .waitlist-close { top: 10px; right: 10px; width: 32px; height: 32px; }
-  .waitlist-modal-copy [data-slot="dialog-title"] { max-width: 310px; font-size: 27px; }
-  .waitlist-modal-copy [data-slot="dialog-description"] { margin-top: 17px; font-size: 14px; }
-  .waitlist-modal-copy > p { margin-top: 18px; font-size: 15px; }
-  .waitlist-benefits { grid-template-columns: 1fr; gap: 10px; font-size: 13px; }
-  .waitlist-form { margin-top: 21px; }
+  .waitlist-modal-copy [data-slot="dialog-title"] { max-width: 290px; font-size: 27px; }
+  .waitlist-modal-copy [data-slot="dialog-description"] { margin-top: 20px; font-size: 14px; }
+  .waitlist-modal-copy > p { font-size: 15px; }
+  .waitlist-benefits { font-size: 13px; }
+  .waitlist-form { margin-top: 23px; }
   .waitlist-form h3 { font-size: 21px; }
-  .waitlist-form input { min-height: 50px; font-size: 15px; }
+  .waitlist-form input { min-height: 51px; font-size: 15px; }
   .waitlist-form > button { min-height: 53px; padding: 0 14px; font-size: 11px; }
 }
 
