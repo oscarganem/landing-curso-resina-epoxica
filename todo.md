@@ -1,4 +1,5 @@
 # Lista de verificación
+- [x] Actualizar el formulario de lista de espera con el nuevo copy, acentos amarillos y una vista compacta de primer pantallazo.
 - [x] Añadir un CTA final de WhatsApp después de la galería en la página de gracias, siguiendo la referencia compartida.
 - [x] Ampliar la galería a doce fotografías sin duplicados y mantener “1,000 alumnos” en amarillo #FFD400.
 - [x] Validar en escritorio y móvil la galería corregida con las seis fotografías confirmadas del último envío.

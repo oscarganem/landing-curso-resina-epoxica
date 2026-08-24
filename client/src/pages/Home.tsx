@@ -482,23 +482,22 @@ export default function Home() {
       </section>
 
       <Dialog open={isWaitlistOpen} onOpenChange={setIsWaitlistOpen}>
-        <DialogContent className="waitlist-modal" showCloseButton={false}>
-          <DialogClose className="waitlist-close" aria-label="Cerrar formulario"><X aria-hidden="true" /></DialogClose>
-          <div className="waitlist-modal-copy">
-            <DialogTitle>Únete GRATIS a la lista prioritaria del Curso de Resina Epóxica</DialogTitle>
-            <DialogDescription>
-              <strong>Las inscripciones para nuestro curso presencial en Playa del Carmen todavía no están abiertas.</strong>
-              <span>Antes de abrir los lugares al público general, daremos acceso primero a las personas registradas en nuestra lista de espera.</span>
-            </DialogDescription>
-            <p>Al registrarte GRATIS obtendrás:</p>
-            <ul className="waitlist-benefits">
-              <li><Check aria-hidden="true" strokeWidth={3} /><span><strong>Acceso a nuestra clase online gratuita</strong>, donde aprenderás las 5 capas de un piso epóxico y verás una demostración en vivo.</span></li>
-              <li><Check aria-hidden="true" strokeWidth={3} /><span><strong>Un descuento exclusivo de preventa</strong>, que revelaremos durante la clase.</span></li>
-              <li><Check aria-hidden="true" strokeWidth={3} /><span><strong>Acceso prioritario para reservar tu lugar</strong> antes de abrir las inscripciones al público general.</span></li>
-            </ul>
-          </div>
-          <form className="waitlist-form" onSubmit={handleWaitlistSubmit}>
-            <h3>¿Quieres recibir tu acceso y conocer el descuento de preventa?</h3>
+          <DialogContent className="waitlist-modal" showCloseButton={false}>
+            <DialogClose className="waitlist-close" aria-label="Cerrar formulario"><X aria-hidden="true" /></DialogClose>
+            <div className="waitlist-modal-copy">
+              <DialogTitle>Únete <strong>GRATIS</strong> a la lista de espera del <strong>Curso de Resina Epóxica</strong></DialogTitle>
+              <DialogDescription>
+                Las inscripciones para nuestro curso presencial en Playa del Carmen todavía no están abiertas.
+              </DialogDescription>
+              <p>Al registrarte <strong>GRATIS</strong> obtendrás:</p>
+              <ul className="waitlist-benefits">
+                <li><Check aria-hidden="true" strokeWidth={3} /><span><strong>Acceso prioritario para reservar tu lugar</strong> antes de abrir las inscripciones al público general.</span></li>
+                <li><Check aria-hidden="true" strokeWidth={3} /><span><strong>Acceso a nuestra clase online gratuita</strong>, donde aprenderás las 5 capas de un piso epóxico y verás una demostración en vivo.</span></li>
+                <li><Check aria-hidden="true" strokeWidth={3} /><span><strong>Un descuento exclusivo de preventa</strong>, que revelaremos durante la clase.</span></li>
+              </ul>
+            </div>
+            <form className="waitlist-form" onSubmit={handleWaitlistSubmit}>
+              <h3>Regístrate aquí</h3>
             <label><span className="sr-only">Introduce tu nombre</span><input required autoComplete="name" placeholder="Introduce tu nombre" value={formValues.fullName} onChange={(event) => setFormValues((values) => ({ ...values, fullName: event.target.value }))} /></label>
             <label><span className="sr-only">Tu mejor correo</span><input required type="email" autoComplete="email" placeholder="Tu mejor correo" value={formValues.email} onChange={(event) => setFormValues((values) => ({ ...values, email: event.target.value }))} /></label>
             <label><span className="sr-only">WhatsApp</span><input required type="tel" autoComplete="tel" placeholder="WhatsApp" value={formValues.whatsapp} onChange={(event) => setFormValues((values) => ({ ...values, whatsapp: event.target.value }))} /></label>
