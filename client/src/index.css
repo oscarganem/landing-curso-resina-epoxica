@@ -675,7 +675,7 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .waitlist-modal-copy > p strong { color: var(--resin-yellow); font-weight: 900; }
 .waitlist-benefits { display: grid; gap: 12px; margin: 14px 0 0; padding: 0; color: #424a54; font-size: 14px; line-height: 1.45; text-align: left; list-style: none; }
 .waitlist-benefits li { display: flex; align-items: flex-start; gap: 10px; }
-.waitlist-benefits svg { flex: 0 0 auto; width: 18px; height: 18px; margin-top: 1px; color: #c9a600; }
+.waitlist-benefits svg { flex: 0 0 auto; width: 18px; height: 18px; margin-top: 1px; color: var(--resin-yellow); }
 .waitlist-benefits strong { color: #202b3a; font-weight: 800; }
 .waitlist-form { display: grid; gap: 13px; margin-top: 27px; }
 .waitlist-form h3 { margin: 0 0 2px; color: #1d2b40; font-family: Arial, Helvetica, sans-serif; font-size: clamp(21px, 2.1vw, 26px); font-weight: 800; letter-spacing: -.025em; line-height: 1.14; text-align: center; }

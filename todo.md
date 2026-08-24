@@ -1,4 +1,5 @@
 # Lista de verificación
+- [x] Aplicar amarillo de marca a las tres palomitas de los beneficios del formulario.
 - [x] Restaurar la disposición vertical original del formulario, conservando solo el nuevo copy solicitado.
 - [x] Actualizar el formulario de lista de espera con el nuevo copy, acentos amarillos y una vista compacta de primer pantallazo.
 - [x] Añadir un CTA final de WhatsApp después de la galería en la página de gracias, siguiendo la referencia compartida.
