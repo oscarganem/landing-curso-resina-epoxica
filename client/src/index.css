@@ -787,6 +787,23 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .student-vertical-grid img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 260ms var(--ease-out, ease-out); }
 .student-horizontal-grid figure:hover img, .student-vertical-grid figure:hover img { transform: scale(1.025); }
 
+/* Cierre de WhatsApp — paso final posterior a la galería de alumnos. */
+.thanks-final-section { overflow: hidden; background: #080808; color: #fcfcfa; text-align: center; }
+.thanks-final-inner { width: min(100% - 48px, 1080px); margin: 0 auto; padding: clamp(96px, 11vw, 148px) 0 clamp(104px, 12vw, 162px); }
+.thanks-final-eyebrow { margin: 0; color: var(--resin-yellow); font-size: 15px; font-weight: 900; letter-spacing: .25em; text-transform: uppercase; }
+.thanks-final-eyebrow-rule, .thanks-final-title-rule { display: block; width: 72px; height: 6px; margin: 22px auto 0; background: var(--resin-yellow); }
+.thanks-final-inner h2 { margin: 34px auto 0; font-family: var(--font-display); font-size: clamp(48px, 6.15vw, 84px); font-weight: 800; letter-spacing: -.07em; line-height: .94; }
+.thanks-final-inner h2 span { color: var(--resin-yellow); }
+.thanks-final-title-rule { width: 58px; height: 5px; margin-top: 33px; }
+.thanks-final-copy { max-width: 900px; margin: 35px auto 0; color: #d9d8d2; font-size: clamp(18px, 2vw, 25px); font-weight: 500; letter-spacing: -.025em; line-height: 1.5; }
+.thanks-final-copy strong { color: #fcfcfa; font-weight: 800; }
+.thanks-final-whatsapp { display: inline-flex; align-items: center; justify-content: center; gap: 18px; min-height: 88px; width: min(100%, 870px); margin-top: 53px; border: 0; border-radius: 16px; background: #0DBB42; box-shadow: 0 18px 36px rgba(13,187,66,.20); color: #fff; font-family: var(--font-display); font-size: clamp(18px, 2.1vw, 27px); font-weight: 900; letter-spacing: -.025em; line-height: 1; text-transform: uppercase; transition: transform 160ms var(--ease-out, ease-out), background 160ms var(--ease-out, ease-out), box-shadow 160ms var(--ease-out, ease-out); }
+.thanks-final-whatsapp:hover { background: #0fc849; box-shadow: 0 20px 44px rgba(13,187,66,.30); transform: translateY(-2px); }
+.thanks-final-whatsapp:active { transform: scale(.98); }
+.thanks-final-whatsapp img { display: block; width: 40px; height: 40px; object-fit: contain; }
+.thanks-final-note { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 29px 0 0; color: #d1d0ca; font-size: 17px; font-weight: 500; }
+.thanks-final-note i { width: 5px; height: 5px; border-radius: 50%; background: var(--resin-yellow); }
+
 @media (max-width: 680px) {
   .student-showcase-inner { width: min(100% - 40px, 500px); padding: 80px 0 88px; }
   .student-showcase-heading h2 { font-size: clamp(38px, 10.9vw, 51px); }
@@ -794,4 +811,13 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   .student-horizontal-grid { gap: 10px; margin-top: 40px; }
   .student-vertical-grid { gap: 10px; margin-top: 10px; }
   .student-horizontal-wide img { aspect-ratio: 3 / 2; }
+  .thanks-final-inner { width: min(100% - 40px, 500px); padding: 84px 0 94px; }
+  .thanks-final-eyebrow { font-size: 12px; letter-spacing: .22em; }
+  .thanks-final-eyebrow-rule { width: 58px; height: 5px; margin-top: 17px; }
+  .thanks-final-inner h2 { margin-top: 29px; font-size: clamp(42px, 11.5vw, 53px); line-height: .96; }
+  .thanks-final-title-rule { width: 48px; height: 4px; margin-top: 27px; }
+  .thanks-final-copy { margin-top: 28px; font-size: 16px; line-height: 1.48; }
+  .thanks-final-whatsapp { min-height: 66px; gap: 11px; margin-top: 38px; padding: 14px 17px; border-radius: 11px; font-size: 15px; line-height: 1.05; }
+  .thanks-final-whatsapp img { flex: 0 0 auto; width: 27px; height: 27px; }
+  .thanks-final-note { flex-wrap: wrap; gap: 8px; margin-top: 23px; font-size: 13px; }
 }

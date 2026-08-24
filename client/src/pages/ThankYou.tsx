@@ -63,6 +63,23 @@ export default function ThankYou() {
           </div>
         </div>
       </section>
+
+      <section className="thanks-final-section" aria-labelledby="thanks-final-title">
+        <div className="thanks-final-inner">
+          <p className="thanks-final-eyebrow">Último paso</p>
+          <span className="thanks-final-eyebrow-rule" aria-hidden="true" />
+          <h2 id="thanks-final-title">Completa el último paso<br />y recibe <span>tu pase GRATIS</span></h2>
+          <span className="thanks-final-title-rule" aria-hidden="true" />
+          <p className="thanks-final-copy">
+            Solicita tu acceso por WhatsApp para asistir a la clase online gratuita del Jueves 10 de septiembre a las 8:00 PM. Durante la clase revelaremos el descuento especial de preventa para el <strong>Curso Presencial</strong> de Resina Epóxica en Playa del Carmen.
+          </p>
+          <button className="thanks-final-whatsapp" type="button" aria-label="WhatsApp se habilitará próximamente">
+            <img src="/manus-storage/whatsapp-icon_a58887ab.png" alt="" />
+            Solicitar mi pase GRATIS por WhatsApp
+          </button>
+          <p className="thanks-final-note"><span>Clase online gratuita</span><i aria-hidden="true" /> <span>Descuento exclusivo para asistentes</span></p>
+        </div>
+      </section>
     </main>
   );
 }

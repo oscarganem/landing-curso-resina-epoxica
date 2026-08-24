@@ -1,4 +1,5 @@
 # Lista de verificación
+- [x] Añadir un CTA final de WhatsApp después de la galería en la página de gracias, siguiendo la referencia compartida.
 - [x] Ampliar la galería a doce fotografías sin duplicados y mantener “1,000 alumnos” en amarillo #FFD400.
 - [x] Validar en escritorio y móvil la galería corregida con las seis fotografías confirmadas del último envío.
 - [x] Retirar las fotos del lote anterior añadidas por error y verificar el último envío del usuario.
