@@ -1,8 +1,9 @@
 # Lista de verificación
+- [x] Ampliar la galería a doce fotografías sin duplicados y mantener “1,000 alumnos” en amarillo #FFD400.
 - [x] Validar en escritorio y móvil la galería corregida con las seis fotografías confirmadas del último envío.
 - [x] Retirar las fotos del lote anterior añadidas por error y verificar el último envío del usuario.
-- [ ] Validar visualmente las once fotografías de la galería en la página de gracias.
-- [ ] Revisar e integrar únicamente las fotografías faltantes confirmadas del último envío para la galería de alumnos.
+- [x] Validar visualmente la galería final de doce fotografías en la página de gracias.
+- [x] Revisar e integrar únicamente las fotografías faltantes confirmadas del último envío para la galería de alumnos.
 - [x] Publicar la galería reubicada en la página de gracias.
 - [x] Validar la galería reubicada en /gracias y confirmar que no aparezca en la landing principal.
 - [x] Mover la nueva galería de alumnos de la landing principal a la página de gracias.

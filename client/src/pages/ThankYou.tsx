@@ -48,12 +48,18 @@ export default function ThankYou() {
             <figure><img src="/manus-storage/alumnos-nueva-horizontal-01_3ce88029.webp" alt="Alumnos durante una capacitación presencial de resina epóxica" loading="lazy" /></figure>
             <figure><img src="/manus-storage/alumnos-nueva-horizontal-02_7a128335.webp" alt="Grupo de participantes durante el curso de resina" loading="lazy" /></figure>
             <figure className="student-horizontal-wide"><img src="/manus-storage/alumnos-nueva-horizontal-03_dad02957.webp" alt="Alumnos reunidos tras una clase práctica de resina" loading="lazy" /></figure>
+            <figure><img src="/manus-storage/alumnos-final-horizontal-04_2d1d64c8.webp" alt="Alumnos mostrando sus proyectos terminados durante el taller" loading="lazy" /></figure>
+            <figure><img src="/manus-storage/alumnos-final-horizontal-05_e807a098.webp" alt="Participantes aprendiendo una técnica práctica de resina" loading="lazy" /></figure>
+            <figure className="student-horizontal-wide"><img src="/manus-storage/alumnos-final-horizontal-06_c776dc09.webp" alt="Alumnos trabajando en una mesa durante una capacitación de resina" loading="lazy" /></figure>
           </div>
 
           <div className="student-vertical-grid">
             <figure><img src="/manus-storage/alumnos-nueva-vertical-01_1ab340fa.webp" alt="Alumno realizando una práctica de resina epóxica" loading="lazy" /></figure>
             <figure><img src="/manus-storage/alumnos-nueva-vertical-02_540c4291.webp" alt="Participante aplicando resina en un proyecto práctico" loading="lazy" /></figure>
             <figure><img src="/manus-storage/alumnos-nueva-vertical-03_eeed7fcc.webp" alt="Alumno aprendiendo técnicas de aplicación de resina" loading="lazy" /></figure>
+            <figure><img src="/manus-storage/alumnos-final-vertical-04_f4ba75f6.webp" alt="Alumno aplicando resina sobre una pieza decorativa" loading="lazy" /></figure>
+            <figure><img src="/manus-storage/alumnos-final-vertical-05_fb722bd5.webp" alt="Participantes elaborando una pieza artística con resina" loading="lazy" /></figure>
+            <figure><img src="/manus-storage/alumnos-final-vertical-06_c824167b.webp" alt="Alumno preparando una aplicación de resina durante la clase" loading="lazy" /></figure>
           </div>
         </div>
       </section>
