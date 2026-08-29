@@ -34,3 +34,9 @@ La auditoría posterior obtuvo 70/100 de rendimiento, frente a 68/100 en la lín
 La separación del formulario y rutas secundarias redujo el bundle inicial de 195.78 KiB gzip a 182.32 KiB gzip. El formulario ahora se entrega como un chunk de 11.45 KiB gzip únicamente al solicitarlo; las rutas de agradecimiento, 404 y raíz de academia también se cargan bajo demanda.
 
 La landing de campaña y el formulario diferido fueron comprobados en el navegador. La landing sigue mostrando el primer pantallazo sin cambios y el modal carga al pulsar el CTA, mantiene sus tres campos y conserva el CTA de envío. El logotipo del hero cambió de la imagen PNG de 395 KiB a una versión WebP de 16 KiB con las mismas dimensiones de presentación.
+
+## Medición final publicada
+
+La auditoría final de PageSpeed Insights para móvil, posterior a la versión `f71c5fe4`, alcanzó 79/100. Frente a la línea base de 68/100, el FCP pasó de 2.3 s a 2.2 s, el LCP de 6.5 s a 4.3 s, el TBT de 190 ms a 171 ms y el Speed Index de 5.0 s a 3.6 s. El CLS se mantuvo en 0. La puntuación de rendimiento mejoró 11 puntos sin cambios visuales en el primer pantallazo ni en el flujo de registro.
+
+Las oportunidades restantes de PageSpeed se concentran en la duración de caché de recursos de terceros y en imágenes por debajo del primer pantallazo. No se aplicaron cambios adicionales porque podrían comprometer medición, prueba social o contenido comercial, y el objetivo inicial era mejorar de forma conservadora.
