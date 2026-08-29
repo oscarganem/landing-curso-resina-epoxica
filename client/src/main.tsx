@@ -6,12 +6,14 @@ import { createRoot } from "react-dom/client";
 import superjson from "superjson";
 import App from "./App";
 import { startLogin } from "./const";
-import { loadMetaPixel } from "./lib/metaPixel";
+import { scheduleMetaPixel } from "./lib/metaPixel";
 import "./index.css";
 
 const queryClient = new QueryClient();
 
-loadMetaPixel();
+// El píxel se descarga fuera de la ruta crítica. Si el usuario convierte antes,
+// trackMetaLead lo inicializa de inmediato para conservar el evento Lead.
+scheduleMetaPixel();
 
 const redirectToLoginIfUnauthorized = (error: unknown) => {
   if (!(error instanceof TRPCClientError)) return;

@@ -828,3 +828,20 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .academy-root-code { margin: 0.75rem 0 0; color: var(--resin-yellow); font: 900 clamp(4.5rem, 13vw, 9rem)/.8 var(--font-display); letter-spacing: -0.08em; }
 .academy-root h1 { max-width: 38rem; margin: 0; font: 900 clamp(2rem, 5vw, 3.5rem)/1.03 var(--font-display); letter-spacing: -0.05em; }
 .academy-root > p:not(.academy-root-code) { max-width: 34rem; margin: 0; color: #c8c8c3; font: 400 1rem/1.55 Arial, Helvetica, sans-serif; }
+
+/* En móvil, estas secciones están fuera del primer pantallazo. El navegador
+   puede posponer su pintura sin alterar su contenido ni la navegación. */
+@media (max-width: 767px) {
+  .learning-section,
+  .community-section,
+  .process-section,
+  .included-section,
+  .about-section,
+  .venue-section,
+  .proof-section,
+  .faq-section,
+  .final-cta-section {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 920px;
+  }
+}

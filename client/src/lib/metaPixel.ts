@@ -36,10 +36,40 @@ export const loadMetaPixel = () => {
   return true;
 };
 
+export const scheduleMetaPixel = () => {
+  if (typeof window === "undefined" || !isMetaPixelId(getPixelId())) return false;
+
+  const loadWhenIdle = () => {
+    const requestIdleCallback = (window as Window & {
+      requestIdleCallback?: (callback: () => void, options?: { timeout: number }) => number;
+    }).requestIdleCallback;
+
+    if (requestIdleCallback) {
+      requestIdleCallback(() => loadMetaPixel(), { timeout: 2_500 });
+      return;
+    }
+
+    globalThis.setTimeout(loadMetaPixel, 1_200);
+  };
+
+  if (document.readyState === "complete") {
+    loadWhenIdle();
+  } else {
+    window.addEventListener("load", loadWhenIdle, { once: true });
+  }
+
+  return true;
+};
+
 export const trackMetaLead = () => {
   const pixelId = getPixelId();
 
-  if (typeof window === "undefined" || !isMetaPixelId(pixelId) || !window.fbq) return false;
+  if (typeof window === "undefined" || !isMetaPixelId(pixelId)) return false;
+
+  // Si el usuario completa el formulario antes de la ventana inactiva,
+  // inicializamos el píxel en ese momento para no perder una conversión real.
+  if (!window.fbq) loadMetaPixel();
+  if (!window.fbq) return false;
 
   window.fbq("track", "Lead");
   return true;
