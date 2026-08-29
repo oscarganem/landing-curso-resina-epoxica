@@ -6,9 +6,12 @@ import { createRoot } from "react-dom/client";
 import superjson from "superjson";
 import App from "./App";
 import { startLogin } from "./const";
+import { loadMetaPixel } from "./lib/metaPixel";
 import "./index.css";
 
 const queryClient = new QueryClient();
+
+loadMetaPixel();
 
 const redirectToLoginIfUnauthorized = (error: unknown) => {
   if (!(error instanceof TRPCClientError)) return;

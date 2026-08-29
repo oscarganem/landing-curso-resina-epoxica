@@ -39,6 +39,7 @@ import {
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { trpc } from "@/lib/trpc";
+import { handleSuccessfulWaitlistSignup } from "@/lib/waitlistConversion";
 import { useLocation } from "wouter";
 
 const benefits = [
@@ -184,9 +185,11 @@ export default function Home() {
   const [formValues, setFormValues] = useState({ fullName: "", email: "", whatsapp: "" });
   const waitlistMutation = trpc.waitlist.signup.useMutation({
     onSuccess: () => {
-      setIsWaitlistOpen(false);
-      setFormError(null);
-      setLocation("/gracias");
+      handleSuccessfulWaitlistSignup({
+        closeForm: () => setIsWaitlistOpen(false),
+        clearError: () => setFormError(null),
+        redirectToThankYou: () => setLocation("/gracias"),
+      });
     },
     onError: (error) => setFormError(error.message || "No pudimos guardar tu registro. Inténtalo de nuevo."),
   });

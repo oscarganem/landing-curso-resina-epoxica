@@ -1,4 +1,10 @@
 # Lista de verificación
+- [x] Validar que el evento Lead se emita únicamente al confirmarse un registro exitoso del formulario.
+- [x] Integrar el píxel de Meta y disparar el evento Lead tras el registro exitoso del formulario.
+- [x] Evaluar el video de anuncio del curso y entregar ajustes concretos de ritmo, mensaje y branding.
+- [x] Crear una segunda referencia visual del bloque de ubicación y fecha con un rectángulo amarillo para la fecha.
+- [x] Crear una referencia visual editorial para el bloque de ubicación y fecha de los anuncios.
+- [x] Entregar un diagnóstico estratégico ampliado, claro y accionable del embudo completo.
 - [x] Analizar el embudo de conversión actual, incluido el mapa operativo compartido, y proponer optimizaciones priorizadas de marketing y copy.
 - [x] Aplicar amarillo de marca a las tres palomitas de los beneficios del formulario.
 - [x] Restaurar la disposición vertical original del formulario, conservando solo el nuevo copy solicitado.
