@@ -1,4 +1,9 @@
 # Lista de verificación
+- [x] Publicar la landing existente en la ruta /curso-playadelcarmen-sep26 de academia.ocares.mx.
+- [x] Localizar el panel que controla la zona DNS actual de ocares.mx sin cambiar nameservers.
+- [ ] Definir el dominio remitente y la integración de correo para el embudo, sin afectar el sitio existente.
+- [x] Definir el subdominio y la configuración DNS segura para conservar el sitio actual y publicar la nueva landing.
+- [x] Investigar y documentar la ruta de Nubox para administrar registros DNS del dominio.
 - [x] Validar que el evento Lead se emita únicamente al confirmarse un registro exitoso del formulario.
 - [x] Integrar el píxel de Meta y disparar el evento Lead tras el registro exitoso del formulario.
 - [x] Evaluar el video de anuncio del curso y entregar ajustes concretos de ritmo, mensaje y branding.

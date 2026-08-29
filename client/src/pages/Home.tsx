@@ -40,6 +40,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { trpc } from "@/lib/trpc";
 import { handleSuccessfulWaitlistSignup } from "@/lib/waitlistConversion";
+import { getThankYouPathForLanding } from "@/lib/campaignRoutes";
 import { useLocation } from "wouter";
 
 const benefits = [
@@ -179,7 +180,7 @@ const faqItems = [
 ];
 
 export default function Home() {
-  const [, setLocation] = useLocation();
+  const [location, setLocation] = useLocation();
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
   const [formValues, setFormValues] = useState({ fullName: "", email: "", whatsapp: "" });
@@ -188,7 +189,7 @@ export default function Home() {
       handleSuccessfulWaitlistSignup({
         closeForm: () => setIsWaitlistOpen(false),
         clearError: () => setFormError(null),
-        redirectToThankYou: () => setLocation("/gracias"),
+        redirectToThankYou: () => setLocation(getThankYouPathForLanding(location)),
       });
     },
     onError: (error) => setFormError(error.message || "No pudimos guardar tu registro. Inténtalo de nuevo."),
