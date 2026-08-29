@@ -821,3 +821,13 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   .thanks-final-whatsapp img { flex: 0 0 auto; width: 27px; height: 27px; }
   .thanks-final-note { flex-wrap: wrap; gap: 8px; margin-top: 23px; font-size: 13px; }
 }
+
+/* Portada neutra para la raíz del subdominio Academia. */
+.academy-root { min-height: 100vh; display: grid; align-content: center; justify-items: center; gap: 1.1rem; padding: 2rem; background: #080808; color: #fcfcfa; text-align: center; }
+.academy-root-logo { width: min(11.25rem, 62vw); height: auto; }
+.academy-root-rule { width: 2.5rem; height: 0.25rem; background: var(--resin-yellow); }
+.academy-root-eyebrow { margin: 0.6rem 0 0; color: var(--resin-yellow); font: 800 0.72rem/1 Arial, Helvetica, sans-serif; letter-spacing: 0.12em; }
+.academy-root h1 { max-width: 38rem; margin: 0; font: 900 clamp(2rem, 5vw, 3.5rem)/1.03 var(--font-display); letter-spacing: -0.05em; }
+.academy-root > p:not(.academy-root-eyebrow) { max-width: 34rem; margin: 0; color: #c8c8c3; font: 400 1rem/1.55 Arial, Helvetica, sans-serif; }
+.academy-root a { margin-top: 0.45rem; padding: 0.92rem 1.25rem; background: var(--resin-yellow); color: #080808; font: 800 0.78rem/1 Arial, Helvetica, sans-serif; letter-spacing: 0.02em; text-decoration: none; }
+.academy-root a:hover { background: #fcfcfa; }

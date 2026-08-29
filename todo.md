@@ -1,4 +1,5 @@
 # Lista de verificación
+- [x] Crear una página raíz neutra para academia.ocares.mx sin mostrar la campaña de Playa del Carmen.
 - [x] Publicar la landing existente en la ruta /curso-playadelcarmen-sep26 de academia.ocares.mx.
 - [x] Localizar el panel que controla la zona DNS actual de ocares.mx sin cambiar nameservers.
 - [ ] Definir el dominio remitente y la integración de correo para el embudo, sin afectar el sitio existente.
