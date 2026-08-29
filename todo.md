@@ -1,4 +1,5 @@
 # Lista de verificación
+- [x] Separar del bundle inicial el formulario modal y las rutas secundarias sin alterar el flujo de conversión.
 - [ ] Optimizar de forma conservadora el rendimiento móvil de la landing según PageSpeed Insights.
 - [ ] Verificar la publicación de la página 404 en academia.ocares.mx; el dominio aún sirve la versión anterior.
 - [x] Crear una página raíz neutra para academia.ocares.mx sin mostrar la campaña de Playa del Carmen.

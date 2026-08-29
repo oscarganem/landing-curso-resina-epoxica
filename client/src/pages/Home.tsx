@@ -2,7 +2,7 @@
  * Diseño: Taller de Alto Contraste. Landing editorial carbón/amarillo con
  * módulos de formación, práctica y comunidad de alumnos.
  */
-import { type FormEvent, useState } from "react";
+import { lazy, Suspense, type FormEvent, useState } from "react";
 import {
   BadgeCheck,
   BookOpen,
@@ -34,14 +34,14 @@ import {
   Table2,
   Users,
   Wrench,
-  X,
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { trpc } from "@/lib/trpc";
 import { handleSuccessfulWaitlistSignup } from "@/lib/waitlistConversion";
 import { getThankYouPathForLanding } from "@/lib/campaignRoutes";
 import { useLocation } from "wouter";
+
+const WaitlistModal = lazy(() => import("./WaitlistModal"));
 
 const benefits = [
   "Aprende a crear acabados marmoleados, metálicos, unicolor y 3D.",
@@ -210,7 +210,7 @@ export default function Home() {
     <main className="landing-shell">
       <header className="site-header" aria-label="Encabezado del curso">
         <a className="brand-lockup" href="#inicio" aria-label="Ocares Academy">
-          <img className="brand-mark" src="/manus-storage/ocares-academy-logo_cf81a218.png" width="217" height="72" alt="Ocares Academy" />
+          <img className="brand-mark" src="/manus-storage/ocares-academy-logo-mobile_a3dbed22.webp" width="217" height="72" alt="Ocares Academy" />
         </a>
       </header>
 
@@ -485,32 +485,19 @@ export default function Home() {
         </div>
       </section>
 
-      <Dialog open={isWaitlistOpen} onOpenChange={setIsWaitlistOpen}>
-          <DialogContent className="waitlist-modal" showCloseButton={false}>
-            <DialogClose className="waitlist-close" aria-label="Cerrar formulario"><X aria-hidden="true" /></DialogClose>
-            <div className="waitlist-modal-copy">
-              <DialogTitle>Únete <strong>GRATIS</strong> a la lista de espera del <strong>Curso de Resina Epóxica</strong></DialogTitle>
-              <DialogDescription>
-                Las inscripciones para nuestro curso presencial en Playa del Carmen todavía no están abiertas.
-              </DialogDescription>
-              <p>Al registrarte <strong>GRATIS</strong> obtendrás:</p>
-              <ul className="waitlist-benefits">
-                <li><Check aria-hidden="true" strokeWidth={3} /><span><strong>Acceso prioritario para reservar tu lugar</strong> antes de abrir las inscripciones al público general.</span></li>
-                <li><Check aria-hidden="true" strokeWidth={3} /><span><strong>Acceso a nuestra clase online gratuita</strong>, donde aprenderás las 5 capas de un piso epóxico y verás una demostración en vivo.</span></li>
-                <li><Check aria-hidden="true" strokeWidth={3} /><span><strong>Un descuento exclusivo de preventa</strong>, que revelaremos durante la clase.</span></li>
-              </ul>
-            </div>
-            <form className="waitlist-form" onSubmit={handleWaitlistSubmit}>
-              <h3>Regístrate aquí</h3>
-            <label><span className="sr-only">Introduce tu nombre</span><input required autoComplete="name" placeholder="Introduce tu nombre" value={formValues.fullName} onChange={(event) => setFormValues((values) => ({ ...values, fullName: event.target.value }))} /></label>
-            <label><span className="sr-only">Tu mejor correo</span><input required type="email" autoComplete="email" placeholder="Tu mejor correo" value={formValues.email} onChange={(event) => setFormValues((values) => ({ ...values, email: event.target.value }))} /></label>
-            <label><span className="sr-only">WhatsApp</span><input required type="tel" autoComplete="tel" placeholder="WhatsApp" value={formValues.whatsapp} onChange={(event) => setFormValues((values) => ({ ...values, whatsapp: event.target.value }))} /></label>
-            {formError && <p className="waitlist-form-error" role="alert">{formError}</p>}
-            <button type="submit" disabled={waitlistMutation.isPending}>{waitlistMutation.isPending ? "Guardando tu registro…" : <>Sí, quiero unirme GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></>}</button>
-            <p className="waitlist-form-trust">Registro gratuito · Sin compromiso · No estás comprando el curso</p>
-          </form>
-        </DialogContent>
-      </Dialog>
+      {isWaitlistOpen && (
+        <Suspense fallback={null}>
+          <WaitlistModal
+            open={isWaitlistOpen}
+            onOpenChange={setIsWaitlistOpen}
+            formValues={formValues}
+            formError={formError}
+            isSubmitting={waitlistMutation.isPending}
+            onFieldChange={(field, value) => setFormValues((values) => ({ ...values, [field]: value }))}
+            onSubmit={handleWaitlistSubmit}
+          />
+        </Suspense>
+      )}
     </main>
   );
 }
