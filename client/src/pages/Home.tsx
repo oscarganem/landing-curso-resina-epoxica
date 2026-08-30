@@ -410,18 +410,14 @@ export default function Home() {
 
       <section className="final-cta-section" aria-labelledby="final-cta-title">
         <div className="final-cta-inner">
-          <h2 id="final-cta-title">
-            <span className="final-headline-desktop">
+          <h2 id="final-cta-title" aria-label="Únete AHORA a la lista de espera y da el primer paso para convertirte en aplicador de Resina Epóxica">
+            <span className="final-headline-desktop" aria-hidden="true">
               <span className="final-headline-line">Únete <strong>AHORA</strong> a la lista de espera</span>
               <span className="final-headline-line">y da el primer paso para convertirte</span>
               <span className="final-headline-line">en aplicador de <em>Resina Epóxica</em></span>
             </span>
             <span className="final-headline-mobile" aria-hidden="true">
-              <span>Únete <strong>AHORA</strong></span>
-              <span>a la lista de espera</span>
-              <span>y da el primer paso para</span>
-              <span>convertirte en aplicador de</span>
-              <span><em>Resina Epóxica</em></span>
+              Únete <strong>AHORA</strong> a la lista de espera y da el primer paso para convertirte en aplicador de <em>Resina Epóxica</em>
             </span>
           </h2>
           <span className="dark-title-rule" aria-hidden="true" />

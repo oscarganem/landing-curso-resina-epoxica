@@ -3,6 +3,7 @@
 - [x] Unificar el padding vertical de las secciones en móvil y escritorio.
 - [x] Aumentar 10% solo la altura de las cuatro imágenes de acabados en móvil y escritorio.
 - [x] Reducir y recomponer el título del CTA final exclusivamente en móvil para mejorar su lectura.
+- [x] Ampliar de forma flexible el ancho útil del título final en móvil, sin forzar líneas fijas.
 - [x] Aplicar de forma efectiva el centrado móvil de los títulos y encabezados de sección, excluyendo el hero.
 - [x] Ejecutar pruebas, tipado y compilación después del ajuste de alineación móvil.
 - [x] Validar visualmente en móvil y escritorio que los títulos de sección estén centrados solo en móvil y que el hero siga alineado a la izquierda.
