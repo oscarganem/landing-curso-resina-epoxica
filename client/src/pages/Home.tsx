@@ -148,13 +148,19 @@ export default function Home() {
       if (!entry.isIntersecting) return;
       setShouldLoadFaq(true);
       observer.disconnect();
-    }, { rootMargin: "900px 0px" });
+    }, { rootMargin: "1400px 0px" });
 
     observer.observe(target);
     return () => observer.disconnect();
   }, []);
 
+  const preloadWaitlistJourney = () => {
+    void import("./WaitlistModal");
+    void import("./ThankYou");
+  };
+
   const openWaitlist = () => {
+    preloadWaitlistJourney();
     setIsWaitlistOpen(true);
   };
 
@@ -181,7 +187,7 @@ export default function Home() {
           <ul className="benefit-list">
             {benefits.map((benefit) => <li key={benefit}><Check aria-hidden="true" strokeWidth={3.2} /><span>{benefit}</span></li>)}
           </ul>
-          <button className="waitlist-cta" type="button" onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
+          <button className="waitlist-cta" type="button" onPointerEnter={preloadWaitlistJourney} onFocus={preloadWaitlistJourney} onTouchStart={preloadWaitlistJourney} onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
           <div className="course-footer" id="lista-de-espera"><span className="footer-rule" /><p><b>+1,000</b> alumnos ya aprendieron con nosotros</p></div>
         </div>
         <aside className="visual-column" aria-label="Espacio reservado para fotografía del curso">
@@ -226,7 +232,7 @@ export default function Home() {
         <div className="community-inner">
           <div className="community-copy">
             <h2 id="community-title"><span className="community-line">Más de <b className="community-highlight">500 alumnos</b></span><span className="community-line">ya perdieron el miedo</span><span className="community-line">a la resina y hoy crean</span><span className="community-line">acabados increíbles.</span><em>Tú puedes ser el siguiente.</em></h2>
-            <button className="community-cta" type="button" onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
+            <button className="community-cta" type="button" onPointerEnter={preloadWaitlistJourney} onFocus={preloadWaitlistJourney} onTouchStart={preloadWaitlistJourney} onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
           </div>
           <div className="community-gallery" aria-label="Galería de alumnos durante las prácticas">
             {studentGallery.map(({ image, alt }, index) => <figure className={`community-photo photo-${index + 1}`} key={image}><img src={image} alt={alt} loading="lazy" /></figure>)}
@@ -261,7 +267,7 @@ export default function Home() {
               </ul>
             </div>
           </aside>
-          <button className="process-cta" type="button" onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
+          <button className="process-cta" type="button" onPointerEnter={preloadWaitlistJourney} onFocus={preloadWaitlistJourney} onTouchStart={preloadWaitlistJourney} onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
         </div>
       </section>
 
@@ -393,7 +399,7 @@ export default function Home() {
             </div>
             <div className="proof-cta-area">
               <p>El próximo aplicador de resina epóxica puedes ser tú</p>
-              <button className="proof-cta" type="button" onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
+              <button className="proof-cta" type="button" onPointerEnter={preloadWaitlistJourney} onFocus={preloadWaitlistJourney} onTouchStart={preloadWaitlistJourney} onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
             </div>
           </div>
         </div>
@@ -422,7 +428,7 @@ export default function Home() {
             <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Acceso prioritario al curso antes de abrir inscripciones al público general</span></li>
             <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Acceso GRATIS a nuestra clase online sobre las 5 capas de un piso epóxico</span></li>
           </ul>
-          <button className="final-cta-button" type="button" onClick={openWaitlist}>Unirme GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
+          <button className="final-cta-button" type="button" onPointerEnter={preloadWaitlistJourney} onFocus={preloadWaitlistJourney} onTouchStart={preloadWaitlistJourney} onClick={openWaitlist}>Unirme GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
           <p className="final-cta-trust">Registro gratuito · Sin compromiso · Cupo presencial limitado</p>
         </div>
       </section>

@@ -62,3 +62,5 @@ La comprobación en producción confirmó que `window.fbq` permanece disponible 
 Para la validación final autorizada por el propietario, se abrió una visita limpia de producción y se inició una captura temporal de llamadas a `fbq` en `sessionStorage`. La captura se encontraba vacía antes de abrir o enviar el formulario, confirmando que la carga inicial no produjo un evento Lead.
 
 La prueba autorizada de producción completó el formulario, confirmó el guardado y redirigió a `/curso-playadelcarmen-sep26/gracias`. Tras la redirección, la captura temporal registró exactamente una llamada `track, Lead`. Con ello queda comprobado el comportamiento de extremo a extremo: no hay Lead en carga inicial y se emite un Lead después de un registro exitoso confirmado.
+
+La carga progresiva usa un margen de anticipación de 1,400 px para las preguntas frecuentes, por lo que el módulo se solicita antes de que el usuario alcance la sección. El formulario y la página de gracias se precargan al primer gesto sobre cualquier CTA y la verificación visual confirmó que el modal aparece de inmediato y conserva todos sus campos, beneficios y acción de registro.
