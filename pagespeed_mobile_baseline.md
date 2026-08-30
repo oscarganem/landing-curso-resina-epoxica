@@ -44,3 +44,11 @@ Las oportunidades restantes de PageSpeed se concentran en la duración de caché
 ## Verificación del formulario diferido
 
 Después de aislar las dependencias de tRPC y React Query dentro del modal cargado bajo demanda, se comprobó en navegador que la landing sigue cargando en la ruta de campaña y que el CTA abre el formulario con los campos, beneficios y botón de envío intactos. Meta Pixel no fue modificado durante este ajuste.
+
+La compilación confirmó que el formulario y su cliente de conversión ahora se entregan en el chunk diferido `WaitlistModal`, separado del bundle principal de la landing. La auditoría posterior de PageSpeed se inició en producción, pero la interfaz devolvió “Introduce una URL válida” pese a usar la URL de campaña ya publicada; por ello no se tomará esa ejecución como una métrica comparable.
+
+## Comparación reproducible del JavaScript inicial
+
+Con una visita limpia a `academia.ocares.mx/curso-playadelcarmen-sep26` sin abrir el formulario, Performance Resource Timing registró un único archivo JavaScript propio inicial de 90,345 bytes transferidos (303,153 bytes descomprimidos). La medición anterior de PageSpeed atribuía 102.1 KiB al recurso JavaScript propio de la landing. El aislamiento del cliente de conversión redujo la transferencia inicial propia aproximadamente un 12%, sin modificar Meta Pixel, Facebook ni el evento Lead.
+
+Después de diferir el acordeón de preguntas frecuentes, se verificó en navegador que los diez desplegables aparecen al aproximarse a la sección y que el primer pantallazo de la landing conserva su composición. La compilación reduce el bundle principal de 556.03 KiB a 520.67 KiB sin comprimir, y entrega el acordeón en el chunk diferido `FaqList` de 24.01 KiB.

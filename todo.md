@@ -1,5 +1,8 @@
 # Lista de verificación
-- [ ] Reducir JavaScript propio no utilizado sin modificar Meta Pixel, Facebook ni el evento Lead.
+- [x] Documentar una comparación reproducible del bundle inicial propio antes y después de las optimizaciones.
+- [x] Aplicar una reducción adicional verificable del JavaScript propio inicial sin modificar Meta/Facebook.
+- [ ] Revalidar en producción la reducción del JavaScript inicial y el flujo de Lead.
+- [x] Reducir JavaScript propio no utilizado sin modificar Meta Pixel, Facebook ni el evento Lead.
 - [x] Separar del bundle inicial el formulario modal y las rutas secundarias sin alterar el flujo de conversión.
 - [x] Optimizar de forma conservadora el rendimiento móvil de la landing según PageSpeed Insights.
 - [x] Verificar la publicación de la página 404 en academia.ocares.mx; el dominio ya muestra la página 404.
