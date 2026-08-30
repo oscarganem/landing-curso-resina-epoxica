@@ -1,4 +1,7 @@
 # Lista de verificación
+- [x] Aplicar de forma efectiva la escala móvil unificada de 35 px para los títulos principales, sin tocar escritorio.
+- [x] Ejecutar pruebas, tipado y compilación después del ajuste tipográfico móvil.
+- [x] Validar visualmente en móvil y escritorio que los títulos principales quedan en 35 px solo en móvil.
 - [x] Aplicar de forma efectiva el reordenamiento responsive del recuadro de experiencia previa para móvil, manteniendo intacta la composición de escritorio.
 - [x] Validar visualmente en móvil y escritorio que el recuadro aparece después de las profesiones solo en móvil.
 - [x] Ejecutar check/build tras el ajuste responsive y dejar evidencia de la validación.

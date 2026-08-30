@@ -850,3 +850,23 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
     contain-intrinsic-size: auto 920px;
   }
 }
+
+/* Escala editorial unificada para titulares principales en móvil. */
+@media (max-width: 680px) {
+  h1,
+  .audience-intro h2,
+  .learning-heading h2,
+  .community-copy h2,
+  .process-heading h2,
+  .included-heading h2,
+  .about-heading h2,
+  .venue-heading h2,
+  .proof-heading h2,
+  .faq-heading h2,
+  .final-cta-inner h2,
+  .thanks-card h1,
+  .student-showcase-heading h2,
+  .thanks-final-inner h2 {
+    font-size: 35px;
+  }
+}
