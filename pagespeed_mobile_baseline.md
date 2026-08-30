@@ -64,3 +64,7 @@ Para la validación final autorizada por el propietario, se abrió una visita li
 La prueba autorizada de producción completó el formulario, confirmó el guardado y redirigió a `/curso-playadelcarmen-sep26/gracias`. Tras la redirección, la captura temporal registró exactamente una llamada `track, Lead`. Con ello queda comprobado el comportamiento de extremo a extremo: no hay Lead en carga inicial y se emite un Lead después de un registro exitoso confirmado.
 
 La carga progresiva usa un margen de anticipación de 1,400 px para las preguntas frecuentes, por lo que el módulo se solicita antes de que el usuario alcance la sección. El formulario y la página de gracias se precargan al primer gesto sobre cualquier CTA y la verificación visual confirmó que el modal aparece de inmediato y conserva todos sus campos, beneficios y acción de registro.
+
+Durante la validación de producción de la carga anticipada, el primer pantallazo y los CTA se mostraron correctamente. Al desplazarse hasta la sección de preguntas frecuentes, se visualizó el título pero no los elementos del acordeón, por lo que esta validación queda pendiente hasta corregir la carga del módulo sin introducir huecos ni retrasos.
+
+El diagnóstico posterior confirmó que el módulo del FAQ sí se cargó correctamente, pero su descarga tardó cerca de 2 segundos después de activarse. Para eliminar ese hueco durante un desplazamiento normal, el margen de anticipación se amplió de 1,400 px a 3,000 px. La sección está suficientemente alejada del primer pantallazo para no añadir ese módulo a la carga inicial.

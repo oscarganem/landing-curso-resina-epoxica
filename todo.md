@@ -1,5 +1,5 @@
 # Lista de verificación
-- [ ] Revalidar en producción la carga anticipada del FAQ durante el scroll y la apertura de CTA.
+- [ ] Corregir y revalidar en producción la carga anticipada del FAQ durante el scroll y la apertura de CTA.
 - [x] Precargar el formulario y la página de gracias en los CTA, y cargar anticipadamente el FAQ antes de su sección.
 - [x] Documentar una comparación reproducible del bundle inicial propio antes y después de las optimizaciones.
 - [x] Aplicar una reducción adicional verificable del JavaScript propio inicial sin modificar Meta/Facebook.

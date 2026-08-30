@@ -148,7 +148,7 @@ export default function Home() {
       if (!entry.isIntersecting) return;
       setShouldLoadFaq(true);
       observer.disconnect();
-    }, { rootMargin: "1400px 0px" });
+    }, { rootMargin: "3000px 0px" });
 
     observer.observe(target);
     return () => observer.disconnect();
