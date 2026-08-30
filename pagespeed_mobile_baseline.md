@@ -74,3 +74,7 @@ La comprobación inicial de la publicación con el nuevo margen confirmó que el
 Durante un desplazamiento secuencial desde la parte superior, la carga inicial se mantuvo estable y no se produjo ningún hueco visual en las secciones intermedias. La precarga del FAQ queda activada varios bloques antes de la sección de preguntas para que la descarga pueda completarse durante la lectura normal de la landing.
 
 Tras publicar la restauración estable del FAQ, el dominio personalizado todavía devolvió un bundle anterior (`index-BRMFNCwl.js`) que no contiene los elementos del FAQ. Se mantendrá pendiente la validación de producción hasta que el dominio sirva el bundle actual; la compilación local y las pruebas ya validaron la versión estable.
+
+Después de actualizar la publicación del dominio personalizado, la ruta de campaña volvió a mostrar los diez elementos del FAQ de forma estable, sin errores de módulos dinámicos. Se inició la comprobación final de apertura del formulario precargado desde el CTA principal.
+
+La comprobación final confirmó que el FAQ estable está presente en producción y que el CTA principal abre el formulario con sus campos, beneficios y botón de envío intactos. La reducción de experiencia segura permanece en la precarga del formulario y la página de gracias; el FAQ se mantiene estático para evitar errores de despliegue de módulos dinámicos.

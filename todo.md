@@ -1,5 +1,5 @@
 # Lista de verificación
-- [ ] Validar en producción el FAQ restaurado como contenido estable y la apertura anticipada de los CTA.
+- [x] Validar en producción el FAQ restaurado como contenido estable y la apertura anticipada de los CTA.
 - [x] Restaurar el FAQ como contenido estable para evitar errores de módulos dinámicos en producción.
 - [x] Precargar el formulario y la página de gracias en los CTA, sin diferir el FAQ.
 - [x] Documentar una comparación reproducible del bundle inicial propio antes y después de las optimizaciones.
