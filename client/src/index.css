@@ -655,6 +655,8 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .final-cta-inner { position: relative; z-index: 1; width: min(100% - 48px, 960px); margin: 0 auto; padding: clamp(88px, 10vw, 126px) 0 clamp(92px, 10vw, 132px); }
 .final-cta-inner h2 { max-width: 950px; margin: 0 auto; font-family: var(--font-display); font-size: clamp(38px, 4vw, 54px); font-weight: 800; letter-spacing: -.07em; line-height: .99; }
 .final-headline-line { display: block; }
+.final-headline-desktop { display: block; }
+.final-headline-mobile { display: none; }
 .final-cta-inner h2 strong, .final-cta-inner h2 em { color: var(--resin-yellow); font-style: normal; }
 .final-cta-intro { margin: 30px auto 0; color: #d4d2cb; font-size: 16px; font-weight: 500; }
 .final-benefit-list { display: grid; gap: 13px; max-width: 690px; margin: 22px auto 0; padding: 0; text-align: left; list-style: none; }
@@ -926,4 +928,8 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   .about-heading { padding-top: 78px; }
   .about-inner { padding-top: 30px; padding-bottom: 82px; }
   .technique-card { min-height: 235px; }
+  .final-cta-inner h2 { max-width: 335px; font-size: 26px; letter-spacing: -.055em; line-height: 1.06; }
+  .final-headline-desktop { display: none; }
+  .final-headline-mobile { display: block; }
+  .final-headline-mobile > span { display: block; white-space: nowrap; }
 }
