@@ -897,3 +897,33 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
     margin-left: auto;
   }
 }
+
+/* Cadencia vertical consistente para las secciones editoriales. */
+.audience-layout { padding-block: clamp(84px, 9vw, 116px); }
+.learning-inner { padding-block: clamp(84px, 9vw, 116px); }
+.community-inner { padding-block: clamp(84px, 9vw, 116px); }
+.process-inner { padding-block: clamp(84px, 9vw, 116px); }
+.included-inner { padding-block: clamp(84px, 9vw, 116px); }
+.venue-inner { padding-block: clamp(84px, 9vw, 116px); }
+.proof-inner { padding-block: clamp(84px, 9vw, 116px); }
+.faq-inner { padding-block: clamp(84px, 9vw, 116px); }
+.final-cta-inner { padding-block: clamp(84px, 9vw, 116px); }
+
+/* El encabezado institucional deja más aire hacia arriba y un puente más corto al texto. */
+.about-heading { padding-top: clamp(84px, 9vw, 116px); }
+.about-inner { padding-top: clamp(36px, 4vw, 52px); padding-bottom: clamp(84px, 9vw, 116px); }
+
+/* Se amplía exclusivamente la altura de las cuatro imágenes de técnicas. */
+.technique-card { min-height: 286px; }
+
+@media (max-width: 850px) {
+  .technique-card { min-height: 253px; }
+}
+
+@media (max-width: 680px) {
+  .audience-layout { padding-block: 76px 80px; }
+  .learning-inner, .community-inner, .process-inner, .included-inner, .venue-inner, .proof-inner, .faq-inner, .final-cta-inner { padding-block: 78px 82px; }
+  .about-heading { padding-top: 78px; }
+  .about-inner { padding-top: 30px; padding-bottom: 82px; }
+  .technique-card { min-height: 235px; }
+}
