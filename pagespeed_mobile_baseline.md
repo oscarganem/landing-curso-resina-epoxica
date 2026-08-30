@@ -40,3 +40,7 @@ La landing de campaña y el formulario diferido fueron comprobados en el navegad
 La auditoría final de PageSpeed Insights para móvil, posterior a la versión `f71c5fe4`, alcanzó 79/100. Frente a la línea base de 68/100, el FCP pasó de 2.3 s a 2.2 s, el LCP de 6.5 s a 4.3 s, el TBT de 190 ms a 171 ms y el Speed Index de 5.0 s a 3.6 s. El CLS se mantuvo en 0. La puntuación de rendimiento mejoró 11 puntos sin cambios visuales en el primer pantallazo ni en el flujo de registro.
 
 Las oportunidades restantes de PageSpeed se concentran en la duración de caché de recursos de terceros y en imágenes por debajo del primer pantallazo. No se aplicaron cambios adicionales porque podrían comprometer medición, prueba social o contenido comercial, y el objetivo inicial era mejorar de forma conservadora.
+
+## Verificación del formulario diferido
+
+Después de aislar las dependencias de tRPC y React Query dentro del modal cargado bajo demanda, se comprobó en navegador que la landing sigue cargando en la ruta de campaña y que el CTA abre el formulario con los campos, beneficios y botón de envío intactos. Meta Pixel no fue modificado durante este ajuste.

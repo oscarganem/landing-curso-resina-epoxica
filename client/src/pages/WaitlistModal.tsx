@@ -1,6 +1,13 @@
-import { type FormEvent } from "react";
+import { type FormEvent, useState } from "react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { httpBatchLink } from "@trpc/client";
+import superjson from "superjson";
 import { Check, MoveUpRight, X } from "lucide-react";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
+import { trpc } from "@/lib/trpc";
+import { handleSuccessfulWaitlistSignup } from "@/lib/waitlistConversion";
+import { getThankYouPathForLanding } from "@/lib/campaignRoutes";
+import { useLocation } from "wouter";
 
 type WaitlistFormValues = {
   fullName: string;
@@ -13,22 +20,29 @@ type WaitlistField = keyof WaitlistFormValues;
 type WaitlistModalProps = {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  formValues: WaitlistFormValues;
-  formError: string | null;
-  isSubmitting: boolean;
-  onFieldChange: (field: WaitlistField, value: string) => void;
-  onSubmit: (event: FormEvent<HTMLFormElement>) => void;
 };
 
-export default function WaitlistModal({
-  open,
-  onOpenChange,
-  formValues,
-  formError,
-  isSubmitting,
-  onFieldChange,
-  onSubmit,
-}: WaitlistModalProps) {
+function WaitlistModalContent({ open, onOpenChange }: WaitlistModalProps) {
+  const [location, setLocation] = useLocation();
+  const [formError, setFormError] = useState<string | null>(null);
+  const [formValues, setFormValues] = useState<WaitlistFormValues>({ fullName: "", email: "", whatsapp: "" });
+  const waitlistMutation = trpc.waitlist.signup.useMutation({
+    onSuccess: () => {
+      handleSuccessfulWaitlistSignup({
+        closeForm: () => onOpenChange(false),
+        clearError: () => setFormError(null),
+        redirectToThankYou: () => setLocation(getThankYouPathForLanding(location)),
+      });
+    },
+    onError: (error) => setFormError(error.message || "No pudimos guardar tu registro. Inténtalo de nuevo."),
+  });
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setFormError(null);
+    waitlistMutation.mutate(formValues);
+  };
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="waitlist-modal" showCloseButton={false}>
@@ -45,16 +59,39 @@ export default function WaitlistModal({
             <li><Check aria-hidden="true" strokeWidth={3} /><span><strong>Un descuento exclusivo de preventa</strong>, que revelaremos durante la clase.</span></li>
           </ul>
         </div>
-        <form className="waitlist-form" onSubmit={onSubmit}>
+        <form className="waitlist-form" onSubmit={handleSubmit}>
           <h3>Regístrate aquí</h3>
-          <label><span className="sr-only">Introduce tu nombre</span><input required autoComplete="name" placeholder="Introduce tu nombre" value={formValues.fullName} onChange={(event) => onFieldChange("fullName", event.target.value)} /></label>
-          <label><span className="sr-only">Tu mejor correo</span><input required type="email" autoComplete="email" placeholder="Tu mejor correo" value={formValues.email} onChange={(event) => onFieldChange("email", event.target.value)} /></label>
-          <label><span className="sr-only">WhatsApp</span><input required type="tel" autoComplete="tel" placeholder="WhatsApp" value={formValues.whatsapp} onChange={(event) => onFieldChange("whatsapp", event.target.value)} /></label>
+          <label><span className="sr-only">Introduce tu nombre</span><input required autoComplete="name" placeholder="Introduce tu nombre" value={formValues.fullName} onChange={(event) => setFormValues((values) => ({ ...values, fullName: event.target.value }))} /></label>
+          <label><span className="sr-only">Tu mejor correo</span><input required type="email" autoComplete="email" placeholder="Tu mejor correo" value={formValues.email} onChange={(event) => setFormValues((values) => ({ ...values, email: event.target.value }))} /></label>
+          <label><span className="sr-only">WhatsApp</span><input required type="tel" autoComplete="tel" placeholder="WhatsApp" value={formValues.whatsapp} onChange={(event) => setFormValues((values) => ({ ...values, whatsapp: event.target.value }))} /></label>
           {formError && <p className="waitlist-form-error" role="alert">{formError}</p>}
-          <button type="submit" disabled={isSubmitting}>{isSubmitting ? "Guardando tu registro…" : <>Sí, quiero unirme GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></>}</button>
+          <button type="submit" disabled={waitlistMutation.isPending}>{waitlistMutation.isPending ? "Guardando tu registro…" : <>Sí, quiero unirme GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></>}</button>
           <p className="waitlist-form-trust">Registro gratuito · Sin compromiso · No estás comprando el curso</p>
         </form>
       </DialogContent>
     </Dialog>
+  );
+}
+
+export default function WaitlistModal(props: WaitlistModalProps) {
+  const [queryClient] = useState(() => new QueryClient());
+  const [trpcClient] = useState(() => trpc.createClient({
+    links: [
+      httpBatchLink({
+        url: "/api/trpc",
+        transformer: superjson,
+        fetch(input, init) {
+          return globalThis.fetch(input, { ...(init ?? {}), credentials: "include" });
+        },
+      }),
+    ],
+  }));
+
+  return (
+    <trpc.Provider client={trpcClient} queryClient={queryClient}>
+      <QueryClientProvider client={queryClient}>
+        <WaitlistModalContent {...props} />
+      </QueryClientProvider>
+    </trpc.Provider>
   );
 }

@@ -2,7 +2,7 @@
  * Diseño: Taller de Alto Contraste. Landing editorial carbón/amarillo con
  * módulos de formación, práctica y comunidad de alumnos.
  */
-import { lazy, Suspense, type FormEvent, useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import {
   BadgeCheck,
   BookOpen,
@@ -36,10 +36,6 @@ import {
   Wrench,
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { trpc } from "@/lib/trpc";
-import { handleSuccessfulWaitlistSignup } from "@/lib/waitlistConversion";
-import { getThankYouPathForLanding } from "@/lib/campaignRoutes";
-import { useLocation } from "wouter";
 
 const WaitlistModal = lazy(() => import("./WaitlistModal"));
 
@@ -180,30 +176,10 @@ const faqItems = [
 ];
 
 export default function Home() {
-  const [location, setLocation] = useLocation();
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
-  const [formError, setFormError] = useState<string | null>(null);
-  const [formValues, setFormValues] = useState({ fullName: "", email: "", whatsapp: "" });
-  const waitlistMutation = trpc.waitlist.signup.useMutation({
-    onSuccess: () => {
-      handleSuccessfulWaitlistSignup({
-        closeForm: () => setIsWaitlistOpen(false),
-        clearError: () => setFormError(null),
-        redirectToThankYou: () => setLocation(getThankYouPathForLanding(location)),
-      });
-    },
-    onError: (error) => setFormError(error.message || "No pudimos guardar tu registro. Inténtalo de nuevo."),
-  });
 
   const openWaitlist = () => {
-    setFormError(null);
     setIsWaitlistOpen(true);
-  };
-
-  const handleWaitlistSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setFormError(null);
-    waitlistMutation.mutate(formValues);
   };
 
   return (
@@ -490,11 +466,6 @@ export default function Home() {
           <WaitlistModal
             open={isWaitlistOpen}
             onOpenChange={setIsWaitlistOpen}
-            formValues={formValues}
-            formError={formError}
-            isSubmitting={waitlistMutation.isPending}
-            onFieldChange={(field, value) => setFormValues((values) => ({ ...values, [field]: value }))}
-            onSubmit={handleWaitlistSubmit}
           />
         </Suspense>
       )}
