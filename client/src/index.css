@@ -258,7 +258,9 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .audience-intro { padding-top: 5px; }
 .light-eyebrow { display: inline-flex; align-items: center; height: 24px; padding: 0 9px; background: var(--resin-yellow); color: #161616; font-size: 10px; font-weight: 900; letter-spacing: .09em; text-transform: uppercase; }
 .audience-intro h2 { max-width: 390px; margin: 19px 0 0; font-family: var(--font-display); font-size: clamp(38px, 4.05vw, 60px); font-weight: 800; letter-spacing: -.063em; line-height: .98; }
-.audience-intro h2 span { color: var(--resin-yellow); }
+.audience-title-accent { color: var(--resin-yellow); }
+.audience-title-desktop, .community-title-desktop { display: block; }
+.audience-title-mobile, .community-title-mobile { display: none; }
 .experience-note { display: grid; grid-template-columns: 64px 1fr; align-items: center; gap: 16px; max-width: 400px; min-height: 151px; margin-top: 30px; padding: 22px; border: 1px solid #dddcd8; border-radius: 6px; background: #fff; }
 .experience-icon, .audience-icon { display: grid; place-items: center; border-radius: 50%; background: var(--resin-yellow); color: #151515; }
 .experience-icon { width: 64px; height: 64px; }
@@ -928,6 +930,10 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   .about-heading { padding-top: 78px; }
   .about-inner { padding-top: 30px; padding-bottom: 82px; }
   .technique-card { min-height: 235px; }
+  .audience-intro h2 { width: calc(100% + 16px); max-width: none; margin-left: -8px; font-size: clamp(25px, 7.2vw, 28px); line-height: 1.04; }
+  .audience-title-desktop, .community-title-desktop { display: none; }
+  .audience-title-mobile, .community-title-mobile { display: block; }
+  .community-copy h2 { width: calc(100% + 16px); max-width: none; margin-left: -8px; font-size: clamp(24px, 6.6vw, 25px); letter-spacing: -.06em; line-height: 1.05; }
   .final-cta-inner h2 { width: calc(100% + 16px); max-width: none; margin-left: -8px; font-size: clamp(22px, 6.6vw, 25px); letter-spacing: -.055em; line-height: 1.06; }
   .final-headline-desktop { display: none; }
   .final-headline-mobile { display: block; }

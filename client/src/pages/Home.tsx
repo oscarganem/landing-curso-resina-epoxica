@@ -198,7 +198,10 @@ export default function Home() {
         <div className="audience-layout">
           <div className="audience-intro">
             <div className="light-eyebrow">¿Para quién es este curso?</div>
-            <h2 id="audience-title">El curso<br />intensivo es<br />para ti si<span>…</span></h2>
+            <h2 id="audience-title" aria-label="El curso intensivo es para ti si…">
+              <span className="audience-title-desktop" aria-hidden="true">El curso<br />intensivo es<br />para ti si<span className="audience-title-accent">…</span></span>
+              <span className="audience-title-mobile" aria-hidden="true">El curso intensivo es para ti si<span className="audience-title-accent">…</span></span>
+            </h2>
             <div className="experience-note"><span className="experience-icon" aria-hidden="true"><ShieldCheck strokeWidth={2.4} /></span><div className="experience-copy"><strong>NO NECESITAS<br />EXPERIENCIA PREVIA</strong><p>Te enseñaremos desde cero,<br />paso a paso.</p></div></div>
           </div>
           <div className="audience-content"><ul className="audience-list">
@@ -225,7 +228,11 @@ export default function Home() {
       <section className="community-section" aria-labelledby="community-title">
         <div className="community-inner">
           <div className="community-copy">
-            <h2 id="community-title"><span className="community-line">Más de <b className="community-highlight">500 alumnos</b></span><span className="community-line">ya perdieron el miedo</span><span className="community-line">a la resina y hoy crean</span><span className="community-line">acabados increíbles.</span><em>Tú puedes ser el siguiente.</em></h2>
+            <h2 id="community-title" aria-label="Más de 500 alumnos ya perdieron el miedo a la resina y hoy crean acabados increíbles.">
+              <span className="community-title-desktop" aria-hidden="true"><span className="community-line">Más de <b className="community-highlight">500 alumnos</b></span><span className="community-line">ya perdieron el miedo</span><span className="community-line">a la resina y hoy crean</span><span className="community-line">acabados increíbles.</span></span>
+              <span className="community-title-mobile" aria-hidden="true">Más de <b className="community-highlight">500 alumnos</b> ya perdieron el miedo a la resina y hoy crean acabados increíbles.</span>
+              <em>Tú puedes ser el siguiente.</em>
+            </h2>
             <button className="community-cta" type="button" onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
           </div>
           <div className="community-gallery" aria-label="Galería de alumnos durante las prácticas">
