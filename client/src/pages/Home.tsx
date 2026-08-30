@@ -2,7 +2,7 @@
  * Diseño: Taller de Alto Contraste. Landing editorial carbón/amarillo con
  * módulos de formación, práctica y comunidad de alumnos.
  */
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import {
   BadgeCheck,
   BookOpen,
@@ -37,7 +37,7 @@ import {
 } from "lucide-react";
 
 const WaitlistModal = lazy(() => import("./WaitlistModal"));
-import FaqList from "./FaqList";
+const FaqList = lazy(() => import("./FaqList"));
 
 const benefits = [
   "Aprende a crear acabados marmoleados, metálicos, unicolor y 3D.",
@@ -134,14 +134,27 @@ const includedResources = [
 
 export default function Home() {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
+  const [shouldLoadFaq, setShouldLoadFaq] = useState(false);
+  const faqSectionRef = useRef<HTMLElement>(null);
 
-  const preloadWaitlistJourney = () => {
-    void import("./WaitlistModal");
-    void import("./ThankYou");
-  };
+  useEffect(() => {
+    const target = faqSectionRef.current;
+    if (!target || typeof IntersectionObserver === "undefined") {
+      setShouldLoadFaq(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      setShouldLoadFaq(true);
+      observer.disconnect();
+    }, { rootMargin: "900px 0px" });
+
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, []);
 
   const openWaitlist = () => {
-    preloadWaitlistJourney();
     setIsWaitlistOpen(true);
   };
 
@@ -168,7 +181,7 @@ export default function Home() {
           <ul className="benefit-list">
             {benefits.map((benefit) => <li key={benefit}><Check aria-hidden="true" strokeWidth={3.2} /><span>{benefit}</span></li>)}
           </ul>
-          <button className="waitlist-cta" type="button" onPointerEnter={preloadWaitlistJourney} onFocus={preloadWaitlistJourney} onTouchStart={preloadWaitlistJourney} onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
+          <button className="waitlist-cta" type="button" onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
           <div className="course-footer" id="lista-de-espera"><span className="footer-rule" /><p><b>+1,000</b> alumnos ya aprendieron con nosotros</p></div>
         </div>
         <aside className="visual-column" aria-label="Espacio reservado para fotografía del curso">
@@ -213,7 +226,7 @@ export default function Home() {
         <div className="community-inner">
           <div className="community-copy">
             <h2 id="community-title"><span className="community-line">Más de <b className="community-highlight">500 alumnos</b></span><span className="community-line">ya perdieron el miedo</span><span className="community-line">a la resina y hoy crean</span><span className="community-line">acabados increíbles.</span><em>Tú puedes ser el siguiente.</em></h2>
-            <button className="community-cta" type="button" onPointerEnter={preloadWaitlistJourney} onFocus={preloadWaitlistJourney} onTouchStart={preloadWaitlistJourney} onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
+            <button className="community-cta" type="button" onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
           </div>
           <div className="community-gallery" aria-label="Galería de alumnos durante las prácticas">
             {studentGallery.map(({ image, alt }, index) => <figure className={`community-photo photo-${index + 1}`} key={image}><img src={image} alt={alt} loading="lazy" /></figure>)}
@@ -248,7 +261,7 @@ export default function Home() {
               </ul>
             </div>
           </aside>
-          <button className="process-cta" type="button" onPointerEnter={preloadWaitlistJourney} onFocus={preloadWaitlistJourney} onTouchStart={preloadWaitlistJourney} onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
+          <button className="process-cta" type="button" onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
         </div>
       </section>
 
@@ -380,18 +393,18 @@ export default function Home() {
             </div>
             <div className="proof-cta-area">
               <p>El próximo aplicador de resina epóxica puedes ser tú</p>
-              <button className="proof-cta" type="button" onPointerEnter={preloadWaitlistJourney} onFocus={preloadWaitlistJourney} onTouchStart={preloadWaitlistJourney} onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
+              <button className="proof-cta" type="button" onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="faq-section" aria-labelledby="faq-title">
+      <section ref={faqSectionRef} className="faq-section" aria-labelledby="faq-title">
         <div className="faq-inner">
           <header className="faq-heading">
             <h2 id="faq-title">¿Aún tienes preguntas?</h2>
           </header>
-          <FaqList />
+          {shouldLoadFaq && <Suspense fallback={null}><FaqList /></Suspense>}
         </div>
       </section>
 
@@ -409,7 +422,7 @@ export default function Home() {
             <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Acceso prioritario al curso antes de abrir inscripciones al público general</span></li>
             <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Acceso GRATIS a nuestra clase online sobre las 5 capas de un piso epóxico</span></li>
           </ul>
-          <button className="final-cta-button" type="button" onPointerEnter={preloadWaitlistJourney} onFocus={preloadWaitlistJourney} onTouchStart={preloadWaitlistJourney} onClick={openWaitlist}>Unirme GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
+          <button className="final-cta-button" type="button" onClick={openWaitlist}>Unirme GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
           <p className="final-cta-trust">Registro gratuito · Sin compromiso · Cupo presencial limitado</p>
         </div>
       </section>

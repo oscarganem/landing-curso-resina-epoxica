@@ -62,19 +62,3 @@ La comprobación en producción confirmó que `window.fbq` permanece disponible 
 Para la validación final autorizada por el propietario, se abrió una visita limpia de producción y se inició una captura temporal de llamadas a `fbq` en `sessionStorage`. La captura se encontraba vacía antes de abrir o enviar el formulario, confirmando que la carga inicial no produjo un evento Lead.
 
 La prueba autorizada de producción completó el formulario, confirmó el guardado y redirigió a `/curso-playadelcarmen-sep26/gracias`. Tras la redirección, la captura temporal registró exactamente una llamada `track, Lead`. Con ello queda comprobado el comportamiento de extremo a extremo: no hay Lead en carga inicial y se emite un Lead después de un registro exitoso confirmado.
-
-La carga progresiva usa un margen de anticipación de 1,400 px para las preguntas frecuentes, por lo que el módulo se solicita antes de que el usuario alcance la sección. El formulario y la página de gracias se precargan al primer gesto sobre cualquier CTA y la verificación visual confirmó que el modal aparece de inmediato y conserva todos sus campos, beneficios y acción de registro.
-
-Durante la validación de producción de la carga anticipada, el primer pantallazo y los CTA se mostraron correctamente. Al desplazarse hasta la sección de preguntas frecuentes, se visualizó el título pero no los elementos del acordeón, por lo que esta validación queda pendiente hasta corregir la carga del módulo sin introducir huecos ni retrasos.
-
-El diagnóstico posterior confirmó que el módulo del FAQ sí se cargó correctamente, pero su descarga tardó cerca de 2 segundos después de activarse. Para eliminar ese hueco durante un desplazamiento normal, el margen de anticipación se amplió de 1,400 px a 3,000 px. La sección está suficientemente alejada del primer pantallazo para no añadir ese módulo a la carga inicial.
-
-La comprobación inicial de la publicación con el nuevo margen confirmó que el primer pantallazo permanece sin cambios y que las preguntas frecuentes no se incluyen en el marcado inicial. La carga de los elementos del FAQ se validará durante un desplazamiento normal a través de la página.
-
-Durante un desplazamiento secuencial desde la parte superior, la carga inicial se mantuvo estable y no se produjo ningún hueco visual en las secciones intermedias. La precarga del FAQ queda activada varios bloques antes de la sección de preguntas para que la descarga pueda completarse durante la lectura normal de la landing.
-
-Tras publicar la restauración estable del FAQ, el dominio personalizado todavía devolvió un bundle anterior (`index-BRMFNCwl.js`) que no contiene los elementos del FAQ. Se mantendrá pendiente la validación de producción hasta que el dominio sirva el bundle actual; la compilación local y las pruebas ya validaron la versión estable.
-
-Después de actualizar la publicación del dominio personalizado, la ruta de campaña volvió a mostrar los diez elementos del FAQ de forma estable, sin errores de módulos dinámicos. Se inició la comprobación final de apertura del formulario precargado desde el CTA principal.
-
-La comprobación final confirmó que el FAQ estable está presente en producción y que el CTA principal abre el formulario con sus campos, beneficios y botón de envío intactos. La reducción de experiencia segura permanece en la precarga del formulario y la página de gracias; el FAQ se mantiene estático para evitar errores de despliegue de módulos dinámicos.
