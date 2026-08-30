@@ -54,3 +54,11 @@ Con una visita limpia a `academia.ocares.mx/curso-playadelcarmen-sep26` sin abri
 Después de diferir el acordeón de preguntas frecuentes, se verificó en navegador que los diez desplegables aparecen al aproximarse a la sección y que el primer pantallazo de la landing conserva su composición. La compilación reduce el bundle principal de 556.03 KiB a 520.67 KiB sin comprimir, y entrega el acordeón en el chunk diferido `FaqList` de 24.01 KiB.
 
 La primera comprobación de `academia.ocares.mx` tras publicar la optimización todavía sirvió el bundle anterior `index-U6J8AO9d.js` de 90,045 bytes codificados. La verificación de producción queda pendiente de la propagación del despliegue del dominio personalizado; no se atribuirá ese resultado a la versión nueva.
+
+Una nueva publicación ya sirve el bundle actualizado `index-DzS55eag.js` en `academia.ocares.mx/curso-playadelcarmen-sep26`. En una visita limpia y sin abrir el formulario, el JavaScript propio inicial bajó de 90,045 a 83,607 bytes codificados, una reducción adicional de 6,438 bytes (7.1%) y de 303,153 a 281,617 bytes descomprimidos. Los únicos recursos externos de JavaScript presentes siguen siendo Umami y Meta Pixel; Meta/Facebook no se modificaron.
+
+La comprobación en producción confirmó que `window.fbq` permanece disponible y que no se emite un Lead durante la carga inicial. Las pruebas automatizadas existentes confirman que el evento Lead se dispara dentro del manejador de registro exitoso, por lo que la conversión mantiene su comportamiento sin enviar eventos de prueba a la cuenta de producción.
+
+Para la validación final autorizada por el propietario, se abrió una visita limpia de producción y se inició una captura temporal de llamadas a `fbq` en `sessionStorage`. La captura se encontraba vacía antes de abrir o enviar el formulario, confirmando que la carga inicial no produjo un evento Lead.
+
+La prueba autorizada de producción completó el formulario, confirmó el guardado y redirigió a `/curso-playadelcarmen-sep26/gracias`. Tras la redirección, la captura temporal registró exactamente una llamada `track, Lead`. Con ello queda comprobado el comportamiento de extremo a extremo: no hay Lead en carga inicial y se emite un Lead después de un registro exitoso confirmado.
