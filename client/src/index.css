@@ -869,4 +869,31 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   .thanks-final-inner h2 {
     font-size: 35px;
   }
+
+  .audience-intro h2,
+  .learning-heading h2,
+  .community-copy h2,
+  .process-heading h2,
+  .included-heading h2,
+  .about-heading h2,
+  .venue-heading h2,
+  .proof-heading h2,
+  .faq-heading h2,
+  .final-cta-inner h2 {
+    text-align: center;
+  }
+
+  .audience-intro .light-eyebrow {
+    align-self: center;
+    text-align: center;
+  }
+
+  .learning-heading .dark-title-rule,
+  .process-heading .dark-title-rule,
+  .about-heading .dark-title-rule,
+  .proof-heading .dark-title-rule,
+  .final-cta-inner .dark-title-rule {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }

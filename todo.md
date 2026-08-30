@@ -1,4 +1,7 @@
 # Lista de verificación
+- [x] Aplicar de forma efectiva el centrado móvil de los títulos y encabezados de sección, excluyendo el hero.
+- [x] Ejecutar pruebas, tipado y compilación después del ajuste de alineación móvil.
+- [x] Validar visualmente en móvil y escritorio que los títulos de sección estén centrados solo en móvil y que el hero siga alineado a la izquierda.
 - [x] Aplicar de forma efectiva la escala móvil unificada de 35 px para los títulos principales, sin tocar escritorio.
 - [x] Ejecutar pruebas, tipado y compilación después del ajuste tipográfico móvil.
 - [x] Validar visualmente en móvil y escritorio que los títulos principales quedan en 35 px solo en móvil.
