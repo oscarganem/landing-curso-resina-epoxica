@@ -1,4 +1,7 @@
 # Lista de verificación
+- [x] Aplicar de forma efectiva el reordenamiento responsive del recuadro de experiencia previa para móvil, manteniendo intacta la composición de escritorio.
+- [x] Validar visualmente en móvil y escritorio que el recuadro aparece después de las profesiones solo en móvil.
+- [x] Ejecutar check/build tras el ajuste responsive y dejar evidencia de la validación.
 - [x] Documentar una comparación reproducible del bundle inicial propio antes y después de las optimizaciones.
 - [x] Aplicar una reducción adicional verificable del JavaScript propio inicial sin modificar Meta/Facebook.
 - [x] Validar en producción un registro real autorizado y confirmar que Lead solo se emite después del éxito.
