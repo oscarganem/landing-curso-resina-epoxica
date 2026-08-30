@@ -72,3 +72,5 @@ El diagnóstico posterior confirmó que el módulo del FAQ sí se cargó correct
 La comprobación inicial de la publicación con el nuevo margen confirmó que el primer pantallazo permanece sin cambios y que las preguntas frecuentes no se incluyen en el marcado inicial. La carga de los elementos del FAQ se validará durante un desplazamiento normal a través de la página.
 
 Durante un desplazamiento secuencial desde la parte superior, la carga inicial se mantuvo estable y no se produjo ningún hueco visual en las secciones intermedias. La precarga del FAQ queda activada varios bloques antes de la sección de preguntas para que la descarga pueda completarse durante la lectura normal de la landing.
+
+Tras publicar la restauración estable del FAQ, el dominio personalizado todavía devolvió un bundle anterior (`index-BRMFNCwl.js`) que no contiene los elementos del FAQ. Se mantendrá pendiente la validación de producción hasta que el dominio sirva el bundle actual; la compilación local y las pruebas ya validaron la versión estable.
