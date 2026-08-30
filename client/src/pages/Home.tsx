@@ -2,7 +2,7 @@
  * Diseño: Taller de Alto Contraste. Landing editorial carbón/amarillo con
  * módulos de formación, práctica y comunidad de alumnos.
  */
-import { lazy, Suspense, useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import {
   BadgeCheck,
   BookOpen,
@@ -37,7 +37,7 @@ import {
 } from "lucide-react";
 
 const WaitlistModal = lazy(() => import("./WaitlistModal"));
-const FaqList = lazy(() => import("./FaqList"));
+import FaqList from "./FaqList";
 
 const benefits = [
   "Aprende a crear acabados marmoleados, metálicos, unicolor y 3D.",
@@ -134,25 +134,6 @@ const includedResources = [
 
 export default function Home() {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
-  const [shouldLoadFaq, setShouldLoadFaq] = useState(false);
-  const faqSectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const target = faqSectionRef.current;
-    if (!target || typeof IntersectionObserver === "undefined") {
-      setShouldLoadFaq(true);
-      return;
-    }
-
-    const observer = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting) return;
-      setShouldLoadFaq(true);
-      observer.disconnect();
-    }, { rootMargin: "3000px 0px" });
-
-    observer.observe(target);
-    return () => observer.disconnect();
-  }, []);
 
   const preloadWaitlistJourney = () => {
     void import("./WaitlistModal");
@@ -405,12 +386,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section ref={faqSectionRef} className="faq-section" aria-labelledby="faq-title">
+      <section className="faq-section" aria-labelledby="faq-title">
         <div className="faq-inner">
           <header className="faq-heading">
             <h2 id="faq-title">¿Aún tienes preguntas?</h2>
           </header>
-          {shouldLoadFaq && <Suspense fallback={null}><FaqList /></Suspense>}
+          <FaqList />
         </div>
       </section>
 

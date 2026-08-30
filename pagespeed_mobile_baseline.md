@@ -68,3 +68,7 @@ La carga progresiva usa un margen de anticipación de 1,400 px para las pregunta
 Durante la validación de producción de la carga anticipada, el primer pantallazo y los CTA se mostraron correctamente. Al desplazarse hasta la sección de preguntas frecuentes, se visualizó el título pero no los elementos del acordeón, por lo que esta validación queda pendiente hasta corregir la carga del módulo sin introducir huecos ni retrasos.
 
 El diagnóstico posterior confirmó que el módulo del FAQ sí se cargó correctamente, pero su descarga tardó cerca de 2 segundos después de activarse. Para eliminar ese hueco durante un desplazamiento normal, el margen de anticipación se amplió de 1,400 px a 3,000 px. La sección está suficientemente alejada del primer pantallazo para no añadir ese módulo a la carga inicial.
+
+La comprobación inicial de la publicación con el nuevo margen confirmó que el primer pantallazo permanece sin cambios y que las preguntas frecuentes no se incluyen en el marcado inicial. La carga de los elementos del FAQ se validará durante un desplazamiento normal a través de la página.
+
+Durante un desplazamiento secuencial desde la parte superior, la carga inicial se mantuvo estable y no se produjo ningún hueco visual en las secciones intermedias. La precarga del FAQ queda activada varios bloques antes de la sección de preguntas para que la descarga pueda completarse durante la lectura normal de la landing.
