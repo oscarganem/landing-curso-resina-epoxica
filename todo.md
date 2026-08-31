@@ -11,6 +11,11 @@
 - [x] Ajustar en escritorio las proporciones del hero entre columna de texto, fotografía y espacio central según la referencia compartida.
 - [x] Reemplazar el subtítulo del hero por el mensaje de lista de espera, precio de preventa y clase online gratuita.
 - [x] Consolidar el nuevo copy de beneficios y el tamaño de la prueba social del hero sin estilos inline duplicados.
+- [x] Retirar el rótulo amarillo “UBICACIÓN” de la sección del mapa.
+- [x] Reemplazar la prueba social del hero por cinco estrellas amarillas y el mensaje de alumnos.
+- [x] Actualizar el subtítulo y los tres beneficios del CTA final con el copy de lista previa, preventa y clase online.
+- [x] Mantener justificados los párrafos de la sección institucional también en móvil.
+- [x] Separar el título del bloque de referencia de cobro y distribuir sus tres puntos con mayor aire.
 - [x] Aplicar de forma efectiva el centrado móvil de los títulos y encabezados de sección, excluyendo el hero.
 - [x] Ejecutar pruebas, tipado y compilación después del ajuste de alineación móvil.
 - [x] Validar visualmente en móvil y escritorio que los títulos de sección estén centrados solo en móvil y que el hero siga alineado a la izquierda.

@@ -182,7 +182,10 @@ export default function Home() {
             {benefits.map((benefit) => <li key={benefit}><Check aria-hidden="true" strokeWidth={3.2} /><span>{benefit}</span></li>)}
           </ul>
           <button className="waitlist-cta" type="button" onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
-          <div className="course-footer" id="lista-de-espera"><span className="footer-rule" /><p><b>+1,000</b> alumnos ya aprendieron con nosotros</p></div>
+          <div className="course-footer" id="lista-de-espera">
+            <span className="course-rating" role="img" aria-label="Cinco estrellas">★★★★★</span>
+            <p>+1,000 alumnos ya aprendieron con nosotros</p>
+          </div>
         </div>
         <aside className="visual-column" aria-label="Fotografía de una aplicación práctica de resina durante el curso">
           <div className="photo-frame">
@@ -220,11 +223,14 @@ export default function Home() {
           <div className="technique-grid">
             {techniques.map(({ title, image, position }) => <article className="technique-card" key={title}><img src={image} alt={title} loading="lazy" style={{ objectPosition: position }} /><div className="technique-shade" aria-hidden="true" /><div className="technique-status"><Check aria-hidden="true" strokeWidth={3} /> Incluido en el taller presencial</div><h3>{title}</h3></article>)}
           </div>
-          <aside className="earning-card" aria-labelledby="earning-title">
-            <div className="earning-photo"><img src="/manus-storage/piso-marmoleado-economico_fe9c195f.webp" alt="Piso marmoleado de resina epóxica" loading="lazy" /></div>
-            <div className="earning-details"><h3 id="earning-title">¿Cuánto se cobra por este tipo de proyectos?</h3><div className="earning-facts">{earningFacts.map(({ icon: Icon, label, detail }) => <div className="earning-fact" key={label}><span className="earning-icon" aria-hidden="true"><Icon strokeWidth={2.2} /></span><strong>{label}</strong><p>{detail}</p></div>)}</div></div>
-            <p className="earning-disclaimer">*Los precios son aproximados y pueden variar según superficie, complejidad, materiales, ciudad y condiciones del trabajo.</p>
-          </aside>
+          <div className="earning-block">
+            <h3 className="earning-title" id="earning-title">¿Cuánto se cobra por este tipo de proyectos?</h3>
+            <aside className="earning-card" aria-labelledby="earning-title">
+              <div className="earning-photo"><img src="/manus-storage/piso-marmoleado-economico_fe9c195f.webp" alt="Piso marmoleado de resina epóxica" loading="lazy" /></div>
+              <div className="earning-details"><div className="earning-facts">{earningFacts.map(({ icon: Icon, label, detail }) => <div className="earning-fact" key={label}><span className="earning-icon" aria-hidden="true"><Icon strokeWidth={2.2} /></span><strong>{label}</strong><p>{detail}</p></div>)}</div></div>
+              <p className="earning-disclaimer">*Los precios son aproximados y pueden variar según superficie, complejidad, materiales, ciudad y condiciones del trabajo.</p>
+            </aside>
+          </div>
         </div>
       </section>
 
@@ -367,7 +373,6 @@ export default function Home() {
             </article>
 
             <div className="venue-map">
-              <span className="venue-map-tag">Ubicación</span>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.824431774057!2d-87.076498!3d20.636011899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e4326db4db907%3A0x967b3c90e3eda04d!2sCANACO%20SERVYTUR%20PLAYA%20DEL%20CARMEN!5e0!3m2!1ses-419!2smx!4v1787349497546!5m2!1ses-419!2smx"
                 title="Ubicación de CANACO Servitur Playa del Carmen"
@@ -431,11 +436,11 @@ export default function Home() {
             </span>
           </h2>
           <span className="dark-title-rule" aria-hidden="true" />
-          <p className="final-cta-intro">Al registrarte GRATIS obtendrás:</p>
+          <p className="final-cta-intro">Las inscripciones generales aún no están abiertas. Al registrarte sin costo en la lista previa obtienes:</p>
           <ul className="final-benefit-list">
-            <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Descuento exclusivo de preventa</span></li>
-            <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Acceso prioritario al curso antes de abrir inscripciones al público general</span></li>
-            <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Acceso GRATIS a nuestra clase online sobre las 5 capas de un piso epóxico</span></li>
+            <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Descuento especial de preventa solo para registrados en la lista.</span></li>
+            <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Prioridad de inscripción antes de agotar los lugares presenciales.</span></li>
+            <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Clase Online GRATUITA: &quot;Las 5 capas de un piso epóxico&quot;.</span></li>
           </ul>
           <button className="final-cta-button" type="button" onClick={openWaitlist}>Unirme GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
           <p className="final-cta-trust">Registro gratuito · Sin compromiso · Cupo presencial limitado</p>
