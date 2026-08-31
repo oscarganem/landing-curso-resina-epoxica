@@ -20,6 +20,8 @@
 - [x] Agregar Ingenieros civiles a la lista de perfiles de la sección de audiencia.
 - [x] Aumentar moderadamente los rótulos de cobro y acercar sus detalles en la versión móvil.
 - [x] Agregar el paso 04 del taller presencial al proceso y retirar el recuadro inferior de curso.
+- [x] Reducir moderadamente los títulos de los cuatro pasos en móvil para mantenerlos en una sola línea.
+- [x] Unificar la cifra “1,000 alumnos” en la comunidad para escritorio, móvil y accesibilidad.
 - [x] Aplicar de forma efectiva el centrado móvil de los títulos y encabezados de sección, excluyendo el hero.
 - [x] Ejecutar pruebas, tipado y compilación después del ajuste de alineación móvil.
 - [x] Validar visualmente en móvil y escritorio que los títulos de sección estén centrados solo en móvil y que el hero siga alineado a la izquierda.

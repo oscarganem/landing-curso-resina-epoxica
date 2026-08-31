@@ -245,9 +245,9 @@ export default function Home() {
       <section className="community-section" aria-labelledby="community-title">
         <div className="community-inner">
           <div className="community-copy">
-            <h2 id="community-title" aria-label="Más de 500 alumnos ya perdieron el miedo a la resina y hoy crean acabados increíbles.">
-              <span className="community-title-desktop" aria-hidden="true"><span className="community-line">Más de <b className="community-highlight">500 alumnos</b></span><span className="community-line">ya perdieron el miedo</span><span className="community-line">a la resina y hoy crean</span><span className="community-line">acabados increíbles.</span></span>
-              <span className="community-title-mobile" aria-hidden="true">Más de <b className="community-highlight">500 alumnos</b> ya perdieron el miedo a la resina y hoy crean acabados increíbles.</span>
+            <h2 id="community-title" aria-label="Más de 1000 alumnos ya perdieron el miedo a la resina y hoy crean acabados increíbles.">
+              <span className="community-title-desktop" aria-hidden="true"><span className="community-line">Más de <b className="community-highlight">1000 alumnos</b></span><span className="community-line">ya perdieron el miedo</span><span className="community-line">a la resina y hoy crean</span><span className="community-line">acabados increíbles.</span></span>
+              <span className="community-title-mobile" aria-hidden="true">Más de <b className="community-highlight">1000 alumnos</b> ya perdieron el miedo a la resina y hoy crean acabados increíbles.</span>
               <em>Tú puedes ser el siguiente.</em>
             </h2>
             <button className="community-cta" type="button" onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>

@@ -445,12 +445,12 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   .process-line { white-space: normal; }
   .process-heading > p { margin-top: 17px; font-size: 14px; }
   .process-steps { grid-template-columns: 1fr; gap: 13px; margin-top: 34px; }
-  .process-step { min-height: 0; padding: 20px; }
+  .process-step { min-height: 0; padding: 20px 16px; }
   .process-step-top { gap: 15px; }
   .process-icon { width: 62px; height: 62px; }
   .process-icon svg { width: 31px; height: 31px; }
   .process-step-top b { font-size: 47px; }
-  .process-step h3 { margin-top: 17px; font-size: 25px; }
+  .process-step h3 { max-width: none; width: 100%; margin-top: 17px; font-size: clamp(16px, 4.8vw, 18px); letter-spacing: -.065em; line-height: 1.06; white-space: nowrap; }
   .process-step p { margin-top: 10px; font-size: 14px; }
   .process-step-location { font-size: 12px !important; }
   .process-cta { min-height: 54px; margin-top: 13px; font-size: 14px; }
