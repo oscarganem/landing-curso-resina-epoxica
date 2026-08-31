@@ -1,6 +1,8 @@
 import { CalendarDays, Check, Clock3 } from "lucide-react";
 import { Link } from "wouter";
 
+const whatsappPassUrl = "https://wa.me/529617848718?text=Hola%20%F0%9F%91%8B%20Ya%20me%20registr%C3%A9%20a%20la%20Lista%20de%20Espera%20y%20quiero%20pedir%20mi%20pase%20para%20la%20Clase%20Online%20de%20Resina%20Ep%C3%B3xica";
+
 export default function ThankYou() {
   return (
     <main className="thanks-page">
@@ -26,9 +28,9 @@ export default function ThankYou() {
             <span>Si no asistes, no podrás acceder a este descuento para el <strong>Curso presencial en Playa del Carmen.</strong></span>
           </p>
 
-          <button className="thanks-whatsapp" type="button" aria-label="WhatsApp se habilitará próximamente">
+          <a className="thanks-whatsapp" href={whatsappPassUrl} target="_blank" rel="noreferrer" aria-label="Solicitar mi pase GRATIS por WhatsApp">
             <img src="/manus-storage/whatsapp-icon_a58887ab.png" alt="" /> Solicitar mi pase GRATIS por WhatsApp
-          </button>
+          </a>
 
           <div className="thanks-info-row">
             <div><CalendarDays aria-hidden="true" /><span>Clase ONLINE gratuita<strong>Jueves 10 de septiembre</strong></span></div>
@@ -73,10 +75,10 @@ export default function ThankYou() {
           <p className="thanks-final-copy">
             Solicita tu acceso por WhatsApp para asistir a la clase online gratuita del Jueves 10 de septiembre a las 8:00 PM. Durante la clase revelaremos el descuento especial de preventa para el <strong>Curso Presencial</strong> de Resina Epóxica en Playa del Carmen.
           </p>
-          <button className="thanks-final-whatsapp" type="button" aria-label="WhatsApp se habilitará próximamente">
+          <a className="thanks-final-whatsapp" href={whatsappPassUrl} target="_blank" rel="noreferrer" aria-label="Solicitar mi pase GRATIS por WhatsApp">
             <img src="/manus-storage/whatsapp-icon_a58887ab.png" alt="" />
             Solicitar mi pase GRATIS por WhatsApp
-          </button>
+          </a>
           <p className="thanks-final-note"><span>Clase online gratuita</span><i aria-hidden="true" /> <span>Descuento exclusivo para asistentes</span></p>
         </div>
       </section>

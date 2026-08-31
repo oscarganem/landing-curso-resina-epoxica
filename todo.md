@@ -77,7 +77,7 @@
 - [x] Verificar visualmente y publicar la fecha y horario actualizados de la clase online en /gracias.
 - [x] Actualizar la página de gracias con la clase online del jueves 10 de septiembre a las 8:00 PM.
 - [x] Validar la ruta /gracias, su redirección tras el registro y su diseño responsive.
-- [ ] Vincular el CTA verde de WhatsApp al número definitivo cuando sea proporcionado.
+- [x] Vincular el CTA verde de WhatsApp al enlace definitivo proporcionado para solicitar el pase de la clase online.
 - [x] Crear una página de gracias con pasos de acceso y CTA verde de WhatsApp tras el registro.
 - [x] Redondear, ocultar barras de scroll y afinar la jerarquía tipográfica del formulario modal.
 - [x] Crear un formulario modal de lista de espera con nombre, correo y WhatsApp, conectado a todos los CTA.
