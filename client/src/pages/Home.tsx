@@ -71,6 +71,7 @@ const audienceGroups = [
   { icon: GraduationCap, label: "Estudiantes" },
   { icon: Ruler, label: "Arquitectos" },
   { icon: HardHat, label: "Albañiles" },
+  { icon: Building2, label: "Ingenieros civiles" },
 ];
 
 const techniques = [
@@ -226,7 +227,7 @@ export default function Home() {
           <div className="earning-block">
             <h3 className="earning-title" id="earning-title">¿Cuánto se cobra por este tipo de proyectos?</h3>
             <aside className="earning-card" aria-labelledby="earning-title">
-              <div className="earning-photo"><img src="/manus-storage/piso-marmoleado-economico_fe9c195f.webp" alt="Piso marmoleado de resina epóxica" loading="lazy" /></div>
+              <div className="earning-photo"><img src="/manus-storage/piso-azul-marmoleado_5b4a8397.webp" alt="Piso de resina azul marmoleado con vetas doradas" loading="lazy" /></div>
               <div className="earning-details"><div className="earning-facts">{earningFacts.map(({ icon: Icon, label, detail }) => <div className="earning-fact" key={label}><span className="earning-icon" aria-hidden="true"><Icon strokeWidth={2.2} /></span><strong>{label}</strong><p>{detail}</p></div>)}</div></div>
               <p className="earning-disclaimer">*Los precios son aproximados y pueden variar según superficie, complejidad, materiales, ciudad y condiciones del trabajo.</p>
             </aside>
