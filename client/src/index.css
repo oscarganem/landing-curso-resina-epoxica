@@ -228,6 +228,18 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .frame-corner-top { top: 4px; left: 4px; border-top: 2px solid; border-left: 2px solid; }
 .frame-corner-bottom { right: 4px; bottom: 4px; border-right: 2px solid; border-bottom: 2px solid; }
 
+@media (min-width: 851px) {
+  .hero {
+    grid-template-columns: minmax(0, 510px) minmax(440px, 500px);
+    gap: clamp(48px, 4vw, 64px);
+    justify-content: space-between;
+  }
+  .hero-copy { max-width: 510px; }
+  h1 { max-width: 510px; }
+  .photo-frame { width: min(100%, 500px); }
+  .photo-placeholder { min-height: 0; aspect-ratio: 4 / 5; }
+}
+
 @keyframes reveal-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
