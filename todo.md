@@ -9,6 +9,7 @@
 - [x] Confirmar con el usuario que la tabla azul extendida tiene la escala solicitada y que se preservan rostro, ropa y postura del aplicador.
 - [x] Integrar la fotografía aprobada de mesa azul en el espacio 4:5 del hero, optimizada para móvil y escritorio.
 - [x] Ajustar en escritorio las proporciones del hero entre columna de texto, fotografía y espacio central según la referencia compartida.
+- [x] Reemplazar el subtítulo del hero por el mensaje de lista de espera, precio de preventa y clase online gratuita.
 - [x] Aplicar de forma efectiva el centrado móvil de los títulos y encabezados de sección, excluyendo el hero.
 - [x] Ejecutar pruebas, tipado y compilación después del ajuste de alineación móvil.
 - [x] Validar visualmente en móvil y escritorio que los títulos de sección estén centrados solo en móvil y que el hero siga alineado a la izquierda.

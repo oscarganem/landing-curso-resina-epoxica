@@ -177,7 +177,7 @@ export default function Home() {
           </h1>
           <span className="hero-title-rule" aria-hidden="true" />
           <p className="event-line"><MapPin aria-hidden="true" /> Playa del Carmen <b>|</b><CalendarDays aria-hidden="true" /> 18 de Septiembre</p>
-          <p className="course-lede"><span>La formación <strong>#1</strong> para aplicadores</span><span>de resina epóxica en México.</span></p>
+          <p className="course-lede">Únete a la Lista de Espera y asegura tu precio de preventa + 1 Clase Online GRATIS antes del evento.</p>
           <ul className="benefit-list">
             {benefits.map((benefit) => <li key={benefit}><Check aria-hidden="true" strokeWidth={3.2} /><span>{benefit}</span></li>)}
           </ul>
