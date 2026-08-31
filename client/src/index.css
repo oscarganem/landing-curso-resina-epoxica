@@ -385,8 +385,9 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   .earning-photo { height: 180px; }
   .earning-details { min-height: 0; padding: 2px 5px 0; }
   .earning-facts { gap: 0; margin: 0; }
-  .earning-fact { grid-template-columns: 31px 1fr; gap: 7px; padding: 10px 8px; }
-  .earning-fact p { grid-column: 2; font-size: 11px; }
+  .earning-fact { grid-template-columns: 31px 1fr; grid-template-rows: auto auto; column-gap: 7px; row-gap: 3px; padding: 9px 8px; }
+  .earning-fact strong { font-size: 14px; line-height: 1.1; }
+  .earning-fact p { grid-column: 2; margin-top: -1px; font-size: 12px; line-height: 1.2; }
   .earning-disclaimer { margin: -4px 5px 2px; font-size: 8px; }
   .community-inner { grid-template-columns: 1fr; gap: 35px; padding: 72px 0 78px; }
   .community-copy { display: block; align-self: auto; padding: 0; }

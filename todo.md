@@ -18,6 +18,7 @@
 - [x] Separar el título del bloque de referencia de cobro y distribuir sus tres puntos con mayor aire.
 - [x] Reemplazar la imagen del bloque de referencia de cobro por el acabado azul marmoleado proporcionado.
 - [x] Agregar Ingenieros civiles a la lista de perfiles de la sección de audiencia.
+- [x] Aumentar moderadamente los rótulos de cobro y acercar sus detalles en la versión móvil.
 - [x] Aplicar de forma efectiva el centrado móvil de los títulos y encabezados de sección, excluyendo el hero.
 - [x] Ejecutar pruebas, tipado y compilación después del ajuste de alineación móvil.
 - [x] Validar visualmente en móvil y escritorio que los títulos de sección estén centrados solo en móvil y que el hero siga alineado a la izquierda.
