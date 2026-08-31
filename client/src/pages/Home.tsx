@@ -115,6 +115,13 @@ const prioritySteps = [
     title: "Descubre tu descuento de preventa",
     text: "Al final de la clase en vivo revelaremos el precio especial disponible únicamente para quienes se registraron en la lista.",
   },
+  {
+    icon: CalendarDays,
+    number: "04",
+    title: "Asiste al Taller Presencial",
+    location: "18 Sep | Playa del Carmen",
+    text: "Preséntate al evento presencial y crea tus propios acabados en pisos, barras y mesas de río.",
+  },
 ];
 
 const courseModules = [
@@ -259,25 +266,16 @@ export default function Home() {
           </div>
 
           <div className="process-steps">
-            {prioritySteps.map(({ icon: Icon, number, title, text }) => (
+            {prioritySteps.map(({ icon: Icon, number, title, location, text }) => (
               <article className="process-step" key={number}>
                 <div className="process-step-top"><span className="process-icon"><Icon aria-hidden="true" strokeWidth={2.3} /></span><b>{number}</b></div>
                 <h3>{title}</h3>
+                {location && <p className="process-step-location"><MapPin aria-hidden="true" strokeWidth={2} />{location}</p>}
                 <p>{text}</p>
               </article>
             ))}
           </div>
 
-          <aside className="process-course-note" aria-label="Detalles del curso presencial">
-            <span className="process-calendar"><CalendarDays aria-hidden="true" strokeWidth={2.25} /></span>
-            <div className="process-course-copy">
-              <h3>Curso presencial: <span>Playa del Carmen — 18 de septiembre</span></h3>
-              <ul>
-                <li><Check aria-hidden="true" strokeWidth={3} />Los miembros de la lista de espera tendrán acceso primero a los lugares antes de abrir las inscripciones al público general.</li>
-                <li><Check aria-hidden="true" strokeWidth={3} />Una vez dentro de la lista recibirás tu acceso a la clase online gratuita, donde revelaremos la oferta especial de preventa exclusiva para los miembros registrados.</li>
-              </ul>
-            </div>
-          </aside>
           <button className="process-cta" type="button" onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
         </div>
       </section>

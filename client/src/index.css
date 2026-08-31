@@ -410,25 +410,19 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .process-line { display: block; white-space: nowrap; }
 .process-heading h2 b, .process-heading h2 strong { color: var(--resin-yellow); font-weight: inherit; }
 .process-heading > p { max-width: 640px; margin: 19px auto 0; color: #cbc9c4; font-size: clamp(15px, 1.25vw, 18px); font-weight: 650; letter-spacing: -.018em; line-height: 1.38; }
-.process-steps { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 36px; }
-.process-steps::before { position: absolute; z-index: 0; top: 120px; right: 15%; left: 15%; border-top: 3px dotted var(--resin-yellow); content: ""; }
-.process-step { position: relative; z-index: 1; min-height: 276px; padding: 22px 24px 25px; border: 1px solid rgba(255,255,255,.3); border-radius: 12px; background: #070707; }
-.process-step-top { display: flex; align-items: center; gap: 21px; }
+.process-steps { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-top: 36px; }
+.process-steps::before { position: absolute; z-index: 0; top: 107px; right: 11%; left: 11%; border-top: 3px dotted var(--resin-yellow); content: ""; }
+.process-step { position: relative; z-index: 1; min-height: 294px; padding: 20px 19px 23px; border: 1px solid rgba(255,255,255,.3); border-radius: 12px; background: #070707; }
+.process-step-top { display: flex; align-items: center; gap: 16px; }
 .process-icon, .process-calendar { display: grid; flex: 0 0 auto; place-items: center; border-radius: 50%; background: var(--resin-yellow); color: #111; }
-.process-icon { width: 75px; height: 75px; }
-.process-icon svg { width: 38px; height: 38px; }
-.process-step-top b { color: var(--resin-yellow); font-family: var(--font-display); font-size: clamp(43px, 4vw, 61px); font-weight: 800; letter-spacing: -.07em; line-height: 1; }
-.process-step h3 { max-width: 280px; margin: 19px 0 0; color: #fffefa; font-family: var(--font-display); font-size: clamp(22px, 1.85vw, 28px); font-weight: 800; letter-spacing: -.055em; line-height: .99; }
-.process-step p { margin: 13px 0 0; color: #d5d3ce; font-size: clamp(13px, 1.05vw, 15px); font-weight: 600; letter-spacing: -.015em; line-height: 1.4; }
-.process-course-note { display: grid; grid-template-columns: 126px 1fr; align-items: center; gap: 28px; margin-top: 21px; padding: 20px 25px; border: 1px solid rgba(255,212,0,.58); border-radius: 12px; background: #070707; }
-.process-calendar { width: 104px; height: 104px; }
-.process-calendar svg { width: 54px; height: 54px; }
-.process-course-copy { min-width: 0; padding-left: 28px; border-left: 1px solid rgba(255,255,255,.35); }
-.process-course-copy h3 { margin: 0; color: #fbfaf7; font-family: var(--font-display); font-size: 28px; font-weight: 800; letter-spacing: -.06em; line-height: 1.02; }
-.process-course-copy h3 span { color: var(--resin-yellow); }
-.process-course-copy ul { display: grid; gap: 10px; margin: 15px 0 0; padding: 0; list-style: none; }
-.process-course-copy li { display: flex; align-items: flex-start; gap: 10px; color: #d9d7d2; font-size: 16px; font-weight: 600; letter-spacing: -.015em; line-height: 1.35; }
-.process-course-copy li svg { flex: 0 0 auto; width: 19px; height: 19px; margin-top: 1px; color: var(--resin-yellow); }
+.process-icon { width: 64px; height: 64px; }
+.process-icon svg { width: 33px; height: 33px; }
+.process-step-top b { color: var(--resin-yellow); font-family: var(--font-display); font-size: clamp(42px, 3.6vw, 54px); font-weight: 800; letter-spacing: -.07em; line-height: 1; }
+.process-step h3 { max-width: 240px; margin: 17px 0 0; color: #fffefa; font-family: var(--font-display); font-size: clamp(20px, 1.62vw, 25px); font-weight: 800; letter-spacing: -.055em; line-height: .99; }
+.process-step p { margin: 12px 0 0; color: #d5d3ce; font-size: clamp(12px, 1vw, 14px); font-weight: 600; letter-spacing: -.015em; line-height: 1.4; }
+.process-step-location { display: flex; align-items: center; gap: 6px; margin-top: 11px !important; color: var(--resin-yellow) !important; font-size: 11px !important; font-weight: 800 !important; line-height: 1.2 !important; }
+.process-step-location svg { width: 14px; height: 14px; }
+.process-step-location + p { margin-top: 9px; }
 .process-cta { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 58px; margin-top: 16px; border: 1px solid var(--resin-yellow); border-radius: 6px; background: var(--resin-yellow); color: #111; font-size: 15px; font-weight: 900; letter-spacing: -.02em; text-decoration: none; transition: transform 160ms cubic-bezier(.23,1,.32,1), background 160ms ease, color 160ms ease; }
 .process-cta svg { width: 18px; height: 18px; margin-left: 9px; }
 .process-cta:hover { background: transparent; color: var(--resin-yellow); transform: translateY(-2px); }
@@ -436,14 +430,11 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 
 @media (max-width: 850px) {
   .process-inner { width: min(100% - 48px, 760px); }
-  .process-steps { gap: 18px; }
+  .process-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
   .process-step { padding: 22px 20px 25px; }
   .process-steps::before { display: none; }
   .process-icon { width: 67px; height: 67px; }
   .process-icon svg { width: 34px; height: 34px; }
-  .process-course-note { grid-template-columns: 110px 1fr; gap: 22px; }
-  .process-calendar { width: 92px; height: 92px; }
-  .process-calendar svg { width: 48px; height: 48px; }
 }
 
 @media (max-width: 680px) {
@@ -461,12 +452,7 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   .process-step-top b { font-size: 47px; }
   .process-step h3 { margin-top: 17px; font-size: 25px; }
   .process-step p { margin-top: 10px; font-size: 14px; }
-  .process-course-note { grid-template-columns: 1fr; gap: 18px; padding: 21px; }
-  .process-calendar { width: 82px; height: 82px; }
-  .process-calendar svg { width: 43px; height: 43px; }
-  .process-course-copy { padding: 0; border: 0; }
-  .process-course-copy h3 { font-size: 28px; }
-  .process-course-copy li { font-size: 14px; }
+  .process-step-location { font-size: 12px !important; }
   .process-cta { min-height: 54px; margin-top: 13px; font-size: 14px; }
 }
 
