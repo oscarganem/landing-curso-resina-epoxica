@@ -184,11 +184,14 @@ export default function Home() {
           <button className="waitlist-cta" type="button" onClick={openWaitlist}>Únete GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></button>
           <div className="course-footer" id="lista-de-espera"><span className="footer-rule" /><p><b>+1,000</b> alumnos ya aprendieron con nosotros</p></div>
         </div>
-        <aside className="visual-column" aria-label="Espacio reservado para fotografía del curso">
+        <aside className="visual-column" aria-label="Fotografía de una aplicación práctica de resina durante el curso">
           <div className="photo-frame">
             <div className="frame-corner frame-corner-top" aria-hidden="true" />
             <div className="frame-corner frame-corner-bottom" aria-hidden="true" />
-            <div className="photo-placeholder"><div className="placeholder-grid" aria-hidden="true" /><p>Espacio reservado<br /><span>para fotografía del curso</span></p><span className="placeholder-index" aria-hidden="true">01</span></div>
+            <div className="photo-placeholder photo-placeholder-filled">
+              <img className="hero-course-photo" src="/manus-storage/hero-mesa-azul-aprobada_5a76eb7d.webp" width="1080" height="1350" alt="Aplicador extendiendo resina azul sobre una mesa durante una práctica de curso" fetchPriority="high" decoding="async" />
+              <span className="placeholder-index" aria-hidden="true">01</span>
+            </div>
             <span className="photo-note">IMAGEN PRINCIPAL</span>
           </div>
         </aside>

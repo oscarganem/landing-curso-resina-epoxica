@@ -5,6 +5,9 @@
 - [x] Reducir y recomponer el título del CTA final exclusivamente en móvil para mejorar su lectura.
 - [x] Ampliar de forma flexible el ancho útil del título final en móvil, sin forzar líneas fijas.
 - [x] Ampliar y equilibrar los títulos de audiencia y comunidad en móvil sin forzar líneas fijas.
+- [x] Editar la foto del hero sustituyendo el rectángulo de plástico negro bajo la tabla por una tabla azul de resina extendida, sin alterar los rasgos del aplicador.
+- [x] Confirmar con el usuario que la tabla azul extendida tiene la escala solicitada y que se preservan rostro, ropa y postura del aplicador.
+- [x] Integrar la fotografía aprobada de mesa azul en el espacio 4:5 del hero, optimizada para móvil y escritorio.
 - [x] Aplicar de forma efectiva el centrado móvil de los títulos y encabezados de sección, excluyendo el hero.
 - [x] Ejecutar pruebas, tipado y compilación después del ajuste de alineación móvil.
 - [x] Validar visualmente en móvil y escritorio que los títulos de sección estén centrados solo en móvil y que el hero siga alineado a la izquierda.
