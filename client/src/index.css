@@ -209,8 +209,8 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 
 .course-footer { display: flex; align-items: center; gap: 14px; margin-top: 25px; }
 .footer-rule { display: block; flex: 1; height: 1px; max-width: 145px; background: var(--line); }
-.course-footer p { margin: 0; color: #898783; font-size: 10px; font-weight: 650; letter-spacing: .01em; }
-.course-footer b { color: var(--resin-yellow); font-family: var(--font-display); font-size: 10px; letter-spacing: .08em; }
+.course-footer p { margin: 0; color: #898783; font-size: 12px; font-weight: 650; letter-spacing: .01em; }
+.course-footer b { color: var(--resin-yellow); font-family: var(--font-display); font-size: 12px; letter-spacing: .08em; }
 
 .visual-column { align-self: stretch; display: flex; align-items: center; justify-content: flex-end; animation: reveal-up .65s .1s both cubic-bezier(.23, 1, .32, 1); }
 .photo-frame { position: relative; width: min(100%, 432px); padding: 11px; background: #171717; box-shadow: 22px 24px 0 rgba(0,0,0,.18); transform: rotate(-1.3deg); }

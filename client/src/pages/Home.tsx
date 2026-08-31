@@ -42,8 +42,8 @@ const FaqList = lazy(() => import("./FaqList"));
 const benefits = [
   "Aprende a crear acabados marmoleados, metálicos, unicolor y 3D.",
   "Crea pisos con hojuelas y granito antiderrapante.",
-  "Obtén acceso GRATIS a nuestra clase online previa al curso.",
-  "Accede a un PRECIO EXCLUSIVO de preventa.",
+  "Acceso GRATIS a la Masterclass Online previa al taller.",
+  "Descuento de preventa (solo para registrados en la lista).",
 ];
 
 const audienceReasons = [
