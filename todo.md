@@ -29,8 +29,9 @@
 - [x] Revisar la actividad del conjunto de datos Resina Epóxica dentro del portafolio AVE + MAS (cuenta `787252385881350`).
 - [ ] Enviar un registro autorizado de prueba y confirmar la recepción de Lead en Meta después de la nueva publicación.
 - [ ] Ejecutar el registro técnico autorizado en la ruta publicada de campaña y revisar el resultado en Meta.
+- [ ] Enviar el último registro técnico autorizado después de la espera del píxel y confirmar Lead.
 - [x] Mantener como única página de gracias la ruta /curso-playadelcarmen-sep26/gracias y eliminar /gracias.
-- [ ] Esperar a que el píxel esté listo antes de disparar Lead en la página de gracias y conservar la protección contra accesos directos.
+- [x] Esperar a que el píxel esté listo antes de disparar Lead en la página de gracias, una sola vez tras éxito, y excluir accesos directos, recargas, popups y regreso del navegador.
 - [x] Confirmar que el evento SubscribedButtonClic detectado por Meta no sustituye al evento estándar Lead.
 - [x] Aplicar de forma efectiva el centrado móvil de los títulos y encabezados de sección, excluyendo el hero.
 - [x] Ejecutar pruebas, tipado y compilación después del ajuste de alineación móvil.
@@ -175,3 +176,7 @@
 - [x] Eliminar solicitudes externas de tipografía y componentes de interfaz no requeridos.
 - [x] Reservar dimensiones explícitas para el contenedor de fotografía y prevenir saltos de layout.
 - [x] Validar compilación y revisar visualmente las versiones de escritorio y móvil.
+
+- [x] Hacer que trackMetaLeadWhenReady dispare Lead únicamente cuando window.fbq.callMethod esté disponible, sin fallback por tiempo.
+- [x] Añadir pruebas negativas para visita directa, recarga, cierre o apertura del modal y navegación atrás o adelante sin nuevo registro.
+- [x] Verificar con evidencia reproducible la secuencia PageView → registro exitoso → /curso-playadelcarmen-sep26/gracias → Lead.

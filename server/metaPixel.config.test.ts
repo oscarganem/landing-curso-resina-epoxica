@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { isMetaPixelId, scheduleMetaPixel, trackMetaLead, trackMetaLeadWhenReady } from "../client/src/lib/metaPixel";
+import { consumePendingMetaLead, isMetaPixelId, markMetaLeadPending, scheduleMetaPixel, trackMetaLead, trackMetaLeadWhenReady } from "../client/src/lib/metaPixel";
 
 describe("Configuración de Meta Pixel", () => {
   it("expone un identificador numérico de píxel válido", () => {
@@ -24,6 +24,40 @@ describe("Configuración de Meta Pixel", () => {
 
     await expect(trackMetaLeadWhenReady()).resolves.toBe(true);
     expect(fbq).toHaveBeenCalledWith("track", "Lead");
+
+    vi.unstubAllGlobals();
+  });
+
+  it("no emite Lead si el píxel real nunca queda listo", async () => {
+    const fbq = vi.fn();
+    vi.stubGlobal("window", { fbq });
+    vi.useFakeTimers();
+
+    try {
+      const leadPromise = trackMetaLeadWhenReady();
+      await vi.advanceTimersByTimeAsync(10_050);
+      await expect(leadPromise).resolves.toBe(false);
+      expect(fbq).not.toHaveBeenCalledWith("track", "Lead");
+    } finally {
+      vi.useRealTimers();
+      vi.unstubAllGlobals();
+    }
+  });
+
+  it("consume la señal de Lead una sola vez y protege visitas directas o recargas", () => {
+    const values = new Map<string, string>();
+    vi.stubGlobal("window", {
+      sessionStorage: {
+        getItem: (key: string) => values.get(key) ?? null,
+        setItem: (key: string, value: string) => values.set(key, value),
+        removeItem: (key: string) => values.delete(key),
+      },
+    });
+
+    expect(consumePendingMetaLead()).toBe(false);
+    expect(markMetaLeadPending()).toBe(true);
+    expect(consumePendingMetaLead()).toBe(true);
+    expect(consumePendingMetaLead()).toBe(false);
 
     vi.unstubAllGlobals();
   });

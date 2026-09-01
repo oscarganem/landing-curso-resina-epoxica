@@ -89,8 +89,16 @@ export const trackMetaLeadWhenReady = () => {
     const sendLead = () => resolve(trackMetaLead());
 
     const waitForPixel = () => {
-      if (isMetaPixelReady() || Date.now() - startedAt >= 4_000) {
+      if (isMetaPixelReady()) {
         sendLead();
+        return;
+      }
+
+      // Si Meta no termina de cargar, no emitimos un Lead prematuro. El
+      // formulario seguirá protegido por la señal consumida y una visita
+      // posterior no podrá repetir la conversión.
+      if (Date.now() - startedAt >= 10_000) {
+        resolve(false);
         return;
       }
 
