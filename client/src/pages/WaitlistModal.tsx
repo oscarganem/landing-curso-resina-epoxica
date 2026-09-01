@@ -7,6 +7,7 @@ import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle } fr
 import { trpc } from "@/lib/trpc";
 import { handleSuccessfulWaitlistSignup } from "@/lib/waitlistConversion";
 import { getThankYouPathForLanding } from "@/lib/campaignRoutes";
+import { normalizeMexicanWhatsApp } from "@shared/phone";
 import { useLocation } from "wouter";
 
 type WaitlistFormValues = {
@@ -40,7 +41,7 @@ function WaitlistModalContent({ open, onOpenChange }: WaitlistModalProps) {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setFormError(null);
-    waitlistMutation.mutate(formValues);
+    waitlistMutation.mutate({ ...formValues, whatsapp: normalizeMexicanWhatsApp(formValues.whatsapp) });
   };
 
   return (
@@ -63,7 +64,7 @@ function WaitlistModalContent({ open, onOpenChange }: WaitlistModalProps) {
           <h3>Regístrate aquí</h3>
           <label><span className="sr-only">Introduce tu nombre</span><input required autoComplete="name" placeholder="Introduce tu nombre" value={formValues.fullName} onChange={(event) => setFormValues((values) => ({ ...values, fullName: event.target.value }))} /></label>
           <label><span className="sr-only">Tu mejor correo</span><input required type="email" autoComplete="email" placeholder="Tu mejor correo" value={formValues.email} onChange={(event) => setFormValues((values) => ({ ...values, email: event.target.value }))} /></label>
-          <label><span className="sr-only">WhatsApp</span><input required type="tel" autoComplete="tel" placeholder="WhatsApp" value={formValues.whatsapp} onChange={(event) => setFormValues((values) => ({ ...values, whatsapp: event.target.value }))} /></label>
+          <label className="waitlist-whatsapp-field"><span className="sr-only">WhatsApp, diez dígitos después del prefijo +52</span><span className="waitlist-phone-prefix" aria-hidden="true">+52</span><input required type="tel" inputMode="numeric" autoComplete="tel-national" placeholder="WhatsApp a 10 dígitos" value={formValues.whatsapp} onChange={(event) => setFormValues((values) => ({ ...values, whatsapp: event.target.value.replace(/\D/g, "").slice(-10) }))} /></label>
           {formError && <p className="waitlist-form-error" role="alert">{formError}</p>}
           <button type="submit" disabled={waitlistMutation.isPending}>{waitlistMutation.isPending ? "Guardando tu registro…" : <>Sí, quiero unirme GRATIS a la lista de espera <MoveUpRight aria-hidden="true" /></>}</button>
           <p className="waitlist-form-trust">Registro gratuito · Sin compromiso · No estás comprando el curso</p>
