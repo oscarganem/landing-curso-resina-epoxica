@@ -94,9 +94,7 @@ export const trackMetaLeadWhenReady = () => {
         return;
       }
 
-      // Si Meta no termina de cargar, no emitimos un Lead prematuro. El
-      // formulario seguirá protegido por la señal consumida y una visita
-      // posterior no podrá repetir la conversión.
+      // Si Meta no termina de cargar, no emitimos un Lead prematuro.
       if (Date.now() - startedAt >= 10_000) {
         resolve(false);
         return;
@@ -109,19 +107,3 @@ export const trackMetaLeadWhenReady = () => {
   });
 };
 
-const PENDING_WAITLIST_LEAD_KEY = "ocares:pending-waitlist-lead";
-
-export const markMetaLeadPending = () => {
-  if (typeof window === "undefined") return false;
-
-  window.sessionStorage.setItem(PENDING_WAITLIST_LEAD_KEY, "1");
-  return true;
-};
-
-export const consumePendingMetaLead = () => {
-  if (typeof window === "undefined") return false;
-  if (window.sessionStorage.getItem(PENDING_WAITLIST_LEAD_KEY) !== "1") return false;
-
-  window.sessionStorage.removeItem(PENDING_WAITLIST_LEAD_KEY);
-  return true;
-};

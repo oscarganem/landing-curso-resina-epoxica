@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { consumePendingMetaLead, isMetaPixelId, markMetaLeadPending, scheduleMetaPixel, trackMetaLead, trackMetaLeadWhenReady } from "../client/src/lib/metaPixel";
+import { isMetaPixelId, scheduleMetaPixel, trackMetaLead, trackMetaLeadWhenReady } from "../client/src/lib/metaPixel";
 
 describe("Configuración de Meta Pixel", () => {
   it("expone un identificador numérico de píxel válido", () => {
@@ -44,23 +44,6 @@ describe("Configuración de Meta Pixel", () => {
     }
   });
 
-  it("consume la señal de Lead una sola vez y protege visitas directas o recargas", () => {
-    const values = new Map<string, string>();
-    vi.stubGlobal("window", {
-      sessionStorage: {
-        getItem: (key: string) => values.get(key) ?? null,
-        setItem: (key: string, value: string) => values.set(key, value),
-        removeItem: (key: string) => values.delete(key),
-      },
-    });
-
-    expect(consumePendingMetaLead()).toBe(false);
-    expect(markMetaLeadPending()).toBe(true);
-    expect(consumePendingMetaLead()).toBe(true);
-    expect(consumePendingMetaLead()).toBe(false);
-
-    vi.unstubAllGlobals();
-  });
 
   it("inicializa el píxel y conserva Lead si el registro ocurre antes de la carga diferida", () => {
     const appendChild = vi.fn();

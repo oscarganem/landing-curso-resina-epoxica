@@ -4,8 +4,8 @@ import App from "./App";
 import { scheduleMetaPixel } from "./lib/metaPixel";
 import "./index.css";
 
-// El píxel se descarga fuera de la ruta crítica. Si el usuario convierte antes,
-// trackMetaLead lo inicializa de inmediato para conservar el evento Lead.
+// El píxel se descarga fuera de la ruta crítica y se inicializa una sola vez.
+// La página de gracias espera a que la función real esté lista antes de enviar Lead.
 scheduleMetaPixel();
 
 createRoot(document.getElementById("root")!).render(

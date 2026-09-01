@@ -10,3 +10,11 @@
 - Fecha de la prueba: 2026-09-01.
 
 La visita posterior directa a la ruta de gracias cargó el contenido normalmente. Al simular Atrás en la vista previa, la URL permaneció en la página de gracias y no apareció ningún formulario ni señal adicional; esto es consistente con la eliminación inmediata de la clave de sesión.
+
+Meta Events Manager abrió con la cuenta AVE+ (`act=145221702945566`). La vista inicial mostró el conjunto AVE+ MERCADO LIBRE con identificador 729759674558257 y 0 eventos; no correspondía al conjunto Resina Epóxica. Al seleccionar el control lateral se abrió por error Conversiones personalizadas, por lo que no se ha confirmado todavía el conjunto correcto ni la recepción de Lead en Meta.
+
+La cuenta AVE+ está autenticada en Events Manager, pero la vista solo muestra AVE+ MERCADO LIBRE (ID 729759674558257), no el conjunto Resina Epóxica. El intento de navegación lateral llevó a Conversiones personalizadas; se volvió al resumen para continuar la localización sin realizar cambios ni configuraciones.
+
+Al cambiar el selector a `AVE + MAS`, el panel mostró el activo comercial `Resina Epoxica` con identificador `787252385881350`, coincidiendo con el conjunto informado previamente. Se continuará abriendo ese activo para revisar eventos.
+
+El selector confirmó visualmente el activo `Resina Epoxica` (ID `787252385881350`) dentro de AVE + MAS. El panel interno no respondió al desplazamiento automatizado y el activo quedó fuera del área visible; no se realizaron cambios en la cuenta.

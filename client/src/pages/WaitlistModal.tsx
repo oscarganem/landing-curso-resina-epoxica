@@ -6,7 +6,6 @@ import { Check, MoveUpRight, X } from "lucide-react";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { trpc } from "@/lib/trpc";
 import { handleSuccessfulWaitlistSignup } from "@/lib/waitlistConversion";
-import { markMetaLeadPending } from "@/lib/metaPixel";
 import { getThankYouPathForLanding } from "@/lib/campaignRoutes";
 import { normalizeMexicanWhatsApp } from "@shared/phone";
 import { useLocation } from "wouter";
@@ -31,7 +30,6 @@ function WaitlistModalContent({ open, onOpenChange }: WaitlistModalProps) {
   const waitlistMutation = trpc.waitlist.signup.useMutation({
     onSuccess: () => {
       handleSuccessfulWaitlistSignup({
-        markLeadPending: markMetaLeadPending,
         closeForm: () => onOpenChange(false),
         clearError: () => setFormError(null),
         redirectToThankYou: () => setLocation(getThankYouPathForLanding(location)),

@@ -180,3 +180,7 @@
 - [x] Hacer que trackMetaLeadWhenReady dispare Lead únicamente cuando window.fbq.callMethod esté disponible, sin fallback por tiempo.
 - [x] Añadir pruebas negativas para visita directa, recarga, cierre o apertura del modal y navegación atrás o adelante sin nuevo registro.
 - [x] Verificar con evidencia reproducible la secuencia PageView → registro exitoso → /curso-playadelcarmen-sep26/gracias → Lead.
+
+- [x] Disparar Lead en cada montaje de /curso-playadelcarmen-sep26/gracias, sin depender del formulario, sessionStorage, cookies ni parámetros especiales.
+- [x] Mantener una sola instalación global del Pixel con PageView y eliminar cualquier disparo de Lead desde el popup o el botón de envío.
+- [x] Actualizar pruebas, tipado y compilación para el nuevo comportamiento SPA.
