@@ -28,6 +28,7 @@
 - [ ] Diagnosticar dentro de Meta la causa concreta de las conversiones no visibles antes de concluir la auditoría.
 - [x] Revisar la actividad del conjunto de datos Resina Epóxica dentro del portafolio AVE + MAS (cuenta `787252385881350`).
 - [ ] Enviar un registro autorizado de prueba y confirmar la recepción de Lead en Meta después de la nueva publicación.
+- [x] Mantener como única página de gracias la ruta /curso-playadelcarmen-sep26/gracias y eliminar /gracias.
 - [x] Disparar Lead en la página de gracias solo cuando se llegue tras un registro exitoso y una sola vez por conversión.
 - [x] Confirmar que el evento SubscribedButtonClic detectado por Meta no sustituye al evento estándar Lead.
 - [x] Aplicar de forma efectiva el centrado móvil de los títulos y encabezados de sección, excluyendo el hero.

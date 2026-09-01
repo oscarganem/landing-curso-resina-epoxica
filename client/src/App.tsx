@@ -17,10 +17,6 @@ function AcademyRootRoute() {
   return <Suspense fallback={<RouteLoading />}><AcademyRoot /></Suspense>;
 }
 
-function ThankYouRoute() {
-  return <Suspense fallback={<RouteLoading />}><ThankYou /></Suspense>;
-}
-
 function NotFoundRoute() {
   return <Suspense fallback={<RouteLoading />}><NotFound /></Suspense>;
 }
@@ -32,7 +28,6 @@ function Router() {
       <Route path={playaDelCarmenCampaignPath} component={Home} />
       <Route path={playaDelCarmenThankYouPath} component={ThankYou} />
       <Route path="/" component={AcademyRootRoute} />
-      <Route path="/gracias" component={ThankYouRoute} />
       <Route path="/404" component={NotFoundRoute} />
       <Route component={NotFoundRoute} />
     </Switch>

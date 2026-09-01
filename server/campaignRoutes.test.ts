@@ -12,8 +12,8 @@ describe("Rutas de campaña", () => {
     expect(getThankYouPathForLanding(playaDelCarmenCampaignPath)).toBe(playaDelCarmenThankYouPath);
   });
 
-  it("conserva la página de gracias original para la landing raíz", () => {
-    expect(getThankYouPathForLanding("/")).toBe("/gracias");
+  it("siempre dirige a la página de gracias exclusiva de la campaña", () => {
+    expect(getThankYouPathForLanding("/")).toBe(playaDelCarmenThankYouPath);
   });
 
   it("identifica la raíz del subdominio academia para no mostrar una campaña de ciudad", () => {

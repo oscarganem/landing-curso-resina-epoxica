@@ -3,6 +3,6 @@ export const playaDelCarmenThankYouPath = `${playaDelCarmenCampaignPath}/gracias
 export const academyHostname = "academia.ocares.mx";
 
 export const getThankYouPathForLanding = (currentPath: string) =>
-  currentPath === playaDelCarmenCampaignPath ? playaDelCarmenThankYouPath : "/gracias";
+  playaDelCarmenThankYouPath;
 
 export const isAcademyRootHostname = (hostname: string) => hostname.toLowerCase() === academyHostname;
