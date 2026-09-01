@@ -1,9 +1,15 @@
 import { CalendarDays, Check, Clock3 } from "lucide-react";
 import { Link } from "wouter";
+import { useEffect } from "react";
+import { consumePendingMetaLead, trackMetaLead } from "@/lib/metaPixel";
 
 const whatsappPassUrl = "https://wa.me/529617848718?text=Hola%20%F0%9F%91%8B%20Ya%20me%20registr%C3%A9%20a%20la%20Lista%20de%20Espera%20y%20quiero%20pedir%20mi%20pase%20para%20la%20Clase%20Online%20de%20Resina%20Ep%C3%B3xica";
 
 export default function ThankYou() {
+  useEffect(() => {
+    if (consumePendingMetaLead()) trackMetaLead();
+  }, []);
+
   return (
     <main className="thanks-page">
       <div className="thanks-shell">

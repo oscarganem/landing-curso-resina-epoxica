@@ -74,3 +74,20 @@ export const trackMetaLead = () => {
   window.fbq("track", "Lead");
   return true;
 };
+
+const PENDING_WAITLIST_LEAD_KEY = "ocares:pending-waitlist-lead";
+
+export const markMetaLeadPending = () => {
+  if (typeof window === "undefined") return false;
+
+  window.sessionStorage.setItem(PENDING_WAITLIST_LEAD_KEY, "1");
+  return true;
+};
+
+export const consumePendingMetaLead = () => {
+  if (typeof window === "undefined") return false;
+  if (window.sessionStorage.getItem(PENDING_WAITLIST_LEAD_KEY) !== "1") return false;
+
+  window.sessionStorage.removeItem(PENDING_WAITLIST_LEAD_KEY);
+  return true;
+};

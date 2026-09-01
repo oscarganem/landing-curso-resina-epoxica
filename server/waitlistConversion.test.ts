@@ -1,23 +1,19 @@
 import { describe, expect, it, vi } from "vitest";
 
-vi.mock("../client/src/lib/metaPixel", () => ({
-  trackMetaLead: vi.fn(),
-}));
-
-import { trackMetaLead } from "../client/src/lib/metaPixel";
 import { handleSuccessfulWaitlistSignup } from "../client/src/lib/waitlistConversion";
 
 describe("Conversión de lista de espera", () => {
-  it("registra Lead únicamente al confirmarse el registro exitoso", () => {
+  it("marca Lead para la página de gracias únicamente al confirmarse el registro exitoso", () => {
+    const markLeadPending = vi.fn();
     const closeForm = vi.fn();
     const clearError = vi.fn();
     const redirectToThankYou = vi.fn();
 
-    expect(trackMetaLead).not.toHaveBeenCalled();
+    expect(markLeadPending).not.toHaveBeenCalled();
 
-    handleSuccessfulWaitlistSignup({ closeForm, clearError, redirectToThankYou });
+    handleSuccessfulWaitlistSignup({ markLeadPending, closeForm, clearError, redirectToThankYou });
 
-    expect(trackMetaLead).toHaveBeenCalledTimes(1);
+    expect(markLeadPending).toHaveBeenCalledTimes(1);
     expect(closeForm).toHaveBeenCalledTimes(1);
     expect(clearError).toHaveBeenCalledTimes(1);
     expect(redirectToThankYou).toHaveBeenCalledTimes(1);
