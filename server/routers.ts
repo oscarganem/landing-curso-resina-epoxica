@@ -4,6 +4,7 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import { upsertWaitlistSignup } from "./db";
+import { syncWaitlistSignupToSender } from "./sender";
 
 export const waitlistSignupSchema = z.object({
   fullName: z.string().trim().min(2, "Ingresa tu nombre completo.").max(160),
@@ -27,6 +28,7 @@ export const appRouter = router({
   waitlist: router({
     signup: publicProcedure.input(waitlistSignupSchema).mutation(async ({ input }) => {
       await upsertWaitlistSignup(input);
+      await syncWaitlistSignupToSender(input);
       return { success: true } as const;
     }),
   }),

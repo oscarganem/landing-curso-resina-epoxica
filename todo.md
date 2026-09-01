@@ -188,3 +188,8 @@
 - [x] Instalar una sola vez el snippet oficial de Meta Pixel con ID 1064040862296356 antes de montar React y conservar PageView global.
 - [x] Disparar directamente window.fbq("track", "Lead") al montar ThankYou.tsx, sin isMetaPixelReady ni dependencia del formulario.
 - [x] Actualizar pruebas, tipado y compilación del flujo directo de Lead y publicar el cambio.
+
+- [x] Confirmar que la primera credencial corresponde al Account public ID de Sender y la segunda al token API.
+- [x] Guardar el token de Sender únicamente como secreto del servidor y no exponerlo en el cliente.
+- [x] Sincronizar cada registro guardado con la lista de Sender mediante el endpoint oficial, con manejo seguro de errores y duplicados.
+- [x] Añadir pruebas de la sincronización y publicar sin activar envíos automáticos antes de verificar el dominio.
