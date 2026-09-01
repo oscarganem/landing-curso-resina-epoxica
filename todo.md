@@ -193,3 +193,8 @@
 - [x] Guardar el token de Sender únicamente como secreto del servidor y no exponerlo en el cliente.
 - [x] Sincronizar cada registro guardado con la lista de Sender mediante el endpoint oficial, con manejo seguro de errores y duplicados.
 - [x] Añadir pruebas de la sincronización y publicar sin activar envíos automáticos antes de verificar el dominio.
+
+- [x] Contar y revisar los contactos históricos guardados en waitlistSignups antes de importarlos.
+- [x] Comparar los correos históricos contra la lista nueva de Sender para identificar faltantes.
+- [x] Importar los contactos históricos faltantes a Sender con trigger_automation=false y sin duplicados.
+- [x] Verificar el conteo final y documentar la migración sin enviar campañas.
