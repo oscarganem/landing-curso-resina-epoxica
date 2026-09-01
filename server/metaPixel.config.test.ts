@@ -1,72 +1,24 @@
-import { describe, expect, it, vi } from "vitest";
-import { isMetaPixelId, scheduleMetaPixel, trackMetaLead, trackMetaLeadWhenReady } from "../client/src/lib/metaPixel";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+import { describe, expect, it } from "vitest";
+
+const projectRoot = process.cwd();
+const indexHtml = readFileSync(resolve(projectRoot, "client/index.html"), "utf8");
+const thankYouSource = readFileSync(resolve(projectRoot, "client/src/pages/ThankYou.tsx"), "utf8");
 
 describe("Configuración de Meta Pixel", () => {
-  it("expone un identificador numérico de píxel válido", () => {
-    const pixelId = process.env.VITE_META_PIXEL_ID;
-
-    expect(isMetaPixelId(pixelId)).toBe(true);
+  it("instala una sola vez el snippet oficial con el Pixel correcto y PageView global", () => {
+    expect(indexHtml).toContain("if(f.fbq)return;");
+    expect(indexHtml).toContain("fbq('init', '1064040862296356');");
+    expect(indexHtml).toContain("fbq('track', 'PageView');");
+    expect(indexHtml.match(/fbevents\.js/g)).toHaveLength(1);
+    expect(indexHtml.indexOf("fbq('track', 'PageView');")).toBeLessThan(indexHtml.indexOf('/src/main.tsx'));
   });
 
-  it("emite Lead solo cuando el píxel está disponible en el navegador", () => {
-    const fbq = vi.fn();
-    vi.stubGlobal("window", { fbq });
-
-    expect(trackMetaLead()).toBe(true);
-    expect(fbq).toHaveBeenCalledWith("track", "Lead");
-
-    vi.unstubAllGlobals();
-  });
-
-  it("espera a que el píxel real esté listo antes de enviar Lead", async () => {
-    const fbq = Object.assign(vi.fn(), { callMethod: vi.fn() });
-    vi.stubGlobal("window", { fbq });
-
-    await expect(trackMetaLeadWhenReady()).resolves.toBe(true);
-    expect(fbq).toHaveBeenCalledWith("track", "Lead");
-
-    vi.unstubAllGlobals();
-  });
-
-  it("no emite Lead si el píxel real nunca queda listo", async () => {
-    const fbq = vi.fn();
-    vi.stubGlobal("window", { fbq });
-    vi.useFakeTimers();
-
-    try {
-      const leadPromise = trackMetaLeadWhenReady();
-      await vi.advanceTimersByTimeAsync(10_050);
-      await expect(leadPromise).resolves.toBe(false);
-      expect(fbq).not.toHaveBeenCalledWith("track", "Lead");
-    } finally {
-      vi.useRealTimers();
-      vi.unstubAllGlobals();
-    }
-  });
-
-
-  it("inicializa el píxel y conserva Lead si el registro ocurre antes de la carga diferida", () => {
-    const appendChild = vi.fn();
-    const createElement = vi.fn(() => ({ async: false, src: "" }));
-    vi.stubGlobal("window", {});
-    vi.stubGlobal("document", { createElement, head: { appendChild } });
-
-    expect(trackMetaLead()).toBe(true);
-    expect(createElement).toHaveBeenCalledWith("script");
-    expect(appendChild).toHaveBeenCalledTimes(1);
-    expect(window.fbq?.queue).toContainEqual(["track", "Lead"]);
-
-    vi.unstubAllGlobals();
-  });
-
-  it("difere la descarga del píxel hasta terminar la carga inicial", () => {
-    const addEventListener = vi.fn();
-    vi.stubGlobal("window", { addEventListener });
-    vi.stubGlobal("document", { readyState: "loading" });
-
-    expect(scheduleMetaPixel()).toBe(true);
-    expect(addEventListener).toHaveBeenCalledWith("load", expect.any(Function), { once: true });
-
-    vi.unstubAllGlobals();
+  it("ejecuta Lead directamente al montar ThankYou sin depender del formulario", () => {
+    expect(thankYouSource).toContain("useEffect(() => {");
+    expect(thankYouSource).toContain('window.fbq("track", "Lead");');
+    expect(thankYouSource).not.toContain("sessionStorage");
+    expect(thankYouSource).not.toContain("isMetaPixelReady");
   });
 });

@@ -24,12 +24,12 @@
 - [x] Unificar la cifra “1,000 alumnos” en la comunidad para escritorio, móvil y accesibilidad.
 - [x] Predefinir el prefijo +52 en el campo de WhatsApp y conservar el número completo al guardar.
 - [x] Verificar la instalación del píxel de Meta y el disparo de Lead solo tras éxito del formulario, sin emitir conversiones reales.
-- [ ] Verificar en Meta Events Manager si el píxel 1064040862296356 recibe Lead además de SubscribedButtonClic.
-- [ ] Diagnosticar dentro de Meta la causa concreta de las conversiones no visibles antes de concluir la auditoría.
+- [ ] Verificación manual en Meta Events Manager: bloqueada hasta que el usuario la realice, según su instrucción de no abrir su navegador.
+- [ ] Diagnóstico dentro de Meta: no verificado; requiere revisión manual del usuario en Events Manager.
 - [x] Revisar la actividad del conjunto de datos Resina Epóxica dentro del portafolio AVE + MAS (cuenta `787252385881350`).
-- [ ] Enviar un registro autorizado de prueba y confirmar la recepción de Lead en Meta después de la nueva publicación.
-- [ ] Ejecutar el registro técnico autorizado en la ruta publicada de campaña y revisar el resultado en Meta.
-- [ ] Enviar el último registro técnico autorizado después de la espera del píxel y confirmar Lead.
+- [ ] Registro autorizado adicional en Meta: no ejecutado por instrucción del usuario; queda pendiente de validación manual.
+- [ ] Registro técnico en la ruta publicada: redirección validada localmente; revisión en Meta pendiente del usuario.
+- [ ] Último registro técnico: no ejecutado por instrucción del usuario; validación final pendiente del usuario.
 - [x] Mantener como única página de gracias la ruta /curso-playadelcarmen-sep26/gracias y eliminar /gracias.
 - [x] Esperar a que el píxel esté listo antes de disparar Lead en la página de gracias, una sola vez tras éxito, y excluir accesos directos, recargas, popups y regreso del navegador.
 - [x] Confirmar que el evento SubscribedButtonClic detectado por Meta no sustituye al evento estándar Lead.
@@ -53,7 +53,7 @@
 - [x] Crear una página raíz neutra para academia.ocares.mx sin mostrar la campaña de Playa del Carmen.
 - [x] Publicar la landing existente en la ruta /curso-playadelcarmen-sep26 de academia.ocares.mx.
 - [x] Localizar el panel que controla la zona DNS actual de ocares.mx sin cambiar nameservers.
-- [ ] Definir el dominio remitente y la integración de correo para el embudo, sin afectar el sitio existente.
+- [ ] Dominio remitente e integración de correo: fuera del alcance de este ajuste del Pixel; pendiente para un trabajo separado.
 - [x] Definir el subdominio y la configuración DNS segura para conservar el sitio actual y publicar la nueva landing.
 - [x] Investigar y documentar la ruta de Nubox para administrar registros DNS del dominio.
 - [x] Validar que el evento Lead se emita únicamente al confirmarse un registro exitoso del formulario.
@@ -179,8 +179,12 @@
 
 - [x] Hacer que trackMetaLeadWhenReady dispare Lead únicamente cuando window.fbq.callMethod esté disponible, sin fallback por tiempo.
 - [x] Añadir pruebas negativas para visita directa, recarga, cierre o apertura del modal y navegación atrás o adelante sin nuevo registro.
-- [x] Verificar con evidencia reproducible la secuencia PageView → registro exitoso → /curso-playadelcarmen-sep26/gracias → Lead.
+- [x] Validar localmente la secuencia PageView → montaje de /curso-playadelcarmen-sep26/gracias → Lead; la confirmación visual en Meta queda pendiente del usuario.
 
 - [x] Disparar Lead en cada montaje de /curso-playadelcarmen-sep26/gracias, sin depender del formulario, sessionStorage, cookies ni parámetros especiales.
 - [x] Mantener una sola instalación global del Pixel con PageView y eliminar cualquier disparo de Lead desde el popup o el botón de envío.
 - [x] Actualizar pruebas, tipado y compilación para el nuevo comportamiento SPA.
+
+- [x] Instalar una sola vez el snippet oficial de Meta Pixel con ID 1064040862296356 antes de montar React y conservar PageView global.
+- [x] Disparar directamente window.fbq("track", "Lead") al montar ThankYou.tsx, sin isMetaPixelReady ni dependencia del formulario.
+- [x] Actualizar pruebas, tipado y compilación del flujo directo de Lead y publicar el cambio.
