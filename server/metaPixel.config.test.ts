@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { isMetaPixelId, scheduleMetaPixel, trackMetaLead } from "../client/src/lib/metaPixel";
+import { isMetaPixelId, scheduleMetaPixel, trackMetaLead, trackMetaLeadWhenReady } from "../client/src/lib/metaPixel";
 
 describe("Configuración de Meta Pixel", () => {
   it("expone un identificador numérico de píxel válido", () => {
@@ -13,6 +13,16 @@ describe("Configuración de Meta Pixel", () => {
     vi.stubGlobal("window", { fbq });
 
     expect(trackMetaLead()).toBe(true);
+    expect(fbq).toHaveBeenCalledWith("track", "Lead");
+
+    vi.unstubAllGlobals();
+  });
+
+  it("espera a que el píxel real esté listo antes de enviar Lead", async () => {
+    const fbq = Object.assign(vi.fn(), { callMethod: vi.fn() });
+    vi.stubGlobal("window", { fbq });
+
+    await expect(trackMetaLeadWhenReady()).resolves.toBe(true);
     expect(fbq).toHaveBeenCalledWith("track", "Lead");
 
     vi.unstubAllGlobals();

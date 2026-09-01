@@ -75,6 +75,32 @@ export const trackMetaLead = () => {
   return true;
 };
 
+const isMetaPixelReady = () => Boolean(window.fbq && "callMethod" in window.fbq);
+
+export const trackMetaLeadWhenReady = () => {
+  const pixelId = getPixelId();
+
+  if (typeof window === "undefined" || !isMetaPixelId(pixelId)) return Promise.resolve(false);
+
+  if (!window.fbq) loadMetaPixel();
+
+  return new Promise<boolean>((resolve) => {
+    const startedAt = Date.now();
+    const sendLead = () => resolve(trackMetaLead());
+
+    const waitForPixel = () => {
+      if (isMetaPixelReady() || Date.now() - startedAt >= 4_000) {
+        sendLead();
+        return;
+      }
+
+      globalThis.setTimeout(waitForPixel, 50);
+    };
+
+    waitForPixel();
+  });
+};
+
 const PENDING_WAITLIST_LEAD_KEY = "ocares:pending-waitlist-lead";
 
 export const markMetaLeadPending = () => {
