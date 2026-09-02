@@ -209,3 +209,7 @@
 - [x] Corregir el titular y el texto introductorio de la página de gracias según la nueva comunidad privada de WhatsApp.
 - [x] Adaptar el CTA final de la página de gracias para dirigir a la comunidad de WhatsApp con copy coherente.
 - [x] Validar las rutas de WhatsApp, pruebas y compilación antes de publicar la página de gracias actualizada.
+
+- [x] Consolidar los textos actuales de la página de gracias y ambos CTA como “UNIRME AL GRUPO DE WHATSAPP”.
+- [x] Retirar estilos inline residuales del copy final y mantener su jerarquía visual con clases reutilizables.
+- [x] Validar visualmente la página de gracias consolidada en escritorio y móvil antes de publicarla.

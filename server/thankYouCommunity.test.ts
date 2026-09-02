@@ -8,7 +8,9 @@ describe("Página de gracias: comunidad de WhatsApp", () => {
   it("dirige ambos CTA a la comunidad privada de WhatsApp", () => {
     expect(thankYouSource).toContain(`const whatsappCommunityUrl = "${communityUrl}"`);
     expect(thankYouSource.match(/href=\{whatsappCommunityUrl\}/g)).toHaveLength(2);
-    expect(thankYouSource).toContain("Unirme a la comunidad de WhatsApp");
+    expect(thankYouSource.match(/UNIRME AL GRUPO DE WHATSAPP/g)).toHaveLength(2);
+    expect(thankYouSource).toContain("Únete al grupo");
+    expect(thankYouSource).toContain("tu descuento de Preventa");
   });
 
   it("elimina el texto y enlace del pase individual anterior", () => {
