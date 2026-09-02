@@ -3,7 +3,8 @@ import { z } from "zod";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
-import { upsertWaitlistSignup } from "./db";
+import { markWaitlistSignupSentToMake, upsertWaitlistSignup } from "./db";
+import { sendWaitlistSignupToMake } from "./make";
 import { syncWaitlistSignupToSender } from "./sender";
 
 export const waitlistSignupSchema = z.object({
@@ -27,8 +28,22 @@ export const appRouter = router({
   }),
   waitlist: router({
     signup: publicProcedure.input(waitlistSignupSchema).mutation(async ({ input }) => {
-      const { isNew } = await upsertWaitlistSignup(input);
+      const { isNew, signup } = await upsertWaitlistSignup(input);
       await syncWaitlistSignupToSender(input, { triggerAutomation: isNew });
+
+      // Solo las altas nuevas se entregan a Make; los contactos históricos y los
+      // reintentos permanecen silenciosos para evitar automatizaciones duplicadas.
+      if (isNew && !signup.makeWebhookSentAt) {
+        try {
+          const makeResult = await sendWaitlistSignupToMake(signup);
+          if (makeResult.synced) {
+            await markWaitlistSignupSentToMake(signup.id);
+          }
+        } catch (error) {
+          console.error("[Make] No fue posible entregar el nuevo registro:", error);
+        }
+      }
+
       return { success: true } as const;
     }),
   }),

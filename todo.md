@@ -223,3 +223,11 @@
 - [x] Probar la detección móvil, el comportamiento de escritorio, tipado y compilación antes de publicar.
 
 - [x] Asegurar que el popup de salida se muestre una sola vez por visita, incluso después de cerrarlo o volver a intentar salir.
+
+- [ ] Diagnosticar por qué el popup de salida no se dispara de manera confiable en móvil.
+- [ ] Corregir el disparador móvil sin permitir apariciones repetidas ni bloquear la salida normal.
+- [ ] Validar en un viewport móvil y publicar la corrección.
+
+- [x] Guardar el webhook de Make como secreto del servidor y definir el payload de registro para ManyChat.
+- [x] Enviar cada alta nueva al webhook de Make tras guardarla, con identificador estable para evitar duplicados.
+- [ ] Ejecutar una prueba controlada para que Make detecte los campos y validar pruebas, tipado y compilación.

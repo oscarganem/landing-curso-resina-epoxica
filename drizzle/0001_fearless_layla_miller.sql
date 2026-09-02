@@ -1,0 +1,1 @@
+ALTER TABLE `waitlistSignups` ADD `makeWebhookSentAt` timestamp;

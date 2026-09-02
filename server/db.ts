@@ -108,5 +108,27 @@ export async function upsertWaitlistSignup(signup: InsertWaitlistSignup) {
     },
   });
 
-  return { isNew: existing.length === 0 };
+  const [savedSignup] = await db
+    .select()
+    .from(waitlistSignups)
+    .where(eq(waitlistSignups.email, signup.email))
+    .limit(1);
+
+  if (!savedSignup) {
+    throw new Error("No fue posible recuperar el registro guardado.");
+  }
+
+  return { isNew: existing.length === 0, signup: savedSignup };
+}
+
+export async function markWaitlistSignupSentToMake(signupId: number) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("La base de datos no está disponible en este momento.");
+  }
+
+  await db
+    .update(waitlistSignups)
+    .set({ makeWebhookSentAt: new Date() })
+    .where(eq(waitlistSignups.id, signupId));
 }

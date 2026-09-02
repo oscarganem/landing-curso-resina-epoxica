@@ -30,6 +30,7 @@ export const waitlistSignups = mysqlTable("waitlistSignups", {
   fullName: varchar("fullName", { length: 160 }).notNull(),
   email: varchar("email", { length: 320 }).notNull().unique(),
   whatsapp: varchar("whatsapp", { length: 32 }).notNull(),
+  makeWebhookSentAt: timestamp("makeWebhookSentAt"),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
 });
