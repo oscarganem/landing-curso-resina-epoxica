@@ -213,3 +213,7 @@
 - [x] Consolidar los textos actuales de la página de gracias y ambos CTA como “UNIRME AL GRUPO DE WHATSAPP”.
 - [x] Retirar estilos inline residuales del copy final y mantener su jerarquía visual con clases reutilizables.
 - [x] Validar visualmente la página de gracias consolidada en escritorio y móvil antes de publicarla.
+
+- [x] Crear un popup de intención de salida exclusivo de la página de gracias, accesible y sin duplicar eventos de conversión.
+- [x] Añadir el copy de salida y el CTA “QUIERO UNIRME AL GRUPO” con el enlace de la comunidad de WhatsApp.
+- [x] Validar la aparición única, cierre, teclado, pruebas y presentación responsive antes de publicar.

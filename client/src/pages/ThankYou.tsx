@@ -1,14 +1,32 @@
 import { CalendarDays, Check, Clock3 } from "lucide-react";
 import { Link } from "wouter";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { isExitIntent, supportsExitIntent } from "@/lib/exitIntent";
 
 const whatsappCommunityUrl = "https://chat.whatsapp.com/I5HJaRynpn9LnyFUKV45bV";
 
 export default function ThankYou() {
+  const [isExitPopupOpen, setIsExitPopupOpen] = useState(false);
+  const exitIntentShownRef = useRef(false);
+
   useEffect(() => {
     if (typeof window.fbq === "function") {
       window.fbq("track", "Lead");
     }
+  }, []);
+
+  useEffect(() => {
+    if (!supportsExitIntent()) return;
+
+    const handleMouseOut = (event: MouseEvent) => {
+      if (exitIntentShownRef.current || !isExitIntent(event)) return;
+      exitIntentShownRef.current = true;
+      setIsExitPopupOpen(true);
+    };
+
+    document.addEventListener("mouseout", handleMouseOut);
+    return () => document.removeEventListener("mouseout", handleMouseOut);
   }, []);
 
   return (
@@ -88,6 +106,29 @@ export default function ThankYou() {
           <p className="thanks-final-note"><span>Clase online gratuita</span><i aria-hidden="true" /> <span>Descuento de preventa</span></p>
         </div>
       </section>
+
+      <Dialog open={isExitPopupOpen} onOpenChange={setIsExitPopupOpen}>
+        <DialogContent className="exit-intent-dialog" aria-describedby="exit-intent-description">
+          <DialogHeader className="exit-intent-header">
+            <p className="exit-intent-eyebrow">Antes de salir</p>
+            <DialogTitle className="exit-intent-title">¡Espera! No te vayas sin entrar al <span>grupo de WhatsApp</span></DialogTitle>
+            <DialogDescription id="exit-intent-description" className="exit-intent-description">
+              Ahí compartiremos el acceso a la <strong>clase online GRATIS</strong> y el <strong>descuento especial de preventa</strong> para el Curso Presencial de Resina Epóxica en Playa del Carmen.
+            </DialogDescription>
+          </DialogHeader>
+          <a
+            className="exit-intent-cta"
+            href={whatsappCommunityUrl}
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => setIsExitPopupOpen(false)}
+          >
+            <img src="/manus-storage/whatsapp-icon_a58887ab.png" alt="" />
+            QUIERO UNIRME AL GRUPO
+          </a>
+          <p className="exit-intent-note">Es gratis y puedes salir cuando quieras.</p>
+        </DialogContent>
+      </Dialog>
     </main>
   );
 }

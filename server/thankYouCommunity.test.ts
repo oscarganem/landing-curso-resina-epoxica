@@ -5,10 +5,11 @@ const thankYouSource = readFileSync(new URL("../client/src/pages/ThankYou.tsx", 
 const communityUrl = "https://chat.whatsapp.com/I5HJaRynpn9LnyFUKV45bV";
 
 describe("Página de gracias: comunidad de WhatsApp", () => {
-  it("dirige ambos CTA a la comunidad privada de WhatsApp", () => {
+  it("dirige los CTA de gracias y el popup a la comunidad privada de WhatsApp", () => {
     expect(thankYouSource).toContain(`const whatsappCommunityUrl = "${communityUrl}"`);
-    expect(thankYouSource.match(/href=\{whatsappCommunityUrl\}/g)).toHaveLength(2);
+    expect(thankYouSource.match(/href=\{whatsappCommunityUrl\}/g)).toHaveLength(3);
     expect(thankYouSource.match(/UNIRME AL GRUPO DE WHATSAPP/g)).toHaveLength(2);
+    expect(thankYouSource).toContain("QUIERO UNIRME AL GRUPO");
     expect(thankYouSource).toContain("Únete al grupo");
     expect(thankYouSource).toContain("tu descuento de Preventa");
   });

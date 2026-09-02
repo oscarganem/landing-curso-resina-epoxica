@@ -823,6 +823,21 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .thanks-final-note { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 29px 0 0; color: #d1d0ca; font-size: 17px; font-weight: 500; }
 .thanks-final-note i { width: 5px; height: 5px; border-radius: 50%; background: var(--resin-yellow); }
 
+.exit-intent-dialog { display: flex; flex-direction: column; width: min(92vw, 600px); max-width: 600px; gap: 0; padding: 48px 44px 38px; overflow: hidden; border: 1px solid rgba(255, 212, 0, .52); border-radius: 22px; background: #11110f; box-shadow: 0 30px 90px rgba(0, 0, 0, .68), 0 0 0 1px rgba(255, 255, 255, .04) inset; color: #fff; text-align: center; }
+.exit-intent-dialog::before { position: absolute; inset: 0 0 auto; height: 5px; background: var(--resin-yellow); content: ""; }
+.exit-intent-dialog [data-slot="dialog-close"] { top: 15px; right: 15px; color: #fff; }
+.exit-intent-header { align-items: center; gap: 0; text-align: center; }
+.exit-intent-eyebrow { margin: 0; color: var(--resin-yellow); font-family: var(--font-display); font-size: 12px; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.exit-intent-title { max-width: 480px; margin: 18px auto 0; color: #fff; font-family: var(--font-display); font-size: clamp(31px, 4.2vw, 46px); font-weight: 900; letter-spacing: -.052em; line-height: .98; }
+.exit-intent-title span { color: var(--resin-yellow); }
+.exit-intent-description { max-width: 470px; margin: 23px auto 0; color: #d9d8d2; font-size: 17px; font-weight: 500; line-height: 1.5; }
+.exit-intent-description strong { color: #fff; font-weight: 800; }
+.exit-intent-cta { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 62px; margin-top: 31px; padding: 14px 22px; border-radius: 10px; background: #0DBB42; box-shadow: 0 16px 30px rgba(13, 187, 66, .2); color: #fff; font-family: var(--font-display); font-size: 16px; font-weight: 900; letter-spacing: -.01em; line-height: 1; text-decoration: none; transition: transform 160ms var(--ease-out, ease-out), background 160ms var(--ease-out, ease-out), box-shadow 160ms var(--ease-out, ease-out); }
+.exit-intent-cta:hover { background: #0fc849; box-shadow: 0 18px 34px rgba(13, 187, 66, .32); transform: translateY(-2px); }
+.exit-intent-cta:active { transform: scale(.97); }
+.exit-intent-cta img { width: 27px; height: 27px; object-fit: contain; }
+.exit-intent-note { margin: 17px 0 0; color: #aaa9a2; font-size: 13px; font-style: italic; line-height: 1.35; }
+
 @media (max-width: 680px) {
   .student-showcase-inner { width: min(100% - 40px, 500px); padding: 80px 0 88px; }
   .student-showcase-heading h2 { font-size: clamp(38px, 10.9vw, 51px); }
@@ -839,6 +854,11 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   .thanks-final-whatsapp { min-height: 66px; gap: 11px; margin-top: 38px; padding: 14px 17px; border-radius: 11px; font-size: 15px; line-height: 1.05; }
   .thanks-final-whatsapp img { flex: 0 0 auto; width: 27px; height: 27px; }
   .thanks-final-note { flex-wrap: wrap; gap: 8px; margin-top: 23px; font-size: 13px; }
+  .exit-intent-dialog { width: min(92vw, 430px); padding: 42px 23px 28px; border-radius: 18px; }
+  .exit-intent-title { margin-top: 15px; font-size: 31px; }
+  .exit-intent-description { margin-top: 20px; font-size: 15px; line-height: 1.48; }
+  .exit-intent-cta { min-height: 58px; margin-top: 26px; padding: 13px 16px; font-size: 14px; }
+  .exit-intent-note { margin-top: 14px; font-size: 12px; }
 }
 
 /* Página 404 para la raíz del subdominio Academia. */
