@@ -1,0 +1,2 @@
+ALTER TABLE `waitlistSignups` ADD `whatsappCountryCode` varchar(8) DEFAULT '+52' NOT NULL;--> statement-breakpoint
+ALTER TABLE `waitlistSignups` ADD `whatsappNationalNumber` varchar(16) DEFAULT '' NOT NULL;

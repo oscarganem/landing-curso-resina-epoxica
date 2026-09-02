@@ -5,6 +5,8 @@ const signup = {
   fullName: "Oscar Cárdenas Ganem",
   email: "oscar@example.com",
   whatsapp: "+525580608254",
+  whatsappCountryCode: "+52",
+  whatsappNationalNumber: "5580608254",
 };
 
 describe("syncWaitlistSignupToSender", () => {
@@ -35,6 +37,10 @@ describe("syncWaitlistSignupToSender", () => {
           firstname: "Oscar",
           lastname: "Cárdenas Ganem",
           phone: signup.whatsapp,
+          fields: {
+            "{{country_code}}": "+52",
+            "{{whatsapp_number}}": "5580608254",
+          },
           groups: ["group-123"],
           trigger_automation: true,
         }),

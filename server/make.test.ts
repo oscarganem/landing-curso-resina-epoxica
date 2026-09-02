@@ -6,6 +6,8 @@ const signup = {
   fullName: "Oscar Cárdenas",
   email: "oscar@example.com",
   whatsapp: "+525580608254",
+  whatsappCountryCode: "+52",
+  whatsappNationalNumber: "5580608254",
   makeWebhookSentAt: null,
   createdAt: new Date("2026-09-02T18:00:00.000Z"),
   updatedAt: new Date("2026-09-02T18:00:00.000Z"),
@@ -31,6 +33,8 @@ describe("Webhook de Make para registros", () => {
       email: "oscar@example.com",
       phone: "+525580608254",
       whatsapp: "+525580608254",
+      country_code: "+52",
+      whatsapp_number: "5580608254",
       registered_at: "2026-09-02T18:00:00.000Z",
     });
   });

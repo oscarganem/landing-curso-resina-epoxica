@@ -1,4 +1,5 @@
 import type { InsertWaitlistSignup } from "../drizzle/schema";
+import { getMexicanWhatsAppParts } from "../shared/phone";
 
 const SENDER_API_BASE_URL = "https://api.sender.net/v2";
 
@@ -58,11 +59,18 @@ export async function syncWaitlistSignupToSender(
 
   const { firstname, lastname } = splitFullName(signup.fullName);
   const triggerAutomation = options.triggerAutomation ?? false;
+  const phoneParts = getMexicanWhatsAppParts(signup.whatsapp);
+  const countryCode = signup.whatsappCountryCode ?? phoneParts.countryCode;
+  const nationalNumber = signup.whatsappNationalNumber ?? phoneParts.nationalNumber;
   const subscriberPayload = {
     email: signup.email,
     firstname,
     ...(lastname ? { lastname } : {}),
     phone: signup.whatsapp,
+    fields: {
+      "{{country_code}}": countryCode,
+      "{{whatsapp_number}}": nationalNumber,
+    },
     groups: [config.groupId],
     trigger_automation: triggerAutomation,
   };

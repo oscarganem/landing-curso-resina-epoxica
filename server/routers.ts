@@ -6,6 +6,7 @@ import { publicProcedure, router } from "./_core/trpc";
 import { markWaitlistSignupSentToMake, upsertWaitlistSignup } from "./db";
 import { sendWaitlistSignupToMake } from "./make";
 import { syncWaitlistSignupToSender } from "./sender";
+import { getMexicanWhatsAppParts } from "../shared/phone";
 
 export const waitlistSignupSchema = z.object({
   fullName: z.string().trim().min(2, "Ingresa tu nombre completo.").max(160),
@@ -28,8 +29,15 @@ export const appRouter = router({
   }),
   waitlist: router({
     signup: publicProcedure.input(waitlistSignupSchema).mutation(async ({ input }) => {
-      const { isNew, signup } = await upsertWaitlistSignup(input);
-      await syncWaitlistSignupToSender(input, { triggerAutomation: isNew });
+      const phoneParts = getMexicanWhatsAppParts(input.whatsapp);
+      const normalizedSignup = {
+        ...input,
+        whatsapp: phoneParts.fullNumber,
+        whatsappCountryCode: phoneParts.countryCode,
+        whatsappNationalNumber: phoneParts.nationalNumber,
+      };
+      const { isNew, signup } = await upsertWaitlistSignup(normalizedSignup);
+      await syncWaitlistSignupToSender(normalizedSignup, { triggerAutomation: isNew });
 
       // Solo las altas nuevas se entregan a Make; los contactos históricos y los
       // reintentos permanecen silenciosos para evitar automatizaciones duplicadas.

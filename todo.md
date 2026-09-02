@@ -231,3 +231,11 @@
 - [x] Guardar el webhook de Make como secreto del servidor y definir el payload de registro para ManyChat.
 - [x] Enviar cada alta nueva al webhook de Make tras guardarla, con identificador estable para evitar duplicados.
 - [ ] Ejecutar una prueba controlada para que Make detecte los campos y validar pruebas, tipado y compilación.
+
+- [ ] Confirmar el identificador interno que ManyChat exige para disparar un flujo desde Make.
+- [ ] Configurar en Make la búsqueda confiable del contacto antes de enviar el flujo de bienvenida.
+- [ ] Probar el escenario completo de creación o actualización, búsqueda y envío sin duplicados.
+
+- [x] Guardar por separado el código de país +52 y el número nacional de 10 dígitos, conservando el valor completo existente.
+- [x] Enviar a Sender y Make los campos country_code y whatsapp_number junto con el teléfono completo compatible.
+- [x] Migrar los registros existentes, actualizar pruebas y validar el nuevo contrato telefónico antes de publicar.

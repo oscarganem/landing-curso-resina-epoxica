@@ -1,4 +1,5 @@
 import type { WaitlistSignup } from "../drizzle/schema";
+import { getMexicanWhatsAppParts } from "../shared/phone";
 
 const MAKE_EVENT_TYPE = "waitlist_signup.created";
 const MAKE_CAMPAIGN = "curso-playadelcarmen-sep26";
@@ -9,6 +10,10 @@ export type MakeWebhookResult =
   | { synced: false; reason: "not_configured" };
 
 export function buildMakeWaitlistPayload(signup: WaitlistSignup) {
+  const phoneParts = getMexicanWhatsAppParts(signup.whatsapp);
+  const countryCode = signup.whatsappCountryCode || phoneParts.countryCode;
+  const nationalNumber = signup.whatsappNationalNumber || phoneParts.nationalNumber;
+
   return {
     event_type: MAKE_EVENT_TYPE,
     event_id: `waitlist_${signup.id}`,
@@ -20,6 +25,8 @@ export function buildMakeWaitlistPayload(signup: WaitlistSignup) {
     email: signup.email,
     phone: signup.whatsapp,
     whatsapp: signup.whatsapp,
+    country_code: countryCode,
+    whatsapp_number: nationalNumber,
     registered_at: signup.createdAt.toISOString(),
   };
 }
