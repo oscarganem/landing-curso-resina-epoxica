@@ -205,3 +205,7 @@
 - [ ] Confirmar que el flujo de Sender esté activo, use el grupo correcto y tenga un correo publicado y un dominio remitente autenticado.
 - [x] Cambiar la sincronización de nuevos registros para permitir el disparo de la automatización de bienvenida, sin reactivar históricos.
 - [ ] Probar que un nuevo registro active la automatización una sola vez y publicar el ajuste.
+
+- [x] Corregir el titular y el texto introductorio de la página de gracias según la nueva comunidad privada de WhatsApp.
+- [x] Adaptar el CTA final de la página de gracias para dirigir a la comunidad de WhatsApp con copy coherente.
+- [x] Validar las rutas de WhatsApp, pruebas y compilación antes de publicar la página de gracias actualizada.
