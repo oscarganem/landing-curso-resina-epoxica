@@ -53,7 +53,8 @@
 - [x] Crear una página raíz neutra para academia.ocares.mx sin mostrar la campaña de Playa del Carmen.
 - [x] Publicar la landing existente en la ruta /curso-playadelcarmen-sep26 de academia.ocares.mx.
 - [x] Localizar el panel que controla la zona DNS actual de ocares.mx sin cambiar nameservers.
-- [ ] Dominio remitente e integración de correo: fuera del alcance de este ajuste del Pixel; pendiente para un trabajo separado.
+- [x] Integración server-side con Sender: configurar secretos, lista destino, sincronización del formulario y migración histórica.
+- [ ] Autenticación DNS del dominio remitente: confirmar en Sender que SPF, DKIM y DMARC estén completamente verificados.
 - [x] Definir el subdominio y la configuración DNS segura para conservar el sitio actual y publicar la nueva landing.
 - [x] Investigar y documentar la ruta de Nubox para administrar registros DNS del dominio.
 - [x] Validar que el evento Lead se emita únicamente al confirmarse un registro exitoso del formulario.
@@ -198,3 +199,9 @@
 - [x] Comparar los correos históricos contra la lista nueva de Sender para identificar faltantes.
 - [x] Importar los contactos históricos faltantes a Sender con trigger_automation=false y sin duplicados.
 - [x] Verificar el conteo final y documentar la migración sin enviar campañas.
+
+- [x] Confirmar que el registro más reciente se sincronizó automáticamente con la lista de Sender sin reenviar ni alterar contactos.
+
+- [ ] Confirmar que el flujo de Sender esté activo, use el grupo correcto y tenga un correo publicado y un dominio remitente autenticado.
+- [x] Cambiar la sincronización de nuevos registros para permitir el disparo de la automatización de bienvenida, sin reactivar históricos.
+- [ ] Probar que un nuevo registro active la automatización una sola vez y publicar el ajuste.

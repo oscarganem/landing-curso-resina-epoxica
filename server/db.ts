@@ -1,5 +1,5 @@
-import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
+import { eq } from "drizzle-orm";
 import { InsertUser, InsertWaitlistSignup, users, waitlistSignups } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
@@ -95,10 +95,18 @@ export async function upsertWaitlistSignup(signup: InsertWaitlistSignup) {
     throw new Error("La base de datos no está disponible en este momento.");
   }
 
+  const existing = await db
+    .select({ id: waitlistSignups.id })
+    .from(waitlistSignups)
+    .where(eq(waitlistSignups.email, signup.email))
+    .limit(1);
+
   await db.insert(waitlistSignups).values(signup).onDuplicateKeyUpdate({
     set: {
       fullName: signup.fullName,
       whatsapp: signup.whatsapp,
     },
   });
+
+  return { isNew: existing.length === 0 };
 }

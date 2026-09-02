@@ -17,13 +17,13 @@ describe("syncWaitlistSignupToSender", () => {
     process.env.SENDER_GROUP_ID = originalGroupId;
   });
 
-  it("crea el suscriptor en el grupo sin activar automatizaciones", async () => {
+  it("crea un suscriptor nuevo en el grupo y activa la automatización", async () => {
     process.env.SENDER_API_ACCESS_TOKEN = "test-token";
     process.env.SENDER_GROUP_ID = "group-123";
     const fetchMock = vi.fn().mockResolvedValue(new Response("{}", { status: 200 }));
     vi.stubGlobal("fetch", fetchMock);
 
-    await expect(syncWaitlistSignupToSender(signup)).resolves.toEqual({ synced: true });
+    await expect(syncWaitlistSignupToSender(signup, { triggerAutomation: true })).resolves.toEqual({ synced: true });
 
     expect(fetchMock).toHaveBeenCalledWith(
       "https://api.sender.net/v2/subscribers",
@@ -36,7 +36,7 @@ describe("syncWaitlistSignupToSender", () => {
           lastname: "Cárdenas Ganem",
           phone: signup.whatsapp,
           groups: ["group-123"],
-          trigger_automation: false,
+          trigger_automation: true,
         }),
       }),
     );
@@ -58,6 +58,26 @@ describe("syncWaitlistSignupToSender", () => {
       "https://api.sender.net/v2/subscribers/groups/group-123",
       expect.objectContaining({
         body: JSON.stringify({ subscribers: [signup.email], trigger_automation: false }),
+      }),
+    );
+  });
+
+  it("activa la bienvenida al unir a la lista de campaña un contacto nuevo que ya existe en Sender", async () => {
+    process.env.SENDER_API_ACCESS_TOKEN = "test-token";
+    process.env.SENDER_GROUP_ID = "group-123";
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(new Response("{}", { status: 422 }))
+      .mockResolvedValueOnce(new Response("{}", { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    await expect(syncWaitlistSignupToSender(signup, { triggerAutomation: true })).resolves.toEqual({ synced: true });
+
+    expect(fetchMock).toHaveBeenNthCalledWith(
+      2,
+      "https://api.sender.net/v2/subscribers/groups/group-123",
+      expect.objectContaining({
+        body: JSON.stringify({ subscribers: [signup.email], trigger_automation: true }),
       }),
     );
   });

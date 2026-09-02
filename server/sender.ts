@@ -49,18 +49,22 @@ async function describeSenderError(response: Response) {
   return `Sender respondió ${response.status}: ${detail}`;
 }
 
-export async function syncWaitlistSignupToSender(signup: InsertWaitlistSignup): Promise<SenderSyncResult> {
+export async function syncWaitlistSignupToSender(
+  signup: InsertWaitlistSignup,
+  options: { triggerAutomation?: boolean } = {},
+): Promise<SenderSyncResult> {
   const config = getSenderConfig();
   if (!config) return { synced: false, reason: "not_configured" };
 
   const { firstname, lastname } = splitFullName(signup.fullName);
+  const triggerAutomation = options.triggerAutomation ?? false;
   const subscriberPayload = {
     email: signup.email,
     firstname,
     ...(lastname ? { lastname } : {}),
     phone: signup.whatsapp,
     groups: [config.groupId],
-    trigger_automation: false,
+    trigger_automation: triggerAutomation,
   };
 
   const createResponse = await senderRequest("/subscribers", config.token, subscriberPayload);
@@ -71,7 +75,7 @@ export async function syncWaitlistSignupToSender(signup: InsertWaitlistSignup): 
   if (createResponse.status === 409 || createResponse.status === 422) {
     const groupResponse = await senderRequest(`/subscribers/groups/${encodeURIComponent(config.groupId)}`, config.token, {
       subscribers: [signup.email],
-      trigger_automation: false,
+      trigger_automation: triggerAutomation,
     });
     if (groupResponse.ok) return { synced: true };
     throw new Error(await describeSenderError(groupResponse));

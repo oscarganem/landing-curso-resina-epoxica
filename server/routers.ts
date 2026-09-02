@@ -27,8 +27,8 @@ export const appRouter = router({
   }),
   waitlist: router({
     signup: publicProcedure.input(waitlistSignupSchema).mutation(async ({ input }) => {
-      await upsertWaitlistSignup(input);
-      await syncWaitlistSignupToSender(input);
+      const { isNew } = await upsertWaitlistSignup(input);
+      await syncWaitlistSignupToSender(input, { triggerAutomation: isNew });
       return { success: true } as const;
     }),
   }),
