@@ -1,14 +1,19 @@
 import { CalendarDays, Check, Clock3 } from "lucide-react";
 import { Link } from "wouter";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { isExitIntent, supportsExitIntent } from "@/lib/exitIntent";
+import { createExitIntentGate, isExitIntent, supportsExitIntent } from "@/lib/exitIntent";
 
 const whatsappCommunityUrl = "https://chat.whatsapp.com/I5HJaRynpn9LnyFUKV45bV";
 
 export default function ThankYou() {
   const [isExitPopupOpen, setIsExitPopupOpen] = useState(false);
-  const exitIntentShownRef = useRef(false);
+  const [exitIntentGate] = useState(createExitIntentGate);
+
+  const showExitPopupOnce = useCallback(() => {
+    if (!exitIntentGate.claim()) return;
+    setIsExitPopupOpen(true);
+  }, [exitIntentGate]);
 
   useEffect(() => {
     if (typeof window.fbq === "function") {
@@ -20,14 +25,26 @@ export default function ThankYou() {
     if (!supportsExitIntent()) return;
 
     const handleMouseOut = (event: MouseEvent) => {
-      if (exitIntentShownRef.current || !isExitIntent(event)) return;
-      exitIntentShownRef.current = true;
-      setIsExitPopupOpen(true);
+      if (!isExitIntent(event)) return;
+      showExitPopupOnce();
     };
 
     document.addEventListener("mouseout", handleMouseOut);
     return () => document.removeEventListener("mouseout", handleMouseOut);
-  }, []);
+  }, [showExitPopupOnce]);
+
+  useEffect(() => {
+    if (supportsExitIntent()) return;
+
+    window.history.pushState(
+      { ...(window.history.state ?? {}), ocareExitIntentGuard: true },
+      "",
+      window.location.href,
+    );
+
+    window.addEventListener("popstate", showExitPopupOnce);
+    return () => window.removeEventListener("popstate", showExitPopupOnce);
+  }, [showExitPopupOnce]);
 
   return (
     <main className="thanks-page">

@@ -217,3 +217,9 @@
 - [x] Crear un popup de intención de salida exclusivo de la página de gracias, accesible y sin duplicar eventos de conversión.
 - [x] Añadir el copy de salida y el CTA “QUIERO UNIRME AL GRUPO” con el enlace de la comunidad de WhatsApp.
 - [x] Validar la aparición única, cierre, teclado, pruebas y presentación responsive antes de publicar.
+
+- [x] Detectar la intención de salida en móvil mediante el botón Atrás dentro de la página de gracias.
+- [x] Mostrar el popup móvil una sola vez y permitir una salida normal en un intento posterior.
+- [x] Probar la detección móvil, el comportamiento de escritorio, tipado y compilación antes de publicar.
+
+- [x] Asegurar que el popup de salida se muestre una sola vez por visita, incluso después de cerrarlo o volver a intentar salir.
