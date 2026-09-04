@@ -23,7 +23,7 @@ describe("landing de Mérida", () => {
     expect(landingSource).toContain("CANACINTRA");
     expect(landingSource).toContain("CANACINTRA Mérida");
     expect(landingSource).toContain("Aprenderás crear acabados: flake, granito antiderrapante, marmoleados, metálicos y 3D.");
-    expect(landingSource).toContain("Manuales + Calculadora Epóxica");
+    expect(landingSource).toContain("Manual del Aplicador PRO + Calculadora Epóxica para calcular tus materiales paso a paso.");
     expect(landingSource).not.toContain('Building2 aria-hidden="true" /> CANACINTRA');
     expect(landingSource).not.toContain("Cancún");
     expect(landingSource).not.toContain("WaitlistModal");

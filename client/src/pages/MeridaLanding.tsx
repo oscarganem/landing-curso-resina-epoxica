@@ -40,7 +40,7 @@ const MeridaFaqList = lazy(() => import("./MeridaFaqList"));
 
 const benefits = [
   "Incluye materiales y herramientas para todas las prácticas.",
-  "Manuales + Calculadora Epóxica para aplicar y calcular materiales paso a paso.",
+  "Manual del Aplicador PRO + Calculadora Epóxica para calcular tus materiales paso a paso.",
   "Soporte de por vida para resolver dudas en tus futuros proyectos.",
 ];
 

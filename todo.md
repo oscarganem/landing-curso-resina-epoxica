@@ -277,3 +277,6 @@
 - [x] Elevar el contenido del hero de Mérida aproximadamente 50 px para reducir el espacio vacío bajo el encabezado.
 - [x] Reducir 10–15 % la escala visual del subtítulo amarillo del hero.
 - [x] Aumentar el aire interno y la legibilidad del CTA principal del hero en escritorio y móvil.
+
+- [x] Sustituir manualmente el beneficio del Manual del Aplicador PRO y Calculadora Epóxica en el hero de Mérida.
+- [x] Actualizar la cobertura, validar y publicar el copy final del beneficio.
