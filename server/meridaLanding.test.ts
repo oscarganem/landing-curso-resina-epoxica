@@ -102,6 +102,19 @@ describe("landing de Mérida", () => {
     expect(landingSource).toContain("Hola, quiero información sobre la preventa de $1,999 para el Curso de Resina Epóxica en Mérida.");
     expect(landingSource).toContain("Hola, quiero registrarme con la opción de pago al llegar de $2,499 para el Curso de Resina Epóxica en Mérida.");
     expect(landingSource).toContain("Hola, quiero información sobre los paquetes para parejas y equipos del Curso de Resina Epóxica en Mérida.");
-    expect(landingSource.match(/href=\{getWhatsAppHref\([^)]*WhatsAppMessage\)\} target="_blank" rel="noreferrer"/g)).toHaveLength(3);
+    expect(landingSource.match(/href=\{getWhatsAppHref\([^)]*WhatsAppMessage\)\}/g)).toHaveLength(3);
+  });
+
+  it("espera antes de redirigir a WhatsApp y registra Lead solo si el píxel está disponible", () => {
+    expect(landingSource).toContain("const handleWhatsAppClick");
+    expect(landingSource.match(/onClick=\{\(event\) => handleWhatsAppClick\(event, getWhatsAppHref\([^)]*WhatsAppMessage\)\)\}/g)).toHaveLength(3);
+    expect(landingSource).toContain('if (typeof window.fbq === "function")');
+    expect(landingSource).toContain('window.fbq("track", "Lead")');
+    expect(landingSource).toContain("}, 1500)");
+    expect(landingSource).toContain("}, 5000)");
+    expect(landingSource).toContain("window.location.href = url;");
+    expect(landingSource).not.toContain("Tú puedes ser el siguiente.");
+    expect(stylesSource).toContain(".whatsapp-redirect-overlay { position: fixed;");
+    expect(stylesSource).toContain(".whatsapp-redirect-spinner");
   });
 });

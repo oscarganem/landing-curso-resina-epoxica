@@ -616,6 +616,7 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .pricing-benefits li { display: flex; align-items: flex-start; gap: 9px; color: #d8d6d0; font-size: 13px; font-weight: 650; line-height: 1.38; }
 .pricing-benefits svg { flex: 0 0 auto; width: 16px; height: 16px; margin-top: 1px; color: var(--resin-yellow); }
 .pricing-primary-cta, .pricing-secondary-cta, .team-pricing-cta { display: inline-flex; align-items: center; justify-content: center; width: 100%; min-height: 56px; margin-top: auto; padding: 13px 18px; border-radius: 4px; font-size: 13px; font-weight: 900; letter-spacing: -.018em; line-height: 1.15; text-align: center; text-decoration: none; transition: transform 160ms cubic-bezier(.23,1,.32,1), background 160ms ease, color 160ms ease; }
+.pricing-primary-cta[aria-disabled="true"], .pricing-secondary-cta[aria-disabled="true"], .team-pricing-cta[aria-disabled="true"] { pointer-events: none; }
 .pricing-primary-cta { margin-top: 30px; border: 1px solid var(--resin-yellow); background: var(--resin-yellow); color: #171717; }
 .pricing-secondary-cta { margin-top: 30px; border: 1px solid rgba(255,255,255,.72); background: transparent; color: #fffefa; }
 .pricing-primary-cta svg, .pricing-secondary-cta svg, .team-pricing-cta svg { width: 17px; height: 17px; margin-left: 8px; }
@@ -802,6 +803,14 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .faq-price-link:hover { background: #ffe14c; transform: translateY(-1px); }
 .faq-price-link:active { transform: scale(.97); }
 
+/* Redirección a WhatsApp — pausa breve para registrar la intención sin cambiar la página de destino. */
+.whatsapp-redirect-overlay { position: fixed; z-index: 80; inset: 0; display: grid; place-items: center; padding: 24px; background: rgba(4,4,4,.76); backdrop-filter: blur(8px); }
+.whatsapp-redirect-card { width: min(100%, 390px); padding: 38px 32px 34px; border: 1px solid rgba(255,255,255,.12); border-radius: 12px; background: #161616; color: #fffefa; box-shadow: 0 25px 70px rgba(0,0,0,.45); text-align: center; }
+.whatsapp-redirect-spinner { display: block; width: 54px; height: 54px; margin: 0 auto 26px; border: 4px solid rgba(13,187,66,.23); border-top-color: #0dbb42; border-right-color: #0dbb42; border-radius: 50%; animation: whatsapp-redirect-spin .8s linear infinite; }
+.whatsapp-redirect-card h2 { margin: 0; color: #fffefa; font-family: var(--font-display); font-size: 25px; font-weight: 800; letter-spacing: -.04em; line-height: 1.05; }
+.whatsapp-redirect-card p { max-width: 280px; margin: 12px auto 0; color: #bdbbb5; font-size: 14px; font-weight: 500; line-height: 1.42; }
+@keyframes whatsapp-redirect-spin { to { transform: rotate(360deg); } }
+
 @media (max-width: 680px) {
   .faq-inner { width: min(100% - 40px, 500px); padding: 88px 0 94px; }
   .faq-heading h2 { font-size: clamp(36px, 10.5vw, 45px); }
@@ -810,6 +819,10 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   .faq-symbol { margin-left: 13px; font-size: 28px; }
   .faq-content { padding: 0 19px 22px !important; font-size: 14px; }
   .faq-price-link { width: 100%; min-height: 48px; padding-right: 12px; padding-left: 12px; font-size: 11px; }
+  .whatsapp-redirect-card { padding: 34px 23px 30px; }
+  .whatsapp-redirect-spinner { width: 50px; height: 50px; margin-bottom: 23px; }
+  .whatsapp-redirect-card h2 { font-size: 24px; }
+  .whatsapp-redirect-card p { font-size: 14px; }
 }
 
 /* Cierre final — llamada a la acción concentrada sobre fondo carbón. */

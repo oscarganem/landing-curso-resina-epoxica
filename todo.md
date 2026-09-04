@@ -326,3 +326,8 @@
 
 - [x] Conectar los CTA de preventa, precio regular y equipos de Mérida con WhatsApp y sus mensajes predeterminados aprobados.
 - [x] Validar los enlaces codificados y publicar los CTA activos sin modificar otros botones de la landing.
+
+- [x] Eliminar la frase “Tú puedes ser el siguiente.” de la sección de comunidad de Mérida.
+- [x] Implementar un overlay reutilizable de redirección a WhatsApp con Lead, espera de 1.5 segundos y recuperación de seguridad.
+- [x] Aplicar el flujo de redirección a los tres CTA de paquetes, conservando sus mensajes y enlaces de WhatsApp.
+- [x] Validar el overlay y los CTA en escritorio y móvil, con pruebas, tipado y compilación.

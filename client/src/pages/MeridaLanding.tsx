@@ -2,7 +2,7 @@
  * Diseño: Taller de Alto Contraste. Landing editorial carbón/amarillo con
  * módulos de formación, práctica y comunidad de alumnos.
  */
-import { lazy, Suspense, useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState, type MouseEvent } from "react";
 import {
   BadgeCheck,
   BookOpen,
@@ -107,7 +107,53 @@ const includedResources = [
 
 export default function MeridaLanding() {
   const [shouldLoadFaq, setShouldLoadFaq] = useState(false);
+  const [isRedirecting, setIsRedirecting] = useState(false);
   const faqSectionRef = useRef<HTMLElement>(null);
+  const isRedirectingRef = useRef(false);
+  const redirectTimerRef = useRef<number | null>(null);
+  const safetyTimerRef = useRef<number | null>(null);
+
+  const clearRedirectTimers = () => {
+    if (redirectTimerRef.current !== null) {
+      window.clearTimeout(redirectTimerRef.current);
+      redirectTimerRef.current = null;
+    }
+    if (safetyTimerRef.current !== null) {
+      window.clearTimeout(safetyTimerRef.current);
+      safetyTimerRef.current = null;
+    }
+  };
+
+  const resetRedirectState = () => {
+    clearRedirectTimers();
+    isRedirectingRef.current = false;
+    setIsRedirecting(false);
+  };
+
+  const handleWhatsAppClick = (event: MouseEvent<HTMLAnchorElement>, url: string) => {
+    event.preventDefault();
+    if (isRedirectingRef.current) return;
+
+    isRedirectingRef.current = true;
+    setIsRedirecting(true);
+
+    if (typeof window.fbq === "function") {
+      window.fbq("track", "Lead");
+    }
+
+    redirectTimerRef.current = window.setTimeout(() => {
+      redirectTimerRef.current = null;
+      try {
+        window.location.href = url;
+      } catch {
+        resetRedirectState();
+      }
+    }, 1500);
+
+    safetyTimerRef.current = window.setTimeout(() => {
+      resetRedirectState();
+    }, 5000);
+  };
 
   useEffect(() => {
     const target = faqSectionRef.current;
@@ -125,6 +171,17 @@ export default function MeridaLanding() {
     observer.observe(target);
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => () => clearRedirectTimers(), []);
+
+  useEffect(() => {
+    if (!isRedirecting) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isRedirecting]);
 
   return (
     <main className="landing-shell">
@@ -218,7 +275,6 @@ export default function MeridaLanding() {
             <h2 id="community-title" aria-label="Más de 1000 alumnos ya perdieron el miedo a la resina y hoy crean acabados increíbles.">
               <span className="community-title-desktop" aria-hidden="true"><span className="community-line">Más de <b className="community-highlight">1000 alumnos</b></span><span className="community-line">ya perdieron el miedo</span><span className="community-line">a la resina y hoy crean</span><span className="community-line">acabados increíbles.</span></span>
               <span className="community-title-mobile" aria-hidden="true">Más de <b className="community-highlight">1000 alumnos</b> ya perdieron el miedo a la resina y hoy crean acabados increíbles.</span>
-              <em>Tú puedes ser el siguiente.</em>
             </h2>
             <a className="community-cta" href="#precios">VER PAQUETES Y ASEGURAR MI LUGAR <MoveUpRight aria-hidden="true" /></a>
           </div>
@@ -305,7 +361,7 @@ export default function MeridaLanding() {
                 <li><Check aria-hidden="true" strokeWidth={3} /><span>Lugar confirmado.</span></li>
                 <li><Check aria-hidden="true" strokeWidth={3} /><span>Incluye todos los beneficios mostrados arriba.</span></li>
               </ul>
-              <a className="pricing-primary-cta" href={getWhatsAppHref(presaleWhatsAppMessage)} target="_blank" rel="noreferrer">REGISTRARME POR WHATSAPP <MoveUpRight aria-hidden="true" /></a>
+              <a className="pricing-primary-cta" href={getWhatsAppHref(presaleWhatsAppMessage)} onClick={(event) => handleWhatsAppClick(event, getWhatsAppHref(presaleWhatsAppMessage))} aria-disabled={isRedirecting}>REGISTRARME POR WHATSAPP <MoveUpRight aria-hidden="true" /></a>
             </article>
 
             <article className="pricing-card pricing-card-regular" aria-labelledby="regular-title">
@@ -319,7 +375,7 @@ export default function MeridaLanding() {
                 <li><Check aria-hidden="true" strokeWidth={3} /><span>No necesitas pagar ahora.</span></li>
                 <li><Check aria-hidden="true" strokeWidth={3} /><span>Incluye todos los beneficios mostrados arriba.</span></li>
               </ul>
-              <a className="pricing-secondary-cta" href={getWhatsAppHref(regularWhatsAppMessage)} target="_blank" rel="noreferrer">REGISTRARME SIN ANTICIPO <MoveUpRight aria-hidden="true" /></a>
+              <a className="pricing-secondary-cta" href={getWhatsAppHref(regularWhatsAppMessage)} onClick={(event) => handleWhatsAppClick(event, getWhatsAppHref(regularWhatsAppMessage))} aria-disabled={isRedirecting}>REGISTRARME SIN ANTICIPO <MoveUpRight aria-hidden="true" /></a>
             </article>
           </div>
 
@@ -337,7 +393,7 @@ export default function MeridaLanding() {
             </div>
             <div className="team-pricing-action">
               <p>Todos los participantes reciben los materiales, recursos y beneficios del curso.</p>
-              <a className="team-pricing-cta" href={getWhatsAppHref(teamWhatsAppMessage)} target="_blank" rel="noreferrer">INSCRIBIR A MI EQUIPO POR WHATSAPP <MoveUpRight aria-hidden="true" /></a>
+              <a className="team-pricing-cta" href={getWhatsAppHref(teamWhatsAppMessage)} onClick={(event) => handleWhatsAppClick(event, getWhatsAppHref(teamWhatsAppMessage))} aria-disabled={isRedirecting}>INSCRIBIR A MI EQUIPO POR WHATSAPP <MoveUpRight aria-hidden="true" /></a>
             </div>
           </aside>
         </div>
@@ -444,6 +500,14 @@ export default function MeridaLanding() {
           <p className="final-cta-trust">Cupo presencial limitado · Taller práctico en CANACINTRA Mérida</p>
         </div>
       </section>
+
+      {isRedirecting && <div className="whatsapp-redirect-overlay" role="status" aria-live="assertive" aria-label="Redirigiendo a WhatsApp">
+        <div className="whatsapp-redirect-card">
+          <span className="whatsapp-redirect-spinner" aria-hidden="true" />
+          <h2>Redirigiendo a WhatsApp…</h2>
+          <p>Por favor espera un momento mientras preparamos tu mensaje.</p>
+        </div>
+      </div>}
     </main>
   );
 }
