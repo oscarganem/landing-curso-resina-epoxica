@@ -586,6 +586,81 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   .resource-card p { margin-top: 6px; font-size: 12px; }
 }
 
+/* Sección de precios — preventa, registro regular y equipos. */
+.pricing-section { position: relative; overflow: hidden; background: #0a0a0a; color: #f8f7f3; }
+.pricing-section::before { position: absolute; top: -14vw; left: -12vw; width: 38vw; height: 38vw; border: 1px solid rgba(255,212,0,.11); border-radius: 50%; content: ""; }
+.pricing-section::after { position: absolute; right: 8%; bottom: 9%; width: 23%; height: 1px; background: rgba(255,212,0,.32); content: ""; }
+.pricing-inner { position: relative; z-index: 1; width: min(100% - 48px, 1080px); margin: 0 auto; padding: clamp(78px, 9vw, 122px) 0 clamp(84px, 9vw, 128px); }
+.pricing-heading { max-width: 840px; margin: 0 auto; text-align: center; }
+.pricing-heading h2 { margin: 0; color: #fffefa; font-family: var(--font-display); font-size: clamp(38px, 4.45vw, 63px); font-weight: 800; letter-spacing: -.07em; line-height: .98; text-transform: uppercase; }
+.pricing-heading h2 span { color: var(--resin-yellow); }
+.pricing-heading p { max-width: 630px; margin: 20px auto 0; color: #cfcdc7; font-size: clamp(15px, 1.32vw, 18px); font-weight: 600; letter-spacing: -.018em; line-height: 1.42; }
+.pricing-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: stretch; gap: 22px; margin-top: clamp(43px, 5vw, 60px); }
+.pricing-card { position: relative; display: flex; min-width: 0; flex-direction: column; padding: 36px; background: #131313; }
+.pricing-card-featured { border: 1px solid var(--resin-yellow); box-shadow: 0 20px 46px rgba(0,0,0,.3), inset 0 0 0 1px rgba(255,212,0,.08); }
+.pricing-card-regular { border: 1px solid rgba(255,255,255,.21); background: #181818; }
+.pricing-recommended { position: absolute; top: 0; left: 30px; display: inline-flex; min-height: 30px; align-items: center; padding: 0 11px; background: var(--resin-yellow); color: #161616; font-size: 10px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; transform: translateY(-1px); }
+.pricing-card-featured .pricing-card-copy { padding-top: 9px; }
+.pricing-card h3 { margin: 0; color: #fffefa; font-family: var(--font-display); font-size: clamp(24px, 2.4vw, 34px); font-weight: 800; letter-spacing: -.06em; line-height: 1; text-transform: uppercase; }
+.pricing-previous-price { margin: 22px 0 0; color: #8b8983; font-size: 17px; font-weight: 800; line-height: 1; text-decoration: line-through; text-decoration-thickness: 1px; }
+.pricing-current-price { margin: 8px 0 0; color: var(--resin-yellow); font-family: var(--font-display); font-size: clamp(54px, 6.1vw, 78px); font-weight: 800; letter-spacing: -.08em; line-height: .86; }
+.pricing-description { max-width: 390px; margin: 24px 0 0; color: #eeece6; font-size: 16px; font-weight: 650; letter-spacing: -.018em; line-height: 1.4; }
+.pricing-deadline, .pricing-availability { margin: 14px 0 0; color: var(--resin-yellow); font-size: 13px; font-weight: 850; line-height: 1.35; }
+.pricing-availability { color: #aaa8a2; }
+.pricing-benefits { display: grid; gap: 11px; margin: 27px 0 0; padding: 22px 0 0; border-top: 1px solid rgba(255,255,255,.15); list-style: none; }
+.pricing-benefits li { display: flex; align-items: flex-start; gap: 9px; color: #d8d6d0; font-size: 13px; font-weight: 650; line-height: 1.38; }
+.pricing-benefits svg { flex: 0 0 auto; width: 16px; height: 16px; margin-top: 1px; color: var(--resin-yellow); }
+.pricing-primary-cta, .pricing-secondary-cta, .team-pricing-cta { display: inline-flex; align-items: center; justify-content: center; width: 100%; min-height: 56px; margin-top: auto; padding: 13px 18px; border-radius: 4px; font-size: 13px; font-weight: 900; letter-spacing: -.018em; line-height: 1.15; text-align: center; transition: transform 160ms cubic-bezier(.23,1,.32,1), background 160ms ease, color 160ms ease; }
+.pricing-primary-cta { margin-top: 30px; border: 1px solid var(--resin-yellow); background: var(--resin-yellow); color: #171717; }
+.pricing-secondary-cta { margin-top: 30px; border: 1px solid rgba(255,255,255,.72); background: transparent; color: #fffefa; }
+.pricing-primary-cta svg, .pricing-secondary-cta svg, .team-pricing-cta svg { width: 17px; height: 17px; margin-left: 8px; }
+.pricing-primary-cta:hover, .team-pricing-cta:hover { background: transparent; color: var(--resin-yellow); transform: translateY(-2px); }
+.pricing-secondary-cta:hover { border-color: var(--resin-yellow); color: var(--resin-yellow); transform: translateY(-2px); }
+.pricing-primary-cta:active, .pricing-secondary-cta:active, .team-pricing-cta:active { transform: scale(.97); }
+.team-pricing-block { display: grid; grid-template-columns: minmax(260px, .85fr) minmax(380px, 1.15fr) minmax(245px, .82fr); align-items: center; gap: 26px; margin-top: 22px; padding: 29px 31px; border: 1px solid rgba(255,212,0,.48); background: #111; }
+.team-pricing-intro { display: flex; align-items: flex-start; gap: 14px; }
+.team-pricing-icon { display: grid; flex: 0 0 auto; width: 46px; height: 46px; place-items: center; border-radius: 50%; background: var(--resin-yellow); color: #161616; }
+.team-pricing-icon svg { width: 24px; height: 24px; }
+.team-pricing-intro h3 { margin: 1px 0 0; color: #fffefa; font-family: var(--font-display); font-size: 23px; font-weight: 800; letter-spacing: -.055em; line-height: 1; text-transform: uppercase; }
+.team-pricing-intro p { margin: 9px 0 0; color: #bdbbb6; font-size: 12px; font-weight: 600; line-height: 1.38; }
+.team-price-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.team-price-option { min-height: 86px; padding: 16px 15px; border: 1px solid rgba(255,255,255,.16); background: #171717; }
+.team-price-option strong { display: block; color: var(--resin-yellow); font-size: 17px; font-weight: 900; letter-spacing: -.04em; line-height: 1.08; }
+.team-price-option span { display: block; margin-top: 8px; color: #d5d3cd; font-size: 11px; font-weight: 650; line-height: 1.25; }
+.team-pricing-action { min-width: 0; }
+.team-pricing-action p { margin: 0; color: #cac8c2; font-size: 11px; font-weight: 600; line-height: 1.36; }
+.team-pricing-cta { min-height: 51px; margin-top: 13px; border: 1px solid var(--resin-yellow); background: var(--resin-yellow); color: #171717; font-size: 11px; }
+
+@media (max-width: 850px) {
+  .pricing-grid { grid-template-columns: 1fr; max-width: 650px; margin-right: auto; margin-left: auto; }
+  .team-pricing-block { grid-template-columns: 1fr; max-width: 650px; margin-right: auto; margin-left: auto; }
+  .team-pricing-action { display: grid; grid-template-columns: 1fr minmax(240px, .72fr); align-items: center; gap: 22px; }
+  .team-pricing-cta { margin-top: 0; }
+}
+
+@media (max-width: 680px) {
+  .pricing-inner { width: min(100% - 40px, 500px); padding: 74px 0 80px; }
+  .pricing-heading h2 { font-size: clamp(36px, 10.1vw, 46px); }
+  .pricing-heading p { margin-top: 16px; font-size: 14px; }
+  .pricing-grid { gap: 16px; margin-top: 38px; }
+  .pricing-card { padding: 27px 21px 22px; }
+  .pricing-recommended { left: 20px; min-height: 28px; font-size: 9px; }
+  .pricing-card h3 { font-size: 27px; }
+  .pricing-current-price { font-size: 61px; }
+  .pricing-description { margin-top: 21px; font-size: 15px; }
+  .pricing-benefits { margin-top: 23px; padding-top: 19px; }
+  .pricing-benefits li { font-size: 12.5px; }
+  .pricing-primary-cta, .pricing-secondary-cta { min-height: 55px; margin-top: 25px; font-size: 12px; }
+  .team-pricing-block { gap: 22px; margin-top: 16px; padding: 24px 20px; }
+  .team-pricing-intro h3 { font-size: 23px; }
+  .team-price-options { grid-template-columns: 1fr; gap: 10px; }
+  .team-price-option { min-height: 0; padding: 14px; }
+  .team-price-option strong { font-size: 17px; }
+  .team-pricing-action { display: block; }
+  .team-pricing-action p { font-size: 12px; }
+  .team-pricing-cta { min-height: 55px; margin-top: 16px; font-size: 11.5px; }
+}
+
 /* Sección institucional — experiencia de Grupo Ocares. */
 .about-section { position: relative; overflow: hidden; background: #090909; color: #f8f7f3; }
 .about-section::before { position: absolute; top: -16vw; left: -14vw; width: 40vw; height: 40vw; border: 1px solid rgba(255,212,0,.1); border-radius: 50%; content: ""; }

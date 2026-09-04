@@ -61,4 +61,21 @@ describe("landing de Mérida", () => {
   it("mantiene en blanco el fondo de la sección de comunidad", () => {
     expect(stylesSource).toContain(".community-section { position: relative; overflow: hidden; background: #fff; color: #161616; }");
   });
+
+  it("agrega la oferta de preventa, pago regular y equipos después de los recursos", () => {
+    const includedIndex = landingSource.indexOf('className="included-section"');
+    const pricingIndex = landingSource.indexOf('className="pricing-section"');
+    const venueIndex = landingSource.indexOf('className="venue-section"');
+
+    expect(landingSource).toContain("Elige cómo quieres");
+    expect(landingSource).toContain("asegurar tu lugar");
+    expect(landingSource).toContain("$1,999");
+    expect(landingSource).toContain("APARTAR CON $100 POR WHATSAPP");
+    expect(landingSource).toContain("REGISTRARME SIN ANTICIPO");
+    expect(landingSource).toContain("¿Vienes acompañado?");
+    expect(landingSource).toContain("INSCRIBIR A MI EQUIPO POR WHATSAPP");
+    expect(includedIndex).toBeGreaterThan(-1);
+    expect(pricingIndex).toBeGreaterThan(includedIndex);
+    expect(venueIndex).toBeGreaterThan(pricingIndex);
+  });
 });

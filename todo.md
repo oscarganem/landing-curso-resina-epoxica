@@ -301,3 +301,8 @@
 - [x] Colocar la sección de recursos después de la sección institucional y validar el nuevo orden en escritorio y móvil.
 
 - [x] Cambiar a blanco el fondo de la sección “Más de 1,000 alumnos…” de Mérida sin alterar su contenido ni composición.
+
+- [x] Crear una sección negra de precios inmediatamente después de “Todo lo que necesitas…” en la landing de Mérida.
+- [x] Integrar las tarjetas de preventa y precio regular con el copy, jerarquía y botones aprobados.
+- [x] Añadir el bloque de parejas y equipos con sus precios, beneficios y CTA, sin enlazar WhatsApp hasta contar con el destino definitivo.
+- [x] Validar la nueva sección de precios en escritorio y móvil, además de pruebas, tipado y compilación.

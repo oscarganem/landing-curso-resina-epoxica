@@ -282,6 +282,65 @@ export default function MeridaLanding() {
         </div>
       </section>
 
+      <section className="pricing-section" aria-labelledby="pricing-title">
+        <div className="pricing-inner">
+          <header className="pricing-heading">
+            <h2 id="pricing-title">Elige cómo quieres <span>asegurar tu lugar</span></h2>
+            <p>Aprovecha el precio de preventa o regístrate para pagar el día del curso.</p>
+          </header>
+
+          <div className="pricing-grid">
+            <article className="pricing-card pricing-card-featured" aria-labelledby="presale-title">
+              <span className="pricing-recommended">Más recomendado</span>
+              <div className="pricing-card-copy">
+                <h3 id="presale-title">Precio de preventa</h3>
+                <p className="pricing-previous-price">$2,499</p>
+                <p className="pricing-current-price">$1,999</p>
+                <p className="pricing-description">Aparta con $100 y paga los $1,899 restantes al llegar.</p>
+                <p className="pricing-deadline">La preventa termina el 17 de septiembre.</p>
+              </div>
+              <ul className="pricing-benefits">
+                <li><Check aria-hidden="true" strokeWidth={3} /><span>Lugar confirmado.</span></li>
+                <li><Check aria-hidden="true" strokeWidth={3} /><span>Incluye todos los beneficios mostrados arriba.</span></li>
+              </ul>
+              <button className="pricing-primary-cta" type="button" aria-disabled="true">APARTAR CON $100 POR WHATSAPP <MoveUpRight aria-hidden="true" /></button>
+            </article>
+
+            <article className="pricing-card pricing-card-regular" aria-labelledby="regular-title">
+              <div className="pricing-card-copy">
+                <h3 id="regular-title">Precio regular</h3>
+                <p className="pricing-current-price">$2,499</p>
+                <p className="pricing-description">Paga en persona el día del curso, sin anticipos.</p>
+                <p className="pricing-availability">Registro sujeto a disponibilidad.</p>
+              </div>
+              <ul className="pricing-benefits">
+                <li><Check aria-hidden="true" strokeWidth={3} /><span>No necesitas pagar ahora.</span></li>
+                <li><Check aria-hidden="true" strokeWidth={3} /><span>Incluye todos los beneficios mostrados arriba.</span></li>
+              </ul>
+              <button className="pricing-secondary-cta" type="button" aria-disabled="true">REGISTRARME SIN ANTICIPO <MoveUpRight aria-hidden="true" /></button>
+            </article>
+          </div>
+
+          <aside className="team-pricing-block" aria-labelledby="team-pricing-title">
+            <div className="team-pricing-intro">
+              <span className="team-pricing-icon"><Users aria-hidden="true" strokeWidth={2.1} /></span>
+              <div>
+                <h3 id="team-pricing-title">¿Vienes acompañado?</h3>
+                <p>Ideal para constructoras, empresas de remodelación y equipos de trabajo.</p>
+              </div>
+            </div>
+            <div className="team-price-options" aria-label="Precios para parejas y equipos">
+              <div className="team-price-option"><strong>2 personas — $3,800</strong><span>$1,900 por persona</span></div>
+              <div className="team-price-option"><strong>3 personas — $4,999</strong><span>Aproximadamente $1,667 por persona</span></div>
+            </div>
+            <div className="team-pricing-action">
+              <p>Todos los participantes reciben los materiales, recursos y beneficios del curso.</p>
+              <button className="team-pricing-cta" type="button" aria-disabled="true">INSCRIBIR A MI EQUIPO POR WHATSAPP <MoveUpRight aria-hidden="true" /></button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
       <section className="venue-section" aria-labelledby="venue-title">
         <div className="venue-inner">
           <header className="venue-heading">
