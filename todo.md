@@ -288,3 +288,7 @@
 - [x] Retirar el indicador decorativo “01” de la fotografía del hero de Mérida y validar el resultado.
 
 - [x] Mantener el CTA blanco a la derecha del CTA amarillo en escritorio y apilar ambos CTA únicamente en móvil.
+
+- [x] Añadir un pequeño espacio entre el encabezado y el hero de Mérida en pantallas de laptop y escritorio.
+- [x] Reducir aproximadamente 10–15 % la altura de ambos CTA del hero sin alterar su alineación horizontal.
+- [x] Validar el ajuste en laptop y móvil antes de publicar.

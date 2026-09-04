@@ -37,5 +37,7 @@ describe("landing de Mérida", () => {
   it("mantiene el CTA secundario a la derecha en escritorio y lo apila solo en móvil", () => {
     expect(stylesSource).toContain(".hero-cta-group {\n  display: flex;\n  flex-wrap: nowrap;");
     expect(stylesSource).toContain(".hero-cta-group { display: grid;");
+    expect(stylesSource).toContain("transform: translateY(-28px);");
+    expect(stylesSource).toContain("min-height: 52px;");
   });
 });
