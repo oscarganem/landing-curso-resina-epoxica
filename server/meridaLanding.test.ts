@@ -80,4 +80,10 @@ describe("landing de Mérida", () => {
     expect(pricingIndex).toBeGreaterThan(includedIndex);
     expect(venueIndex).toBeGreaterThan(pricingIndex);
   });
+
+  it("dirige los CTA de inscripción y paquetes a la sección de precios", () => {
+    expect(landingSource).toContain('className="pricing-section" id="precios"');
+    expect(landingSource).toContain('className="waitlist-cta" href="#precios"');
+    expect(landingSource.match(/className="(?:community-cta|proof-cta|final-cta-button)" href="#precios"/g)).toHaveLength(3);
+  });
 });

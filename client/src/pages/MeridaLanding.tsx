@@ -156,7 +156,7 @@ export default function MeridaLanding() {
             {benefits.map((benefit) => <li key={benefit}><Check aria-hidden="true" strokeWidth={3.2} /><span>{benefit}</span></li>)}
           </ul>
           <div className="hero-cta-group" aria-label="Acciones del curso">
-            <button className="waitlist-cta" type="button" aria-disabled="true">QUIERO INSCRIBIRME <MoveUpRight aria-hidden="true" /></button>
+            <a className="waitlist-cta" href="#precios">QUIERO INSCRIBIRME <MoveUpRight aria-hidden="true" /></a>
             <a className="hero-info-cta" href="#informacion">VER TODA LA INFORMACIÓN <MoveUpRight aria-hidden="true" /></a>
           </div>
           <div className="course-footer" id="paquetes">
@@ -218,7 +218,7 @@ export default function MeridaLanding() {
               <span className="community-title-mobile" aria-hidden="true">Más de <b className="community-highlight">1000 alumnos</b> ya perdieron el miedo a la resina y hoy crean acabados increíbles.</span>
               <em>Tú puedes ser el siguiente.</em>
             </h2>
-            <button className="community-cta" type="button" aria-disabled="true">VER PAQUETES Y ASEGURAR MI LUGAR <MoveUpRight aria-hidden="true" /></button>
+            <a className="community-cta" href="#precios">VER PAQUETES Y ASEGURAR MI LUGAR <MoveUpRight aria-hidden="true" /></a>
           </div>
           <div className="community-gallery" aria-label="Galería de alumnos durante las prácticas">
             {studentGallery.map(({ image, alt }, index) => <figure className={`community-photo photo-${index + 1}`} key={image}><img src={image} alt={alt} loading="lazy" /></figure>)}
@@ -282,7 +282,7 @@ export default function MeridaLanding() {
         </div>
       </section>
 
-      <section className="pricing-section" aria-labelledby="pricing-title">
+      <section className="pricing-section" id="precios" aria-labelledby="pricing-title">
         <div className="pricing-inner">
           <header className="pricing-heading">
             <h2 id="pricing-title">Elige cómo quieres <span>asegurar tu lugar</span></h2>
@@ -404,7 +404,7 @@ export default function MeridaLanding() {
             </div>
             <div className="proof-cta-area">
               <p>El próximo aplicador de resina epóxica puedes ser tú</p>
-              <button className="proof-cta" type="button" aria-disabled="true">VER PAQUETES Y ASEGURAR MI LUGAR <MoveUpRight aria-hidden="true" /></button>
+              <a className="proof-cta" href="#precios">VER PAQUETES Y ASEGURAR MI LUGAR <MoveUpRight aria-hidden="true" /></a>
             </div>
           </div>
         </div>
@@ -438,7 +438,7 @@ export default function MeridaLanding() {
             <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Manual del Aplicador PRO y Calculadora Epóxica incluidos.</span></li>
             <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Soporte de por vida para tus futuras aplicaciones.</span></li>
           </ul>
-          <button className="final-cta-button" type="button" aria-disabled="true">VER PAQUETES Y ASEGURAR MI LUGAR <MoveUpRight aria-hidden="true" /></button>
+          <a className="final-cta-button" href="#precios">VER PAQUETES Y ASEGURAR MI LUGAR <MoveUpRight aria-hidden="true" /></a>
           <p className="final-cta-trust">Cupo presencial limitado · Taller práctico en CANACINTRA Mérida</p>
         </div>
       </section>

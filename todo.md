@@ -309,3 +309,6 @@
 
 - [x] Actualizar el subtítulo de la sección de precios con el nuevo mensaje de inclusión de materiales y recursos.
 - [x] Cambiar el CTA de la tarjeta de preventa a “REGISTRARME POR WHATSAPP” y validar el copy publicado.
+
+- [x] Conectar “QUIERO INSCRIBIRME” y todos los CTA “VER PAQUETES Y ASEGURAR MI LUGAR” de Mérida con la sección de precios.
+- [x] Validar la navegación accesible y publicar el desplazamiento a precios en escritorio y móvil.
