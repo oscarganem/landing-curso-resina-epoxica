@@ -115,6 +115,13 @@ button, a { -webkit-tap-highlight-color: transparent; }
   padding: 44px 0 42px;
 }
 
+@media (min-width: 681px) {
+  .hero {
+    transform: translateY(-50px);
+    margin-bottom: -50px;
+  }
+}
+
 .hero-copy { max-width: 590px; animation: reveal-up .56s both cubic-bezier(.23, 1, .32, 1); }
 
 .eyebrow {
@@ -185,10 +192,10 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .course-lede {
   margin: 17px 0 0;
   color: var(--resin-yellow);
-  font-size: clamp(17px, 1.35vw, 20px);
+  font-size: clamp(15px, 1.18vw, 17.5px);
   font-weight: 800;
   letter-spacing: -.025em;
-  line-height: 1.28;
+  line-height: 1.32;
 }
 .course-lede > span { display: block; }
 .course-lede strong { color: #fffdf8; font-weight: 900; }
@@ -212,15 +219,17 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   align-items: center;
   justify-content: center;
   min-width: 300px;
-  height: 54px;
+  min-height: 60px;
+  height: auto;
   margin-top: 25px;
+  padding: 16px 24px;
   border: 1px solid var(--resin-yellow);
   border-radius: 4px;
   background: var(--resin-yellow);
   color: #121212;
   box-shadow: 0 10px 24px rgba(0,0,0,.23);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 850;
   letter-spacing: -.02em;
   text-decoration: none;
@@ -288,7 +297,7 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   .photo-frame { width: min(88%, 390px); margin: 0 auto; }
   .photo-placeholder { min-height: 360px; }
   .benefit-list { font-size: 12.5px; }
-  .waitlist-cta { width: 100%; min-width: 0; }
+  .waitlist-cta { width: 100%; min-width: 0; min-height: 58px; padding: 15px 18px; font-size: 12.5px; line-height: 1.2; }
   .course-footer { gap: 8px; }
   .course-rating { font-size: 13px; }
   .course-footer p { font-size: 11px; }

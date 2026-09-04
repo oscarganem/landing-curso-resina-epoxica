@@ -273,3 +273,7 @@
 
 - [x] Retirar CANACINTRA del hero de Mérida y conservar únicamente lugar y fecha.
 - [x] Reducir ligeramente la escala de los datos destacados del hero y validar en escritorio y móvil.
+
+- [x] Elevar el contenido del hero de Mérida aproximadamente 50 px para reducir el espacio vacío bajo el encabezado.
+- [x] Reducir 10–15 % la escala visual del subtítulo amarillo del hero.
+- [x] Aumentar el aire interno y la legibilidad del CTA principal del hero en escritorio y móvil.
