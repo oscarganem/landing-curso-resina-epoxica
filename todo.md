@@ -267,3 +267,9 @@
 - [x] Resaltar sede, CANACINTRA y fecha en el hero de Mérida sin cambiar el título principal.
 - [x] Sustituir el subtítulo amarillo y los beneficios del hero por el copy confirmado de venta directa.
 - [x] Validar el hero actualizado en escritorio y móvil, con pruebas y compilación antes de publicar.
+
+- [x] Actualizar la cobertura del hero de Mérida para el copy simplificado de acabados.
+- [x] Validar y publicar el ajuste de copy sin alterar la jerarquía visual del hero.
+
+- [x] Retirar CANACINTRA del hero de Mérida y conservar únicamente lugar y fecha.
+- [x] Reducir ligeramente la escala de los datos destacados del hero y validar en escritorio y móvil.

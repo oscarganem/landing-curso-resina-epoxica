@@ -174,9 +174,8 @@ export default function MeridaLanding() {
           <div className="merida-event-details" aria-label="Detalles del curso presencial en Mérida">
             <span><MapPin aria-hidden="true" /> Mérida, Yucatán</span>
             <span><CalendarDays aria-hidden="true" /> Domingo 20 de septiembre</span>
-            <span><Building2 aria-hidden="true" /> CANACINTRA</span>
           </div>
-          <p className="course-lede">Aprenderás a crear acabados profesionales: pisos flake, granito antiderrapante, efectos marmoleados y metálicos, diseños 3D y mesas tipo río.</p>
+          <p className="course-lede">Aprenderás crear acabados: flake, granito antiderrapante, marmoleados, metálicos y 3D.</p>
           <ul className="benefit-list">
             {benefits.map((benefit) => <li key={benefit}><Check aria-hidden="true" strokeWidth={3.2} /><span>{benefit}</span></li>)}
           </ul>
