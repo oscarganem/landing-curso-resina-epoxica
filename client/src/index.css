@@ -239,6 +239,41 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .waitlist-cta:hover { background: transparent; color: var(--resin-yellow); transform: translateY(-2px); }
 .waitlist-cta:active { transform: scale(.97); }
 
+.hero-cta-group {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 12px;
+  width: min(100%, 490px);
+  margin-top: 25px;
+}
+.hero-cta-group .waitlist-cta { flex: 1 1 0; min-width: 0; margin-top: 0; padding-right: 14px; padding-left: 14px; white-space: nowrap; }
+.hero-info-cta {
+  display: inline-flex;
+  flex: 1 1 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 60px;
+  padding: 16px 14px;
+  border: 1px solid rgba(255, 255, 255, .78);
+  border-radius: 4px;
+  background: #f7f5ef;
+  color: #161616;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 850;
+  letter-spacing: -.015em;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 160ms cubic-bezier(.23,1,.32,1), background 160ms ease, color 160ms ease;
+}
+.hero-info-cta svg { width: 16px; height: 16px; margin-left: 8px; }
+.hero-info-cta:hover { background: transparent; color: #f7f5ef; transform: translateY(-2px); }
+.hero-info-cta:active { transform: scale(.97); }
+
 .course-footer { display: flex; align-items: center; gap: 11px; margin-top: 27px; }
 .course-rating { color: var(--resin-yellow); font-size: 14px; font-weight: 900; letter-spacing: .08em; line-height: 1; }
 .course-footer p { margin: 0; color: #898783; font-size: 12px; font-weight: 650; letter-spacing: .01em; }
@@ -297,7 +332,9 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   .photo-frame { width: min(88%, 390px); margin: 0 auto; }
   .photo-placeholder { min-height: 360px; }
   .benefit-list { font-size: 12.5px; }
+  .hero-cta-group { display: grid; gap: 10px; margin-top: 23px; }
   .waitlist-cta { width: 100%; min-width: 0; min-height: 58px; padding: 15px 18px; font-size: 12.5px; line-height: 1.2; }
+  .hero-info-cta { width: 100%; min-height: 52px; padding: 13px 18px; font-size: 12px; }
   .course-footer { gap: 8px; }
   .course-rating { font-size: 13px; }
   .course-footer p { font-size: 11px; }

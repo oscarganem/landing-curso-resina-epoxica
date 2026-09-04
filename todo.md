@@ -280,3 +280,11 @@
 
 - [x] Sustituir manualmente el beneficio del Manual del Aplicador PRO y Calculadora Epóxica en el hero de Mérida.
 - [x] Actualizar la cobertura, validar y publicar el copy final del beneficio.
+
+- [x] Cambiar el CTA amarillo del hero de Mérida a “QUIERO INSCRIBIRME”.
+- [x] Añadir un CTA secundario claro “VER TODA LA INFORMACIÓN” que desplace suavemente a la segunda sección.
+- [x] Validar los nuevos CTA en escritorio y móvil, incluida la navegación accesible, antes de publicar.
+
+- [x] Retirar el indicador decorativo “01” de la fotografía del hero de Mérida y validar el resultado.
+
+- [x] Mantener el CTA blanco a la derecha del CTA amarillo en escritorio y apilar ambos CTA únicamente en móvil.

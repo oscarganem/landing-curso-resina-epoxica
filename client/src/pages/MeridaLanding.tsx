@@ -179,7 +179,10 @@ export default function MeridaLanding() {
           <ul className="benefit-list">
             {benefits.map((benefit) => <li key={benefit}><Check aria-hidden="true" strokeWidth={3.2} /><span>{benefit}</span></li>)}
           </ul>
-          <button className="waitlist-cta" type="button" aria-disabled="true">VER PAQUETES Y ASEGURAR MI LUGAR <MoveUpRight aria-hidden="true" /></button>
+          <div className="hero-cta-group" aria-label="Acciones del curso">
+            <button className="waitlist-cta" type="button" aria-disabled="true">QUIERO INSCRIBIRME <MoveUpRight aria-hidden="true" /></button>
+            <a className="hero-info-cta" href="#informacion">VER TODA LA INFORMACIÓN <MoveUpRight aria-hidden="true" /></a>
+          </div>
           <div className="course-footer" id="paquetes">
             <span className="course-rating" role="img" aria-label="Cinco estrellas">★★★★★</span>
             <p>+1,000 alumnos ya aprendieron con nosotros</p>
@@ -191,14 +194,13 @@ export default function MeridaLanding() {
             <div className="frame-corner frame-corner-bottom" aria-hidden="true" />
             <div className="photo-placeholder photo-placeholder-filled">
               <img className="hero-course-photo" src="/manus-storage/hero-mesa-azul-aprobada_5a76eb7d.webp" width="1080" height="1350" alt="Aplicador extendiendo resina azul sobre una mesa durante una práctica de curso" fetchPriority="high" decoding="async" />
-              <span className="placeholder-index" aria-hidden="true">01</span>
             </div>
             <span className="photo-note">IMAGEN PRINCIPAL</span>
           </div>
         </aside>
       </section>
 
-      <section className="audience-section" aria-labelledby="audience-title">
+      <section className="audience-section" id="informacion" aria-labelledby="audience-title">
         <div className="audience-layout">
           <div className="audience-intro">
             <div className="light-eyebrow">¿Para quién es este curso?</div>
