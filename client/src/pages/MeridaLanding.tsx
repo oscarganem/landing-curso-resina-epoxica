@@ -126,10 +126,10 @@ const courseModules = [
 const includedResources = [
   { icon: Presentation, title: "Curso intensivo presencial", text: "Práctica guiada durante el curso" },
   { icon: Wrench, title: "Materiales y herramientas para prácticas", text: "Todo lo necesario para aprender en clase" },
-  { icon: BookOpen, title: "Manual del aplicador", text: "Guía de apoyo con procesos y conceptos clave" },
+  { icon: BookOpen, title: "Manual del aplicador PRO", text: "Guía de apoyo con procesos y conceptos clave" },
   { icon: Calculator, title: "Calculadora de materiales", text: "Para estimar resina, pigmentos y cantidades" },
   { icon: BadgeCheck, title: "Certificado de participación", text: "Reconoce tu participación en el curso" },
-  { icon: Headphones, title: "Soporte posterior al curso", text: "Resuelve dudas sobre tus primeras aplicaciones" },
+  { icon: Headphones, title: "Soporte de por vida", text: "Resuelve dudas sobre tus primeras aplicaciones" },
 ];
 
 export default function MeridaLanding() {

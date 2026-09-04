@@ -292,3 +292,6 @@
 - [x] Añadir un pequeño espacio entre el encabezado y el hero de Mérida en pantallas de laptop y escritorio.
 - [x] Reducir aproximadamente 10–15 % la altura de ambos CTA del hero sin alterar su alineación horizontal.
 - [x] Validar el ajuste en laptop y móvil antes de publicar.
+
+- [x] Sustituir manualmente los títulos “Soporte posterior al curso” y “Manual del aplicador” por el copy confirmado en Mérida.
+- [x] Validar el bloque de recursos y publicar el ajuste.
