@@ -15,7 +15,6 @@ describe("landing de Mérida", () => {
     expect(landingSource).not.toContain("WaitlistModal");
     expect(landingSource).not.toContain("trpc.");
     expect(landingSource).not.toContain("getThankYouPathForLanding");
-    expect(landingSource).toContain('aria-disabled="true"');
   });
 
   it("muestra la oferta directa y la logística confirmada de Mérida", () => {
@@ -96,5 +95,13 @@ describe("landing de Mérida", () => {
     expect(landingSource).toContain("Un proyecto de 100 m² puede cotizarse entre $100,000 y $150,000 MXN.");
     expect(stylesSource).toContain(".earning-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(355px, 1fr);");
     expect(stylesSource).toContain(".earning-photo { order: -1; min-height: 250px; }");
+  });
+
+  it("activa los paquetes con WhatsApp y el mensaje predeterminado correspondiente", () => {
+    expect(landingSource).toContain('const whatsAppNumber = "5219617848718"');
+    expect(landingSource).toContain("Hola, quiero información sobre la preventa de $1,999 para el Curso de Resina Epóxica en Mérida.");
+    expect(landingSource).toContain("Hola, quiero registrarme con la opción de pago al llegar de $2,499 para el Curso de Resina Epóxica en Mérida.");
+    expect(landingSource).toContain("Hola, quiero información sobre los paquetes para parejas y equipos del Curso de Resina Epóxica en Mérida.");
+    expect(landingSource.match(/href=\{getWhatsAppHref\([^)]*WhatsAppMessage\)\} target="_blank" rel="noreferrer"/g)).toHaveLength(3);
   });
 });

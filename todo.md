@@ -323,3 +323,6 @@
 - [x] Rediseñar el bloque “¿Cuánto se cobra por este tipo de proyectos?” siguiendo la jerarquía visual de las referencias en escritorio.
 - [x] Reorganizar la versión móvil con titular editorial, imagen superior, precio dominante y ejemplo destacado.
 - [x] Validar el bloque de cobro actualizado en escritorio y móvil, con pruebas, tipado y compilación.
+
+- [x] Conectar los CTA de preventa, precio regular y equipos de Mérida con WhatsApp y sus mensajes predeterminados aprobados.
+- [x] Validar los enlaces codificados y publicar los CTA activos sin modificar otros botones de la landing.

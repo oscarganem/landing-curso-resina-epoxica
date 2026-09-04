@@ -615,7 +615,7 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .pricing-benefits { display: grid; gap: 11px; margin: 27px 0 0; padding: 22px 0 0; border-top: 1px solid rgba(255,255,255,.15); list-style: none; }
 .pricing-benefits li { display: flex; align-items: flex-start; gap: 9px; color: #d8d6d0; font-size: 13px; font-weight: 650; line-height: 1.38; }
 .pricing-benefits svg { flex: 0 0 auto; width: 16px; height: 16px; margin-top: 1px; color: var(--resin-yellow); }
-.pricing-primary-cta, .pricing-secondary-cta, .team-pricing-cta { display: inline-flex; align-items: center; justify-content: center; width: 100%; min-height: 56px; margin-top: auto; padding: 13px 18px; border-radius: 4px; font-size: 13px; font-weight: 900; letter-spacing: -.018em; line-height: 1.15; text-align: center; transition: transform 160ms cubic-bezier(.23,1,.32,1), background 160ms ease, color 160ms ease; }
+.pricing-primary-cta, .pricing-secondary-cta, .team-pricing-cta { display: inline-flex; align-items: center; justify-content: center; width: 100%; min-height: 56px; margin-top: auto; padding: 13px 18px; border-radius: 4px; font-size: 13px; font-weight: 900; letter-spacing: -.018em; line-height: 1.15; text-align: center; text-decoration: none; transition: transform 160ms cubic-bezier(.23,1,.32,1), background 160ms ease, color 160ms ease; }
 .pricing-primary-cta { margin-top: 30px; border: 1px solid var(--resin-yellow); background: var(--resin-yellow); color: #171717; }
 .pricing-secondary-cta { margin-top: 30px; border: 1px solid rgba(255,255,255,.72); background: transparent; color: #fffefa; }
 .pricing-primary-cta svg, .pricing-secondary-cta svg, .team-pricing-cta svg { width: 17px; height: 17px; margin-left: 8px; }

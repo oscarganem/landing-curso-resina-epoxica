@@ -33,6 +33,11 @@ import {
 } from "lucide-react";
 
 const MeridaFaqList = lazy(() => import("./MeridaFaqList"));
+const whatsAppNumber = "5219617848718";
+const getWhatsAppHref = (message: string) => `https://wa.me/${whatsAppNumber}?text=${encodeURIComponent(message)}`;
+const presaleWhatsAppMessage = "Hola, quiero información sobre la preventa de $1,999 para el Curso de Resina Epóxica en Mérida.";
+const regularWhatsAppMessage = "Hola, quiero registrarme con la opción de pago al llegar de $2,499 para el Curso de Resina Epóxica en Mérida.";
+const teamWhatsAppMessage = "Hola, quiero información sobre los paquetes para parejas y equipos del Curso de Resina Epóxica en Mérida.";
 
 const benefits = [
   "Incluye materiales y herramientas para todas las prácticas.",
@@ -300,7 +305,7 @@ export default function MeridaLanding() {
                 <li><Check aria-hidden="true" strokeWidth={3} /><span>Lugar confirmado.</span></li>
                 <li><Check aria-hidden="true" strokeWidth={3} /><span>Incluye todos los beneficios mostrados arriba.</span></li>
               </ul>
-              <button className="pricing-primary-cta" type="button" aria-disabled="true">REGISTRARME POR WHATSAPP <MoveUpRight aria-hidden="true" /></button>
+              <a className="pricing-primary-cta" href={getWhatsAppHref(presaleWhatsAppMessage)} target="_blank" rel="noreferrer">REGISTRARME POR WHATSAPP <MoveUpRight aria-hidden="true" /></a>
             </article>
 
             <article className="pricing-card pricing-card-regular" aria-labelledby="regular-title">
@@ -314,7 +319,7 @@ export default function MeridaLanding() {
                 <li><Check aria-hidden="true" strokeWidth={3} /><span>No necesitas pagar ahora.</span></li>
                 <li><Check aria-hidden="true" strokeWidth={3} /><span>Incluye todos los beneficios mostrados arriba.</span></li>
               </ul>
-              <button className="pricing-secondary-cta" type="button" aria-disabled="true">REGISTRARME SIN ANTICIPO <MoveUpRight aria-hidden="true" /></button>
+              <a className="pricing-secondary-cta" href={getWhatsAppHref(regularWhatsAppMessage)} target="_blank" rel="noreferrer">REGISTRARME SIN ANTICIPO <MoveUpRight aria-hidden="true" /></a>
             </article>
           </div>
 
@@ -332,7 +337,7 @@ export default function MeridaLanding() {
             </div>
             <div className="team-pricing-action">
               <p>Todos los participantes reciben los materiales, recursos y beneficios del curso.</p>
-              <button className="team-pricing-cta" type="button" aria-disabled="true">INSCRIBIR A MI EQUIPO POR WHATSAPP <MoveUpRight aria-hidden="true" /></button>
+              <a className="team-pricing-cta" href={getWhatsAppHref(teamWhatsAppMessage)} target="_blank" rel="noreferrer">INSCRIBIR A MI EQUIPO POR WHATSAPP <MoveUpRight aria-hidden="true" /></a>
             </div>
           </aside>
         </div>
