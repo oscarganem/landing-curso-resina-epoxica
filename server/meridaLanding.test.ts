@@ -76,6 +76,8 @@ describe("landing de Mérida", () => {
     expect(landingSource).toContain("REGISTRARME SIN ANTICIPO");
     expect(landingSource).toContain("¿Vienes acompañado?");
     expect(landingSource).toContain("INSCRIBIR A MI EQUIPO POR WHATSAPP");
+    expect(landingSource).toContain("Todo esto incluye tu entrada al curso");
+    expect(landingSource).not.toContain("Todo lo que necesitas para aprender, practicar y empezar a aplicar");
     expect(includedIndex).toBeGreaterThan(-1);
     expect(pricingIndex).toBeGreaterThan(includedIndex);
     expect(venueIndex).toBeGreaterThan(pricingIndex);

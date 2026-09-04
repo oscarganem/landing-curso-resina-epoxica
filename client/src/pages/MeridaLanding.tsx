@@ -254,7 +254,7 @@ export default function MeridaLanding() {
       <section className="included-section" aria-labelledby="included-title">
         <div className="included-inner">
           <header className="included-heading">
-            <h2 id="included-title">Todo lo que necesitas para aprender, practicar y empezar a aplicar <span>resina</span> por tu cuenta</h2>
+            <h2 id="included-title">Todo esto incluye tu entrada al curso</h2>
           </header>
 
           <div className="resource-grid">

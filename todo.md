@@ -316,3 +316,6 @@
 - [x] Actualizar las FAQ de Mérida con técnicas, precios, logística y el proceso para asegurar lugar.
 - [x] Enlazar la respuesta de inscripción a la sección de precios y explicar el contacto por WhatsApp con un asesor.
 - [x] Validar las FAQ actualizadas en escritorio y móvil, con pruebas, tipado y compilación.
+
+- [x] Reemplazar el título de la sección de recursos de Mérida por “Todo esto incluye tu entrada al curso”.
+- [x] Validar y publicar el nuevo título de la sección de recursos.
