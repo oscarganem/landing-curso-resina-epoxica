@@ -88,4 +88,13 @@ describe("landing de Mérida", () => {
     expect(landingSource).toContain('className="waitlist-cta" href="#precios"');
     expect(landingSource.match(/className="(?:community-cta|proof-cta|final-cta-button)" href="#precios"/g)).toHaveLength(3);
   });
+
+  it("recompone la referencia de cobro con precio dominante, ejemplo e imagen adaptada a móvil", () => {
+    expect(landingSource).toContain("Esto es lo que");
+    expect(landingSource).toContain("podrías cobrar");
+    expect(landingSource).toContain('$1,000 a $1,500 <span>MXN por m²</span>');
+    expect(landingSource).toContain("Un proyecto de 100 m² puede cotizarse entre $100,000 y $150,000 MXN.");
+    expect(stylesSource).toContain(".earning-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(355px, 1fr);");
+    expect(stylesSource).toContain(".earning-photo { order: -1; min-height: 250px; }");
+  });
 });

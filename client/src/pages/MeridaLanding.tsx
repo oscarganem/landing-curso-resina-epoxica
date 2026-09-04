@@ -12,7 +12,6 @@ import {
   CalendarDays,
   Check,
   Clock3,
-  DollarSign,
   FlaskConical,
   Gem,
   GraduationCap,
@@ -28,7 +27,6 @@ import {
   Presentation,
   Ruler,
   ShieldCheck,
-  TrendingUp,
   Table2,
   Users,
   Wrench,
@@ -75,12 +73,6 @@ const techniques = [
   { title: "Pisos con hojuela y granito antiderrapante", image: "/manus-storage/piso-antiderrapante_d347b0f3.webp", position: "center center" },
   { title: "Pisos 3D", image: "/manus-storage/piso-3d_69280b5d.webp", position: "center 52%" },
   { title: "Mesas tipo río y decoraciones", image: "/manus-storage/mesa-rio_c4ac227a.webp", position: "center 48%" },
-];
-
-const earningFacts = [
-  { icon: DollarSign, label: "Referencia de cobro", detail: "$1,000 a $1,500 MXN por m²" },
-  { icon: Calculator, label: "Ejemplo práctico", detail: "Una casa de 100 m² puede cotizarse entre $100,000 y $150,000 MXN" },
-  { icon: TrendingUp, label: "Servicio de alto valor", detail: "Un solo proyecto bien cotizado puede representar una oportunidad importante de ingresos." },
 ];
 
 const studentGallery = [
@@ -200,11 +192,16 @@ export default function MeridaLanding() {
             {techniques.map(({ title, image, position }) => <article className="technique-card" key={title}><img src={image} alt={title} loading="lazy" style={{ objectPosition: position }} /><div className="technique-shade" aria-hidden="true" /><div className="technique-status"><Check aria-hidden="true" strokeWidth={3} /> Incluido en el taller presencial</div><h3>{title}</h3></article>)}
           </div>
           <div className="earning-block">
-            <h3 className="earning-title" id="earning-title">¿Cuánto se cobra por este tipo de proyectos?</h3>
+            <h3 className="earning-title" id="earning-title"><span>Esto es lo que</span><span><em>podrías cobrar</em> por aplicar pisos de</span><span>resina epóxica</span></h3>
             <aside className="earning-card" aria-labelledby="earning-title">
-              <div className="earning-photo"><img src="/manus-storage/piso-azul-marmoleado_5b4a8397.webp" alt="Piso de resina azul marmoleado con vetas doradas" loading="lazy" /></div>
-              <div className="earning-details"><div className="earning-facts">{earningFacts.map(({ icon: Icon, label, detail }) => <div className="earning-fact" key={label}><span className="earning-icon" aria-hidden="true"><Icon strokeWidth={2.2} /></span><strong>{label}</strong><p>{detail}</p></div>)}</div></div>
-              <p className="earning-disclaimer">*Los precios son aproximados y pueden variar según superficie, complejidad, materiales, ciudad y condiciones del trabajo.</p>
+              <div className="earning-summary">
+                <p className="earning-label">Precio de referencia</p>
+                <p className="earning-price">$1,000 a $1,500 <span>MXN por m²</span></p>
+                <p className="earning-example"><strong>Ejemplo:</strong> Un proyecto de 100 m² puede cotizarse entre $100,000 y $150,000 MXN.</p>
+                <p className="earning-opportunity">La aplicación de resina epóxica puede convertirse en un servicio de alto valor para tu negocio.</p>
+                <p className="earning-disclaimer">*Precios aproximados. Pueden variar según la superficie, el acabado, los materiales, la ciudad y las condiciones del proyecto.</p>
+              </div>
+              <figure className="earning-photo"><img src="/manus-storage/piso-azul-marmoleado_5b4a8397.webp" alt="Piso de resina azul marmoleado con vetas doradas" loading="lazy" /></figure>
             </aside>
           </div>
         </div>

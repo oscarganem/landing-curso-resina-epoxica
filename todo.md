@@ -319,3 +319,7 @@
 
 - [x] Reemplazar el título de la sección de recursos de Mérida por “Todo esto incluye tu entrada al curso”.
 - [x] Validar y publicar el nuevo título de la sección de recursos.
+
+- [x] Rediseñar el bloque “¿Cuánto se cobra por este tipo de proyectos?” siguiendo la jerarquía visual de las referencias en escritorio.
+- [x] Reorganizar la versión móvil con titular editorial, imagen superior, precio dominante y ejemplo destacado.
+- [x] Validar el bloque de cobro actualizado en escritorio y móvil, con pruebas, tipado y compilación.
