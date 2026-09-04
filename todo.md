@@ -331,3 +331,8 @@
 - [x] Implementar un overlay reutilizable de redirección a WhatsApp con Lead, espera de 1.5 segundos y recuperación de seguridad.
 - [x] Aplicar el flujo de redirección a los tres CTA de paquetes, conservando sus mensajes y enlaces de WhatsApp.
 - [x] Validar el overlay y los CTA en escritorio y móvil, con pruebas, tipado y compilación.
+
+- [x] Crear la ruta independiente de Cancún basada en la versión final de Mérida para el 19 de septiembre.
+- [x] Sustituir los textos locales y mensajes predeterminados de WhatsApp de Mérida por Cancún.
+- [x] Dejar sede, dirección y mapa de Cancún expresamente pendientes hasta recibir información confirmada.
+- [x] Validar la landing de Cancún en escritorio y móvil, con pruebas, tipado y compilación.
