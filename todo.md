@@ -295,3 +295,7 @@
 
 - [x] Sustituir manualmente los títulos “Soporte posterior al curso” y “Manual del aplicador” por el copy confirmado en Mérida.
 - [x] Validar el bloque de recursos y publicar el ajuste.
+
+- [x] Eliminar de Mérida la sección negra de paquetes, sus tres pasos y su botón interno.
+- [x] Reubicar la sección institucional inmediatamente después de la sección de comunidad.
+- [x] Colocar la sección de recursos después de la sección institucional y validar el nuevo orden en escritorio y móvil.

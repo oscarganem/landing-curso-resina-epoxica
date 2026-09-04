@@ -44,4 +44,17 @@ describe("landing de Mérida", () => {
     expect(stylesSource).toContain("transform: translateY(-28px);");
     expect(stylesSource).toContain("min-height: 52px;");
   });
+
+  it("elimina el bloque de paquetes y conserva comunidad, sección institucional y recursos en el orden solicitado", () => {
+    const communityIndex = landingSource.indexOf('className="community-section"');
+    const aboutIndex = landingSource.indexOf('className="about-section"');
+    const includedIndex = landingSource.indexOf('className="included-section"');
+
+    expect(landingSource).not.toContain('className="process-section"');
+    expect(landingSource).not.toContain('className="process-cta"');
+    expect(landingSource).not.toContain("const purchaseSteps");
+    expect(communityIndex).toBeGreaterThan(-1);
+    expect(aboutIndex).toBeGreaterThan(communityIndex);
+    expect(includedIndex).toBeGreaterThan(aboutIndex);
+  });
 });

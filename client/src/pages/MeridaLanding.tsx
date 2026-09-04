@@ -11,7 +11,6 @@ import {
   Calculator,
   CalendarDays,
   Check,
-  ClipboardCheck,
   Clock3,
   DollarSign,
   FlaskConical,
@@ -30,7 +29,6 @@ import {
   Ruler,
   ShieldCheck,
   TrendingUp,
-  TicketCheck,
   Table2,
   Users,
   Wrench,
@@ -92,28 +90,6 @@ const studentGallery = [
   { image: "/manus-storage/alumno-practica-azul-detalle_9d4f3565.webp", alt: "Alumno creando un acabado decorativo con resina" },
   { image: "/manus-storage/alumno-practica-mezcla_5961ed1f.webp", alt: "Alumnos preparando mezclas de resina durante la práctica" },
   { image: "/manus-storage/alumno-practica-granito_1e42691c.webp", alt: "Alumno aplicando sistema de granito antiderrapante" },
-];
-
-const purchaseSteps = [
-  {
-    icon: TicketCheck,
-    number: "01",
-    title: "Elige tu paquete",
-    text: "Conoce las opciones de inscripción y elige la que mejor se adapte a ti.",
-  },
-  {
-    icon: ClipboardCheck,
-    number: "02",
-    title: "Asegura tu lugar",
-    text: "Reserva tu asistencia y recibe los detalles para prepararte para la práctica.",
-  },
-  {
-    icon: CalendarDays,
-    number: "03",
-    title: "Asiste al Taller Presencial",
-    location: "20 Sep | Mérida",
-    text: "Crea tus propios acabados en pisos, barras y mesas de río con práctica guiada.",
-  },
 ];
 
 const courseModules = [
@@ -250,25 +226,28 @@ export default function MeridaLanding() {
         </div>
       </section>
 
-      <section className="process-section" aria-labelledby="process-title">
-        <div className="process-inner">
-          <div className="process-heading">
-            <h2 id="process-title"><span className="process-line">Elige tu paquete y</span><span className="process-line">asegura tu lugar en el</span><strong className="process-line">taller presencial en Mérida</strong></h2>
-            <span className="dark-title-rule" aria-hidden="true" />
+      <section className="about-section" aria-labelledby="about-title">
+        <header className="about-heading">
+          <h2 id="about-title">¿Quiénes somos y por qué podemos ayudarte?</h2>
+          <span className="dark-title-rule" aria-hidden="true" />
+        </header>
+        <div className="about-inner">
+          <div className="about-copy">
+            <p className="about-greeting">¡Hola! Somos <strong>Oscar Cárdenas</strong> y <strong>Oscar Ganem</strong>.</p>
+            <div className="about-prose">
+              <p>Somos <strong>Grupo Ocares</strong>. Desde hace años nos dedicamos a la construcción, remodelación y aplicación de acabados, <strong>trabajando directamente en obra</strong> y enfrentándonos a los mismos retos que cualquier profesional de la construcción.</p>
+              <p>Con el tiempo decidimos llevar toda esa experiencia a nuestros <strong>cursos presenciales</strong> y comenzar a enseñar a otras personas lo que nosotros mismos hemos aprendido trabajando en campo.</p>
+              <p>Hoy hemos capacitado a <strong>cientos de alumnos</strong> en distintas ciudades de México, quienes han aplicado estos conocimientos en proyectos personales, en su trabajo e incluso para iniciar sus propios negocios.</p>
+            </div>
+            <div className="about-trust">
+              <h3>¿Por qué te contamos esto?</h3>
+              <p>Porque para nosotros es importante que sepas quién está detrás de la información que vas a recibir.</p>
+              <p>Sabemos que aprender una nueva técnica —y mucho más si piensas convertirla en un negocio— requiere <strong>confiar en las personas que te están enseñando</strong>.</p>
+            </div>
           </div>
-
-          <div className="process-steps">
-            {purchaseSteps.map(({ icon: Icon, number, title, location, text }) => (
-              <article className="process-step" key={number}>
-                <div className="process-step-top"><span className="process-icon"><Icon aria-hidden="true" strokeWidth={2.3} /></span><b>{number}</b></div>
-                <h3>{title}</h3>
-                {location && <p className="process-step-location"><MapPin aria-hidden="true" strokeWidth={2} />{location}</p>}
-                <p>{text}</p>
-              </article>
-            ))}
-          </div>
-
-          <button className="process-cta" type="button" aria-disabled="true">VER PAQUETES Y ASEGURAR MI LUGAR <MoveUpRight aria-hidden="true" /></button>
+          <figure className="about-photo">
+            <div className="about-photo-frame"><img src="/manus-storage/grupo-ocares-team_ac748c58.webp" alt="Oscar Cárdenas y Oscar Ganem, equipo de Grupo Ocares" loading="lazy" /></div>
+          </figure>
         </div>
       </section>
 
@@ -300,31 +279,6 @@ export default function MeridaLanding() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="about-section" aria-labelledby="about-title">
-        <header className="about-heading">
-          <h2 id="about-title">¿Quiénes somos y por qué podemos ayudarte?</h2>
-          <span className="dark-title-rule" aria-hidden="true" />
-        </header>
-        <div className="about-inner">
-          <div className="about-copy">
-            <p className="about-greeting">¡Hola! Somos <strong>Oscar Cárdenas</strong> y <strong>Oscar Ganem</strong>.</p>
-            <div className="about-prose">
-              <p>Somos <strong>Grupo Ocares</strong>. Desde hace años nos dedicamos a la construcción, remodelación y aplicación de acabados, <strong>trabajando directamente en obra</strong> y enfrentándonos a los mismos retos que cualquier profesional de la construcción.</p>
-              <p>Con el tiempo decidimos llevar toda esa experiencia a nuestros <strong>cursos presenciales</strong> y comenzar a enseñar a otras personas lo que nosotros mismos hemos aprendido trabajando en campo.</p>
-              <p>Hoy hemos capacitado a <strong>cientos de alumnos</strong> en distintas ciudades de México, quienes han aplicado estos conocimientos en proyectos personales, en su trabajo e incluso para iniciar sus propios negocios.</p>
-            </div>
-            <div className="about-trust">
-              <h3>¿Por qué te contamos esto?</h3>
-              <p>Porque para nosotros es importante que sepas quién está detrás de la información que vas a recibir.</p>
-              <p>Sabemos que aprender una nueva técnica —y mucho más si piensas convertirla en un negocio— requiere <strong>confiar en las personas que te están enseñando</strong>.</p>
-            </div>
-          </div>
-          <figure className="about-photo">
-            <div className="about-photo-frame"><img src="/manus-storage/grupo-ocares-team_ac748c58.webp" alt="Oscar Cárdenas y Oscar Ganem, equipo de Grupo Ocares" loading="lazy" /></div>
-          </figure>
         </div>
       </section>
 
