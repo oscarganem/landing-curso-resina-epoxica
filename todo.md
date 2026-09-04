@@ -299,3 +299,5 @@
 - [x] Eliminar de Mérida la sección negra de paquetes, sus tres pasos y su botón interno.
 - [x] Reubicar la sección institucional inmediatamente después de la sección de comunidad.
 - [x] Colocar la sección de recursos después de la sección institucional y validar el nuevo orden en escritorio y móvil.
+
+- [x] Cambiar a blanco el fondo de la sección “Más de 1,000 alumnos…” de Mérida sin alterar su contenido ni composición.

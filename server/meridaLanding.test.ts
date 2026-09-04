@@ -57,4 +57,8 @@ describe("landing de Mérida", () => {
     expect(aboutIndex).toBeGreaterThan(communityIndex);
     expect(includedIndex).toBeGreaterThan(aboutIndex);
   });
+
+  it("mantiene en blanco el fondo de la sección de comunidad", () => {
+    expect(stylesSource).toContain(".community-section { position: relative; overflow: hidden; background: #fff; color: #161616; }");
+  });
 });
