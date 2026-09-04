@@ -286,7 +286,7 @@ export default function MeridaLanding() {
         <div className="pricing-inner">
           <header className="pricing-heading">
             <h2 id="pricing-title">Elige cómo quieres <span>asegurar tu lugar</span></h2>
-            <p>Aprovecha el precio de preventa o regístrate para pagar el día del curso.</p>
+            <p>Todos los paquetes incluyen los materiales, recursos y beneficios mostrados arriba.</p>
           </header>
 
           <div className="pricing-grid">
@@ -303,7 +303,7 @@ export default function MeridaLanding() {
                 <li><Check aria-hidden="true" strokeWidth={3} /><span>Lugar confirmado.</span></li>
                 <li><Check aria-hidden="true" strokeWidth={3} /><span>Incluye todos los beneficios mostrados arriba.</span></li>
               </ul>
-              <button className="pricing-primary-cta" type="button" aria-disabled="true">APARTAR CON $100 POR WHATSAPP <MoveUpRight aria-hidden="true" /></button>
+              <button className="pricing-primary-cta" type="button" aria-disabled="true">REGISTRARME POR WHATSAPP <MoveUpRight aria-hidden="true" /></button>
             </article>
 
             <article className="pricing-card pricing-card-regular" aria-labelledby="regular-title">

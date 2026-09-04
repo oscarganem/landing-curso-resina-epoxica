@@ -306,3 +306,6 @@
 - [x] Integrar las tarjetas de preventa y precio regular con el copy, jerarquía y botones aprobados.
 - [x] Añadir el bloque de parejas y equipos con sus precios, beneficios y CTA, sin enlazar WhatsApp hasta contar con el destino definitivo.
 - [x] Validar la nueva sección de precios en escritorio y móvil, además de pruebas, tipado y compilación.
+
+- [x] Actualizar el subtítulo de la sección de precios con el nuevo mensaje de inclusión de materiales y recursos.
+- [x] Cambiar el CTA de la tarjeta de preventa a “REGISTRARME POR WHATSAPP” y validar el copy publicado.

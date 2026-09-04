@@ -69,8 +69,10 @@ describe("landing de Mérida", () => {
 
     expect(landingSource).toContain("Elige cómo quieres");
     expect(landingSource).toContain("asegurar tu lugar");
+    expect(landingSource).toContain("Todos los paquetes incluyen los materiales, recursos y beneficios mostrados arriba.");
     expect(landingSource).toContain("$1,999");
-    expect(landingSource).toContain("APARTAR CON $100 POR WHATSAPP");
+    expect(landingSource).toContain("REGISTRARME POR WHATSAPP");
+    expect(landingSource).not.toContain("APARTAR CON $100 POR WHATSAPP");
     expect(landingSource).toContain("REGISTRARME SIN ANTICIPO");
     expect(landingSource).toContain("¿Vienes acompañado?");
     expect(landingSource).toContain("INSCRIBIR A MI EQUIPO POR WHATSAPP");
