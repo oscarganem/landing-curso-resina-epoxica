@@ -36,13 +36,13 @@ import {
   Wrench,
 } from "lucide-react";
 
-const FaqList = lazy(() => import("./FaqList"));
+const MeridaFaqList = lazy(() => import("./MeridaFaqList"));
 
 const benefits = [
-  "Aprende a crear acabados marmoleados, metálicos, unicolor y 3D.",
-  "Crea pisos con hojuelas y granito antiderrapante.",
-  "Acceso GRATIS a la Masterclass Online previa al taller.",
-  "Descuento de preventa (solo para registrados en la lista).",
+  "Incluye materiales y herramientas para todas las prácticas.",
+  "Manual del Aplicador PRO para consultar paso a paso.",
+  "Calculadora Epóxica para estimar materiales y cantidades.",
+  "Soporte de por vida para resolver dudas en tus aplicaciones.",
 ];
 
 const audienceReasons = [
@@ -95,31 +95,25 @@ const studentGallery = [
   { image: "/manus-storage/alumno-practica-granito_1e42691c.webp", alt: "Alumno aplicando sistema de granito antiderrapante" },
 ];
 
-const prioritySteps = [
-  {
-    icon: ClipboardCheck,
-    number: "01",
-    title: "Regístrate GRATIS",
-    text: "Únete a la lista de espera dejando tu nombre, WhatsApp y correo.",
-  },
-  {
-    icon: MonitorPlay,
-    number: "02",
-    title: "Asiste a la clase online gratuita",
-    text: "Aprenderás las 5 capas que conforman un piso epóxico, verás una demostración en vivo y podrás resolver todas tus dudas sobre el curso presencial.",
-  },
+const purchaseSteps = [
   {
     icon: TicketCheck,
-    number: "03",
-    title: "Descubre tu descuento de preventa",
-    text: "Al final de la clase en vivo revelaremos el precio especial disponible únicamente para quienes se registraron en la lista.",
+    number: "01",
+    title: "Elige tu paquete",
+    text: "Conoce las opciones de inscripción y elige la que mejor se adapte a ti.",
+  },
+  {
+    icon: ClipboardCheck,
+    number: "02",
+    title: "Asegura tu lugar",
+    text: "Reserva tu asistencia y recibe los detalles para prepararte para la práctica.",
   },
   {
     icon: CalendarDays,
-    number: "04",
+    number: "03",
     title: "Asiste al Taller Presencial",
-    location: "Próximamente | Cancún",
-    text: "Asiste al evento presencial y crea tus propios acabados en pisos, barras y mesas de río.",
+    location: "20 Sep | Mérida",
+    text: "Crea tus propios acabados en pisos, barras y mesas de río con práctica guiada.",
   },
 ];
 
@@ -139,7 +133,7 @@ const includedResources = [
   { icon: Headphones, title: "Soporte posterior al curso", text: "Resuelve dudas sobre tus primeras aplicaciones" },
 ];
 
-export default function CancunLanding() {
+export default function MeridaLanding() {
   const [shouldLoadFaq, setShouldLoadFaq] = useState(false);
   const faqSectionRef = useRef<HTMLElement>(null);
 
@@ -178,13 +172,13 @@ export default function CancunLanding() {
             <span className="hero-title-line">mesas de río</span>
           </h1>
           <span className="hero-title-rule" aria-hidden="true" />
-          <p className="event-line"><MapPin aria-hidden="true" /> Cancún <b>|</b><CalendarDays aria-hidden="true" /> Próximamente</p>
-          <p className="course-lede">El Curso Presencial de Resina Epóxica llega a Cancún. Próximamente compartiremos los detalles de inscripción.</p>
+          <p className="event-line"><MapPin aria-hidden="true" /> Mérida <b>|</b><CalendarDays aria-hidden="true" /> Domingo 20 de septiembre</p>
+          <p className="course-lede">Una formación práctica para aprender a aplicar resina epóxica con técnica, materiales y acompañamiento profesional.</p>
           <ul className="benefit-list">
             {benefits.map((benefit) => <li key={benefit}><Check aria-hidden="true" strokeWidth={3.2} /><span>{benefit}</span></li>)}
           </ul>
-          <button className="waitlist-cta" type="button" aria-disabled="true">Quiero recibir información del curso <MoveUpRight aria-hidden="true" /></button>
-          <div className="course-footer" id="lista-de-espera">
+          <button className="waitlist-cta" type="button" aria-disabled="true">VER PAQUETES Y ASEGURAR MI LUGAR <MoveUpRight aria-hidden="true" /></button>
+          <div className="course-footer" id="paquetes">
             <span className="course-rating" role="img" aria-label="Cinco estrellas">★★★★★</span>
             <p>+1,000 alumnos ya aprendieron con nosotros</p>
           </div>
@@ -244,7 +238,7 @@ export default function CancunLanding() {
               <span className="community-title-mobile" aria-hidden="true">Más de <b className="community-highlight">1000 alumnos</b> ya perdieron el miedo a la resina y hoy crean acabados increíbles.</span>
               <em>Tú puedes ser el siguiente.</em>
             </h2>
-            <button className="community-cta" type="button" aria-disabled="true">Quiero recibir información del curso <MoveUpRight aria-hidden="true" /></button>
+            <button className="community-cta" type="button" aria-disabled="true">VER PAQUETES Y ASEGURAR MI LUGAR <MoveUpRight aria-hidden="true" /></button>
           </div>
           <div className="community-gallery" aria-label="Galería de alumnos durante las prácticas">
             {studentGallery.map(({ image, alt }, index) => <figure className={`community-photo photo-${index + 1}`} key={image}><img src={image} alt={alt} loading="lazy" /></figure>)}
@@ -255,12 +249,12 @@ export default function CancunLanding() {
       <section className="process-section" aria-labelledby="process-title">
         <div className="process-inner">
           <div className="process-heading">
-            <h2 id="process-title"><span className="process-line">Únete <b>GRATIS</b> a la lista</span><span className="process-line">prioritaria y accede a un</span><strong className="process-line">descuento exclusivo de preventa</strong></h2>
+            <h2 id="process-title"><span className="process-line">Elige tu paquete y</span><span className="process-line">asegura tu lugar en el</span><strong className="process-line">taller presencial en Mérida</strong></h2>
             <span className="dark-title-rule" aria-hidden="true" />
           </div>
 
           <div className="process-steps">
-            {prioritySteps.map(({ icon: Icon, number, title, location, text }) => (
+            {purchaseSteps.map(({ icon: Icon, number, title, location, text }) => (
               <article className="process-step" key={number}>
                 <div className="process-step-top"><span className="process-icon"><Icon aria-hidden="true" strokeWidth={2.3} /></span><b>{number}</b></div>
                 <h3>{title}</h3>
@@ -270,7 +264,7 @@ export default function CancunLanding() {
             ))}
           </div>
 
-          <button className="process-cta" type="button" aria-disabled="true">Quiero recibir información del curso <MoveUpRight aria-hidden="true" /></button>
+          <button className="process-cta" type="button" aria-disabled="true">VER PAQUETES Y ASEGURAR MI LUGAR <MoveUpRight aria-hidden="true" /></button>
         </div>
       </section>
 
@@ -340,8 +334,8 @@ export default function CancunLanding() {
               <div className="venue-card-top">
                 <span className="venue-place-icon"><Building2 aria-hidden="true" strokeWidth={1.8} /></span>
                 <div>
-                  <h3>Sede por confirmar</h3>
-                  <p>Cancún</p>
+                  <h3>CANACINTRA</h3>
+                  <p>Mérida</p>
                 </div>
               </div>
 
@@ -350,22 +344,22 @@ export default function CancunLanding() {
               <dl className="venue-details">
                 <div>
                   <dt><span className="venue-detail-icon"><CalendarDays aria-hidden="true" strokeWidth={1.9} /></span><span>Fecha</span></dt>
-                  <dd>Próximamente</dd>
+                  <dd>Domingo 20 de septiembre</dd>
                 </div>
                 <div>
                   <dt><span className="venue-detail-icon"><Clock3 aria-hidden="true" strokeWidth={1.9} /></span><span>Horario</span></dt>
-                  <dd>Horario por confirmar</dd>
+                  <dd>10:00 am a 5:00 pm</dd>
                 </div>
                 <div>
                   <dt><span className="venue-detail-icon"><MapPin aria-hidden="true" strokeWidth={1.9} /></span><span>Dirección</span></dt>
-                  <dd>Ubicación por confirmar<br />Cancún, Quintana Roo.</dd>
+                  <dd>C. 30 151-7A, García Ginerés,<br />97070 Mérida, Yuc.</dd>
                 </div>
               </dl>
 
-              <div className="venue-note"><span className="venue-note-icon"><Info aria-hidden="true" strokeWidth={1.9} /></span><p>Próximamente compartiremos los datos completos de la sede.</p></div>
+              <div className="venue-note"><span className="venue-note-icon"><Info aria-hidden="true" strokeWidth={1.9} /></span><p>Presenta tu acceso al llegar y prepárate para una jornada práctica de principio a fin.</p></div>
             </article>
 
-            <div className="venue-map venue-map-pending" aria-label="Mapa de la sede de Cancún pendiente de confirmar"><span>Ubicación de la sede<br /><strong>próximamente</strong></span></div>
+            <div className="venue-map" aria-label="Mapa de CANACINTRA Mérida"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.929189470549!2d-89.6359351!3d20.9954754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5673f7999decff%3A0xdd2f54fb7aeb1223!2sCANACINTRA!5e0!3m2!1ses-419!2smx!4v1788541775352!5m2!1ses-419!2smx" title="CANACINTRA Mérida" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /></div>
           </div>
         </div>
       </section>
@@ -393,7 +387,7 @@ export default function CancunLanding() {
             </div>
             <div className="proof-cta-area">
               <p>El próximo aplicador de resina epóxica puedes ser tú</p>
-              <button className="proof-cta" type="button" aria-disabled="true">Quiero recibir información del curso <MoveUpRight aria-hidden="true" /></button>
+              <button className="proof-cta" type="button" aria-disabled="true">VER PAQUETES Y ASEGURAR MI LUGAR <MoveUpRight aria-hidden="true" /></button>
             </div>
           </div>
         </div>
@@ -404,31 +398,31 @@ export default function CancunLanding() {
           <header className="faq-heading">
             <h2 id="faq-title">¿Aún tienes preguntas?</h2>
           </header>
-          {shouldLoadFaq && <Suspense fallback={null}><FaqList /></Suspense>}
+          {shouldLoadFaq && <Suspense fallback={null}><MeridaFaqList /></Suspense>}
         </div>
       </section>
 
       <section className="final-cta-section" aria-labelledby="final-cta-title">
         <div className="final-cta-inner">
-          <h2 id="final-cta-title" aria-label="Únete AHORA a la lista de espera y da el primer paso para convertirte en aplicador de Resina Epóxica">
+          <h2 id="final-cta-title" aria-label="Aprende a aplicar resina epóxica y asegura tu lugar en Mérida">
             <span className="final-headline-desktop" aria-hidden="true">
-              <span className="final-headline-line">Únete <strong>AHORA</strong> a la lista de espera</span>
-              <span className="final-headline-line">y da el primer paso para convertirte</span>
-              <span className="final-headline-line">en aplicador de <em>Resina Epóxica</em></span>
+              <span className="final-headline-line">Aprende a aplicar <em>resina epóxica</em></span>
+              <span className="final-headline-line">y asegura tu lugar en</span>
+              <span className="final-headline-line"><strong>Mérida</strong> este 20 de septiembre</span>
             </span>
             <span className="final-headline-mobile" aria-hidden="true">
-              Únete <strong>AHORA</strong> a la lista de espera y da el primer paso para convertirte en aplicador de <em>Resina Epóxica</em>
+              Aprende a aplicar <em>resina epóxica</em> y asegura tu lugar en <strong>Mérida</strong> este 20 de septiembre
             </span>
           </h2>
           <span className="dark-title-rule" aria-hidden="true" />
-          <p className="final-cta-intro">Las inscripciones generales aún no están abiertas. Al registrarte sin costo en la lista previa obtienes:</p>
+          <p className="final-cta-intro">Una jornada práctica para aprender desde cero y comenzar a aplicar acabados de alto valor.</p>
           <ul className="final-benefit-list">
-            <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Descuento especial de preventa solo para registrados en la lista.</span></li>
-            <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Prioridad de inscripción antes de agotar los lugares presenciales.</span></li>
-            <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Clase Online GRATUITA: &quot;Las 5 capas de un piso epóxico&quot;.</span></li>
+            <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Materiales y herramientas para realizar todas las prácticas.</span></li>
+            <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Manual del Aplicador PRO y Calculadora Epóxica incluidos.</span></li>
+            <li><Check aria-hidden="true" strokeWidth={3.1} /><span>Soporte de por vida para tus futuras aplicaciones.</span></li>
           </ul>
-          <button className="final-cta-button" type="button" aria-disabled="true">Quiero recibir información del curso <MoveUpRight aria-hidden="true" /></button>
-          <p className="final-cta-trust">Registro gratuito · Sin compromiso · Cupo presencial limitado</p>
+          <button className="final-cta-button" type="button" aria-disabled="true">VER PAQUETES Y ASEGURAR MI LUGAR <MoveUpRight aria-hidden="true" /></button>
+          <p className="final-cta-trust">Cupo presencial limitado · Taller práctico en CANACINTRA Mérida</p>
         </div>
       </section>
     </main>

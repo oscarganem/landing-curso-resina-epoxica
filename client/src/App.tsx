@@ -2,11 +2,11 @@
 import { lazy, Suspense } from "react";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
-import { cancunCampaignPath, playaDelCarmenCampaignPath, playaDelCarmenThankYouPath } from "./lib/campaignRoutes";
+import { meridaCampaignPath, playaDelCarmenCampaignPath, playaDelCarmenThankYouPath } from "./lib/campaignRoutes";
 import Home from "./pages/Home";
 
 const AcademyRoot = lazy(() => import("./pages/AcademyRoot"));
-const CancunLanding = lazy(() => import("./pages/CancunLanding"));
+const MeridaLanding = lazy(() => import("./pages/MeridaLanding"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 
@@ -22,8 +22,8 @@ function NotFoundRoute() {
   return <Suspense fallback={<RouteLoading />}><NotFound /></Suspense>;
 }
 
-function CancunLandingRoute() {
-  return <Suspense fallback={<RouteLoading />}><CancunLanding /></Suspense>;
+function MeridaLandingRoute() {
+  return <Suspense fallback={<RouteLoading />}><MeridaLanding /></Suspense>;
 }
 
 function Router() {
@@ -32,7 +32,7 @@ function Router() {
     <Switch>
       <Route path={playaDelCarmenCampaignPath} component={Home} />
       <Route path={playaDelCarmenThankYouPath} component={ThankYou} />
-      <Route path={cancunCampaignPath} component={CancunLandingRoute} />
+      <Route path={meridaCampaignPath} component={MeridaLandingRoute} />
       <Route path="/" component={AcademyRootRoute} />
       <Route path="/404" component={NotFoundRoute} />
       <Route component={NotFoundRoute} />

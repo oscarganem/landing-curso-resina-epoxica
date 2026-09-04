@@ -243,3 +243,19 @@
 - [x] Crear la ruta independiente /curso-cancun-sep26 dentro de academia.ocares.mx sin modificar la landing de Playa del Carmen.
 - [x] Clonar la estructura visual de la landing en Cancún sin formulario persistente, base de datos ni página de gracias.
 - [x] Validar la nueva ruta en escritorio y móvil, pruebas y compilación antes de publicarla.
+
+- [x] Auditar de punta a punta la landing anterior de venta directa cuando el usuario comparta su enlace o capturas.
+- [x] Comparar la oferta de venta directa con la landing actual de Cancún y priorizar cambios por impacto de conversión.
+- [x] Presentar recomendaciones de hero, oferta, precio, prueba social, objeciones y CTA antes de modificar Cancún.
+
+- [x] Reemplazar la ruta y referencias de Cancún por /curso-merida-sep26, sin afectar Playa del Carmen.
+- [x] Actualizar el hero de Mérida con beneficios incluidos y CTA “VER PAQUETES Y ASEGURAR MI LUGAR”.
+- [x] Actualizar CTA final, fecha, horario, sede, dirección y mapa de CANACINTRA Mérida.
+- [x] Validar la nueva landing de Mérida en escritorio y móvil, además de pruebas y compilación, antes de publicar.
+
+- [x] Auditar la landing de referencia de Academia Entrenadores Online y extraer sus palancas de conversión.
+- [x] Comparar esas palancas con la landing de Mérida y definir qué adaptar sin copiar promesas ni diseño.
+- [x] Entregar recomendaciones priorizadas antes de modificar la landing de Mérida.
+
+- [x] Completar el informe de Academia Entrenadores Online y comunicar las adaptaciones aplicables a Ocares.
+- [x] Terminar la conversión de la landing de Mérida después de entregar el análisis de referencia.
