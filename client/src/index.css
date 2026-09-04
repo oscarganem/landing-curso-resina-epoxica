@@ -793,6 +793,9 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .faq-content p { margin: 0; }
 .faq-content p + p { margin-top: 12px; }
 .faq-content strong { color: #22221f; font-weight: 750; }
+.faq-price-link { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 10px 14px; background: var(--resin-yellow); color: #171717; font-size: 12px; font-weight: 900; letter-spacing: .01em; line-height: 1.15; text-decoration: none; text-transform: uppercase; transition: transform 160ms var(--ease-out, ease-out), background 160ms var(--ease-out, ease-out); }
+.faq-price-link:hover { background: #ffe14c; transform: translateY(-1px); }
+.faq-price-link:active { transform: scale(.97); }
 
 @media (max-width: 680px) {
   .faq-inner { width: min(100% - 40px, 500px); padding: 88px 0 94px; }
@@ -801,6 +804,7 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   .faq-trigger { min-height: 76px; padding: 20px 19px !important; font-size: 18px !important; }
   .faq-symbol { margin-left: 13px; font-size: 28px; }
   .faq-content { padding: 0 19px 22px !important; font-size: 14px; }
+  .faq-price-link { width: 100%; min-height: 48px; padding-right: 12px; padding-left: 12px; font-size: 11px; }
 }
 
 /* Cierre final — llamada a la acción concentrada sobre fondo carbón. */

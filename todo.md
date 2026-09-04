@@ -312,3 +312,7 @@
 
 - [x] Conectar “QUIERO INSCRIBIRME” y todos los CTA “VER PAQUETES Y ASEGURAR MI LUGAR” de Mérida con la sección de precios.
 - [x] Validar la navegación accesible y publicar el desplazamiento a precios en escritorio y móvil.
+
+- [x] Actualizar las FAQ de Mérida con técnicas, precios, logística y el proceso para asegurar lugar.
+- [x] Enlazar la respuesta de inscripción a la sección de precios y explicar el contacto por WhatsApp con un asesor.
+- [x] Validar las FAQ actualizadas en escritorio y móvil, con pruebas, tipado y compilación.
