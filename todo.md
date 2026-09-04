@@ -239,3 +239,7 @@
 - [x] Guardar por separado el código de país +52 y el número nacional de 10 dígitos, conservando el valor completo existente.
 - [x] Enviar a Sender y Make los campos country_code y whatsapp_number junto con el teléfono completo compatible.
 - [x] Migrar los registros existentes, actualizar pruebas y validar el nuevo contrato telefónico antes de publicar.
+
+- [x] Crear la ruta independiente /curso-cancun-sep26 dentro de academia.ocares.mx sin modificar la landing de Playa del Carmen.
+- [x] Clonar la estructura visual de la landing en Cancún sin formulario persistente, base de datos ni página de gracias.
+- [x] Validar la nueva ruta en escritorio y móvil, pruebas y compilación antes de publicarla.

@@ -2,10 +2,11 @@
 import { lazy, Suspense } from "react";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
-import { playaDelCarmenCampaignPath, playaDelCarmenThankYouPath } from "./lib/campaignRoutes";
+import { cancunCampaignPath, playaDelCarmenCampaignPath, playaDelCarmenThankYouPath } from "./lib/campaignRoutes";
 import Home from "./pages/Home";
 
 const AcademyRoot = lazy(() => import("./pages/AcademyRoot"));
+const CancunLanding = lazy(() => import("./pages/CancunLanding"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 
@@ -21,12 +22,17 @@ function NotFoundRoute() {
   return <Suspense fallback={<RouteLoading />}><NotFound /></Suspense>;
 }
 
+function CancunLandingRoute() {
+  return <Suspense fallback={<RouteLoading />}><CancunLanding /></Suspense>;
+}
+
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={playaDelCarmenCampaignPath} component={Home} />
       <Route path={playaDelCarmenThankYouPath} component={ThankYou} />
+      <Route path={cancunCampaignPath} component={CancunLandingRoute} />
       <Route path="/" component={AcademyRootRoute} />
       <Route path="/404" component={NotFoundRoute} />
       <Route component={NotFoundRoute} />
