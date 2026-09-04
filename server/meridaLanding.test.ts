@@ -22,6 +22,8 @@ describe("landing de Mérida", () => {
     expect(landingSource).toContain("Domingo 20 de septiembre");
     expect(landingSource).toContain("CANACINTRA");
     expect(landingSource).toContain("CANACINTRA Mérida");
+    expect(landingSource).toContain("Aprenderás a crear acabados profesionales");
+    expect(landingSource).toContain("Manuales + Calculadora Epóxica");
     expect(landingSource).not.toContain("Cancún");
     expect(landingSource).not.toContain("WaitlistModal");
   });

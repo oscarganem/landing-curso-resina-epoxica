@@ -259,3 +259,11 @@
 
 - [x] Completar el informe de Academia Entrenadores Online y comunicar las adaptaciones aplicables a Ocares.
 - [x] Terminar la conversión de la landing de Mérida después de entregar el análisis de referencia.
+
+- [x] Auditar la landing de Pisos Flake Playa del Carmen y extraer sus fortalezas de conversión.
+- [x] Evaluar qué elementos de Pisos Flake se pueden adaptar a Ocares sin copiar su marca o contenido.
+- [x] Entregar recomendaciones priorizadas sin modificar la landing de Mérida.
+
+- [x] Resaltar sede, CANACINTRA y fecha en el hero de Mérida sin cambiar el título principal.
+- [x] Sustituir el subtítulo amarillo y los beneficios del hero por el copy confirmado de venta directa.
+- [x] Validar el hero actualizado en escritorio y móvil, con pruebas y compilación antes de publicar.

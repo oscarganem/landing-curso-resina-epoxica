@@ -159,6 +159,29 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
 .event-line svg { width: 14px; height: 14px; color: var(--resin-yellow); }
 .event-line b { padding: 0 4px; color: #6d6c68; }
 
+.merida-event-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 0;
+}
+.merida-event-details span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 34px;
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 212, 0, .55);
+  background: rgba(255, 212, 0, .08);
+  color: #fffdf8;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .005em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.merida-event-details svg { width: 14px; height: 14px; color: var(--resin-yellow); }
+
 .course-lede {
   margin: 17px 0 0;
   color: var(--resin-yellow);
@@ -258,6 +281,9 @@ h1 .hero-title-yellow { color: var(--resin-yellow); }
   h1 { max-width: 100%; font-size: clamp(32px, 9.5vw, 38px); letter-spacing: -.05em; line-height: 1.03; }
   .hero-copy { max-width: none; }
   .event-line { font-size: 11px; }
+  .merida-event-details { gap: 7px; margin-top: 17px; }
+  .merida-event-details span { min-height: 32px; padding: 7px 8px; font-size: 10px; }
+  .merida-event-details svg { width: 12px; height: 12px; }
   .visual-column { margin-top: 12px; }
   .photo-frame { width: min(88%, 390px); margin: 0 auto; }
   .photo-placeholder { min-height: 360px; }

@@ -40,9 +40,8 @@ const MeridaFaqList = lazy(() => import("./MeridaFaqList"));
 
 const benefits = [
   "Incluye materiales y herramientas para todas las prácticas.",
-  "Manual del Aplicador PRO para consultar paso a paso.",
-  "Calculadora Epóxica para estimar materiales y cantidades.",
-  "Soporte de por vida para resolver dudas en tus aplicaciones.",
+  "Manuales + Calculadora Epóxica para aplicar y calcular materiales paso a paso.",
+  "Soporte de por vida para resolver dudas en tus futuros proyectos.",
 ];
 
 const audienceReasons = [
@@ -172,8 +171,12 @@ export default function MeridaLanding() {
             <span className="hero-title-line">mesas de río</span>
           </h1>
           <span className="hero-title-rule" aria-hidden="true" />
-          <p className="event-line"><MapPin aria-hidden="true" /> Mérida <b>|</b><CalendarDays aria-hidden="true" /> Domingo 20 de septiembre</p>
-          <p className="course-lede">Una formación práctica para aprender a aplicar resina epóxica con técnica, materiales y acompañamiento profesional.</p>
+          <div className="merida-event-details" aria-label="Detalles del curso presencial en Mérida">
+            <span><MapPin aria-hidden="true" /> Mérida, Yucatán</span>
+            <span><CalendarDays aria-hidden="true" /> Domingo 20 de septiembre</span>
+            <span><Building2 aria-hidden="true" /> CANACINTRA</span>
+          </div>
+          <p className="course-lede">Aprenderás a crear acabados profesionales: pisos flake, granito antiderrapante, efectos marmoleados y metálicos, diseños 3D y mesas tipo río.</p>
           <ul className="benefit-list">
             {benefits.map((benefit) => <li key={benefit}><Check aria-hidden="true" strokeWidth={3.2} /><span>{benefit}</span></li>)}
           </ul>
