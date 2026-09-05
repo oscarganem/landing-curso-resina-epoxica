@@ -339,3 +339,6 @@
 
 - [ ] En Mérida y Cancún, abrir los CTA de WhatsApp en una nueva pestaña en escritorio y mantener la misma pestaña en móvil.
 - [ ] Validar que Playa del Carmen no cambie y publicar el comportamiento por dispositivo.
+
+- [ ] En Mérida y Cancún, abrir los CTA de WhatsApp en una nueva pestaña en escritorio y mantener la misma pestaña en móvil.
+- [ ] Validar que Playa del Carmen no cambie y publicar el comportamiento por dispositivo.
