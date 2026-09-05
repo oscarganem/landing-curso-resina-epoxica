@@ -113,6 +113,9 @@ describe("landing de Mérida", () => {
     expect(landingSource).toContain("}, 1500)");
     expect(landingSource).toContain("}, 5000)");
     expect(landingSource).toContain("window.location.href = url;");
+    expect(landingSource).toContain('window.matchMedia("(max-width: 767px)").matches');
+    expect(landingSource).toContain('window.open("", "_blank", "noopener,noreferrer")');
+    expect(landingSource).toContain("popup.location.href = url;");
     expect(landingSource).not.toContain("Tú puedes ser el siguiente.");
     expect(stylesSource).toContain(".whatsapp-redirect-overlay { position: fixed;");
     expect(stylesSource).toContain(".whatsapp-redirect-spinner");

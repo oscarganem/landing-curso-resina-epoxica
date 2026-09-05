@@ -337,8 +337,8 @@
 - [x] Dejar sede, dirección y mapa de Cancún expresamente pendientes hasta recibir información confirmada.
 - [x] Validar la landing de Cancún en escritorio y móvil, con pruebas, tipado y compilación.
 
-- [ ] En Mérida y Cancún, abrir los CTA de WhatsApp en una nueva pestaña en escritorio y mantener la misma pestaña en móvil.
-- [ ] Validar que Playa del Carmen no cambie y publicar el comportamiento por dispositivo.
+- [x] En Mérida y Cancún, abrir los CTA de WhatsApp en una nueva pestaña en escritorio y mantener la misma pestaña en móvil.
+- [x] Validar que Playa del Carmen no cambie y publicar el comportamiento por dispositivo.
 
-- [ ] En Mérida y Cancún, abrir los CTA de WhatsApp en una nueva pestaña en escritorio y mantener la misma pestaña en móvil.
-- [ ] Validar que Playa del Carmen no cambie y publicar el comportamiento por dispositivo.
+- [x] En Mérida y Cancún, abrir los CTA de WhatsApp en una nueva pestaña en escritorio y mantener la misma pestaña en móvil.
+- [x] Validar que Playa del Carmen no cambie y publicar el comportamiento por dispositivo.
