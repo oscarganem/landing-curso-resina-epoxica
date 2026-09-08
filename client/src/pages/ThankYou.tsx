@@ -69,7 +69,7 @@ export default function ThankYou() {
             <span>Únete ahora a nuestro grupo privado de WhatsApp, donde compartiremos el descuento de preventa y el acceso a la clase online GRATIS.</span>
           </p>
 
-          <a className="thanks-whatsapp" href={whatsappCommunityUrl} target="_blank" rel="noreferrer" aria-label="Unirme a la comunidad de WhatsApp">
+          <a className="thanks-whatsapp" href={whatsappCommunityUrl} aria-label="Unirme a la comunidad de WhatsApp">
             <img src="/manus-storage/whatsapp-icon_a58887ab.png" alt="" /> UNIRME AL GRUPO DE WHATSAPP
           </a>
 
@@ -116,7 +116,7 @@ export default function ThankYou() {
           <p className="thanks-final-copy">
             Dentro del grupo de WhatsApp compartiremos el acceso a la clase online gratuita y el descuento especial de preventa para nuestro <strong>Curso Presencial de Resina Epóxica en Playa del Carmen.</strong>
           </p>
-          <a className="thanks-final-whatsapp" href={whatsappCommunityUrl} target="_blank" rel="noreferrer" aria-label="Unirme a la comunidad de WhatsApp">
+          <a className="thanks-final-whatsapp" href={whatsappCommunityUrl} aria-label="Unirme a la comunidad de WhatsApp">
             <img src="/manus-storage/whatsapp-icon_a58887ab.png" alt="" />
             UNIRME AL GRUPO DE WHATSAPP
           </a>

@@ -351,3 +351,6 @@
 
 - [x] Completar en Cancún la sede Salón Alianza Desafío, dirección, mapa y nota formal sobre el uso rentado del espacio.
 - [x] Actualizar las preguntas frecuentes de Cancún con la sede, dirección, mapa y aclaración institucional confirmadas.
+
+- [x] Corregir la ventana en blanco al abrir WhatsApp desde los CTA de Cancún y Playa del Carmen, preservando los mensajes existentes.
+- [x] Validar y publicar la corrección de WhatsApp en Cancún y Playa sin modificar Mérida.

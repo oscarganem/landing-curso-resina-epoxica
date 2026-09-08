@@ -144,7 +144,7 @@ export default function CancunLanding() {
 
     const isMobile = window.matchMedia("(max-width: 767px)").matches;
     if (!isMobile) {
-      popupWindowRef.current = window.open("", "_blank", "noopener,noreferrer");
+      popupWindowRef.current = window.open(url, "_blank", "noopener,noreferrer");
     }
 
     redirectTimerRef.current = window.setTimeout(() => {
@@ -153,7 +153,6 @@ export default function CancunLanding() {
         if (!isMobile && popupWindowRef.current) {
           const popup = popupWindowRef.current;
           popupWindowRef.current = null;
-          popup.location.href = url;
           popup.focus();
         } else {
           window.location.href = url;
