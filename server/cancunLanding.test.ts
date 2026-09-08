@@ -17,16 +17,21 @@ describe("landing de Cancún", () => {
     expect(landingSource).not.toContain("getThankYouPathForLanding");
   });
 
-  it("muestra la oferta directa de Cancún y deja la sede pendiente de información confirmada", () => {
+  it("muestra la oferta directa de Cancún y la sede confirmada", () => {
     expect(landingSource).toContain("QUIERO INSCRIBIRME");
     expect(landingSource).toContain("VER TODA LA INFORMACIÓN");
     expect(landingSource).toContain('href="#informacion"');
     expect(landingSource).toContain('id="informacion"');
     expect(landingSource).toContain("Cancún, Quintana Roo");
     expect(landingSource).toContain("19 de septiembre");
-    expect(landingSource).toContain("Sede por confirmar");
-    expect(landingSource).toContain("La sede, dirección, horario y mapa se anunciarán próximamente.");
-    expect(landingSource).toContain("Mapa próximamente");
+    expect(landingSource).toContain("Salón Alianza Desafío");
+    expect(landingSource).toContain("Av. Xel-Ha LT 56 y 57, MZ 28, Edificio Siglo XXI, tercer nivel, Supermanzana 24, 77509 Cancún, Q.R.");
+    expect(landingSource).toContain("10:00 am a 5:00 pm");
+    expect(landingSource).toContain("El curso es impartido exclusivamente por Ocares Academy.");
+    expect(landingSource).toContain("Alianza Desafío no imparte este curso.");
+    expect(landingSource).toContain("Alianza%20Desaf%C3%ADo%20Canc%C3%BAn");
+    expect(landingSource).not.toContain("Sede por confirmar");
+    expect(landingSource).not.toContain("Mapa próximamente");
     expect(landingSource).toContain("Aprenderás crear acabados: flake, granito antiderrapante, marmoleados, metálicos y 3D.");
     expect(landingSource).toContain("Manual del Aplicador PRO + Calculadora Epóxica para calcular tus materiales paso a paso.");
     expect(landingSource).toContain('title: "Manual del aplicador PRO"');

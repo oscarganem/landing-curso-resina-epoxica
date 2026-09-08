@@ -342,3 +342,12 @@
 
 - [x] En Mérida y Cancún, abrir los CTA de WhatsApp en una nueva pestaña en escritorio y mantener la misma pestaña en móvil.
 - [x] Validar que Playa del Carmen no cambie y publicar el comportamiento por dispositivo.
+
+- [x] Diagnosticar el fallo de despliegue por cuota ServicesPerProject de Cloud Run en us-east1 sin realizar cambios destructivos.
+- [x] Verificar que las pruebas, el tipado y la compilación del proyecto sigan correctos para descartar una causa de código.
+
+- [ ] Auditar el flujo del evento Lead en Mérida y Cancún, incluyendo Pixel global, disparo al CTA y compatibilidad SPA.
+- [ ] Ejecutar pruebas de regresión, tipado y compilación para confirmar la implementación del evento Lead.
+
+- [x] Completar en Cancún la sede Salón Alianza Desafío, dirección, mapa y nota formal sobre el uso rentado del espacio.
+- [x] Actualizar las preguntas frecuentes de Cancún con la sede, dirección, mapa y aclaración institucional confirmadas.

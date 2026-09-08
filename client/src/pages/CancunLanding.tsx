@@ -428,8 +428,8 @@ export default function CancunLanding() {
               <div className="venue-card-top">
                 <span className="venue-place-icon"><Building2 aria-hidden="true" strokeWidth={1.8} /></span>
                 <div>
-                  <h3>Cancún</h3>
-                  <p>Sede por confirmar</p>
+                  <h3>Salón Alianza Desafío</h3>
+                  <p>Espacio sede del curso presencial</p>
                 </div>
               </div>
 
@@ -442,18 +442,18 @@ export default function CancunLanding() {
                 </div>
                 <div>
                   <dt><span className="venue-detail-icon"><Clock3 aria-hidden="true" strokeWidth={1.9} /></span><span>Horario</span></dt>
-                  <dd>Por confirmar</dd>
+                  <dd>10:00 am a 5:00 pm</dd>
                 </div>
                 <div>
                   <dt><span className="venue-detail-icon"><MapPin aria-hidden="true" strokeWidth={1.9} /></span><span>Dirección</span></dt>
-                  <dd>Se anunciará próximamente.</dd>
+                  <dd>Av. Xel-Ha LT 56 y 57, MZ 28, Edificio Siglo XXI, tercer nivel, Supermanzana 24, 77509 Cancún, Q.R.</dd>
                 </div>
               </dl>
 
-              <div className="venue-note"><span className="venue-note-icon"><Info aria-hidden="true" strokeWidth={1.9} /></span><p>La sede, dirección, horario y mapa se anunciarán próximamente.</p></div>
+              <div className="venue-note"><span className="venue-note-icon"><Info aria-hidden="true" strokeWidth={1.9} /></span><p>El curso es impartido exclusivamente por Ocares Academy. El espacio de Salón Alianza Desafío es rentado para la realización del evento; Alianza Desafío no imparte este curso.</p></div>
             </article>
 
-            <div className="venue-map venue-map-pending" aria-label="Mapa de Cancún pendiente de confirmación"><span className="venue-map-pending-icon"><MapPin aria-hidden="true" strokeWidth={1.8} /></span><strong>Mapa próximamente</strong><p>La ubicación exacta se compartirá al confirmar la sede.</p></div>
+            <div className="venue-map" aria-label="Mapa de Salón Alianza Desafío en Cancún"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.7454512254853!2d-86.8352751247397!3d21.16252608052045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2bb2e6867a01%3A0x57d3bbb939158b0f!2sAlianza%20Desaf%C3%ADo%20Canc%C3%BAn!5e0!3m2!1ses-419!2smx!4v1788838945719!5m2!1ses-419!2smx" title="Mapa de Salón Alianza Desafío en Cancún" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" /></div>
           </div>
         </div>
       </section>
