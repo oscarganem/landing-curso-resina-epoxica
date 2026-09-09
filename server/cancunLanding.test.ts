@@ -120,10 +120,8 @@ describe("landing de Cancún", () => {
     expect(landingSource).toContain("}, 1500)");
     expect(landingSource).toContain("}, 5000)");
     expect(landingSource).toContain("window.location.href = url;");
-    expect(landingSource).toContain('window.matchMedia("(max-width: 767px)").matches');
-    expect(landingSource).toContain('window.open(url, "_blank", "noopener,noreferrer")');
-    expect(landingSource).toContain("popup.focus();");
-    expect(landingSource).not.toContain('window.open("", "_blank", "noopener,noreferrer")');
+    expect(landingSource).not.toContain("window.open");
+    expect(landingSource).not.toContain("popupWindowRef");
     expect(landingSource).not.toContain("Tú puedes ser el siguiente.");
     expect(stylesSource).toContain(".whatsapp-redirect-overlay { position: fixed;");
     expect(stylesSource).toContain(".whatsapp-redirect-spinner");

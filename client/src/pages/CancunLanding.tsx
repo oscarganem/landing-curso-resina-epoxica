@@ -112,7 +112,6 @@ export default function CancunLanding() {
   const isRedirectingRef = useRef(false);
   const redirectTimerRef = useRef<number | null>(null);
   const safetyTimerRef = useRef<number | null>(null);
-  const popupWindowRef = useRef<Window | null>(null);
 
   const clearRedirectTimers = () => {
     if (redirectTimerRef.current !== null) {
@@ -142,24 +141,11 @@ export default function CancunLanding() {
       window.fbq("track", "Lead");
     }
 
-    const isMobile = window.matchMedia("(max-width: 767px)").matches;
-    if (!isMobile) {
-      popupWindowRef.current = window.open(url, "_blank", "noopener,noreferrer");
-    }
-
     redirectTimerRef.current = window.setTimeout(() => {
       redirectTimerRef.current = null;
       try {
-        if (!isMobile && popupWindowRef.current) {
-          const popup = popupWindowRef.current;
-          popupWindowRef.current = null;
-          popup.focus();
-        } else {
-          window.location.href = url;
-        }
+        window.location.href = url;
       } catch {
-        if (popupWindowRef.current && !popupWindowRef.current.closed) popupWindowRef.current.close();
-        popupWindowRef.current = null;
         resetRedirectState();
       }
     }, 1500);
@@ -188,8 +174,6 @@ export default function CancunLanding() {
 
   useEffect(() => () => {
     clearRedirectTimers();
-    if (popupWindowRef.current && !popupWindowRef.current.closed) popupWindowRef.current.close();
-    popupWindowRef.current = null;
   }, []);
 
   useEffect(() => {

@@ -354,3 +354,6 @@
 
 - [x] Corregir la ventana en blanco al abrir WhatsApp desde los CTA de Cancún y Playa del Carmen, preservando los mensajes existentes.
 - [x] Validar y publicar la corrección de WhatsApp en Cancún y Playa sin modificar Mérida.
+
+- [x] En Cancún y Mérida, sustituir window.open por window.location.href después del delay actual, manteniendo Lead, overlay y timeout de 5 segundos.
+- [x] Validar que no haya redirecciones duplicadas ni cambios en textos, número o lógica de Lead, y publicar el ajuste.
