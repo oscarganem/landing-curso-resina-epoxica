@@ -288,21 +288,20 @@ export default function CancunLanding() {
 
       <section className="about-section" aria-labelledby="about-title">
         <header className="about-heading">
-          <h2 id="about-title">¿Quiénes somos y por qué podemos ayudarte?</h2>
+          <h2 id="about-title">¿Quiénes somos?</h2>
           <span className="dark-title-rule" aria-hidden="true" />
         </header>
         <div className="about-inner">
           <div className="about-copy">
-            <p className="about-greeting">¡Hola! Somos <strong>Oscar Cárdenas</strong> y <strong>Oscar Ganem</strong>.</p>
             <div className="about-prose">
-              <p>Somos <strong>Grupo Ocares</strong>. Desde hace años nos dedicamos a la construcción, remodelación y aplicación de acabados, <strong>trabajando directamente en obra</strong> y enfrentándonos a los mismos retos que cualquier profesional de la construcción.</p>
-              <p>Con el tiempo decidimos llevar toda esa experiencia a nuestros <strong>cursos presenciales</strong> y comenzar a enseñar a otras personas lo que nosotros mismos hemos aprendido trabajando en campo.</p>
-              <p>Hoy hemos capacitado a <strong>cientos de alumnos</strong> en distintas ciudades de México, quienes han aplicado estos conocimientos en proyectos personales, en su trabajo e incluso para iniciar sus propios negocios.</p>
+              <p>Somos <strong>Oscar Cárdenas y Oscar Ganem</strong>, fundadores de <strong>Grupo Ocares</strong>.</p>
+              <p>Desde hace años trabajamos directamente en construcción, remodelación y aplicación de acabados, enfrentándonos en obra a los mismos retos que cualquier profesional del sector.</p>
+              <p>Esa experiencia nos llevó a crear nuestros cursos presenciales, donde enseñamos de forma práctica lo que hemos aprendido trabajando en campo.</p>
+              <p>Hoy hemos capacitado a cientos de alumnos en distintas ciudades de México, ayudándolos a aplicar estos conocimientos en sus proyectos, su trabajo e incluso en sus propios negocios.</p>
             </div>
             <div className="about-trust">
               <h3>¿Por qué te contamos esto?</h3>
-              <p>Porque para nosotros es importante que sepas quién está detrás de la información que vas a recibir.</p>
-              <p>Sabemos que aprender una nueva técnica —y mucho más si piensas convertirla en un negocio— requiere <strong>confiar en las personas que te están enseñando</strong>.</p>
+              <p>Porque si vas a aprender una nueva técnica, es importante saber quién te está enseñando y de dónde viene su experiencia.</p>
             </div>
           </div>
           <figure className="about-photo">

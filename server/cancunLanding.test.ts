@@ -44,6 +44,15 @@ describe("landing de Cancún", () => {
     expect(landingSource).not.toContain("WaitlistModal");
   });
 
+  it("muestra el copy institucional aprobado de Grupo Ocares", () => {
+    expect(landingSource).toContain("¿Quiénes somos?");
+    expect(landingSource).toContain("Somos <strong>Oscar Cárdenas y Oscar Ganem</strong>, fundadores de <strong>Grupo Ocares</strong>.");
+    expect(landingSource).toContain("Desde hace años trabajamos directamente en construcción, remodelación y aplicación de acabados, enfrentándonos en obra a los mismos retos que cualquier profesional del sector.");
+    expect(landingSource).toContain("Esa experiencia nos llevó a crear nuestros cursos presenciales, donde enseñamos de forma práctica lo que hemos aprendido trabajando en campo.");
+    expect(landingSource).toContain("Hoy hemos capacitado a cientos de alumnos en distintas ciudades de México, ayudándolos a aplicar estos conocimientos en sus proyectos, su trabajo e incluso en sus propios negocios.");
+    expect(landingSource).toContain("Porque si vas a aprender una nueva técnica, es importante saber quién te está enseñando y de dónde viene su experiencia.");
+  });
+
   it("mantiene el CTA secundario a la derecha en escritorio y lo apila solo en móvil", () => {
     expect(stylesSource).toContain(".hero-cta-group {\n  display: flex;\n  flex-wrap: nowrap;");
     expect(stylesSource).toContain(".hero-cta-group { display: grid;");

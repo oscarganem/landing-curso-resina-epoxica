@@ -357,3 +357,6 @@
 
 - [x] En Cancún y Mérida, sustituir window.open por window.location.href después del delay actual, manteniendo Lead, overlay y timeout de 5 segundos.
 - [x] Validar que no haya redirecciones duplicadas ni cambios en textos, número o lógica de Lead, y publicar el ajuste.
+
+- [x] Reemplazar en Cancún y Mérida la sección institucional por el copy aprobado sobre Oscar Cárdenas, Oscar Ganem y Grupo Ocares.
+- [x] Validar que Playa del Carmen permanezca intacta y publicar el nuevo copy institucional en ambas campañas.
