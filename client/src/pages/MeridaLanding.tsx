@@ -74,19 +74,19 @@ const audienceGroups = [
 ];
 
 const techniques = [
-  { title: "Pisos marmoleados, metálicos y unicolor", image: "/manus-storage/piso-metalico_e19ee2d1.webp", position: "center center" },
-  { title: "Pisos con hojuela y granito antiderrapante", image: "/manus-storage/piso-antiderrapante_d347b0f3.webp", position: "center center" },
-  { title: "Pisos 3D", image: "/manus-storage/piso-3d_69280b5d.webp", position: "center 52%" },
-  { title: "Mesas tipo río y decoraciones", image: "/manus-storage/mesa-rio_c4ac227a.webp", position: "center 48%" },
+  { title: "Pisos marmoleados, metálicos y unicolor", image: "/assets/piso-metalico_e19ee2d1.webp", position: "center center" },
+  { title: "Pisos con hojuela y granito antiderrapante", image: "/assets/piso-antiderrapante_d347b0f3.webp", position: "center center" },
+  { title: "Pisos 3D", image: "/assets/piso-3d_69280b5d.webp", position: "center 52%" },
+  { title: "Mesas tipo río y decoraciones", image: "/assets/mesa-rio_c4ac227a.webp", position: "center 48%" },
 ];
 
 const studentGallery = [
-  { image: "/manus-storage/alumno-practica-roja_99be4dca.webp", alt: "Alumno aplicando resina roja durante el taller" },
-  { image: "/manus-storage/alumno-practica-azul_ac182caa.webp", alt: "Alumno aplicando resina azul durante el taller" },
-  { image: "/manus-storage/alumno-practica-negra_f6afd7d8.webp", alt: "Alumno aplicando resina negra durante el taller" },
-  { image: "/manus-storage/alumno-practica-azul-detalle_9d4f3565.webp", alt: "Alumno creando un acabado decorativo con resina" },
-  { image: "/manus-storage/alumno-practica-mezcla_5961ed1f.webp", alt: "Alumnos preparando mezclas de resina durante la práctica" },
-  { image: "/manus-storage/alumno-practica-granito_1e42691c.webp", alt: "Alumno aplicando sistema de granito antiderrapante" },
+  { image: "/assets/alumno-practica-roja_99be4dca.webp", alt: "Alumno aplicando resina roja durante el taller" },
+  { image: "/assets/alumno-practica-azul_ac182caa.webp", alt: "Alumno aplicando resina azul durante el taller" },
+  { image: "/assets/alumno-practica-negra_f6afd7d8.webp", alt: "Alumno aplicando resina negra durante el taller" },
+  { image: "/assets/alumno-practica-azul-detalle_9d4f3565.webp", alt: "Alumno creando un acabado decorativo con resina" },
+  { image: "/assets/alumno-practica-mezcla_5961ed1f.webp", alt: "Alumnos preparando mezclas de resina durante la práctica" },
+  { image: "/assets/alumno-practica-granito_1e42691c.webp", alt: "Alumno aplicando sistema de granito antiderrapante" },
 ];
 
 const courseModules = [
@@ -189,7 +189,7 @@ export default function MeridaLanding() {
     <main className="landing-shell">
       <header className="site-header" aria-label="Encabezado del curso">
         <a className="brand-lockup" href="#inicio" aria-label="Ocares Academy">
-          <img className="brand-mark" src="/manus-storage/ocares-academy-logo-mobile_a3dbed22.webp" width="217" height="72" alt="Ocares Academy" />
+          <img className="brand-mark" src="/assets/ocares-academy-logo-mobile_a3dbed22.webp" width="217" height="72" alt="Ocares Academy" />
         </a>
       </header>
 
@@ -225,7 +225,7 @@ export default function MeridaLanding() {
             <div className="frame-corner frame-corner-top" aria-hidden="true" />
             <div className="frame-corner frame-corner-bottom" aria-hidden="true" />
             <div className="photo-placeholder photo-placeholder-filled">
-              <img className="hero-course-photo" src="/manus-storage/hero-mesa-azul-aprobada_5a76eb7d.webp" width="1080" height="1350" alt="Aplicador extendiendo resina azul sobre una mesa durante una práctica de curso" fetchPriority="high" decoding="async" />
+              <img className="hero-course-photo" src="/assets/hero-mesa-azul-aprobada_5a76eb7d.webp" width="1080" height="1350" alt="Aplicador extendiendo resina azul sobre una mesa durante una práctica de curso" fetchPriority="high" decoding="async" />
             </div>
             <span className="photo-note">IMAGEN PRINCIPAL</span>
           </div>
@@ -265,7 +265,7 @@ export default function MeridaLanding() {
                 <p className="earning-opportunity">La aplicación de resina epóxica puede convertirse en un servicio de alto valor para tu negocio.</p>
                 <p className="earning-disclaimer">*Precios aproximados. Pueden variar según la superficie, el acabado, los materiales, la ciudad y las condiciones del proyecto.</p>
               </div>
-              <figure className="earning-photo"><img src="/manus-storage/piso-azul-marmoleado_5b4a8397.webp" alt="Piso de resina azul marmoleado con vetas doradas" loading="lazy" /></figure>
+              <figure className="earning-photo"><img src="/assets/piso-azul-marmoleado_5b4a8397.webp" alt="Piso de resina azul marmoleado con vetas doradas" loading="lazy" /></figure>
             </aside>
           </div>
         </div>
@@ -305,7 +305,7 @@ export default function MeridaLanding() {
             </div>
           </div>
           <figure className="about-photo">
-            <div className="about-photo-frame"><img src="/manus-storage/grupo-ocares-team_ac748c58.webp" alt="Oscar Cárdenas y Oscar Ganem, equipo de Grupo Ocares" loading="lazy" /></div>
+            <div className="about-photo-frame"><img src="/assets/grupo-ocares-team_ac748c58.webp" alt="Oscar Cárdenas y Oscar Ganem, equipo de Grupo Ocares" loading="lazy" /></div>
           </figure>
         </div>
       </section>
@@ -449,17 +449,17 @@ export default function MeridaLanding() {
 
           <div className="proof-gallery">
             <figure className="proof-main-photo">
-              <img src="/manus-storage/prueba-alumnos-principal_8ff31ef4.webp" alt="Grupo de alumnos de una capacitación de resina epóxica" loading="lazy" />
+              <img src="/assets/prueba-alumnos-principal_8ff31ef4.webp" alt="Grupo de alumnos de una capacitación de resina epóxica" loading="lazy" />
             </figure>
             <div className="proof-grid">
-              <figure><img src="/manus-storage/prueba-alumnos-01_1b085399.webp" alt="Alumnos reunidos después de una capacitación práctica" loading="lazy" /></figure>
-              <figure><img src="/manus-storage/prueba-alumnos-02_517ece59.webp" alt="Participantes de un curso presencial de resina" loading="lazy" /></figure>
-              <figure><img src="/manus-storage/prueba-alumnos-03_b9160a17.webp" alt="Grupo de alumnos mostrando sus proyectos de resina" loading="lazy" /></figure>
-              <figure><img src="/manus-storage/prueba-alumnos-04_7ed2cdc6.webp" alt="Grupo de asistentes a una capacitación de resina epóxica" loading="lazy" /></figure>
-              <figure><img src="/manus-storage/prueba-practica-01_784b8232.webp" alt="Alumna aplicando resina epóxica durante una práctica" loading="lazy" /></figure>
-              <figure><img src="/manus-storage/prueba-practica-02_fe684c40.webp" alt="Alumno extendiendo resina roja en una práctica presencial" loading="lazy" /></figure>
-              <figure><img src="/manus-storage/prueba-practica-03_32c5b58c.webp" alt="Alumnos aplicando resina sobre paneles durante el curso" loading="lazy" /></figure>
-              <figure><img src="/manus-storage/prueba-practica-04_57479a44.webp" alt="Alumno distribuyendo resina azul durante una demostración práctica" loading="lazy" /></figure>
+              <figure><img src="/assets/prueba-alumnos-01_1b085399.webp" alt="Alumnos reunidos después de una capacitación práctica" loading="lazy" /></figure>
+              <figure><img src="/assets/prueba-alumnos-02_517ece59.webp" alt="Participantes de un curso presencial de resina" loading="lazy" /></figure>
+              <figure><img src="/assets/prueba-alumnos-03_b9160a17.webp" alt="Grupo de alumnos mostrando sus proyectos de resina" loading="lazy" /></figure>
+              <figure><img src="/assets/prueba-alumnos-04_7ed2cdc6.webp" alt="Grupo de asistentes a una capacitación de resina epóxica" loading="lazy" /></figure>
+              <figure><img src="/assets/prueba-practica-01_784b8232.webp" alt="Alumna aplicando resina epóxica durante una práctica" loading="lazy" /></figure>
+              <figure><img src="/assets/prueba-practica-02_fe684c40.webp" alt="Alumno extendiendo resina roja en una práctica presencial" loading="lazy" /></figure>
+              <figure><img src="/assets/prueba-practica-03_32c5b58c.webp" alt="Alumnos aplicando resina sobre paneles durante el curso" loading="lazy" /></figure>
+              <figure><img src="/assets/prueba-practica-04_57479a44.webp" alt="Alumno distribuyendo resina azul durante una demostración práctica" loading="lazy" /></figure>
             </div>
             <div className="proof-cta-area">
               <p>El próximo aplicador de resina epóxica puedes ser tú</p>

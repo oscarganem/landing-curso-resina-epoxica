@@ -8,7 +8,7 @@ export default function AcademyRoot() {
     <main className="academy-root academy-root-not-found" aria-labelledby="academy-root-title">
       <img
         className="academy-root-logo"
-        src="/manus-storage/ocares-academy-logo_cf81a218.png"
+        src="/assets/ocares-academy-logo_cf81a218.png"
         alt="Ocares Academy"
         width="217"
         height="72"

@@ -50,14 +50,14 @@ export default function ThankYou() {
     <main className="thanks-page">
       <div className="thanks-shell">
         <Link className="thanks-brand" href="/" aria-label="Volver al curso de resina epoxica">
-          <img src="/manus-storage/ocares-academy-logo_cf81a218.png" width="217" height="72" alt="Ocares Academy" />
+          <img src="/assets/ocares-academy-logo_cf81a218.png" width="217" height="72" alt="Ocares Academy" />
         </Link>
 
         <section className="thanks-card" aria-labelledby="thanks-title">
           <div className="thanks-status" aria-label="Progreso de acceso">
             <div className="thanks-status-item is-complete"><span><Check aria-hidden="true" strokeWidth={3} /></span><b>01 Registro</b><small>Completado</small></div>
             <i aria-hidden="true" />
-            <div className="thanks-status-item is-whatsapp"><span><img src="/manus-storage/whatsapp-icon_a58887ab.png" alt="" /></span><b>02 Comunidad WhatsApp</b><small>Próximo paso</small></div>
+            <div className="thanks-status-item is-whatsapp"><span><img src="/assets/whatsapp-icon_a58887ab.png" alt="" /></span><b>02 Comunidad WhatsApp</b><small>Próximo paso</small></div>
             <i aria-hidden="true" />
             <div className="thanks-status-item"><span><CalendarDays aria-hidden="true" strokeWidth={2.3} /></span><b>03 Clase online</b><small>Próximo paso</small></div>
           </div>
@@ -70,7 +70,7 @@ export default function ThankYou() {
           </p>
 
           <a className="thanks-whatsapp" href={whatsappCommunityUrl} aria-label="Unirme a la comunidad de WhatsApp">
-            <img src="/manus-storage/whatsapp-icon_a58887ab.png" alt="" /> UNIRME AL GRUPO DE WHATSAPP
+            <img src="/assets/whatsapp-icon_a58887ab.png" alt="" /> UNIRME AL GRUPO DE WHATSAPP
           </a>
 
           <div className="thanks-info-row">
@@ -88,21 +88,21 @@ export default function ThankYou() {
           </header>
 
           <div className="student-horizontal-grid">
-            <figure><img src="/manus-storage/alumnos-nueva-horizontal-01_3ce88029.webp" alt="Alumnos durante una capacitación presencial de resina epóxica" loading="lazy" /></figure>
-            <figure><img src="/manus-storage/alumnos-nueva-horizontal-02_7a128335.webp" alt="Grupo de participantes durante el curso de resina" loading="lazy" /></figure>
-            <figure className="student-horizontal-wide"><img src="/manus-storage/alumnos-nueva-horizontal-03_dad02957.webp" alt="Alumnos reunidos tras una clase práctica de resina" loading="lazy" /></figure>
-            <figure><img src="/manus-storage/alumnos-final-horizontal-04_2d1d64c8.webp" alt="Alumnos mostrando sus proyectos terminados durante el taller" loading="lazy" /></figure>
-            <figure><img src="/manus-storage/alumnos-final-horizontal-05_e807a098.webp" alt="Participantes aprendiendo una técnica práctica de resina" loading="lazy" /></figure>
-            <figure className="student-horizontal-wide"><img src="/manus-storage/alumnos-final-horizontal-06_c776dc09.webp" alt="Alumnos trabajando en una mesa durante una capacitación de resina" loading="lazy" /></figure>
+            <figure><img src="/assets/alumnos-nueva-horizontal-01_3ce88029.webp" alt="Alumnos durante una capacitación presencial de resina epóxica" loading="lazy" /></figure>
+            <figure><img src="/assets/alumnos-nueva-horizontal-02_7a128335.webp" alt="Grupo de participantes durante el curso de resina" loading="lazy" /></figure>
+            <figure className="student-horizontal-wide"><img src="/assets/alumnos-nueva-horizontal-03_dad02957.webp" alt="Alumnos reunidos tras una clase práctica de resina" loading="lazy" /></figure>
+            <figure><img src="/assets/alumnos-final-horizontal-04_2d1d64c8.webp" alt="Alumnos mostrando sus proyectos terminados durante el taller" loading="lazy" /></figure>
+            <figure><img src="/assets/alumnos-final-horizontal-05_e807a098.webp" alt="Participantes aprendiendo una técnica práctica de resina" loading="lazy" /></figure>
+            <figure className="student-horizontal-wide"><img src="/assets/alumnos-final-horizontal-06_c776dc09.webp" alt="Alumnos trabajando en una mesa durante una capacitación de resina" loading="lazy" /></figure>
           </div>
 
           <div className="student-vertical-grid">
-            <figure><img src="/manus-storage/alumnos-nueva-vertical-01_1ab340fa.webp" alt="Alumno realizando una práctica de resina epóxica" loading="lazy" /></figure>
-            <figure><img src="/manus-storage/alumnos-nueva-vertical-02_540c4291.webp" alt="Participante aplicando resina en un proyecto práctico" loading="lazy" /></figure>
-            <figure><img src="/manus-storage/alumnos-nueva-vertical-03_eeed7fcc.webp" alt="Alumno aprendiendo técnicas de aplicación de resina" loading="lazy" /></figure>
-            <figure><img src="/manus-storage/alumnos-final-vertical-04_f4ba75f6.webp" alt="Alumno aplicando resina sobre una pieza decorativa" loading="lazy" /></figure>
-            <figure><img src="/manus-storage/alumnos-final-vertical-05_fb722bd5.webp" alt="Participantes elaborando una pieza artística con resina" loading="lazy" /></figure>
-            <figure><img src="/manus-storage/alumnos-final-vertical-06_c824167b.webp" alt="Alumno preparando una aplicación de resina durante la clase" loading="lazy" /></figure>
+            <figure><img src="/assets/alumnos-nueva-vertical-01_1ab340fa.webp" alt="Alumno realizando una práctica de resina epóxica" loading="lazy" /></figure>
+            <figure><img src="/assets/alumnos-nueva-vertical-02_540c4291.webp" alt="Participante aplicando resina en un proyecto práctico" loading="lazy" /></figure>
+            <figure><img src="/assets/alumnos-nueva-vertical-03_eeed7fcc.webp" alt="Alumno aprendiendo técnicas de aplicación de resina" loading="lazy" /></figure>
+            <figure><img src="/assets/alumnos-final-vertical-04_f4ba75f6.webp" alt="Alumno aplicando resina sobre una pieza decorativa" loading="lazy" /></figure>
+            <figure><img src="/assets/alumnos-final-vertical-05_fb722bd5.webp" alt="Participantes elaborando una pieza artística con resina" loading="lazy" /></figure>
+            <figure><img src="/assets/alumnos-final-vertical-06_c824167b.webp" alt="Alumno preparando una aplicación de resina durante la clase" loading="lazy" /></figure>
           </div>
         </div>
       </section>
@@ -117,7 +117,7 @@ export default function ThankYou() {
             Dentro del grupo de WhatsApp compartiremos el acceso a la clase online gratuita y el descuento especial de preventa para nuestro <strong>Curso Presencial de Resina Epóxica en Playa del Carmen.</strong>
           </p>
           <a className="thanks-final-whatsapp" href={whatsappCommunityUrl} aria-label="Unirme a la comunidad de WhatsApp">
-            <img src="/manus-storage/whatsapp-icon_a58887ab.png" alt="" />
+            <img src="/assets/whatsapp-icon_a58887ab.png" alt="" />
             UNIRME AL GRUPO DE WHATSAPP
           </a>
           <p className="thanks-final-note"><span>Clase online gratuita</span><i aria-hidden="true" /> <span>Descuento de preventa</span></p>
@@ -140,7 +140,7 @@ export default function ThankYou() {
             rel="noreferrer"
             onClick={() => setIsExitPopupOpen(false)}
           >
-            <img src="/manus-storage/whatsapp-icon_a58887ab.png" alt="" />
+            <img src="/assets/whatsapp-icon_a58887ab.png" alt="" />
             QUIERO UNIRME AL GRUPO
           </a>
           <p className="exit-intent-note">Es gratis y puedes salir cuando quieras.</p>
