@@ -1,9 +1,15 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
+import MeridaLanding from "../client/src/pages/MeridaLanding";
+import { courseCampaigns } from "../client/src/config/courseCampaigns";
 
 const appSource = readFileSync(new URL("../client/src/App.tsx", import.meta.url), "utf8");
-const landingSource = readFileSync(new URL("../client/src/pages/MeridaLanding.tsx", import.meta.url), "utf8");
+const landingSource = readFileSync(new URL("../client/src/components/course/CourseLanding.tsx", import.meta.url), "utf8");
 const stylesSource = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8").replace(/\r\n/g, "\n");
+
+const landingHtml = renderToStaticMarkup(createElement(MeridaLanding));
 
 describe("landing de Mérida", () => {
   it("registra una ruta independiente dentro del mismo dominio", () => {
@@ -22,9 +28,9 @@ describe("landing de Mérida", () => {
     expect(landingSource).toContain("VER TODA LA INFORMACIÓN");
     expect(landingSource).toContain('href="#informacion"');
     expect(landingSource).toContain('id="informacion"');
-    expect(landingSource).toContain("Domingo 20 de septiembre");
-    expect(landingSource).toContain("CANACINTRA");
-    expect(landingSource).toContain("CANACINTRA Mérida");
+    expect(landingHtml).toContain("Domingo 20 de septiembre");
+    expect(landingHtml).toContain("CANACINTRA");
+    expect(landingHtml).toContain("CANACINTRA Mérida");
     expect(landingSource).toContain("Aprenderás crear acabados: flake, granito antiderrapante, marmoleados, metálicos y 3D.");
     expect(landingSource).toContain("Manual del Aplicador PRO + Calculadora Epóxica para calcular tus materiales paso a paso.");
     expect(landingSource).toContain('title: "Manual del aplicador PRO"');
@@ -78,7 +84,7 @@ describe("landing de Mérida", () => {
     expect(landingSource).toContain("Elige cómo quieres");
     expect(landingSource).toContain("asegurar tu lugar");
     expect(landingSource).toContain("Todos los paquetes incluyen los materiales, recursos y beneficios mostrados arriba.");
-    expect(landingSource).toContain("$1,999");
+    expect(landingHtml).toContain("$1,999");
     expect(landingSource).toContain("REGISTRARME POR WHATSAPP");
     expect(landingSource).not.toContain("APARTAR CON $100 POR WHATSAPP");
     expect(landingSource).toContain("REGISTRARME SIN ANTICIPO");
@@ -107,10 +113,13 @@ describe("landing de Mérida", () => {
   });
 
   it("activa los paquetes con WhatsApp y el mensaje predeterminado correspondiente", () => {
-    expect(landingSource).toContain('const whatsAppNumber = "5219617848718"');
-    expect(landingSource).toContain("Hola, quiero información sobre la preventa de $1,999 para el Curso de Resina Epóxica en Mérida.");
-    expect(landingSource).toContain("Hola, quiero registrarme con la opción de pago al llegar de $2,499 para el Curso de Resina Epóxica en Mérida.");
-    expect(landingSource).toContain("Hola, quiero información sobre los paquetes para parejas y equipos del Curso de Resina Epóxica en Mérida.");
+    expect(courseCampaigns.merida.whatsapp.number).toBe("5219617848718");
+    expect(courseCampaigns.merida.whatsapp.messages.presale).toBe("Hola, quiero información sobre la preventa de $1,999 para el Curso de Resina Epóxica en Mérida.");
+    expect(landingHtml).toContain("https://wa.me/5219617848718?text=" + encodeURIComponent("Hola, quiero información sobre la preventa de $1,999 para el Curso de Resina Epóxica en Mérida."));
+    expect(courseCampaigns.merida.whatsapp.messages.regular).toBe("Hola, quiero registrarme con la opción de pago al llegar de $2,499 para el Curso de Resina Epóxica en Mérida.");
+    expect(landingHtml).toContain("https://wa.me/5219617848718?text=" + encodeURIComponent("Hola, quiero registrarme con la opción de pago al llegar de $2,499 para el Curso de Resina Epóxica en Mérida."));
+    expect(courseCampaigns.merida.whatsapp.messages.team).toBe("Hola, quiero información sobre los paquetes para parejas y equipos del Curso de Resina Epóxica en Mérida.");
+    expect(landingHtml).toContain("https://wa.me/5219617848718?text=" + encodeURIComponent("Hola, quiero información sobre los paquetes para parejas y equipos del Curso de Resina Epóxica en Mérida."));
     expect(landingSource.match(/href=\{getWhatsAppHref\([^)]*WhatsAppMessage\)\}/g)).toHaveLength(3);
   });
 
