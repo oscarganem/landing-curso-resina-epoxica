@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 
 const appSource = readFileSync(new URL("../client/src/App.tsx", import.meta.url), "utf8");
 const landingSource = readFileSync(new URL("../client/src/pages/CancunLanding.tsx", import.meta.url), "utf8");
-const stylesSource = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
+const stylesSource = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8").replace(/\r\n/g, "\n");
 
 describe("landing de Cancún", () => {
   it("registra una ruta independiente dentro del mismo dominio", () => {

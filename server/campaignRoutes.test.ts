@@ -18,6 +18,6 @@ describe("Rutas de campaña", () => {
 
   it("identifica la raíz del subdominio academia para no mostrar una campaña de ciudad", () => {
     expect(isAcademyRootHostname("academia.ocares.mx")).toBe(true);
-    expect(isAcademyRootHostname("3000-izopczgfj2x3lll3ygzs3-40e07970.us2.manus.computer")).toBe(false);
+    expect(isAcademyRootHostname("preview.example.com")).toBe(false);
   });
 });
