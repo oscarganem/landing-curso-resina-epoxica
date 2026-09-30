@@ -131,6 +131,39 @@ export const courseCampaigns = {
     },
     faqIdPrefix: "ecatepec-faq",
   },
+  iztapalapa: {
+    path: "/curso-iztapalapa-oct26",
+    city: "Iztapalapa",
+    state: "Ciudad de México",
+    date: { dayOfWeek: "Domingo", label: "18 de octubre" },
+    schedule: "10:00 am a 5:00 pm",
+    venue: {
+      confirmed: false,
+      name: "Sede por confirmar",
+      label: "Sede por confirmar en Iztapalapa",
+      addressLines: ["Dirección por confirmar"],
+    },
+    whatsapp: {
+      number: "5219617848718",
+      messages: {
+        presale: "Hola, quiero información sobre la preventa de $1,999 para el Curso de Resina Epóxica en Iztapalapa.",
+        regular: "Hola, quiero registrarme con la opción de pago al llegar de $2,499 para el Curso de Resina Epóxica en Iztapalapa.",
+        team: "Hola, quiero información sobre los paquetes para parejas y equipos del Curso de Resina Epóxica en Iztapalapa.",
+      },
+    },
+    pricing: {
+      regular: "$2,499",
+      presale: "$1,999",
+      deposit: "$100",
+      remaining: "$1,899",
+      presaleEnds: "15 de octubre",
+      teams: [
+        { people: 2, total: "$3,800", perPerson: "$1,900", approximate: false },
+        { people: 3, total: "$4,999", perPerson: "$1,667", approximate: true },
+      ],
+    },
+    faqIdPrefix: "iztapalapa-faq",
+  },
 } satisfies Record<string, CourseCampaignConfig>;
 
 
