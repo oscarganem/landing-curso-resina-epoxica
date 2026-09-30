@@ -98,5 +98,39 @@ export const courseCampaigns = {
     },
     faqIdPrefix: "pachuca-faq",
   },
+  ecatepec: {
+    path: "/curso-ecatepec-oct26",
+    city: "Ecatepec",
+    state: "Estado de México",
+    date: { dayOfWeek: "Sábado", label: "17 de octubre" },
+    schedule: "Horario por confirmar",
+    venue: {
+      confirmed: false,
+      name: "Sede por confirmar",
+      label: "Sede por confirmar en Ecatepec",
+      addressLines: ["Dirección por confirmar"],
+    },
+    whatsapp: {
+      number: "5219617848718",
+      messages: {
+        presale: "Hola, quiero información sobre la preventa de $1,999 para el Curso de Resina Epóxica en Ecatepec.",
+        regular: "Hola, quiero registrarme con la opción de pago al llegar de $2,499 para el Curso de Resina Epóxica en Ecatepec.",
+        team: "Hola, quiero información sobre los paquetes para parejas y equipos del Curso de Resina Epóxica en Ecatepec.",
+      },
+    },
+    pricing: {
+      regular: "$2,499",
+      presale: "$1,999",
+      deposit: "$100",
+      remaining: "$1,899",
+      presaleEnds: "15 de octubre",
+      teams: [
+        { people: 2, total: "$3,800", perPerson: "$1,900", approximate: false },
+        { people: 3, total: "$4,999", perPerson: "$1,667", approximate: true },
+      ],
+    },
+    faqIdPrefix: "ecatepec-faq",
+  },
 } satisfies Record<string, CourseCampaignConfig>;
+
 
