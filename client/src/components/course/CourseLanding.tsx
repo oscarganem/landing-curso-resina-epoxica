@@ -357,7 +357,7 @@ export default function CourseLanding({ campaign }: { campaign: CourseCampaignCo
                 <p className="pricing-previous-price">{pricing.regular}</p>
                 <p className="pricing-current-price">{pricing.presale}</p>
                 <p className="pricing-description">{`Aparta con ${pricing.deposit} y paga los ${pricing.remaining} restantes al llegar.`}</p>
-                <p className="pricing-deadline">{`La preventa termina el ${pricing.presaleEnds}.`}</p>
+                {pricing.presaleEnds && <p className="pricing-deadline">{`La preventa termina el ${pricing.presaleEnds}.`}</p>}
               </div>
               <ul className="pricing-benefits">
                 <li><Check aria-hidden="true" strokeWidth={3} /><span>Lugar confirmado.</span></li>
@@ -435,7 +435,9 @@ export default function CourseLanding({ campaign }: { campaign: CourseCampaignCo
               <div className="venue-note"><span className="venue-note-icon"><Info aria-hidden="true" strokeWidth={1.9} /></span><p>Presenta tu acceso al llegar y prepárate para una jornada práctica de principio a fin.</p></div>
             </article>
 
-            <div className="venue-map" aria-label={`Mapa de ${venue.label}`}><iframe src={venue.mapEmbedUrl} title={venue.label} loading="lazy" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /></div>
+            {venue.mapEmbedUrl
+              ? <div className="venue-map" aria-label={`Mapa de ${venue.label}`}><iframe src={venue.mapEmbedUrl} title={venue.label} loading="lazy" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /></div>
+              : <div className="venue-map venue-map-pending" aria-label="Mapa pendiente de confirmar"><span className="venue-map-pending-icon"><MapPin aria-hidden="true" /></span><strong>Mapa disponible próximamente</strong><p>Publicaremos la ubicación en cuanto la sede esté confirmada.</p></div>}
           </div>
         </div>
       </section>
@@ -512,3 +514,4 @@ export default function CourseLanding({ campaign }: { campaign: CourseCampaignCo
     </main>
   );
 }
+

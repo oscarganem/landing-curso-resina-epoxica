@@ -5,10 +5,11 @@ export interface CourseCampaignConfig {
   date: { dayOfWeek: string; label: string };
   schedule: string;
   venue: {
+    confirmed?: boolean;
     name: string;
     label: string;
     addressLines: readonly string[];
-    mapEmbedUrl: string;
+    mapEmbedUrl?: string;
   };
   whatsapp: {
     number: string;
@@ -20,7 +21,7 @@ export interface CourseCampaignConfig {
     presale: string;
     deposit: string;
     remaining: string;
-    presaleEnds: string;
+    presaleEnds?: string;
     teams: readonly {
       people: number;
       total: string;
@@ -65,4 +66,37 @@ export const courseCampaigns = {
     },
     faqIdPrefix: "merida-faq",
   },
+  pachuca: {
+    path: "/curso-pachuca-oct26",
+    city: "Pachuca",
+    state: "Hidalgo",
+    date: { dayOfWeek: "Viernes", label: "16 de octubre" },
+    schedule: "Horario por confirmar",
+    venue: {
+      confirmed: false,
+      name: "Sede por confirmar",
+      label: "Sede por confirmar en Pachuca",
+      addressLines: ["Dirección por confirmar"],
+    },
+    whatsapp: {
+      number: "5219617848718",
+      messages: {
+        presale: "Hola, quiero información sobre la preventa de $1,999 para el Curso de Resina Epóxica en Pachuca.",
+        regular: "Hola, quiero registrarme con la opción de pago al llegar de $2,499 para el Curso de Resina Epóxica en Pachuca.",
+        team: "Hola, quiero información sobre los paquetes para parejas y equipos del Curso de Resina Epóxica en Pachuca.",
+      },
+    },
+    pricing: {
+      regular: "$2,499",
+      presale: "$1,999",
+      deposit: "$100",
+      remaining: "$1,899",
+      teams: [
+        { people: 2, total: "$3,800", perPerson: "$1,900", approximate: false },
+        { people: 3, total: "$4,999", perPerson: "$1,667", approximate: true },
+      ],
+    },
+    faqIdPrefix: "pachuca-faq",
+  },
 } satisfies Record<string, CourseCampaignConfig>;
+

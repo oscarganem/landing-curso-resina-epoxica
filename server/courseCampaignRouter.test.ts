@@ -11,8 +11,8 @@ const render = (path: string, campaigns: Record<string, CourseCampaignConfig> = 
 );
 
 describe("Sites campaign routing", () => {
-  it("keeps only Mérida active and campaign paths unique", () => {
-    expect(Object.keys(courseCampaigns)).toEqual(["merida"]);
+  it("keeps Mérida and Pachuca active with unique campaign paths", () => {
+    expect(Object.keys(courseCampaigns)).toEqual(["merida", "pachuca"]);
     const paths = Object.values(courseCampaigns).map(campaign => campaign.path);
     expect(new Set(paths).size).toBe(paths.length);
   });
@@ -23,7 +23,21 @@ describe("Sites campaign routing", () => {
     },
   );
 
-  it.each(["/", "/desconocida", "/curso-merida-sep26/extra", "/curso-playadelcarmen-sep26", "/curso-cancun-sep26"])(
+  it.each(["/curso-pachuca-oct26", "/curso-pachuca-oct26/", "/curso-pachuca-oct26?utm_source=test"])(
+    "renders Pachuca at %s without inheriting Mérida venue data", path => {
+      const html = render(path);
+      expect(html).toContain("Pachuca, Hidalgo");
+      expect(html).toContain("Viernes 16 de octubre");
+      expect(html).toContain("Sede por confirmar");
+      expect(html).toContain("Dirección por confirmar");
+      expect(html).toContain("Mapa disponible próximamente");
+      expect(html).toContain(encodeURIComponent("Curso de Resina Epóxica en Pachuca."));
+      expect(html).not.toContain("CANACINTRA Mérida");
+      expect(html).not.toContain("17 de septiembre");
+    },
+  );
+
+  it.each(["/", "/desconocida", "/curso-merida-sep26/extra", "/curso-pachuca-oct26/extra", "/curso-playadelcarmen-sep26", "/curso-cancun-sep26"])(
     "shows not found at %s", path => {
       expect(render(path)).toBe("<main>Página no encontrada.</main>");
     },
@@ -35,3 +49,4 @@ describe("Sites campaign routing", () => {
     expect(render("/curso-merida-sep26", campaigns)).toBe("<main>Página no encontrada.</main>");
   });
 });
+
