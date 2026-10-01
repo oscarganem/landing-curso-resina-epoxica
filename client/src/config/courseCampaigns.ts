@@ -103,7 +103,7 @@ export const courseCampaigns = {
     city: "Ecatepec",
     state: "Estado de México",
     date: { dayOfWeek: "Sábado", label: "17 de octubre" },
-    schedule: "Horario por confirmar",
+    schedule: "10:00 am a 5:00 pm",
     venue: {
       confirmed: true,
       name: "Centro de eventos Charly",
