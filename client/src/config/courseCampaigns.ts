@@ -105,10 +105,14 @@ export const courseCampaigns = {
     date: { dayOfWeek: "Sábado", label: "17 de octubre" },
     schedule: "Horario por confirmar",
     venue: {
-      confirmed: false,
-      name: "Sede por confirmar",
-      label: "Sede por confirmar en Ecatepec",
-      addressLines: ["Dirección por confirmar"],
+      confirmed: true,
+      name: "Centro de eventos Charly",
+      label: "Centro de eventos Charly",
+      addressLines: [
+        "Melchor Ocampo 35-MZ 032, San Cristóbal Centro,",
+        "55000 Ecatepec de Morelos, Méx.",
+      ],
+      mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3758.6344118462907!2d-99.0451686!3d19.6001572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f1bd2427c869%3A0x81a165ac1edd449f!2sCENTRO%20DE%20EVENTOS%20CHARLY!5e0!3m2!1ses-419!2smx!4v1790883712528!5m2!1ses-419!2smx",
     },
     whatsapp: {
       number: "5219617848718",
