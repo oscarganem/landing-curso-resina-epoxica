@@ -71,12 +71,13 @@ export const courseCampaigns = {
     city: "Pachuca",
     state: "Hidalgo",
     date: { dayOfWeek: "Viernes", label: "16 de octubre" },
-    schedule: "Horario por confirmar",
+    schedule: "10:00 am - 5:00 pm",
     venue: {
-      confirmed: false,
-      name: "Sede por confirmar",
-      label: "Sede por confirmar en Pachuca",
-      addressLines: ["Dirección por confirmar"],
+      confirmed: true,
+      name: "Salon Manina",
+      label: "Salon Manina",
+      addressLines: ["Profr José Ibarra Olivares 107, Revolución,", "42060 Pachuca de Soto, Hgo."],
+      mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3746.360572745298!2d-98.7429417!3d20.1189994!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1095d81b28da3%3A0x963e619eabaa4b77!2sSal%C3%B3n%20de%20Eventos%20%22Manina%22!5e0!3m2!1ses-419!2smx!4v1790969379514!5m2!1ses-419!2smx",
     },
     whatsapp: {
       number: "5219617848718",
