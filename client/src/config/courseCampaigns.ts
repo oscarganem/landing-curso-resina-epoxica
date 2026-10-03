@@ -143,10 +143,11 @@ export const courseCampaigns = {
     date: { dayOfWeek: "Domingo", label: "18 de octubre" },
     schedule: "10:00 am a 5:00 pm",
     venue: {
-      confirmed: false,
-      name: "Sede por confirmar",
-      label: "Sede por confirmar en Iztapalapa",
-      addressLines: ["Dirección por confirmar"],
+      confirmed: true,
+      name: "San Miguel Salón de Eventos",
+      label: "San Miguel Salón de Eventos",
+      addressLines: ["Eusebio Guajardo 73-b, San Miguel, Iztapalapa,", "09360 Ciudad de México, CDMX"],
+      mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7528.751759611565!2d-99.0809054!3d19.3528706!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fdc06c1cd547%3A0x85cf50595dac272c!2sSan%20Miguel%20Sal%C3%B3n%20de%20Eventos!5e0!3m2!1ses-419!2smx!4v1791040527474!5m2!1ses-419!2smx",
     },
     whatsapp: {
       number: "5219617848718",
