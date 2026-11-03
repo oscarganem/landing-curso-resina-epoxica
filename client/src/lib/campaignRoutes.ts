@@ -1,8 +1,5 @@
-import { courseCampaigns } from "../config/courseCampaigns";
-
 export const playaDelCarmenCampaignPath = "/curso-playadelcarmen-sep26";
 export const playaDelCarmenThankYouPath = `${playaDelCarmenCampaignPath}/gracias`;
-export const meridaCampaignPath = courseCampaigns.merida.path;
 export const cancunCampaignPath = "/curso-cancun-sep26";
 export const academyHostname = "academia.ocares.mx";
 
